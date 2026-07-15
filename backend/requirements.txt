@@ -1,0 +1,90 @@
+# ==========================================================
+# Resume Screening & Candidate Ranking System
+# ==========================================================
+
+# -----------------------
+# Web Backend
+# -----------------------
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+
+# -----------------------
+# Configuration
+# -----------------------
+pyyaml
+python-dotenv
+
+# -----------------------
+# Data Processing
+# -----------------------
+numpy
+pandas
+
+# -----------------------
+# PDF & DOCX Parsing
+# -----------------------
+pymupdf
+python-docx
+
+# -----------------------
+# OCR
+# -----------------------
+pytesseract
+Pillow
+
+# Uncomment if you later benchmark it
+# easyocr
+# paddleocr
+
+# -----------------------
+# NLP
+# -----------------------
+spacy
+rapidfuzz
+
+# -----------------------
+# Information Retrieval
+# -----------------------
+rank-bm25
+sentence-transformers
+
+# -----------------------
+# Machine Learning
+# -----------------------
+torch
+onnx
+onnxruntime
+
+# -----------------------
+# Similarity Search
+# -----------------------
+faiss-cpu
+
+# -----------------------
+# Export
+# -----------------------
+openpyxl
+xlsxwriter
+
+# -----------------------
+# Logging
+# -----------------------
+loguru
+
+# -----------------------
+# Progress Bars
+# -----------------------
+tqdm
+
+# -----------------------
+# Utilities
+# -----------------------
+joblib
+
+# -----------------------
+# Testing
+# -----------------------
+pytest
+pytest-cov

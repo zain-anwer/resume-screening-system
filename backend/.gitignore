@@ -1,0 +1,194 @@
+# ==================================================
+# Python
+# ==================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Package builds
+build/
+dist/
+*.egg-info/
+.eggs/
+
+
+# ==================================================
+# Environment & Secrets
+# ==================================================
+
+.env
+.env.*
+!.env.example
+
+*.key
+*.pem
+*.crt
+
+
+# ==================================================
+# Candidate Data (SENSITIVE - NEVER COMMIT)
+# ==================================================
+
+# Raw resumes
+data/resumes_raw/
+
+# Supporting documents
+data/supporting_docs/
+
+# Processed candidate information
+data/processed_json/
+
+# Annotation data
+data/annotations/
+
+# Any extracted personal information
+**/*cnic*
+**/*degree*
+**/*identity*
+**/*personal*
+
+
+# ==================================================
+# ML Models & Embeddings
+# ==================================================
+
+# Downloaded/generated models
+models/embeddings/
+models/rerankers/
+
+# Model weights
+*.bin
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# Vector databases / indexes
+*.faiss
+*.index
+*.pkl
+*.pickle
+
+
+# ==================================================
+# Generated Outputs
+# ==================================================
+
+output/json/
+output/csv/
+output/excel/
+output/pdf/
+
+
+# ==================================================
+# Logs
+# ==================================================
+
+logs/*
+!logs/.gitkeep
+
+*.log
+
+
+# ==================================================
+# Reports & Evaluation Results
+# ==================================================
+
+reports/evaluation_results/
+reports/screenshots/
+
+
+# ==================================================
+# Jupyter Notebook
+# ==================================================
+
+.ipynb_checkpoints/
+
+# Notebook generated files
+*.nbconvert.ipynb
+
+
+# ==================================================
+# Streamlit
+# ==================================================
+
+.streamlit/
+
+# Streamlit cache
+.streamlit/cache/
+
+
+# ==================================================
+# OS Generated Files
+# ==================================================
+
+# Linux
+*~
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+
+# ==================================================
+# IDEs
+# ==================================================
+
+.vscode/
+.idea/
+
+*.swp
+*.swo
+
+
+# ==================================================
+# Temporary Files
+# ==================================================
+
+*.tmp
+*.temp
+*.cache
+
+tmp/
+temp/
+
+
+# ==================================================
+# Testing
+# ==================================================
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+
+# ==================================================
+# Large Dataset Files
+# ==================================================
+
+*.csv
+*.xlsx
+
+# Allow project configuration/sample files
+!data/sample_jobs/*.yaml
+!configs/**/*.yaml
+
+
+# ==================================================
+# Keep Empty Directories
+# ==================================================
+
+!.gitkeep
