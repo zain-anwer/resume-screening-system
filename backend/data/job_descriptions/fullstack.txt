@@ -1,0 +1,27 @@
+Job Title: Full Stack Developer
+
+Company: 10Pearls
+
+Experience Required: 4–7 Years
+
+Responsibilities
+
+• Develop frontend and backend systems.
+• Build REST APIs.
+• Design databases.
+• Collaborate with QA and DevOps.
+
+Required Skills
+
+Python
+React
+Node.js
+MongoDB
+Docker
+Git
+
+Preferred
+
+AWS
+Redis
+CI/CD

@@ -1,0 +1,26 @@
+Job Title: Cloud Engineer
+
+Company: Netsol Technologies
+
+Experience Required: 4–8 Years
+
+Responsibilities
+
+• Design cloud infrastructure.
+• Automate deployments.
+• Manage Kubernetes clusters.
+• Monitor production workloads.
+
+Required Skills
+
+AWS
+Azure
+Docker
+Kubernetes
+Terraform
+
+Preferred
+
+Python
+Linux
+Networking

@@ -1,0 +1,29 @@
+Job Title: React Frontend Developer
+
+Company: Arbisoft
+
+Location: Lahore
+
+Experience Required: 2–5 Years
+
+Responsibilities
+
+• Develop responsive user interfaces.
+• Integrate REST APIs.
+• Write reusable React components.
+• Optimize frontend performance.
+
+Required Skills
+
+React
+JavaScript
+TypeScript
+Redux
+HTML
+CSS
+
+Preferred
+
+Next.js
+Material UI
+Jest

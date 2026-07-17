@@ -1,0 +1,43 @@
+Job Title: Python Backend Engineer
+
+Company: TechNova Solutions
+
+Location: Karachi, Pakistan
+Employment Type: Full-Time
+Experience Required: 3–6 Years
+
+About the Role
+
+TechNova Solutions is seeking an experienced Python Backend Engineer to design, develop, and maintain scalable backend services for enterprise applications. The ideal candidate should have strong experience building REST APIs, database optimization, cloud deployment, and microservices.
+
+Key Responsibilities
+
+• Design scalable backend systems using Python.
+• Develop RESTful APIs using FastAPI or Flask.
+• Design relational databases and optimize SQL queries.
+• Integrate third-party APIs.
+• Write clean, maintainable, and testable code.
+• Collaborate with frontend and DevOps teams.
+• Participate in code reviews.
+• Deploy applications using Docker.
+
+Required Skills
+
+Python
+FastAPI
+Flask
+REST APIs
+PostgreSQL
+Git
+Docker
+
+Preferred Skills
+
+AWS
+Redis
+Microservices
+CI/CD
+
+Education
+
+Bachelor's degree in Computer Science or Software Engineering.

@@ -1,0 +1,28 @@
+Job Title: AI / Machine Learning Engineer
+
+Company: VisionAI Labs
+
+Experience Required: 3–6 Years
+
+Responsibilities
+
+• Train machine learning models.
+• Develop NLP applications.
+• Fine-tune LLMs.
+• Deploy AI services.
+
+Required Skills
+
+Python
+PyTorch
+Transformers
+Machine Learning
+Pandas
+NumPy
+
+Preferred
+
+TensorFlow
+Hugging Face
+ONNX
+CUDA

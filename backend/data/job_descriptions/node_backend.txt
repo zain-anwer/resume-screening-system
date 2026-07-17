@@ -1,0 +1,25 @@
+Job Title: Node.js Backend Developer
+
+Company: Tkxel
+
+Experience Required: 3–5 Years
+
+Responsibilities
+
+• Build scalable APIs.
+• Design backend architecture.
+• Optimize MongoDB.
+
+Required Skills
+
+Node.js
+Express.js
+MongoDB
+Docker
+Git
+
+Preferred
+
+Redis
+AWS
+TypeScript

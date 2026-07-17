@@ -1,0 +1,26 @@
+Job Title: DevOps Engineer
+
+Company: Folio3
+
+Experience Required: 4+ Years
+
+Responsibilities
+
+• Build CI/CD pipelines.
+• Deploy cloud infrastructure.
+• Monitor production systems.
+• Automate deployments.
+
+Required Skills
+
+Docker
+Kubernetes
+Terraform
+Linux
+AWS
+
+Preferred
+
+Azure
+Jenkins
+GitHub Actions

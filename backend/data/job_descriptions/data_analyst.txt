@@ -1,0 +1,25 @@
+Job Title: Data Analyst
+
+Company: Careem
+
+Experience Required: 2–5 Years
+
+Responsibilities
+
+• Analyze business data.
+• Create dashboards.
+• Generate reports.
+• Perform SQL analysis.
+
+Required Skills
+
+SQL
+Power BI
+Excel
+Python
+
+Preferred
+
+Tableau
+Pandas
+Statistics
