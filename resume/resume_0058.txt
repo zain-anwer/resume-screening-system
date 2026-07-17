@@ -1,0 +1,25 @@
+James Park
+james_park@yahoo.com | +1 4612727954 | Remote
+
+SUMMARY
+Former Teacher transitioning into Data Scientist, bringing transferable skills in stakeholder communication and analytical thinking.
+
+SKILLS
+R, A/B Testing, SQL, Excel, Teacher domain knowledge, Stakeholder Communication
+
+EXPERIENCE
+Data Analyst - Insightry Analytics, Dubai, UAE (2024 – 2026)
+  ➜ Coordinated processes related to R reducing costs by 15%
+  ➜ Developed a solution using Python
+  ➜ Streamlined a system for Tableau across 3 teams
+
+PROJECTS
+➜ Weather Forecast Tool: Built using Machine Learning and Pandas.
+➜ Chat Support Bot: Built using Machine Learning and R.
+➜ Weather Forecast Tool: Built using Pandas and Pandas.
+
+EDUCATION
+MS Electrical Engineering, Bahria University 2023
+
+CERTIFICATIONS
+➜ AWS Certified Cloud Practitioner

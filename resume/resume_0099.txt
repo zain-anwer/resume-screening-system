@@ -1,0 +1,31 @@
+Kashif Raza
+kashifraza13@proton.me | +92 3845121773 | Lahore, Pakistan
+
+SUMMARY
+Results-driven Software Engineering professional with 2+ years of experience delivering measurable impact through REST APIs and JavaScript.
+
+SKILLS
+Node.js, REST APIs, C#, Git, JavaScript, Docker
+
+EXPERIENCE
+Full Stack Developer - Codelight Technologies, Sydney, Australia (2024/2025)
+  ✓ Analyzed processes related to Docker
+  ✓ Developed a system for Python reducing costs by 15%
+  ✓ Managed processes related to REST APIs across 3 teams
+  ✓ Streamlined a solution using Git
+Backend Developer - Nimbus Softworks, Remote (2025 - 2026)
+  ✓ Developed processes related to Microservices by 35%
+  ✓ Implemented processes related to REST APIs
+  ✓ Launched a system for Python
+  ✓ Delivered a system for Node.js across 3 teams
+Software Engineer II - Pinegrove Systems, Dubai, UAE (2026/2027)
+  ✓ Designed a project involving Docker by 20%
+  ✓ Designed processes related to Java within tight deadlines
+  ✓ Developed a system for JavaScript by 35%
+  ✓ Built a solution using Docker by 20%
+
+EDUCATION
+BS Mechanical Engineering, COMSATS University 2023
+
+CERTIFICATIONS
+✓ Certified ScrumMaster

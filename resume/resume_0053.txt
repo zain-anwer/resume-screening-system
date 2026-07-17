@@ -1,0 +1,28 @@
+Junaid Anwar
+junaid_anwar21@yahoo.com | +92 3852380248 | Toronto, Canada
+
+SUMMARY
+Results-driven Data Scientist professional with 2+ years of experience delivering measurable impact through Excel and Machine Learning.
+
+SKILLS
+R, Machine Learning, Excel, Statistics, Power BI, Pandas
+
+EXPERIENCE
+Data Analyst - DataForge Inc., London, UK (2024-2025)
+  → Implemented a solution using A/B Testing by 35%
+  → Built a solution using Statistics by 20%
+  → Coordinated a project involving Statistics across 3 teams
+  → Automated a system for A/B Testing across 3 teams
+Junior Data Scientist - Metricly, Singapore (Jan 2025 to Dec 2026)
+  → Supervised processes related to Statistics within tight deadlines
+  → Automated processes related to Tableau by 20%
+  → Implemented a project involving Machine Learning for 10,000+ users
+  → Automated a project involving R across 3 teams
+Junior Data Scientist - Metricly, Singapore (2026-2027)
+  → Automated a system for Power BI
+  → Implemented a system for A/B Testing
+  → Led a solution using Machine Learning
+  → Coordinated a solution using Excel across 3 teams
+
+EDUCATION
+BS Computer Science, Arizona State University 2023
