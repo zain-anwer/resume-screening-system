@@ -1,0 +1,133 @@
+{
+  "id": "",
+
+  "personal_info": {
+    "name": "",
+    "gender": "",
+    "marital_status": "",
+    "father_name": "", 
+    "email": "",
+    "phone": [],
+    "landline": [],
+    "cnic": "",
+    "location": "",
+    "date_of_birth": "",
+    "nationality": ""
+  },
+
+  "education": [
+    {
+      "degree_raw": "",
+      "degree_level": "",
+      "field": "",
+      "institution": "",
+      "campus": "",
+      "graduation_year": null,
+      "start_year": null,
+      "is_current": false,
+      "cgpa": null,
+      "max_cgpa": null
+    }
+  ],
+
+  "experience": [
+    {
+      "title": "",
+      "organization": "",
+      "employment_type": "",
+      "location": "",
+      "start_date": "",
+      "end_date": null,
+      "is_current": false,
+      "duration_months": null,
+      "description": "",
+      "responsibilities": [],
+      "technologies": []
+    }
+  ],
+
+  "projects": [
+    {
+      "name": "",
+      "role": "",
+      "description": "",
+      "start_date": "",
+      "end_date": "",
+      "technologies": [],
+      "github": "",
+      "demo": ""
+    }
+  ],
+
+  "skills": [],
+
+  "certifications": [
+    {
+      "name": "",
+      "issuer": "",
+      "issue_date": "",
+      "expiry_date": "",
+      "credential_id": "",
+      "credential_url": ""
+    }
+  ],
+
+  "achievements": [
+    {
+      "title": "",
+      "organization": "",
+      "date": "",
+      "description": ""
+    }
+  ],
+
+  "publications": [
+    {
+      "title": "",
+      "publisher": "",
+      "year": null,
+      "url": ""
+    }
+  ],
+
+  "languages": [
+    {
+      "language": "",
+      "proficiency": ""
+    }
+  ],
+
+  "urls": {
+    "github": "",
+    "linkedin": "",
+    "portfolio": [],
+    "website": "",
+    "other": []
+  },
+
+  "summary": "",
+
+  "total_experience_years": 0.0,
+
+  "additional_sections": { 
+    "references": [], 
+    "interests": [] 
+  },
+
+  "flags": {
+    "missing_fields": [],
+    "low_confidence_fields": [],
+    "ner_review_needed": false
+  },
+
+  "metadata": {
+    "source_file": "",
+    "parser_version": "",
+    "job_category" : "",
+    "created_at": "",
+    "updated_at": "",
+    "document_type": "",
+    "parsing_status": "",
+    "confidence_score": null
+  }
+}
