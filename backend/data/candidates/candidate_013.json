@@ -1,0 +1,55 @@
+{
+  "id": "candidate_013",
+  "personal_info": {
+    "name": "Candidate 013",
+    "email": "candidate013@example.com",
+    "phone": "+92-300-1234567",
+    "cnic": "42101-1234567-1",
+    "location": "Pakistan"
+  },
+  "education": [
+    {
+      "degree_raw": "BS Computer Science",
+      "degree_level": "Bachelors",
+      "field": "Computer Science",
+      "institution": "FAST-NUCES",
+      "graduation_year": 2019,
+      "is_current": false,
+      "cgpa": 3.5
+    }
+  ],
+  "experience": [
+    {
+      "title": "ERP Functional Consultant",
+      "organization": "Systems Limited",
+      "start_date": "2020-01-01",
+      "end_date": null,
+      "is_current": true,
+      "duration_months": 120
+    }
+  ],
+  "total_experience_years": 10,
+  "skills": [
+    "ERP",
+    "Procurement",
+    "Inventory",
+    "Finance"
+  ],
+  "certifications": [
+    {
+      "name": "Agile Fundamentals",
+      "year": 2023
+    }
+  ],
+  "urls": {
+    "github": "",
+    "linkedin": "",
+    "portfolio": []
+  },
+  "flags": {
+    "missing_fields": [],
+    "low_confidence_fields": [],
+    "ner_review_needed": false
+  },
+  "resume_text": "ERP Functional Consultant with 10 years of experience. Skilled in ERP, Procurement, Inventory, Finance. Built enterprise systems, collaborated with teams, optimized performance, deployed production applications and followed agile practices."
+}

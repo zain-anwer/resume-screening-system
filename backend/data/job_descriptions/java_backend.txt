@@ -1,0 +1,34 @@
+Job Title: Senior Java Backend Engineer
+
+Company: Systems Limited
+
+Location: Lahore
+
+Experience Required: 5+ Years
+
+Responsibilities
+
+• Build enterprise Java applications.
+• Design scalable backend architecture.
+• Develop REST APIs.
+• Optimize SQL performance.
+• Participate in Agile development.
+
+Required Skills
+
+Java
+Spring Boot
+Hibernate
+MySQL
+Docker
+Git
+
+Preferred
+
+Kafka
+Redis
+AWS
+
+Education
+
+BS Computer Science
