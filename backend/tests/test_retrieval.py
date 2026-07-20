@@ -1,24 +1,53 @@
 from backend.src.services.embedding_service import EmbeddingService
+from backend.src.services.similarity_service import SimilarityService
 
-service = EmbeddingService()
+embedding_service = EmbeddingService()
 
-text = """
-AI Engineer with experience in Python,
-PyTorch, Transformers and Machine Learning.
+text1 = """
+Python Machine Learning Engineer
+PyTorch
+Transformers
+LLMs
 """
 
-embedding = service.encode(text)
+text2 = """
+AI Engineer
+Python
+Deep Learning
+Transformers
+"""
+
+text3 = """
+Flutter Developer
+Dart
+Firebase
+Android
+"""
+
+embedding1 = embedding_service.encode(text1)
+embedding2 = embedding_service.encode(text2)
+embedding3 = embedding_service.encode(text3)
+
+score1 = SimilarityService.cosine_similarity(
+    embedding1,
+    embedding2,
+)
+
+score2 = SimilarityService.cosine_similarity(
+    embedding1,
+    embedding3,
+)
 
 print("=" * 60)
-print("Embedding")
+print("Semantic Similarity")
 print("=" * 60)
 
-print(type(embedding))
 print()
 
-print("Shape:", embedding.shape)
+print("AI vs AI")
+print(score1)
+
 print()
 
-print("First 10 values:")
-
-print(embedding[:10])
+print("AI vs Flutter")
+print(score2)
