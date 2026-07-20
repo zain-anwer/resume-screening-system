@@ -1,0 +1,151 @@
+{
+  "id": "worker_grade4_04",
+  "personal_info": {
+    "full_name": "Rafiq Ahmed Chandio",
+    "father_name": "Muhammad Bux Chandio",
+    "gender": "Male",
+    "marital_status": "",
+    "date_of_birth": "1986-12-26",
+    "age": 39,
+    "nationality": "Pakistani",
+    "cnic": "45302-4445556-4",
+    "contact": {
+      "emails": [
+        "rafiq.chandio@gmail.com"
+      ],
+      "phones": [
+        "0301-6667788"
+      ],
+      "landlines": []
+    },
+    "address": {
+      "full_address": "Mohalla Chandio Colony, Nawabshah",
+      "city": "Nawabshah",
+      "province": "Sindh",
+      "country": "Pakistan"
+    }
+  },
+  "education": [
+    {
+      "degree": "DAE Printing & Graphic Arts",
+      "institution": "Government College of Technology, Karachi",
+      "graduation_year": "2012"
+    }
+  ],
+  "experience": [
+    {
+      "designation": "Senior Press Technician",
+      "company": "Pakistan Security Printing Corporation",
+      "location": "Karachi",
+      "duration": "Jan 2017 - Present",
+      "responsibilities": [
+        "Operate secure offset printing lines for banknote-grade documents",
+        "Conduct quality-control checks under security printing protocols"
+      ]
+    },
+    {
+      "designation": "Press Technician",
+      "company": "National Press Ltd",
+      "location": "Nawabshah",
+      "duration": "Jun 2012 - Dec 2016",
+      "responsibilities": [
+        "Operated printing presses and performed routine maintenance"
+      ]
+    }
+  ],
+  "projects": [],
+  "skills": {
+    "technical": [
+      "Security Printing",
+      "Offset Printing",
+      "Print Quality Control",
+      "Machine Maintenance"
+    ],
+    "soft": [
+      "Diligent",
+      "Safety Conscious"
+    ],
+    "tools": [],
+    "databases": [],
+    "frameworks": [],
+    "cloud": [],
+    "operating_systems": [],
+    "languages": []
+  },
+  "certifications": [],
+  "achievements": [],
+  "publications": [],
+  "languages": [
+    "Urdu",
+    "English"
+  ],
+  "urls": {
+    "linkedin": "",
+    "github": "",
+    "portfolio": [],
+    "website": "",
+    "other": []
+  },
+  "summary": "Diligent and safety-conscious technical worker seeking a Grade IV position.",
+  "experience_summary": {
+    "total_experience_years": 13,
+    "management_experience_years": 0,
+    "relevant_experience_years": 13
+  },
+  "eligibility_features": {
+    "highest_degree": "DAE Printing & Graphic Arts",
+    "highest_degree_level": "Diploma",
+    "age": 39,
+    "currently_employed": true,
+    "current_designation": "Senior Press Technician",
+    "current_company": "Pakistan Security Printing Corporation",
+    "has_management_experience": false,
+    "has_python": false,
+    "has_sql": false,
+    "has_sap": false,
+    "has_oracle": false,
+    "has_driving_license": false,
+    "has_security_clearance": false
+  },
+  "references": [
+    {
+      "name": "Mr. Javed Qureshi",
+      "designation": "Production Manager",
+      "organization": "Pakistan Security Printing Corporation",
+      "contact": "0321-7778899"
+    }
+  ],
+  "interests": [],
+  "verification": {
+    "resume_name": "Rafiq Ahmed Chandio",
+    "cnic_name": "Rafiq Ahmed Chandio",
+    "resume_dob": "1986-12-26",
+    "cnic_dob": "1986-12-26",
+    "resume_cnic": "45302-4445556-4",
+    "cnic_number": "45302-4445556-4",
+    "name_match": true,
+    "dob_match": true,
+    "cnic_match": true
+  },
+  "flags": {
+    "missing_fields": [
+      "marital_status"
+    ],
+    "low_confidence_fields": [],
+    "manual_review_required": false,
+    "resume_blurred": false,
+    "cnic_blurred": false
+  },
+  "metadata": {
+    "candidate_id": "worker_grade4_04",
+    "job_category": "Worker_Grade_04",
+    "source_resume": "resume_extraction",
+    "source_cnic": "cnic_extraction",
+    "document_type": "resume_and_cnic",
+    "parser_version": "1.0",
+    "created_at": "2026-07-20",
+    "updated_at": "2026-07-20",
+    "parsing_status": "completed",
+    "confidence_score": 0.96
+  }
+}

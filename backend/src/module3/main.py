@@ -172,7 +172,7 @@ for file in candidate_files:
 
         for skill in result["preferred_skills"]["matched"]:
 
-            print(f"   ✓ {skill}")
+            print(f"   - {skill}")
 
     else:
 

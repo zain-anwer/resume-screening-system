@@ -1,0 +1,146 @@
+{
+  "id": "worker_grade4_05",
+  "personal_info": {
+    "full_name": "Shahbaz Ali Gondal",
+    "father_name": "",
+    "gender": "",
+    "marital_status": "",
+    "date_of_birth": "1991-12-26",
+    "age": 34,
+    "nationality": "Pakistani",
+    "cnic": "34101-5556667-5",
+    "contact": {
+      "emails": [],
+      "phones": [],
+      "landlines": []
+    },
+    "address": {
+      "full_address": "",
+      "city": "Gujranwala",
+      "province": "Punjab",
+      "country": "Pakistan"
+    }
+  },
+  "education": [
+    {
+      "degree": "DAE Mechanical",
+      "institution": "Government College of Technology, Gujranwala"
+    }
+  ],
+  "experience": [
+    {
+      "designation": "Machine Operator",
+      "company": "Gujranwala Engineering Works",
+      "location": "Gujranwala",
+      "responsibilities": [
+        "Operate industrial machinery",
+        "Perform fabrication work"
+      ]
+    },
+    {
+      "designation": "Technician",
+      "company": "Punjab Steel Mills",
+      "location": "Gujranwala",
+      "responsibilities": [
+        "Performed mechanical maintenance tasks"
+      ]
+    }
+  ],
+  "projects": [],
+  "skills": {
+    "technical": [
+      "Machine Operation",
+      "Welding",
+      "Fabrication",
+      "Maintenance"
+    ],
+    "soft": [
+      "Diligent",
+      "Safety Conscious"
+    ],
+    "tools": [],
+    "databases": [],
+    "frameworks": [],
+    "cloud": [],
+    "operating_systems": [],
+    "languages": []
+  },
+  "certifications": [],
+  "achievements": [],
+  "publications": [],
+  "languages": [],
+  "urls": {
+    "linkedin": "",
+    "github": "",
+    "portfolio": [],
+    "website": "",
+    "other": []
+  },
+  "summary": "Diligent and safety-conscious technical worker seeking a Grade IV position.",
+  "experience_summary": {
+    "total_experience_years": 0,
+    "management_experience_years": 0,
+    "relevant_experience_years": 0
+  },
+  "eligibility_features": {
+    "highest_degree": "DAE Mechanical",
+    "highest_degree_level": "Diploma",
+    "age": 34,
+    "currently_employed": false,
+    "current_designation": "Machine Operator",
+    "current_company": "Gujranwala Engineering Works",
+    "has_management_experience": false,
+    "has_python": false,
+    "has_sql": false,
+    "has_sap": false,
+    "has_oracle": false,
+    "has_driving_license": false,
+    "has_security_clearance": false
+  },
+  "references": [
+    {
+      "name": "Mr. Nasir Gondal"
+    }
+  ],
+  "interests": [],
+  "verification": {
+    "resume_name": "Shahbaz Ali Gondal",
+    "cnic_name": "Shahbaz Ali Gondal",
+    "resume_dob": "",
+    "cnic_dob": "1991-12-26",
+    "resume_cnic": "",
+    "cnic_number": "34101-5556667-5",
+    "name_match": true,
+    "dob_match": false,
+    "cnic_match": false
+  },
+  "flags": {
+    "missing_fields": [
+      "contact",
+      "address",
+      "gender",
+      "father_name",
+      "marital_status"
+    ],
+    "low_confidence_fields": [
+      "education",
+      "work_experience_dates",
+      "reference_details"
+    ],
+    "manual_review_required": true,
+    "resume_blurred": false,
+    "cnic_blurred": false
+  },
+  "metadata": {
+    "candidate_id": "worker_grade4_05",
+    "job_category": "Worker_Grade_04",
+    "source_resume": "resume_extraction",
+    "source_cnic": "cnic_extraction",
+    "document_type": "resume_and_cnic",
+    "parser_version": "1.0",
+    "created_at": "2026-07-20",
+    "updated_at": "2026-07-20",
+    "parsing_status": "completed_with_low_confidence",
+    "confidence_score": 0.72
+  }
+}

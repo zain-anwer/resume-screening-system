@@ -46,7 +46,7 @@ LEVELS = {
 
 def get_candidate_level(candidate):
 
-    level = candidate["eligibility_features"].get(
+    level = candidate.get("eligibility_features", {}).get(
         "highest_degree_level",
         ""
     ).lower()
@@ -62,6 +62,24 @@ def get_candidate_level(candidate):
     }
 
     return mapping.get(level, "")
+
+
+def get_education_degree_name(education_record):
+    """
+    Candidate JSONs may come from different extraction passes.
+    Accept the common degree field variants used in this project.
+    """
+
+    if not isinstance(education_record, dict):
+        return ""
+
+    for key in ["degree_name", "degree", "qualification", "title"]:
+        value = education_record.get(key)
+
+        if value:
+            return str(value)
+
+    return ""
 
 
 # ---------------------------------------------------------
@@ -98,9 +116,12 @@ def check_education(candidate, rules):
 
     found = False
 
-    for edu in candidate["education"]:
+    for edu in candidate.get("education", []):
 
-        degree = edu["degree_name"].lower()
+        degree = get_education_degree_name(edu).lower()
+
+        if not degree:
+            continue
 
         for req in accepted:
 

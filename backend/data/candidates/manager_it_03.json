@@ -1,0 +1,181 @@
+{
+  "id": "manager_it_03",
+  "personal_info": {
+    "full_name": "Faisal Mahmood Khan",
+    "father_name": "Abdul Mahmood Khan",
+    "gender": "Male",
+    "marital_status": "",
+    "date_of_birth": "1987-12-26",
+    "age": 38,
+    "nationality": "Pakistani",
+    "cnic": "42301-3456789-3",
+    "contact": {
+      "emails": [],
+      "phones": [],
+      "landlines": []
+    },
+    "address": {
+      "full_address": "House 12, Street 6, DHA Phase 5, Karachi",
+      "city": "Karachi",
+      "province": "Sindh",
+      "country": "Pakistan"
+    }
+  },
+  "education": [
+    {
+      "degree": "MS Information Technology"
+    },
+    {
+      "degree": "BS Computer Science"
+    }
+  ],
+  "experience": [
+    {
+      "designation": "IT Manager",
+      "company": "Pak Petro Refineries Ltd",
+      "location": "Karachi",
+      "responsibilities": [
+        "Led a 10-member IT team across 3 regional offices",
+        "Oversaw Oracle ERP implementation and upgrade cycles",
+        "Directed data-center consolidation project"
+      ]
+    },
+    {
+      "designation": "Deputy IT Manager",
+      "company": "Coastal Energy Pakistan",
+      "location": "Karachi",
+      "responsibilities": [
+        "Supervised infrastructure team of 6",
+        "Managed SAP support and database administration"
+      ]
+    },
+    {
+      "designation": "Systems Administrator",
+      "company": "Delta Networks",
+      "responsibilities": [
+        "Administered enterprise Linux and networking infrastructure"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Data-Center Consolidation",
+      "organization": "Pak Petro Refineries"
+    },
+    {
+      "name": "Oracle ERP Upgrade Program"
+    }
+  ],
+  "skills": {
+    "technical": [
+      "Oracle ERP",
+      "SAP",
+      "Tier-1 ERP Implementation",
+      "Project Management",
+      "Database Administration",
+      "Cloud"
+    ],
+    "soft": [
+      "Leadership",
+      "Team Management"
+    ],
+    "tools": [],
+    "databases": [
+      "Oracle"
+    ],
+    "frameworks": [],
+    "cloud": [
+      "Cloud"
+    ],
+    "operating_systems": [
+      "Linux"
+    ],
+    "languages": []
+  },
+  "certifications": [
+    {
+      "name": "Oracle Database Administrator Certified Professional"
+    },
+    {
+      "name": "PMP"
+    },
+    {
+      "name": "Cisco Certified Network Professional"
+    }
+  ],
+  "achievements": [],
+  "publications": [],
+  "languages": [
+    "English",
+    "Urdu"
+  ],
+  "urls": {
+    "linkedin": "",
+    "github": "",
+    "portfolio": [],
+    "website": "",
+    "other": []
+  },
+  "summary": "Senior IT professional with 13 years of experience managing enterprise ERP systems and leading multi-site infrastructure teams in the oil & gas sector.",
+  "experience_summary": {
+    "total_experience_years": 13,
+    "management_experience_years": 13,
+    "relevant_experience_years": 13
+  },
+  "eligibility_features": {
+    "highest_degree": "MS Information Technology",
+    "highest_degree_level": "Masters",
+    "age": 38,
+    "currently_employed": false,
+    "current_designation": "IT Manager",
+    "current_company": "Pak Petro Refineries Ltd",
+    "has_management_experience": true,
+    "has_python": false,
+    "has_sql": false,
+    "has_sap": true,
+    "has_oracle": true,
+    "has_driving_license": false,
+    "has_security_clearance": false
+  },
+  "references": [
+    {
+      "name": "Mr. Nadeem Aslam"
+    }
+  ],
+  "interests": [],
+  "verification": {
+    "resume_name": "Faisal Mahmood Khan",
+    "cnic_name": "Faisal Mahmood Khan",
+    "resume_dob": "",
+    "cnic_dob": "1987-12-26",
+    "resume_cnic": "",
+    "cnic_number": "42301-3456789-3",
+    "name_match": true,
+    "dob_match": false,
+    "cnic_match": false
+  },
+  "flags": {
+    "missing_fields": [
+      "contact",
+      "marital_status"
+    ],
+    "low_confidence_fields": [
+      "date_of_birth"
+    ],
+    "manual_review_required": false,
+    "resume_blurred": false,
+    "cnic_blurred": false
+  },
+  "metadata": {
+    "candidate_id": "manager_it_03",
+    "job_category": "Manager_IT",
+    "source_resume": "resume_extraction",
+    "source_cnic": "cnic_extraction",
+    "document_type": "resume_and_cnic",
+    "parser_version": "1.0",
+    "created_at": "2026-07-20",
+    "updated_at": "2026-07-20",
+    "parsing_status": "completed",
+    "confidence_score": 0.91
+  }
+}
