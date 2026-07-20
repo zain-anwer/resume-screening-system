@@ -4,38 +4,56 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 from backend.configs.config import EMBEDDING_MODEL
 
-logger=logging.getLogger(__name__)
+logger = logging.getLogger(__name__)
+
+
 class EmbeddingService:
-   # MODEL_NAME = "all-MiniLM-L6-v2"
-    #first load the embedding model
-    def __init__(self)->None:
+    """
+    Generates semantic embeddings using a SentenceTransformer model.
+    """
+
+    def __init__(self) -> None:
         logger.info(
             "Loading embedding model '%s'...",
-            self.MODEL_NAME,)
+            EMBEDDING_MODEL,
+        )
+
         self.model = SentenceTransformer(
-    EMBEDDING_MODEL
-)
+            EMBEDDING_MODEL
+        )
+
         logger.info(
-            "Embedding model loaded successfully.")
-    def encode(self,text:str,)->np.array:
+            "Embedding model loaded successfully."
+        )
+
+    def encode(
+        self,
+        text: str,
+    ) -> np.ndarray:
+
         if not text.strip():
             raise ValueError(
                 "Input text cannot be empty."
             )
-        embedding=self.model.encode(text,convert_to_numpy=True,normalize_embeddings=True)
-        return embedding
+
+        return self.model.encode(
+            text,
+            convert_to_numpy=True,
+            normalize_embeddings=True,
+        )
+
     def encode_batch(
         self,
         texts: list[str],
     ) -> np.ndarray:
+
         if not texts:
             raise ValueError(
                 "Text list cannot be empty."
             )
-        embeddings = self.model.encode(
+
+        return self.model.encode(
             texts,
             convert_to_numpy=True,
             normalize_embeddings=True,
         )
-        return embeddings
-          

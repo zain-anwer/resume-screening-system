@@ -11,6 +11,7 @@ from backend.src.services.bm25_engine import BM25Engine
 from backend.src.services.ranking_service import RankingService
 from backend.models.ranked_candidate import RankedCandidate
 
+
 logger=logging.getLogger(__name__)
 class RetrievalService:
     def __init__(self)->None:

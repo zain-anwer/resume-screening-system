@@ -1,125 +1,112 @@
-from backend.src.adapters.candidate_adapter import CandidateAdapter
-from backend.src.adapters.jd_adapter import JobDescriptionAdapter
-from backend.src.preprocessing.document_builder import DocumentBuilder
-from backend.src.services.bm25_engine import BM25Engine
-from backend.src.services.ranking_service import RankingService
-
 import json
 from pathlib import Path
 
-# ----------------------------
+from backend.src.adapters.jd_adapter import JobDescriptionAdapter
+from backend.src.services.retrieval_service import RetrievalService
+
+# -----------------------------
+# Build Retrieval Index
+# -----------------------------
+
+service = RetrievalService()
+
+service.build_index(
+    "backend/data/candidates"
+)
+
+# -----------------------------
 # Load Job Description
-# ----------------------------
+# -----------------------------
 
 job = JobDescriptionAdapter.adapt(
     job_id="jd_001",
     file_path="backend/data/job_descriptions/ai_engineer.txt",
 )
 
-# ----------------------------
-# Load Candidates
-# ----------------------------
+# -----------------------------
+# Retrieve Ranked Candidates
+# -----------------------------
 
-candidates = []
-
-candidate_dir = Path("backend/data/candidates")
-
-for file in sorted(candidate_dir.glob("*.json")):
-
-    with open(file, encoding="utf-8") as f:
-        raw = json.load(f)
-
-    candidates.append(
-        CandidateAdapter.adapt(raw)
-    )
-
-# ----------------------------
-# Build Candidate Documents
-# ----------------------------
-
-candidate_documents = [
-    DocumentBuilder.build_candidate(c)
-    for c in candidates
-]
-
-candidate_ids = [
-    c.id
-    for c in candidates
-]
-
-# ----------------------------
-# BM25
-# ----------------------------
-
-engine = BM25Engine()
-
-engine.fit(
-    candidate_ids,
-    candidate_documents,
-)
-
-job_document = DocumentBuilder.build_job(job)
-
-bm25_results = engine.search(
-    job_document,
+results = service.retrieve(
+    job,
     top_k=5,
 )
 
-# Convert ids back to Candidate objects
-candidate_lookup = {
-    c.id: c
-    for c in candidates
-}
+# -----------------------------
+# Print Results
+# -----------------------------
 
-retrieved = [
-    (
-        candidate_lookup[candidate_id],
-        score,
+print("=" * 70)
+print("TOP RANKED CANDIDATES")
+print("=" * 70)
+
+for candidate in results:
+
+    print(f"\nRank: {candidate.rank}")
+    print(f"Candidate ID: {candidate.candidate.id}")
+    print(f"Name: {candidate.candidate.personal_info.name}")
+
+    print(
+        f"Current Role: "
+        f"{candidate.candidate.experience[0].title}"
     )
-    for candidate_id, score in bm25_results
-]
 
-# ----------------------------
-# Hybrid Ranking
-# ----------------------------
+    print(
+        f"Experience: "
+        f"{candidate.candidate.total_experience_years} years"
+    )
 
-ranking = RankingService()
-
-results = ranking.rank(
-    job,
-    retrieved,
-)
-
-print("=" * 60)
-print("Final Hybrid Ranking")
-print("=" * 60)
-
-for result in results:
+    print(
+        f"Skills: "
+        f"{', '.join(candidate.candidate.skills)}"
+    )
 
     print()
 
-    print(result.rank)
-    print(result.candidate.id)
-    print(result.candidate.experience[0].title)
-
     print(
-        "Lexical:",
-        round(result.lexical_score, 3),
+        f"Lexical Score : "
+        f"{candidate.lexical_score:.3f}"
     )
 
     print(
-        "Semantic:",
-        round(result.semantic_score, 3),
+        f"Semantic Score: "
+        f"{candidate.semantic_score:.3f}"
     )
 
     print(
-        "Final:",
-        round(result.final_score, 3),
+        f"Final Score   : "
+        f"{candidate.final_score:.3f}"
     )
+
+    print()
 
     print(
-        "Matched Skills:",
-        result.matched_skills,
+        "Matched Skills:"
     )
 
-    print("-" * 40)
+    if candidate.matched_skills:
+        for skill in candidate.matched_skills:
+            print(f"  ✓ {skill}")
+    else:
+        print("  None")
+
+    print()
+
+    print(
+        "Missing Skills:"
+    )
+
+    if candidate.missing_skills:
+        for skill in candidate.missing_skills:
+            print(f"  ✗ {skill}")
+    else:
+        print("  None")
+
+    print("\nResume Preview:")
+
+    print(
+        candidate.candidate.resume_text[:150]
+        + "..."
+    )
+
+    print("-" * 70)
