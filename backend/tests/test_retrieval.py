@@ -1,44 +1,33 @@
-from backend.src.preprocessing.tokenizer import Tokenizer
+from backend.src.adapters.jd_adapter import JobDescriptionAdapter
+from backend.src.services.retrieval_service import RetrievalService
 
 
-def main():
-    sample = """
-    Senior Python Backend Engineer with 8 years of experience.
+service = RetrievalService()
 
-    Skills:
-    Python, FastAPI, Docker, PostgreSQL,
-    Redis, AWS, REST APIs.
-    """
+service.build_index(
+    "backend/data/candidates"
+)
 
-    print("=" * 50)
-    print("Without Stopword Removal")
-    print("=" * 50)
+job = JobDescriptionAdapter.adapt(
+    "jd_001",
+    "backend/data/job_descriptions/ai_engineer.txt",
+)
 
-    tokens = Tokenizer.tokenize(sample)
+results = service.retrieve(
+    job,
+    top_k=5,
+)
 
-    print(tokens)
+print("=" * 60)
+print("Top Candidates")
+print("=" * 60)
 
-    print("\n" + "=" * 50)
-    print("With Stopword Removal")
-    print("=" * 50)
+for candidate in results:
 
-    filtered = Tokenizer.tokenize(
-        sample,
-        remove_stopwords=True,
-    )
+    print(candidate.id)
 
-    print(filtered)
+    print(candidate.experience[0].title)
 
-    # Assertions
-    assert "python" in tokens
-    assert "fastapi" in tokens
-    assert "postgresql" in tokens
+    print(candidate.skills)
 
-    assert "with" not in filtered
-    assert "the" not in filtered
-
-    print("\n✅ Tokenizer test passed.")
-
-
-if __name__ == "__main__":
-    main()
+    print("-" * 40)
