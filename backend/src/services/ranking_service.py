@@ -6,8 +6,10 @@ from backend.src.preprocessing.document_builder import DocumentBuilder
 from backend.src.services.embedding_service import EmbeddingService
 from backend.src.services.similarity_service import SimilarityService
 class RankingService:
-    LEXICAL_WEIGHT=0.40
-    SEMANTIC_WEIGHT=0.60
+    from backend.configs.config import (
+    LEXICAL_WEIGHT,
+    SEMANTIC_WEIGHT,
+)
     def __init__(self):
         self.embedding_service=EmbeddingService()
     def rank(self,job:JobDescription,bm25_results: list[tuple[Candidate, float]])->list[RankedCandidate]:

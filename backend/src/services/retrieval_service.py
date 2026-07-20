@@ -8,11 +8,14 @@ from backend.models.job_description import JobDescription
 from backend.src.adapters.candidate_adapter import CandidateAdapter
 from backend.src.preprocessing.document_builder import DocumentBuilder
 from backend.src.services.bm25_engine import BM25Engine
+from backend.src.services.ranking_service import RankingService
+from backend.models.ranked_candidate import RankedCandidate
 
 logger=logging.getLogger(__name__)
 class RetrievalService:
     def __init__(self)->None:
-        self.engine=BM25Engine()
+        self.engine = BM25Engine()
+        self.ranking_service = RankingService()
         self.candidates: dict[str, Candidate] = {}
     def build_index(self,candidate_folder: str| Path)->None:
         candidate_folder=Path(candidate_folder)
@@ -38,15 +41,22 @@ class RetrievalService:
         self,
         job: JobDescription,
         top_k: int = 10,
-    ) -> list[Candidate]:
+    ) ->  list[RankedCandidate]:
         job_document = DocumentBuilder.build_job(job)
         results = self.engine.search(
             job_document,
             top_k,
         )
-        retrieved_candidates = []
-        for candidate_id, _score in results:
-            retrieved_candidates.append(
-                self.candidates[candidate_id]
-            )
-        return retrieved_candidates
+        retrieved = []
+        for candidate_id, score in results:
+           retrieved.append(
+        (
+            self.candidates[candidate_id],
+            score,
+        )
+    )
+
+        return self.ranking_service.rank(
+    job,
+    retrieved,
+)
