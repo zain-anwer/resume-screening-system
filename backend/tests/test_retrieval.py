@@ -1,33 +1,24 @@
-from backend.src.adapters.jd_adapter import JobDescriptionAdapter
-from backend.src.services.retrieval_service import RetrievalService
+from backend.src.services.embedding_service import EmbeddingService
 
+service = EmbeddingService()
 
-service = RetrievalService()
+text = """
+AI Engineer with experience in Python,
+PyTorch, Transformers and Machine Learning.
+"""
 
-service.build_index(
-    "backend/data/candidates"
-)
-
-job = JobDescriptionAdapter.adapt(
-    "jd_001",
-    "backend/data/job_descriptions/ai_engineer.txt",
-)
-
-results = service.retrieve(
-    job,
-    top_k=5,
-)
+embedding = service.encode(text)
 
 print("=" * 60)
-print("Top Candidates")
+print("Embedding")
 print("=" * 60)
 
-for candidate in results:
+print(type(embedding))
+print()
 
-    print(candidate.id)
+print("Shape:", embedding.shape)
+print()
 
-    print(candidate.experience[0].title)
+print("First 10 values:")
 
-    print(candidate.skills)
-
-    print("-" * 40)
+print(embedding[:10])
