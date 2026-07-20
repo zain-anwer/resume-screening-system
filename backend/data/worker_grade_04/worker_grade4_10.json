@@ -1,0 +1,199 @@
+{
+  "id": "worker_grade4_10",
+  "personal_info": {
+    "full_name": "Abdullah Faheem",
+    "father_name": "",
+    "gender": "",
+    "marital_status": "Single",
+    "date_of_birth": "1995-05-05",
+    "age": 31,
+    "nationality": "Pakistani",
+    "cnic": "10851-3678638-7",
+    "contact": {
+      "emails": [
+        "abdullahfaheem998@gmail.com"
+      ],
+      "phones": [
+        "+923482977412"
+      ],
+      "landlines": []
+    },
+    "address": {
+      "full_address": "Flat No C-30, Faraz Avenue, Gulistan-e-Johar, Block-20, Karachi",
+      "city": "Karachi",
+      "province": "Sindh",
+      "country": "Pakistan"
+    }
+  },
+  "education": [
+    {
+      "degree_name": "Bachelor of Science (BSc), Mechanical Engineering Technology",
+      "degree_level": "Bachelors",
+      "field": "Mechanical Engineering Technology",
+      "specialization": "",
+      "institution": "Hamdard University",
+      "campus": "",
+      "start_year": null,
+      "graduation_year": 2024,
+      "cgpa": null,
+      "max_cgpa": null,
+      "percentage": null,
+      "is_current": false
+    },
+    {
+      "degree_name": "DAE, Dies & Mold (Mechanical)",
+      "degree_level": "Diploma",
+      "field": "Dies & Mold",
+      "specialization": "Mechanical",
+      "institution": "Karachi Tools Dies and Mold Center (K.T.D.M.C)",
+      "campus": "",
+      "start_year": null,
+      "graduation_year": 2019,
+      "cgpa": null,
+      "max_cgpa": null,
+      "percentage": null,
+      "is_current": false
+    },
+    {
+      "degree_name": "Matriculation",
+      "degree_level": "Matriculation",
+      "field": "Science",
+      "specialization": "",
+      "institution": "Karachi Board",
+      "campus": "",
+      "start_year": null,
+      "graduation_year": 2015,
+      "cgpa": null,
+      "max_cgpa": null,
+      "percentage": null,
+      "is_current": false
+    }
+  ],
+  "experience": [
+    {
+      "title": "Process Operator",
+      "organization": "Aisha Steel Mills Ltd",
+      "industry": "Manufacturing/Steel",
+      "employment_type": "Full-time",
+      "location": "Karachi",
+      "start_date": "2019-07-01",
+      "end_date": "",
+      "is_current": true,
+      "description": "Continuous Galvanizing Line (CGL)",
+      "responsibilities": [
+        "Responsible for all documentation of production, maintenance, development & other activities",
+        "Operated and maintained furnace and zinc pot and their equipment",
+        "Proficiently operated and managed the tension leveler, ensuring precise stretching, bending, and straightening processes",
+        "Responsible for operating degreasing section",
+        "Daily production report and SAP entries"
+      ],
+      "technologies": [
+        "SAP"
+      ],
+      "achievements": [],
+      "duration_months": 84
+    }
+  ],
+  "projects": [],
+  "skills": {
+    "technical": [
+      "Process Control",
+      "Production Documentation",
+      "SAP Entries"
+    ],
+    "soft": [
+      "Teamwork",
+      "Strong decision maker"
+    ],
+    "tools": [
+      "Microsoft Office",
+      "Creo Parametric"
+    ],
+    "databases": [],
+    "frameworks": [],
+    "cloud": [],
+    "operating_systems": [],
+    "languages": []
+  },
+  "certifications": [],
+  "achievements": [],
+  "publications": [],
+  "languages": [
+    {
+      "language": "Urdu",
+      "proficiency": ""
+    },
+    {
+      "language": "English",
+      "proficiency": ""
+    }
+  ],
+  "urls": {
+    "linkedin": "https://www.linkedin.com/in/abdullah-faheem-73525b1b2",
+    "github": "",
+    "portfolio": [],
+    "website": "",
+    "other": []
+  },
+  "summary": "Motivated and detail-oriented professional with experience in process-controlling operations, SAP, and data management, seeking to leverage skills and technical knowledge in a dynamic organization.",
+  "experience_summary": {
+    "total_experience_years": 7.0,
+    "management_experience_years": 0,
+    "relevant_experience_years": 7.0
+  },
+  "eligibility_features": {
+    "highest_degree": "Bachelor of Science (BSc), Mechanical Engineering Technology",
+    "highest_degree_level": "Bachelors",
+    "age": 31,
+    "currently_employed": true,
+    "current_designation": "Process Operator",
+    "current_company": "Aisha Steel Mills Ltd",
+    "has_management_experience": false,
+    "has_python": false,
+    "has_sql": false,
+    "has_sap": true,
+    "has_oracle": false,
+    "has_driving_license": false,
+    "has_security_clearance": false
+  },
+  "references": [],
+  "interests": [
+    "Reading",
+    "Playing Cricket",
+    "Designing"
+  ],
+  "verification": {
+    "resume_name": "Abdullah Faheem",
+    "cnic_name": "Abdullah Faheem",
+    "resume_dob": "",
+    "cnic_dob": "1995-05-05",
+    "resume_cnic": "10851-3678638-7",
+    "cnic_number": "10851-3678638-7",
+    "name_match": true,
+    "dob_match": false,
+    "cnic_match": true
+  },
+  "flags": {
+    "missing_fields": [
+      "date_of_birth",
+      "gender",
+      "references"
+    ],
+    "low_confidence_fields": [],
+    "manual_review_required": false,
+    "resume_blurred": false,
+    "cnic_blurred": false
+  },
+  "metadata": {
+    "candidate_id": "worker_grade4_10",
+    "job_category": "Worker_Grade_04",
+    "source_resume": "resume_text",
+    "source_cnic": "cnic_extraction",
+    "document_type": "resume+cnic",
+    "parser_version": "1.0",
+    "created_at": "2026-07-20",
+    "updated_at": "2026-07-20",
+    "parsing_status": "success",
+    "confidence_score": 0.9
+  }
+}
