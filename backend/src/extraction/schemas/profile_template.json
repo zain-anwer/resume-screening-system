@@ -117,6 +117,7 @@
   "flags": {
     "missing_fields": [],
     "low_confidence_fields": [],
+    "mismatched_fields": [],
     "ner_review_needed": false
   },
 

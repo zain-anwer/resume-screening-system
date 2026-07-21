@@ -2,6 +2,7 @@
 from layout_reconstruction import reconstruct_resume_layout
 from section_segregation import segregate_text
 from text_normalization import normalize_ocr_text
+from personal_info_reconciliation import reconcile_personal_info
 
 # parser imports
 from parsers.certifications_parser import parse_certifications_section
@@ -26,8 +27,13 @@ outputs = []
 
 for input in inputs:
     output = {}
+    input['resume_text'] = normalize_ocr_text(input['resume_text'])
     segregated_text = segregate_text(input['resume_text'])
     output['personal_info'], output['urls'] = parse_header_section(segregated_text['header'])
+
+    # reconciliation layer on header section only
+    output['personal_info'], output['flags'] = reconcile_personal_info(output['personal_info'],input)
+
     output['eductaion'] = parse_education_section(segregated_text['education'])
     output['experience'] = parse_experience_section(segregated_text['experience'])
     output['skills'] = parse_skills_section(segregated_text['skills'])

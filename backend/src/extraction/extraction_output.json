@@ -1,7 +1,7 @@
 [
     {
         "personal_info": {
-            "name": "Ahmed Siddiqui",
+            "name": "Bilal Ahmed Siddiqui",
             "gender": "Male",
             "marital_status": null,
             "father_name": "Sikandar Ahmed Siddiqui",
@@ -16,6 +16,15 @@
             "nationality": "Pakistani"
         },
         "urls": null,
+        "flags": {
+            "missing_fields": [
+                "marital_status",
+                "landline"
+            ],
+            "low_confidence_fields": [],
+            "mismatched_fields": [],
+            "ner_review_needed": false
+        },
         "eductaion": [
             {
                 "degree": "MS Computer Science",
@@ -133,15 +142,27 @@
                 "+92-332-2159620"
             ],
             "landline": [],
-            "cnic": null,
+            "cnic": "Waleed Aftab",
             "location": "Karachi",
-            "date_of_birth": null,
+            "date_of_birth": "1991-12-21",
             "nationality": null
         },
         "urls": {
             "github": null,
             "linkedin": "https://www.linkedin.com/in/waleed-aftab-756a45a4",
             "portfolio": []
+        },
+        "flags": {
+            "missing_fields": [
+                "gender",
+                "marital_status",
+                "father_name",
+                "landline",
+                "nationality"
+            ],
+            "low_confidence_fields": [],
+            "mismatched_fields": [],
+            "ner_review_needed": false
         },
         "eductaion": [],
         "experience": [],
@@ -159,16 +180,6 @@
             "2004"
         ],
         "projects": [
-            {
-                "name": "\u2022 Adaptability",
-                "role": null,
-                "start_date": null,
-                "end_date": null,
-                "technologies": [],
-                "github": null,
-                "demo": null,
-                "description": null
-            },
             {
                 "name": "Oracle 11g Developer Track",
                 "role": null,
@@ -222,12 +233,27 @@
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": null,
+            "cnic": "Sana Fatima Qureshi",
             "location": null,
-            "date_of_birth": null,
+            "date_of_birth": "1994-12-26",
             "nationality": null
         },
         "urls": null,
+        "flags": {
+            "missing_fields": [
+                "gender",
+                "marital_status",
+                "father_name",
+                "email",
+                "phone",
+                "landline",
+                "location",
+                "nationality"
+            ],
+            "low_confidence_fields": [],
+            "mismatched_fields": [],
+            "ner_review_needed": false
+        },
         "eductaion": [
             {
                 "degree": "MS Software Engineering",
@@ -335,19 +361,34 @@
     },
     {
         "personal_info": {
-            "name": null,
+            "name": "Faisal Mahmood Khan",
             "gender": null,
             "marital_status": null,
             "father_name": null,
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": null,
+            "cnic": "Faisal Mahmood Khan",
             "location": null,
-            "date_of_birth": null,
+            "date_of_birth": "1987-12-26",
             "nationality": null
         },
         "urls": null,
+        "flags": {
+            "missing_fields": [
+                "gender",
+                "marital_status",
+                "father_name",
+                "email",
+                "phone",
+                "landline",
+                "location",
+                "nationality"
+            ],
+            "low_confidence_fields": [],
+            "mismatched_fields": [],
+            "ner_review_needed": false
+        },
         "eductaion": [],
         "experience": [],
         "skills": [],
@@ -357,19 +398,34 @@
     },
     {
         "personal_info": {
-            "name": null,
+            "name": "Ayesha Noor Baig",
             "gender": null,
             "marital_status": null,
             "father_name": null,
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": null,
+            "cnic": "Ayesha Noor Baig",
             "location": null,
-            "date_of_birth": null,
+            "date_of_birth": "1996-12-26",
             "nationality": null
         },
         "urls": null,
+        "flags": {
+            "missing_fields": [
+                "gender",
+                "marital_status",
+                "father_name",
+                "email",
+                "phone",
+                "landline",
+                "location",
+                "nationality"
+            ],
+            "low_confidence_fields": [],
+            "mismatched_fields": [],
+            "ner_review_needed": false
+        },
         "eductaion": [],
         "experience": [],
         "skills": [],
@@ -379,19 +435,34 @@
     },
     {
         "personal_info": {
-            "name": null,
+            "name": "Wagqas Iqbal Chaudhry",
             "gender": null,
             "marital_status": null,
             "father_name": null,
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": null,
+            "cnic": "Wagqas Iqbal Chaudhry",
             "location": null,
-            "date_of_birth": null,
+            "date_of_birth": "1993-12-26",
             "nationality": null
         },
         "urls": null,
+        "flags": {
+            "missing_fields": [
+                "gender",
+                "marital_status",
+                "father_name",
+                "email",
+                "phone",
+                "landline",
+                "location",
+                "nationality"
+            ],
+            "low_confidence_fields": [],
+            "mismatched_fields": [],
+            "ner_review_needed": false
+        },
         "eductaion": [],
         "experience": [],
         "skills": [],
@@ -414,6 +485,17 @@
             "nationality": "Pakistani"
         },
         "urls": null,
+        "flags": {
+            "missing_fields": [
+                "marital_status",
+                "email",
+                "phone",
+                "landline"
+            ],
+            "low_confidence_fields": [],
+            "mismatched_fields": [],
+            "ner_review_needed": false
+        },
         "eductaion": [
             {
                 "degree": "MS Computer Science",
@@ -524,12 +606,31 @@
                 "+92 333 4707817"
             ],
             "landline": [],
-            "cnic": null,
+            "cnic": "Atthar Hassan",
             "location": null,
-            "date_of_birth": null,
+            "date_of_birth": "1991-04-17",
             "nationality": null
         },
-        "urls": null,
+        "urls": {
+            "github": null,
+            "linkedin": null,
+            "portfolio": [
+                "https://4.0"
+            ]
+        },
+        "flags": {
+            "missing_fields": [
+                "gender",
+                "marital_status",
+                "father_name",
+                "landline",
+                "location",
+                "nationality"
+            ],
+            "low_confidence_fields": [],
+            "mismatched_fields": [],
+            "ner_review_needed": false
+        },
         "eductaion": [
             {
                 "degree": "BS (Hons.) Computer Science",
@@ -556,19 +657,12 @@
             }
         ],
         "skills": [
-            "\u25e6 INFORMATION SECURITY (IS) AUDIT",
-            "\u25e6 IS GOVERNANCE",
-            "RISK AND COMPLIANCE (GRC)",
-            "\u25e6 ISO - 27001:2022 (ISMS)",
-            "\u25e6 PCI-DSS VERSION 4.0",
-            "\u25e6 IS RISK ASSESSMENT",
-            "\u25e6 REGULATORY COMPLIANCE",
-            "\u25e6 TEAMWORK"
+            "TEAMWORK"
         ],
         "projects": [],
         "certifications": [
             {
-                "name": "\u25e6 CISA - ISACA",
+                "name": "CISA - ISACA",
                 "issuer": null,
                 "issue_date": null,
                 "expiry_date": null,
@@ -576,7 +670,7 @@
                 "credential_url": null
             },
             {
-                "name": "\u25e6 CERTIFIED IN CYBERSECURITY - (ISC)2",
+                "name": "CERTIFIED IN CYBERSECURITY - (ISC)2",
                 "issuer": null,
                 "issue_date": null,
                 "expiry_date": null,
@@ -584,7 +678,7 @@
                 "credential_url": null
             },
             {
-                "name": "\u25e6 CYBER RISK SUPERVISION - IMF",
+                "name": "CYBER RISK SUPERVISION - IMF",
                 "issuer": null,
                 "issue_date": null,
                 "expiry_date": null,
@@ -596,7 +690,7 @@
     },
     {
         "personal_info": {
-            "name": "Muzafar Ali Senior",
+            "name": "Muzafar Ali",
             "gender": null,
             "marital_status": null,
             "father_name": null,
@@ -606,9 +700,9 @@
                 "0335-3812224"
             ],
             "landline": [],
-            "cnic": null,
+            "cnic": "Muzafar Ali",
             "location": "Sindh",
-            "date_of_birth": null,
+            "date_of_birth": "1993-04-08",
             "nationality": null
         },
         "urls": {
@@ -629,6 +723,22 @@
                 "http://www.jsbl.com",
                 "http://www.theeaglesacademy.com"
             ]
+        },
+        "flags": {
+            "missing_fields": [
+                "gender",
+                "marital_status",
+                "father_name",
+                "landline",
+                "nationality"
+            ],
+            "low_confidence_fields": [
+                "name"
+            ],
+            "mismatched_fields": [
+                "name"
+            ],
+            "ner_review_needed": true
         },
         "eductaion": [],
         "experience": [],
@@ -652,7 +762,7 @@
                 ],
                 "github": null,
                 "demo": null,
-                "description": "\u2022 Expertise in developing WordPress websites from PSD to HTML and WordPress CMS. \u2022 Proficient in PHP, HTML, CSS, and JavaScript for customizing WordPress themes and plugins. \u2022 Familiar with WordPress best practices, including security, performance optimization, and SEO. \u2022 Experience in managing and updating WordPress sites, including content management and troubleshooting. \u2022 Certified in Google Project Management, demonstrating proficiency in leading and managing projects using Google's project management tools and methodologies. \u2022 Skilled in overseeing cross-functional teams, ensuring project success through effective planning, execution, and monitoring. \u2022 Experienced in utilizing Google Workspace (formerly G Suite) tools such as Google Drive, Google Docs, Google Sheets, and Google Calendar for collaboration and project tracking. \u2022 Proficient in implementing Agile and other project management frameworks to deliver projects on time and within budget."
+                "description": "Expertise in developing WordPress websites from PSD to HTML and WordPress CMS. Proficient in PHP, HTML, CSS, and JavaScript for customizing WordPress themes and plugins. Familiar with WordPress best practices, including security, performance optimization, and SEO. Experience in managing and updating WordPress sites, including content management and troubleshooting. Certified in Google Project Management, demonstrating proficiency in leading and managing projects using Google's project management tools and methodologies. Skilled in overseeing cross-functional teams, ensuring project success through effective planning, execution, and monitoring. Experienced in utilizing Google Workspace (formerly G Suite) tools such as Google Drive, Google Docs, Google Sheets, and Google Calendar for collaboration and project tracking. Proficient in implementing Agile and other project management frameworks to deliver projects on time and within budget."
             },
             {
                 "name": "KEY SKILLS",
@@ -733,6 +843,18 @@
             "nationality": "Pakistani"
         },
         "urls": null,
+        "flags": {
+            "missing_fields": [
+                "marital_status",
+                "email",
+                "phone",
+                "landline",
+                "location"
+            ],
+            "low_confidence_fields": [],
+            "mismatched_fields": [],
+            "ner_review_needed": false
+        },
         "eductaion": [
             {
                 "degree": "DAE Mechanical",
@@ -785,12 +907,27 @@
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": null,
+            "cnic": "Zeeshan Karim Solangi",
             "location": null,
-            "date_of_birth": null,
+            "date_of_birth": "1997-12-26",
             "nationality": null
         },
         "urls": null,
+        "flags": {
+            "missing_fields": [
+                "gender",
+                "marital_status",
+                "father_name",
+                "email",
+                "phone",
+                "landline",
+                "location",
+                "nationality"
+            ],
+            "low_confidence_fields": [],
+            "mismatched_fields": [],
+            "ner_review_needed": false
+        },
         "eductaion": [
             {
                 "degree": "DAE Electrical",
@@ -828,19 +965,34 @@
     },
     {
         "personal_info": {
-            "name": null,
+            "name": "Din Muhammad Bugti",
             "gender": null,
             "marital_status": null,
             "father_name": null,
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": null,
+            "cnic": "Din Muhammad Bugti",
             "location": null,
-            "date_of_birth": null,
+            "date_of_birth": "1994-12-26",
             "nationality": null
         },
         "urls": null,
+        "flags": {
+            "missing_fields": [
+                "gender",
+                "marital_status",
+                "father_name",
+                "email",
+                "phone",
+                "landline",
+                "location",
+                "nationality"
+            ],
+            "low_confidence_fields": [],
+            "mismatched_fields": [],
+            "ner_review_needed": false
+        },
         "eductaion": [],
         "experience": [],
         "skills": [],
@@ -850,19 +1002,34 @@
     },
     {
         "personal_info": {
-            "name": null,
+            "name": "Rafiq Ahmed Chandio",
             "gender": null,
             "marital_status": null,
             "father_name": null,
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": null,
+            "cnic": "Rafiq Ahmed Chandio",
             "location": null,
-            "date_of_birth": null,
+            "date_of_birth": "1986-12-26",
             "nationality": null
         },
         "urls": null,
+        "flags": {
+            "missing_fields": [
+                "gender",
+                "marital_status",
+                "father_name",
+                "email",
+                "phone",
+                "landline",
+                "location",
+                "nationality"
+            ],
+            "low_confidence_fields": [],
+            "mismatched_fields": [],
+            "ner_review_needed": false
+        },
         "eductaion": [],
         "experience": [],
         "skills": [],
@@ -872,19 +1039,34 @@
     },
     {
         "personal_info": {
-            "name": null,
+            "name": "Shahbaz Ali Gondal",
             "gender": null,
             "marital_status": null,
             "father_name": null,
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": null,
+            "cnic": "Shahbaz Ali Gondal",
             "location": null,
-            "date_of_birth": null,
+            "date_of_birth": "1991-12-26",
             "nationality": null
         },
         "urls": null,
+        "flags": {
+            "missing_fields": [
+                "gender",
+                "marital_status",
+                "father_name",
+                "email",
+                "phone",
+                "landline",
+                "location",
+                "nationality"
+            ],
+            "low_confidence_fields": [],
+            "mismatched_fields": [],
+            "ner_review_needed": false
+        },
         "eductaion": [],
         "experience": [],
         "skills": [],
@@ -894,7 +1076,7 @@
     },
     {
         "personal_info": {
-            "name": "Yousuf Larik",
+            "name": "Imran Yousuf Larik",
             "gender": "Male",
             "marital_status": null,
             "father_name": "Yousuf Ali Larik",
@@ -907,6 +1089,17 @@
             "nationality": "Pakistani"
         },
         "urls": null,
+        "flags": {
+            "missing_fields": [
+                "marital_status",
+                "email",
+                "phone",
+                "landline"
+            ],
+            "low_confidence_fields": [],
+            "mismatched_fields": [],
+            "ner_review_needed": false
+        },
         "eductaion": [
             {
                 "degree": "DAE Electronics",
@@ -936,19 +1129,34 @@
     },
     {
         "personal_info": {
-            "name": null,
+            "name": "Ghulam Mustafa Rind",
             "gender": null,
             "marital_status": null,
             "father_name": null,
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": null,
+            "cnic": "Ghulam Mustafa Rind",
             "location": null,
-            "date_of_birth": null,
+            "date_of_birth": "1997-12-26",
             "nationality": null
         },
         "urls": null,
+        "flags": {
+            "missing_fields": [
+                "gender",
+                "marital_status",
+                "father_name",
+                "email",
+                "phone",
+                "landline",
+                "location",
+                "nationality"
+            ],
+            "low_confidence_fields": [],
+            "mismatched_fields": [],
+            "ner_review_needed": false
+        },
         "eductaion": [],
         "experience": [],
         "skills": [],
@@ -958,19 +1166,34 @@
     },
     {
         "personal_info": {
-            "name": null,
+            "name": "Naveed Anwar Bhatti",
             "gender": null,
             "marital_status": null,
             "father_name": null,
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": null,
+            "cnic": "Naveed Anwar Bhatti",
             "location": null,
-            "date_of_birth": null,
+            "date_of_birth": "1998-12-26",
             "nationality": null
         },
         "urls": null,
+        "flags": {
+            "missing_fields": [
+                "gender",
+                "marital_status",
+                "father_name",
+                "email",
+                "phone",
+                "landline",
+                "location",
+                "nationality"
+            ],
+            "low_confidence_fields": [],
+            "mismatched_fields": [],
+            "ner_review_needed": false
+        },
         "eductaion": [],
         "experience": [],
         "skills": [],
@@ -989,9 +1212,9 @@
                 "03152929764"
             ],
             "landline": [],
-            "cnic": null,
+            "cnic": "Muhammad Rizwan",
             "location": "Korangi Creek",
-            "date_of_birth": null,
+            "date_of_birth": "1999-10-09",
             "nationality": null
         },
         "urls": {
@@ -1000,6 +1223,18 @@
             "portfolio": [
                 "https://www.linkedln.com/in/muhammadrizwan"
             ]
+        },
+        "flags": {
+            "missing_fields": [
+                "gender",
+                "marital_status",
+                "father_name",
+                "landline",
+                "nationality"
+            ],
+            "low_confidence_fields": [],
+            "mismatched_fields": [],
+            "ner_review_needed": false
         },
         "eductaion": [
             {
@@ -1030,20 +1265,20 @@
                 "organization": "UNIVERSAL FILMS",
                 "start_date": "NOV 2018",
                 "end_date": "JAN 2019",
-                "description": "\u00b7 Created and maintained detailed production reports to track performance and efficiency. \u00b7 Optimized production processes for flexo printing, improving efficiency and reducing waste. \u00b7 Conducted process analysis and troubleshooting to identify and resolve production bottlenecks. \u00b7 Developed and maintained production schedules, ensuring timely and cost-effective delivery of print jobs. \u00b7 Managed the setup and calibration of flexo presses, ensuring optimal performance and minimal downtime. \u00b7 Collaborated with cross-functional teams (R&D, quality control, and maintenance) to streamline workflows and improve overall production quality. \u00b7 Utilized data analysis to monitor key performance indicators (KPIs) and drive continuous improvement initiatives. \u00b7 Trained production teams on process optimization techniques, safety standards, and best practices. \u00b7 Ensured compliance with company quality policies. \u00b7 Led root cause analysis for quality issues, implementing corrective actions that improved product consistency and customer satisfaction. \u00b7 Managed process documentation and reporting, tracking performance metrics, and supporting audits PROCESS ENGINEER SLITTING PACKING & DISPATCH KOMPASS PAKISTAN \u00b7 Lead a team of 75 team leaders\u2019 officers, staff, supervisors, operators, and technicians in the slitting Packing & Dispatch department. \u00b7 Coordinate production schedules to ensure timely product delivery while maintaining quality standards. \u00b7 Execute production activities efficiently to achieve consistent high-quality products and minimize customer complaints. \u00b7 Collaborate with engineering, procurement, and quality control teams to optimize production processes and address challenges. Page 2 \u00b7 Provide leadership to enhance production efficiency, improve machine utilization, and boost team morale. \u00b7 Conduct monthly stock audits and review daily stock movement reports to ensure accurate inventory management. \u00b7 Analyze processes and compile de-bottlenecking studies to optimize production efficiency. \u00b7 Design and validate process parameters for new products, calculate break-even points and recipes. \u00b7 Monitor process parameters continuously to maintain optimal production and quality. \u00b7 Implement the production plan, update bills of materials (BOM), and align activities to achieve management targets. \u00b7 Investigate technical problems, identify root causes, and propose solutions to ensure safe operations in the slitting department. ENUMERATOR SINDH EDUCATION FOUNDATION \u00b7 Interacted sensitively, effectively & professionally with individuals of educational background. \u00b7 Proper validation & verifications of schools enrolled in SEF. \u00b7 Strictly adhered to confidentially dictionaries to safeguard information. \u00b7 Validation of schools, teachers & students. INTERNSHIP GENERAL TYRES & RUBBERS \u00b7 Understand basic workflow ethics & environment of company. \u00b7 Learn their production cycles & working methods and Calculate efficiency & daily outputs of machines. \u00b7 Observe their strategies & regulations regarding productions."
+                "description": "Created and maintained detailed production reports to track performance and efficiency. Optimized production processes for flexo printing, improving efficiency and reducing waste. Conducted process analysis and troubleshooting to identify and resolve production bottlenecks. Developed and maintained production schedules, ensuring timely and cost-effective delivery of print jobs. Managed the setup and calibration of flexo presses, ensuring optimal performance and minimal downtime. Collaborated with cross-functional teams (R&D, quality control, and maintenance) to streamline workflows and improve overall production quality. Utilized data analysis to monitor key performance indicators (KPIs) and drive continuous improvement initiatives. Trained production teams on process optimization techniques, safety standards, and best practices. Ensured compliance with company quality policies. Led root cause analysis for quality issues, implementing corrective actions that improved product consistency and customer satisfaction. Managed process documentation and reporting, tracking performance metrics, and supporting audits PROCESS ENGINEER SLITTING PACKING & DISPATCH KOMPASS PAKISTAN Lead a team of 75 team leaders\u2019 officers, staff, supervisors, operators, and technicians in the slitting Packing & Dispatch department. Coordinate production schedules to ensure timely product delivery while maintaining quality standards. Execute production activities efficiently to achieve consistent high-quality products and minimize customer complaints. Collaborate with engineering, procurement, and quality control teams to optimize production processes and address challenges. Provide leadership to enhance production efficiency, improve machine utilization, and boost team morale. Conduct monthly stock audits and review daily stock movement reports to ensure accurate inventory management. Analyze processes and compile de-bottlenecking studies to optimize production efficiency. Design and validate process parameters for new products, calculate break-even points and recipes. Monitor process parameters continuously to maintain optimal production and quality. Implement the production plan, update bills of materials (BOM), and align activities to achieve management targets. Investigate technical problems, identify root causes, and propose solutions to ensure safe operations in the slitting department. ENUMERATOR SINDH EDUCATION FOUNDATION Interacted sensitively, effectively & professionally with individuals of educational background. Proper validation & verifications of schools enrolled in SEF. Strictly adhered to confidentially dictionaries to safeguard information. Validation of schools, teachers & students. INTERNSHIP GENERAL TYRES & RUBBERS Understand basic workflow ethics & environment of company. Learn their production cycles & working methods and Calculate efficiency & daily outputs of machines. Observe their strategies & regulations regarding productions."
             }
         ],
         "skills": [
-            "\u00b7 Leadership skills",
-            "\u00b7 Interpersonal communication skills",
-            "\u00b7 Time management",
-            "\u00b7 Team management",
-            "\u00b7 Adaptability",
-            "\u00b7 SAP Business one Hana Literacy",
-            "\u00b7 Ms. Office",
-            "\u00b7 Negotiation",
-            "\u00b7 Team work",
-            "\u00b7 Decision making"
+            "Leadership skills",
+            "Interpersonal communication skills",
+            "Time management",
+            "Team management",
+            "Adaptability",
+            "SAP Business one Hana Literacy",
+            "Ms. Office",
+            "Negotiation",
+            "Team work",
+            "Decision making"
         ],
         "projects": [],
         "certifications": [
@@ -1078,21 +1313,13 @@
                 "expiry_date": null,
                 "credential_id": null,
                 "credential_url": null
-            },
-            {
-                "name": "Page 3",
-                "issuer": null,
-                "issue_date": null,
-                "expiry_date": null,
-                "credential_id": null,
-                "credential_url": null
             }
         ],
         "references": []
     },
     {
         "personal_info": {
-            "name": "Skill Highlights",
+            "name": "Abdullah Faheem",
             "gender": null,
             "marital_status": "Single",
             "father_name": null,
@@ -1103,13 +1330,30 @@
             "landline": [],
             "cnic": "42501-7246536-7",
             "location": "Gulistan",
-            "date_of_birth": null,
+            "date_of_birth": "1995-05-05",
             "nationality": null
         },
         "urls": {
             "github": null,
             "linkedin": "https://www.linkedin.com/in/abdullah-faheem-73525b1b2",
             "portfolio": []
+        },
+        "flags": {
+            "missing_fields": [
+                "gender",
+                "father_name",
+                "landline",
+                "nationality"
+            ],
+            "low_confidence_fields": [
+                "name",
+                "cnic"
+            ],
+            "mismatched_fields": [
+                "name",
+                "cnic"
+            ],
+            "ner_review_needed": true
         },
         "eductaion": [
             {
