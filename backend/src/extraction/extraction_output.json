@@ -133,7 +133,7 @@
     {
         "personal_info": {
             "name": "Waleed Aftab",
-            "gender": null,
+            "gender": "Male",
             "marital_status": null,
             "father_name": null,
             "email": "s.waleed.aftab@gmail.com",
@@ -142,7 +142,7 @@
                 "+92-332-2159620"
             ],
             "landline": [],
-            "cnic": "Waleed Aftab",
+            "cnic": "88907-1445199-9",
             "location": "Karachi",
             "date_of_birth": "1991-12-21",
             "nationality": null
@@ -154,7 +154,6 @@
         },
         "flags": {
             "missing_fields": [
-                "gender",
                 "marital_status",
                 "father_name",
                 "landline",
@@ -227,13 +226,13 @@
     {
         "personal_info": {
             "name": "Sana Fatima Qureshi",
-            "gender": null,
+            "gender": "Female",
             "marital_status": null,
             "father_name": null,
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": "Sana Fatima Qureshi",
+            "cnic": "42201-2345678-2",
             "location": null,
             "date_of_birth": "1994-12-26",
             "nationality": null
@@ -241,7 +240,6 @@
         "urls": null,
         "flags": {
             "missing_fields": [
-                "gender",
                 "marital_status",
                 "father_name",
                 "email",
@@ -362,13 +360,13 @@
     {
         "personal_info": {
             "name": "Faisal Mahmood Khan",
-            "gender": null,
+            "gender": "Male",
             "marital_status": null,
             "father_name": null,
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": "Faisal Mahmood Khan",
+            "cnic": "42301-3456789-3",
             "location": null,
             "date_of_birth": "1987-12-26",
             "nationality": null
@@ -376,7 +374,6 @@
         "urls": null,
         "flags": {
             "missing_fields": [
-                "gender",
                 "marital_status",
                 "father_name",
                 "email",
@@ -399,13 +396,13 @@
     {
         "personal_info": {
             "name": "Ayesha Noor Baig",
-            "gender": null,
+            "gender": "Female",
             "marital_status": null,
             "father_name": null,
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": "Ayesha Noor Baig",
+            "cnic": "42101-4567890-4",
             "location": null,
             "date_of_birth": "1996-12-26",
             "nationality": null
@@ -413,7 +410,6 @@
         "urls": null,
         "flags": {
             "missing_fields": [
-                "gender",
                 "marital_status",
                 "father_name",
                 "email",
@@ -436,13 +432,13 @@
     {
         "personal_info": {
             "name": "Wagqas Iqbal Chaudhry",
-            "gender": null,
+            "gender": "Male",
             "marital_status": null,
             "father_name": null,
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": "Wagqas Iqbal Chaudhry",
+            "cnic": "42401-5678901-5",
             "location": null,
             "date_of_birth": "1993-12-26",
             "nationality": null
@@ -450,7 +446,6 @@
         "urls": null,
         "flags": {
             "missing_fields": [
-                "gender",
                 "marital_status",
                 "father_name",
                 "email",
@@ -598,7 +593,7 @@
     {
         "personal_info": {
             "name": "Atthar Hassan",
-            "gender": null,
+            "gender": "Female",
             "marital_status": null,
             "father_name": null,
             "email": "athar.rehmani1@gmail.com",
@@ -606,7 +601,7 @@
                 "+92 333 4707817"
             ],
             "landline": [],
-            "cnic": "Atthar Hassan",
+            "cnic": "14165-1499914-2",
             "location": null,
             "date_of_birth": "1991-04-17",
             "nationality": null
@@ -620,7 +615,6 @@
         },
         "flags": {
             "missing_fields": [
-                "gender",
                 "marital_status",
                 "father_name",
                 "landline",
@@ -691,7 +685,7 @@
     {
         "personal_info": {
             "name": "Muzafar Ali",
-            "gender": null,
+            "gender": "Male",
             "marital_status": null,
             "father_name": null,
             "email": "muzafar4996@gmail.com",
@@ -700,7 +694,7 @@
                 "0335-3812224"
             ],
             "landline": [],
-            "cnic": "Muzafar Ali",
+            "cnic": "93810-2867825-1",
             "location": "Sindh",
             "date_of_birth": "1993-04-08",
             "nationality": null
@@ -726,7 +720,6 @@
         },
         "flags": {
             "missing_fields": [
-                "gender",
                 "marital_status",
                 "father_name",
                 "landline",
@@ -901,13 +894,13 @@
     {
         "personal_info": {
             "name": "Zeeshan Karim Solangi",
-            "gender": null,
+            "gender": "Female",
             "marital_status": null,
             "father_name": null,
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": "Zeeshan Karim Solangi",
+            "cnic": "41304-2223334-2",
             "location": null,
             "date_of_birth": "1997-12-26",
             "nationality": null
@@ -915,7 +908,6 @@
         "urls": null,
         "flags": {
             "missing_fields": [
-                "gender",
                 "marital_status",
                 "father_name",
                 "email",
@@ -966,13 +958,13 @@
     {
         "personal_info": {
             "name": "Din Muhammad Bugti",
-            "gender": null,
+            "gender": "Male",
             "marital_status": null,
             "father_name": null,
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": "Din Muhammad Bugti",
+            "cnic": "53101-3334445-3",
             "location": null,
             "date_of_birth": "1994-12-26",
             "nationality": null
@@ -980,7 +972,6 @@
         "urls": null,
         "flags": {
             "missing_fields": [
-                "gender",
                 "marital_status",
                 "father_name",
                 "email",
@@ -1003,13 +994,13 @@
     {
         "personal_info": {
             "name": "Rafiq Ahmed Chandio",
-            "gender": null,
+            "gender": "Female",
             "marital_status": null,
             "father_name": null,
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": "Rafiq Ahmed Chandio",
+            "cnic": "45302-4445556-4",
             "location": null,
             "date_of_birth": "1986-12-26",
             "nationality": null
@@ -1017,7 +1008,6 @@
         "urls": null,
         "flags": {
             "missing_fields": [
-                "gender",
                 "marital_status",
                 "father_name",
                 "email",
@@ -1040,13 +1030,13 @@
     {
         "personal_info": {
             "name": "Shahbaz Ali Gondal",
-            "gender": null,
+            "gender": "Male",
             "marital_status": null,
             "father_name": null,
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": "Shahbaz Ali Gondal",
+            "cnic": "34101-5556667-5",
             "location": null,
             "date_of_birth": "1991-12-26",
             "nationality": null
@@ -1054,7 +1044,6 @@
         "urls": null,
         "flags": {
             "missing_fields": [
-                "gender",
                 "marital_status",
                 "father_name",
                 "email",
@@ -1130,13 +1119,13 @@
     {
         "personal_info": {
             "name": "Ghulam Mustafa Rind",
-            "gender": null,
+            "gender": "Male",
             "marital_status": null,
             "father_name": null,
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": "Ghulam Mustafa Rind",
+            "cnic": "44301-7778889-7",
             "location": null,
             "date_of_birth": "1997-12-26",
             "nationality": null
@@ -1144,7 +1133,6 @@
         "urls": null,
         "flags": {
             "missing_fields": [
-                "gender",
                 "marital_status",
                 "father_name",
                 "email",
@@ -1167,13 +1155,13 @@
     {
         "personal_info": {
             "name": "Naveed Anwar Bhatti",
-            "gender": null,
+            "gender": "Female",
             "marital_status": null,
             "father_name": null,
             "email": null,
             "phone": [],
             "landline": [],
-            "cnic": "Naveed Anwar Bhatti",
+            "cnic": "45101-8889990-8",
             "location": null,
             "date_of_birth": "1998-12-26",
             "nationality": null
@@ -1181,7 +1169,6 @@
         "urls": null,
         "flags": {
             "missing_fields": [
-                "gender",
                 "marital_status",
                 "father_name",
                 "email",
@@ -1204,7 +1191,7 @@
     {
         "personal_info": {
             "name": "Muhammad Rizwan",
-            "gender": null,
+            "gender": "Female",
             "marital_status": null,
             "father_name": null,
             "email": "rizwanzahidofficial468122@gmail.com",
@@ -1212,7 +1199,7 @@
                 "03152929764"
             ],
             "landline": [],
-            "cnic": "Muhammad Rizwan",
+            "cnic": "81426-8038374-4",
             "location": "Korangi Creek",
             "date_of_birth": "1999-10-09",
             "nationality": null
@@ -1226,7 +1213,6 @@
         },
         "flags": {
             "missing_fields": [
-                "gender",
                 "marital_status",
                 "father_name",
                 "landline",
@@ -1320,7 +1306,7 @@
     {
         "personal_info": {
             "name": "Abdullah Faheem",
-            "gender": null,
+            "gender": "Male",
             "marital_status": "Single",
             "father_name": null,
             "email": "abdullahfaheem998@gmail.com",
@@ -1340,7 +1326,6 @@
         },
         "flags": {
             "missing_fields": [
-                "gender",
                 "father_name",
                 "landline",
                 "nationality"
