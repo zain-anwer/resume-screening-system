@@ -4,20 +4,23 @@
 
 import re
 
-def normalize_ocr_text(text : str) -> str:
+def normalize_ocr_text(text: str) -> str:
+    # CRLF -> LF first
+    text = re.sub(r'\r\n?', '\n', text)
 
-  # removing page artifacts
-  text = re.sub(r'.*page\s*\d+.*',' ',text)
+    # remove page-artifact lines (case-insensitive)
+    text = re.sub(r'.*page\s*\d+.*', ' ', text, flags=re.IGNORECASE)
 
-  # removing bullet points
-  text = re.sub(r'^\s*(?:[•◦·→\-]|o)\s+', ' ', text)
+    # removing bullet points
+    text = re.sub(r'^\s*(?:[•◦·→\-]|o)\s+', ' ', text,flags=re.MULTILINE)
 
-  # CRLF -> LF and remove multiple newlines
-  text = re.sub(r'\r','\n',text)
-  text = re.sub(r'\n\s*\n\s*\n+','\n',text)
+    # collapse runs of 3+ blank lines down to one
+    text = re.sub(r'\n\s*\n\s*\n+', '\n', text)
 
-  # removing multiple whitespaces and stripping trailing spaces
-  text = re.sub(r'\s+',' ',text)
-  text = '\n'.join([line.strip() for line in text.splitlines() if line.strip()])
+    # collapse repeated spaces/tabs WITHOUT eating newlines
+    text = re.sub(r'[ \t]+', ' ', text)
 
-  return text
+    # strip each line, drop empties
+    text = '\n'.join(line.strip() for line in text.splitlines() if line.strip())
+
+    return text

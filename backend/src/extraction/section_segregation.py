@@ -1,11 +1,18 @@
+# old heuristic: reject any lines with more than three words
+# new heuristic: reject any lines with more than four words without upper casing or title casing
+
+# ================================================= #
+#        PRELIMINARY SECTION SEGREGATOR
+# ================================================= #
+
 import re
 import json
 from pathlib import Path
 from rapidfuzz import fuzz, process
 
-
 CURR_DIR = Path(__file__).resolve().parent
 
+# additional heading normalization to help with dictionary matches
 def normalize_heading(text):
     text = text.lower()
 
@@ -17,8 +24,7 @@ def normalize_heading(text):
 
     return text.strip()
 
-# parse the raw text and break into headers to ensure proper regex and NER application
-
+# dictionary mapping all possible synonyms to their formalized section headings
 with open(CURR_DIR / 'schemas/section_mapping.json','r',encoding='utf-8') as file:
   SECTION_HEADINGS = json.load(file)
 
@@ -48,9 +54,19 @@ def segregate_text(raw_text : str):
     if not line:
       continue
 
+    """
     if len(line.split()) > 3:
       section_segregated_text[current_header.lower()].append(line)
       continue
+    """
+
+    stripped = line.strip(':-|• ')
+    is_heading_shaped = len(line.split()) <= 4 and (stripped.isupper() or stripped.istitle())
+
+    if not is_heading_shaped:
+      section_segregated_text[current_header.lower()].append(line)
+      continue
+
 
     normalized_line = normalize_heading(line)
 
