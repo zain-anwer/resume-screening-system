@@ -5,8 +5,10 @@
 import re
 import spacy # type: ignore
 from regex_patterns import *
+from pathlib import Path
 from spacy.matcher import PhraseMatcher # type: ignore
 
+CURR_DIR = Path(__file__).resolve().parent
 
 # =========================================================
 # NER COMPONENT
@@ -14,7 +16,7 @@ from spacy.matcher import PhraseMatcher # type: ignore
 
 nlp = spacy.blank("en")
 
-with open('skills_gazetteer.txt', 'r', encoding='utf-8') as f:
+with open(CURR_DIR.parent / 'dictionaries/skills_gazetteer.txt', 'r', encoding='utf-8') as f:
     SKILLS_GAZETTEER = sorted(
         {line.strip() for line in f if line.strip() and not line.startswith('#')},
         key=len,
