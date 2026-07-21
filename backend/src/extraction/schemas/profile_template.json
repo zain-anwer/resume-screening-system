@@ -1,27 +1,27 @@
 {
-  "id": "",
+  "id": null,
 
   "personal_info": {
-    "name": "",
-    "gender": "",
-    "marital_status": "",
-    "father_name": "", 
-    "email": "",
+    "name": null,
+    "gender": null,
+    "marital_status": null,
+    "father_name": null,
+    "email": null,
     "phone": [],
     "landline": [],
-    "cnic": "",
-    "location": "",
-    "date_of_birth": "",
-    "nationality": ""
+    "cnic": null,
+    "location": null,
+    "date_of_birth": null,
+    "nationality": null
   },
 
   "education": [
     {
-      "degree_raw": "",
-      "degree_level": "",
-      "field": "",
-      "institution": "",
-      "campus": "",
+      "degree_raw": null,
+      "degree_level": null,
+      "field": null,
+      "institution": null,
+      "campus": null,
       "graduation_year": null,
       "start_year": null,
       "is_current": false,
@@ -32,15 +32,15 @@
 
   "experience": [
     {
-      "title": "",
-      "organization": "",
-      "employment_type": "",
-      "location": "",
-      "start_date": "",
+      "title": null,
+      "organization": null,
+      "employment_type": null,
+      "location": null,
+      "start_date": null,
       "end_date": null,
       "is_current": false,
       "duration_months": null,
-      "description": "",
+      "description": null,
       "responsibilities": [],
       "technologies": []
     }
@@ -48,14 +48,14 @@
 
   "projects": [
     {
-      "name": "",
-      "role": "",
-      "description": "",
-      "start_date": "",
-      "end_date": "",
+      "name": null,
+      "role": null,
+      "description": null,
+      "start_date": null,
+      "end_date": null,
       "technologies": [],
-      "github": "",
-      "demo": ""
+      "github": null,
+      "demo": null
     }
   ],
 
@@ -63,55 +63,55 @@
 
   "certifications": [
     {
-      "name": "",
-      "issuer": "",
-      "issue_date": "",
-      "expiry_date": "",
-      "credential_id": "",
-      "credential_url": ""
+      "name": null,
+      "issuer": null,
+      "issue_date": null,
+      "expiry_date": null,
+      "credential_id": null,
+      "credential_url": null
     }
   ],
 
   "achievements": [
     {
-      "title": "",
-      "organization": "",
-      "date": "",
-      "description": ""
+      "title": null,
+      "organization": null,
+      "date": null,
+      "description": null
     }
   ],
 
   "publications": [
     {
-      "title": "",
-      "publisher": "",
+      "title": null,
+      "publisher": null,
       "year": null,
-      "url": ""
+      "url": null
     }
   ],
 
   "languages": [
     {
-      "language": "",
-      "proficiency": ""
+      "language": null,
+      "proficiency": null
     }
   ],
 
   "urls": {
-    "github": "",
-    "linkedin": "",
+    "github": null,
+    "linkedin": null,
     "portfolio": [],
-    "website": "",
+    "website": null,
     "other": []
   },
 
-  "summary": "",
+  "summary": null,
 
   "total_experience_years": 0.0,
 
-  "additional_sections": { 
-    "references": [], 
-    "interests": [] 
+  "additional_sections": {
+    "references": [],
+    "interests": []
   },
 
   "flags": {
@@ -121,13 +121,14 @@
   },
 
   "metadata": {
-    "source_file": "",
-    "parser_version": "",
-    "job_category" : "",
-    "created_at": "",
-    "updated_at": "",
-    "document_type": "",
-    "parsing_status": "",
+    "source_file": null,
+    "parser_version": null,
+    "job_category": null,
+    "created_at": null,
+    "updated_at": null,
+    "document_type": null,
+    "parsing_status": null,
     "confidence_score": null
   }
 }
+

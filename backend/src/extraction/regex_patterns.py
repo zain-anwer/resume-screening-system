@@ -210,3 +210,114 @@ chunk_pattern = re.compile(
     re.I
 )
 
+
+CATEGORY_LABEL_RE = re.compile(
+    r"^[A-Za-z /'\u2019&-]+:\s*"
+)
+
+DELIM_CHARS = ',;|\u2022'
+
+DELIM_RE = re.compile(
+    f'[{re.escape(DELIM_CHARS)}]'
+)
+
+CAMEL_BOUNDARY_RE = [
+
+    re.compile(
+        r'(?<=[a-z0-9])(?=[A-Z])'
+    ),
+
+    re.compile(
+        r'(?<=[A-Z])(?=[A-Z][a-z])'
+    ),
+]
+
+SKIP_TOKENS = {
+    'n/a',
+    'na',
+    ''
+}
+
+CERTIFICATION_LABEL_RE = re.compile(
+    r'^\s*certifications?\s*:\s*',
+    re.IGNORECASE
+)
+
+
+CERTIFICATE_LABEL_RE = re.compile(
+    r'^\s*certificates?\s*:\s*',
+    re.IGNORECASE
+)
+
+
+URL_RE = re.compile(
+    r'(https?://\S+|www\.\S+)',
+    re.IGNORECASE
+)
+
+
+CREDENTIAL_ID_RE = re.compile(
+    r'\b(?:credential|certificate|certification)'
+    r'\s*(?:id|number|no\.?)\s*[:#-]?\s*'
+    r'([A-Za-z0-9-]+)',
+    re.IGNORECASE
+)
+
+
+DATE_RE = re.compile(
+    r'\b(?:'
+    r'Jan(?:uary)?|'
+    r'Feb(?:ruary)?|'
+    r'Mar(?:ch)?|'
+    r'Apr(?:il)?|'
+    r'May|'
+    r'Jun(?:e)?|'
+    r'Jul(?:y)?|'
+    r'Aug(?:ust)?|'
+    r'Sep(?:tember)?|'
+    r'Oct(?:ober)?|'
+    r'Nov(?:ember)?|'
+    r'Dec(?:ember)?'
+    r')'
+    r'\s+\d{4}'
+    r'|\b\d{1,2}[/-]\d{1,2}[/-]\d{2,4}\b'
+    r'|\b\d{4}\b',
+    re.IGNORECASE
+)
+
+PHONE_PATTERN = re.compile(
+    r'(?<!\d)'
+    r'(?:'
+        r'\+?\d{1,3}[-\s]?'      # country code
+        r'(?:\(?\d{2,4}\)?[-\s]?)?'
+        r'\d{3,4}[-\s]?\d{3,4}'
+    r')'
+    r'(?!\d)',
+    re.IGNORECASE
+)
+
+
+EMAIL_PATTERN = re.compile(
+    r'\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b',
+    re.IGNORECASE
+)
+
+
+URL_RE = re.compile(r'(https?://\S+|www\.\S+)', re.IGNORECASE)
+
+DATE_TOKEN = (
+    r'(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)'
+    r'[a-z]*\.?\s*\d{4}'
+    r'|\d{1,2}/\d{4}'
+    r'|\d{4}'
+)
+
+DATE_RANGE_RE = re.compile(
+    rf'\b({DATE_TOKEN})\s*[-\u2013\u2014]\s*'
+    rf'({DATE_TOKEN}|Present|Current)\b',
+    re.IGNORECASE
+)
+
+SINGLE_YEAR_RE = re.compile(r'[\s,(]*((?:19|20)\d{2})\)?\.?\s*$')
+
+TRAILING_PAREN_RE = re.compile(r'\s*\([^)]*\)\s*$')
