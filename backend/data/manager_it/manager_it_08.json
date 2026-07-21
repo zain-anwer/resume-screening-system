@@ -1,0 +1,343 @@
+{
+  "id": "manager_it_08",
+  "personal_info": {
+    "full_name": "Muzafar Ali",
+    "father_name": "",
+    "gender": "",
+    "marital_status": "",
+    "date_of_birth": "1993-04-08",
+    "age": 33,
+    "nationality": "Pakistani",
+    "cnic": "93810-2867825-1",
+    "contact": {
+      "emails": [
+        "muzafar4996@gmail.com"
+      ],
+      "phones": [
+        "0300-3096932",
+        "0335-3812224"
+      ],
+      "landlines": []
+    },
+    "address": {
+      "full_address": "Flat no B-201/6 Grey River Apartments, Near Karachi Public School, Korangi Crossing, Karachi",
+      "city": "Karachi",
+      "province": "Sindh",
+      "country": "Pakistan"
+    }
+  },
+  "education": [
+    {
+      "degree_name": "Bachelor's in Software Engineering",
+      "degree_level": "Bachelors",
+      "field": "Software Engineering",
+      "specialization": "",
+      "institution": "University of Sindh Jamshoro",
+      "campus": "",
+      "start_year": null,
+      "graduation_year": 2012,
+      "cgpa": 3.3,
+      "max_cgpa": 4.0,
+      "percentage": null,
+      "is_current": false
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Project Manager",
+      "organization": "Spectrum VMLY&R",
+      "industry": "Advertising/Technology",
+      "employment_type": "Full-time",
+      "location": "",
+      "start_date": "2019-02-01",
+      "end_date": "",
+      "is_current": true,
+      "description": "Managing internal and external teams in technology projects, including website and app development.",
+      "responsibilities": [
+        "Led the development of more than 150 PSD to WordPress websites",
+        "Collaborated with clients including Yamaha Motor Pakistan, Coca-Cola Pakistan Social Media Brands, and Government of Pakistan"
+      ],
+      "technologies": [
+        "WordPress"
+      ],
+      "achievements": [],
+      "duration_months": 89
+    },
+    {
+      "title": "Assistant Architect (Assistant Manager)",
+      "organization": "Axact IT Company Karachi",
+      "industry": "Technology",
+      "employment_type": "Full-time",
+      "location": "Karachi",
+      "start_date": "2017-04-01",
+      "end_date": "2019-01-01",
+      "is_current": false,
+      "description": "",
+      "responsibilities": [
+        "Developed more than 150 PSD to WordPress (CMS) websites in 2 years"
+      ],
+      "technologies": [
+        "WordPress"
+      ],
+      "achievements": [],
+      "duration_months": 21
+    },
+    {
+      "title": "Web Developer",
+      "organization": "Spectrum Y & R",
+      "industry": "Advertising",
+      "employment_type": "Full-time",
+      "location": "",
+      "start_date": "2014-05-01",
+      "end_date": "2017-04-01",
+      "is_current": false,
+      "description": "",
+      "responsibilities": [],
+      "technologies": [],
+      "achievements": [],
+      "duration_months": 35
+    },
+    {
+      "title": "PHP Web Developer",
+      "organization": "Inspurate Systems LLC",
+      "industry": "",
+      "employment_type": "Full-time",
+      "location": "",
+      "start_date": "2013-07-01",
+      "end_date": "2014-05-01",
+      "is_current": false,
+      "description": "",
+      "responsibilities": [],
+      "technologies": [
+        "PHP"
+      ],
+      "achievements": [],
+      "duration_months": 10
+    },
+    {
+      "title": "Junior Developer",
+      "organization": "Networks 360",
+      "industry": "",
+      "employment_type": "Full-time",
+      "location": "",
+      "start_date": "2013-03-01",
+      "end_date": "2013-06-01",
+      "is_current": false,
+      "description": "",
+      "responsibilities": [],
+      "technologies": [],
+      "achievements": [],
+      "duration_months": 3
+    },
+    {
+      "title": "Web developer",
+      "organization": "MIT Software Solution",
+      "industry": "",
+      "employment_type": "Full-time",
+      "location": "",
+      "start_date": "2012-01-01",
+      "end_date": "2013-02-01",
+      "is_current": false,
+      "description": "",
+      "responsibilities": [],
+      "technologies": [],
+      "achievements": [],
+      "duration_months": 13
+    }
+  ],
+  "projects": [
+    {
+      "name": "Punjab Human Capital Investment Project (PHCIP)",
+      "role": "",
+      "organization": "Govt. of Punjab",
+      "description": "WordPress website development",
+      "start_date": "",
+      "end_date": "",
+      "technologies": [
+        "WordPress"
+      ],
+      "github": "",
+      "demo": "https://phcip.com.pk"
+    },
+    {
+      "name": "SHMA Consulting website",
+      "role": "",
+      "organization": "SHMA Consulting",
+      "description": "",
+      "start_date": "",
+      "end_date": "",
+      "technologies": [
+        "WordPress"
+      ],
+      "github": "",
+      "demo": "https://shmaglobal.com"
+    },
+    {
+      "name": "Yamaha Motors Pakistan website",
+      "role": "",
+      "organization": "Yamaha Motor Pakistan",
+      "description": "",
+      "start_date": "",
+      "end_date": "",
+      "technologies": [
+        "WordPress"
+      ],
+      "github": "",
+      "demo": "https://yamaha-motor.com.pk/"
+    },
+    {
+      "name": "Safe Blood Transfusion Project (SBTP)",
+      "role": "",
+      "organization": "Govt. of Pakistan",
+      "description": "Ten Regional Blood Center (RBC) websites",
+      "start_date": "",
+      "end_date": "",
+      "technologies": [
+        "WordPress"
+      ],
+      "github": "",
+      "demo": ""
+    },
+    {
+      "name": "PIA Feedback Management System",
+      "role": "",
+      "organization": "Pakistan International Airlines",
+      "description": "",
+      "start_date": "",
+      "end_date": "",
+      "technologies": [],
+      "github": "",
+      "demo": "http://piac.com.pk"
+    },
+    {
+      "name": "JSBL website",
+      "role": "",
+      "organization": "Jahangir Siddiqui Bank Limited",
+      "description": "",
+      "start_date": "",
+      "end_date": "",
+      "technologies": [],
+      "github": "",
+      "demo": "http://www.jsbl.com/"
+    }
+  ],
+  "skills": {
+    "technical": [
+      "Project Management",
+      "WordPress Development",
+      "Client Communication",
+      "Quality Assurance"
+    ],
+    "soft": [
+      "Leadership",
+      "Teamwork"
+    ],
+    "tools": [
+      "PhpMyAdmin",
+      "Webpage Maker",
+      "Adobe Dreamweaver",
+      "Adobe Photoshop",
+      "Sprinklr",
+      "YouScan",
+      "Meltwater",
+      "XAMPP",
+      "WAMPP"
+    ],
+    "databases": [
+      "MySQL",
+      "Ms-Access"
+    ],
+    "frameworks": [
+      "WordPress"
+    ],
+    "cloud": [
+      "Google Workspace"
+    ],
+    "operating_systems": [],
+    "languages": [
+      "PHP",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "AJAX"
+    ]
+  },
+  "certifications": [
+    {
+      "name": "Google Certification in Project Management",
+      "issuer": "Google",
+      "issue_date": "",
+      "expiry_date": "",
+      "credential_id": "",
+      "credential_url": ""
+    }
+  ],
+  "achievements": [],
+  "publications": [],
+  "languages": [],
+  "urls": {
+    "linkedin": "",
+    "github": "",
+    "portfolio": [],
+    "website": "",
+    "other": []
+  },
+  "summary": "Senior Project Manager with over 9 years of extensive experience in leading and managing cross-functional teams for technology projects, website development, and app development.",
+  "experience_summary": {
+    "total_experience_years": 14.5,
+    "management_experience_years": 9.2,
+    "relevant_experience_years": 14.5
+  },
+  "eligibility_features": {
+    "highest_degree": "Bachelor's in Software Engineering",
+    "highest_degree_level": "Bachelors",
+    "age": 33,
+    "currently_employed": true,
+    "current_designation": "Senior Project Manager",
+    "current_company": "Spectrum VMLY&R",
+    "has_management_experience": true,
+    "has_python": false,
+    "has_sql": true,
+    "has_sap": false,
+    "has_oracle": false,
+    "has_driving_license": false,
+    "has_security_clearance": false
+  },
+  "references": [],
+  "interests": [],
+  "verification": {
+    "resume_name": "Muzafar Ali",
+    "cnic_name": "Muzafar Ali",
+    "resume_dob": "",
+    "cnic_dob": "1993-04-08",
+    "resume_cnic": "",
+    "cnic_number": "93810-2867825-1",
+    "name_match": true,
+    "dob_match": false,
+    "cnic_match": false
+  },
+  "flags": {
+    "missing_fields": [
+      "date_of_birth",
+      "gender",
+      "marital_status",
+      "references"
+    ],
+    "low_confidence_fields": [],
+    "manual_review_required": false,
+    "resume_blurred": false,
+    "cnic_blurred": false
+  },
+  "metadata": {
+    "candidate_id": "manager_it_08",
+    "job_category": "Manager_IT",
+    "source_resume": "resume_text",
+    "source_cnic": "cnic_extraction",
+    "document_type": "resume+cnic",
+    "parser_version": "1.0",
+    "created_at": "2026-07-20",
+    "updated_at": "2026-07-20",
+    "parsing_status": "success",
+    "confidence_score": 0.9
+  }
+}

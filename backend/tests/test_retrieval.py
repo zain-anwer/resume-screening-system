@@ -1,44 +1,112 @@
-from backend.src.preprocessing.tokenizer import Tokenizer
+import json
+from pathlib import Path
 
+from backend.src.adapters.jd_adapter import JobDescriptionAdapter
+from backend.src.services.retrieval_service import RetrievalService
 
-def main():
-    sample = """
-    Senior Python Backend Engineer with 8 years of experience.
+# -----------------------------
+# Build Retrieval Index
+# -----------------------------
 
-    Skills:
-    Python, FastAPI, Docker, PostgreSQL,
-    Redis, AWS, REST APIs.
-    """
+service = RetrievalService()
 
-    print("=" * 50)
-    print("Without Stopword Removal")
-    print("=" * 50)
+service.build_index(
+    "backend/data/candidates"
+)
 
-    tokens = Tokenizer.tokenize(sample)
+# -----------------------------
+# Load Job Description
+# -----------------------------
 
-    print(tokens)
+job = JobDescriptionAdapter.adapt(
+    job_id="jd_001",
+    file_path="backend/data/job_descriptions/ai_engineer.txt",
+)
 
-    print("\n" + "=" * 50)
-    print("With Stopword Removal")
-    print("=" * 50)
+# -----------------------------
+# Retrieve Ranked Candidates
+# -----------------------------
 
-    filtered = Tokenizer.tokenize(
-        sample,
-        remove_stopwords=True,
+results = service.retrieve(
+    job,
+    top_k=5,
+)
+
+# -----------------------------
+# Print Results
+# -----------------------------
+
+print("=" * 70)
+print("TOP RANKED CANDIDATES")
+print("=" * 70)
+
+for candidate in results:
+
+    print(f"\nRank: {candidate.rank}")
+    print(f"Candidate ID: {candidate.candidate.id}")
+    print(f"Name: {candidate.candidate.personal_info.name}")
+
+    print(
+        f"Current Role: "
+        f"{candidate.candidate.experience[0].title}"
     )
 
-    print(filtered)
+    print(
+        f"Experience: "
+        f"{candidate.candidate.total_experience_years} years"
+    )
 
-    # Assertions
-    assert "python" in tokens
-    assert "fastapi" in tokens
-    assert "postgresql" in tokens
+    print(
+        f"Skills: "
+        f"{', '.join(candidate.candidate.skills)}"
+    )
 
-    assert "with" not in filtered
-    assert "the" not in filtered
+    print()
 
-    print("\n✅ Tokenizer test passed.")
+    print(
+        f"Lexical Score : "
+        f"{candidate.lexical_score:.3f}"
+    )
 
+    print(
+        f"Semantic Score: "
+        f"{candidate.semantic_score:.3f}"
+    )
 
-if __name__ == "__main__":
-    main()
+    print(
+        f"Final Score   : "
+        f"{candidate.final_score:.3f}"
+    )
+
+    print()
+
+    print(
+        "Matched Skills:"
+    )
+
+    if candidate.matched_skills:
+        for skill in candidate.matched_skills:
+            print(f"  ✓ {skill}")
+    else:
+        print("  None")
+
+    print()
+
+    print(
+        "Missing Skills:"
+    )
+
+    if candidate.missing_skills:
+        for skill in candidate.missing_skills:
+            print(f"  ✗ {skill}")
+    else:
+        print("  None")
+
+    print("\nResume Preview:")
+
+    print(
+        candidate.candidate.resume_text[:150]
+        + "..."
+    )
+
+    print("-" * 70)

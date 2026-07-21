@@ -1,0 +1,51 @@
+job:
+  id: worker_grade4
+  title: Worker Grade 4
+
+application:
+  reference_date: "2026-07-31"
+
+education:
+  minimum_level: diploma
+
+  accepted_degrees:
+    - DAE Mechanical
+    - DAE Electronics
+    - DAE Electrical
+    - DAE Instrumentation
+    - DAE Process Control
+    - DAE Refrigeration and Air Conditioning
+    - DAE Mechatronics
+    - DAE Chemical
+    - DAE Printing
+    - DAE Graphic Arts
+    - DAE Dies and Moulds
+
+  equivalent_or_higher_allowed: true
+
+experience:
+  minimum_years: 4
+
+age:
+  maximum: 30
+
+relaxation:
+
+  regional:
+    years: 3
+
+    regions:
+      - FATA
+      - Gilgit Baltistan
+      - Balochistan
+      - Azad Jammu and Kashmir
+
+  security_printing_experience:
+    maximum_age: 40
+
+  pspc_employee:
+    years: 10
+
+notes:
+  - Candidate must possess at least a DAE in one of the listed disciplines.
+  - Higher qualifications such as BS Engineering are acceptable if relevant.

@@ -1,0 +1,531 @@
+[
+    {
+        "candidate_id": "manager_it_01",
+        "job": "Manager_IT",
+        "overall_status": "Eligible",
+        "education": {
+            "status": true,
+            "reason": "Education requirement satisfied"
+        },
+        "experience": {
+            "status": true,
+            "reason": "10.0 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "7.8 supervisory years"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 33,
+            "allowed_age": 35,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": [
+                "SAP",
+                "Oracle ERP"
+            ]
+        }
+    },
+    {
+        "candidate_id": "manager_it_010",
+        "job": "Manager_IT",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Required degree not found"
+        },
+        "experience": {
+            "status": true,
+            "reason": "9.7 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "6.8 supervisory years"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 34,
+            "allowed_age": 35,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "manager_it_02",
+        "job": "Manager_IT",
+        "overall_status": "Eligible",
+        "education": {
+            "status": true,
+            "reason": "Education requirement satisfied"
+        },
+        "experience": {
+            "status": true,
+            "reason": "9.5 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "7.0 supervisory years"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 31,
+            "allowed_age": 35,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": [
+                "SAP",
+                "ERP Implementation"
+            ]
+        }
+    },
+    {
+        "candidate_id": "manager_it_03",
+        "job": "Manager_IT",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": true,
+            "reason": "Education requirement satisfied"
+        },
+        "experience": {
+            "status": true,
+            "reason": "13 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "13 supervisory years"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": 38,
+            "allowed_age": 35,
+            "reason": "Age exceeds limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": [
+                "SAP",
+                "Oracle ERP",
+                "ERP Implementation"
+            ]
+        }
+    },
+    {
+        "candidate_id": "manager_it_04",
+        "job": "Manager_IT",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": true,
+            "reason": "Education requirement satisfied"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 5 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "2 supervisory years"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 29,
+            "allowed_age": 35,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": [
+                "SAP"
+            ]
+        }
+    },
+    {
+        "candidate_id": "manager_it_05",
+        "job": "Manager_IT",
+        "overall_status": "Eligible",
+        "education": {
+            "status": true,
+            "reason": "Education requirement satisfied"
+        },
+        "experience": {
+            "status": true,
+            "reason": "8 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "5 supervisory years"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 32,
+            "allowed_age": 35,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "manager_it_06",
+        "job": "Manager_IT",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": true,
+            "reason": "Education requirement satisfied"
+        },
+        "experience": {
+            "status": true,
+            "reason": "12.5 years experience"
+        },
+        "supervisory": {
+            "status": false,
+            "reason": "Supervisory experience insufficient"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 34,
+            "allowed_age": 35,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": [
+                "SAP",
+                "Oracle ERP",
+                "ERP Implementation"
+            ]
+        }
+    },
+    {
+        "candidate_id": "manager_it_07",
+        "job": "Manager_IT",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Required degree not found"
+        },
+        "experience": {
+            "status": true,
+            "reason": "10.9 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "5.1 supervisory years"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 35,
+            "allowed_age": 35,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "manager_it_08",
+        "job": "Manager_IT",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Required degree not found"
+        },
+        "experience": {
+            "status": true,
+            "reason": "14.5 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "9.2 supervisory years"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 33,
+            "allowed_age": 35,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "worker_grade4_01",
+        "job": "Worker_Grade_04",
+        "overall_status": "Eligible",
+        "education": {
+            "status": true,
+            "reason": "Education requirement satisfied"
+        },
+        "experience": {
+            "status": true,
+            "reason": "7.0 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 27,
+            "allowed_age": 30,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "worker_grade4_02",
+        "job": "Worker_Grade_04",
+        "overall_status": "Eligible",
+        "education": {
+            "status": true,
+            "reason": "Education requirement satisfied"
+        },
+        "experience": {
+            "status": true,
+            "reason": "8.1 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 28,
+            "allowed_age": 30,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "worker_grade4_03",
+        "job": "Worker_Grade_04",
+        "overall_status": "Eligible",
+        "education": {
+            "status": true,
+            "reason": "Education requirement satisfied"
+        },
+        "experience": {
+            "status": true,
+            "reason": "6 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 31,
+            "allowed_age": 33,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "worker_grade4_04",
+        "job": "Worker_Grade_04",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": true,
+            "reason": "Education requirement satisfied"
+        },
+        "experience": {
+            "status": true,
+            "reason": "13 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": 39,
+            "allowed_age": 30,
+            "reason": "Age exceeds limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "worker_grade4_05",
+        "job": "Worker_Grade_04",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": true,
+            "reason": "Education requirement satisfied"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 0 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": 34,
+            "allowed_age": 30,
+            "reason": "Age exceeds limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "worker_grade4_06",
+        "job": "Worker_Grade_04",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": true,
+            "reason": "Education requirement satisfied"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 2.9 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 26,
+            "allowed_age": 30,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "worker_grade4_07",
+        "job": "Worker_Grade_04",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 0 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 28,
+            "allowed_age": 30,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "worker_grade4_08",
+        "job": "Worker_Grade_04",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 0 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 27,
+            "allowed_age": 30,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "worker_grade4_09",
+        "job": "Worker_Grade_04",
+        "overall_status": "Eligible",
+        "education": {
+            "status": true,
+            "reason": "Higher qualification accepted"
+        },
+        "experience": {
+            "status": true,
+            "reason": "7.7 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 26,
+            "allowed_age": 30,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "worker_grade4_10",
+        "job": "Worker_Grade_04",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": true,
+            "reason": "Higher qualification accepted"
+        },
+        "experience": {
+            "status": true,
+            "reason": "7.0 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": 31,
+            "allowed_age": 30,
+            "reason": "Age exceeds limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    }
+]

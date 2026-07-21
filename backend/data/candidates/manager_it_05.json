@@ -1,0 +1,179 @@
+{
+  "id": "manager_it_05",
+  "personal_info": {
+    "full_name": "Waqas Iqbal Chaudhry",
+    "father_name": "Iqbal Ahmed Chaudhry",
+    "gender": "Male",
+    "marital_status": "",
+    "date_of_birth": "1993-12-26",
+    "age": 32,
+    "nationality": "Pakistani",
+    "cnic": "42401-5678901-5",
+    "contact": {
+      "emails": [
+        "waqas.iqbal.chy@gmail.com"
+      ],
+      "phones": [
+        "0300-7788990"
+      ],
+      "landlines": []
+    },
+    "address": {
+      "full_address": "House 8, Model Colony, Malir, Karachi",
+      "city": "Karachi",
+      "province": "Sindh",
+      "country": "Pakistan"
+    }
+  },
+  "education": [
+    {
+      "degree": "BA",
+      "institution": "University of Karachi",
+      "graduation_year": "2015"
+    }
+  ],
+  "experience": [
+    {
+      "designation": "IT Manager (Operations)",
+      "company": "Skyline Logistics",
+      "location": "Karachi",
+      "duration": "Apr 2020 - Present",
+      "responsibilities": [
+        "Supervise 4-member network operations team",
+        "Manage Linux server infrastructure and database backups"
+      ]
+    },
+    {
+      "designation": "Network Administrator",
+      "company": "Trident Freight Services",
+      "location": "Karachi",
+      "duration": "Feb 2017 - Mar 2020",
+      "responsibilities": [
+        "Administered enterprise LAN/WAN infrastructure"
+      ]
+    },
+    {
+      "designation": "IT Support Officer",
+      "company": "Chaudhry Enterprises",
+      "location": "Karachi",
+      "duration": "Jun 2015 - Jan 2017",
+      "responsibilities": [
+        "Provided desktop and network support"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "WAN Redesign",
+      "organization": "Skyline Logistics"
+    }
+  ],
+  "skills": {
+    "technical": [
+      "Networking",
+      "Linux",
+      "Database Administration",
+      "SQL"
+    ],
+    "soft": [
+      "Team Management",
+      "Leadership"
+    ],
+    "tools": [],
+    "databases": [
+      "SQL"
+    ],
+    "frameworks": [],
+    "cloud": [],
+    "operating_systems": [
+      "Linux"
+    ],
+    "languages": []
+  },
+  "certifications": [
+    {
+      "name": "CCNA"
+    },
+    {
+      "name": "Linux Foundation Certified Engineer"
+    }
+  ],
+  "achievements": [],
+  "publications": [],
+  "languages": [
+    "English",
+    "Urdu",
+    "Punjabi"
+  ],
+  "urls": {
+    "linkedin": "",
+    "github": "",
+    "portfolio": [],
+    "website": "",
+    "other": []
+  },
+  "summary": "IT operations professional with 8 years of hands-on experience in networking and systems administration.",
+  "experience_summary": {
+    "total_experience_years": 8,
+    "management_experience_years": 5,
+    "relevant_experience_years": 8
+  },
+  "eligibility_features": {
+    "highest_degree": "BA",
+    "highest_degree_level": "Bachelors",
+    "age": 32,
+    "currently_employed": true,
+    "current_designation": "IT Manager (Operations)",
+    "current_company": "Skyline Logistics",
+    "has_management_experience": true,
+    "has_python": false,
+    "has_sql": true,
+    "has_sap": false,
+    "has_oracle": false,
+    "has_driving_license": false,
+    "has_security_clearance": false
+  },
+  "references": [
+    {
+      "name": "Mr. Salman Raza",
+      "designation": "Operations Director",
+      "organization": "Skyline Logistics",
+      "contact": "0321-4445566"
+    }
+  ],
+  "interests": [],
+  "verification": {
+    "resume_name": "Waqas Iqbal Chaudhry",
+    "cnic_name": "Wagqas Iqbal Chaudhry",
+    "resume_dob": "1993-12-26",
+    "cnic_dob": "1993-12-26",
+    "resume_cnic": "42401-5678901-5",
+    "cnic_number": "42401-5678901-5",
+    "name_match": false,
+    "dob_match": true,
+    "cnic_match": true
+  },
+  "flags": {
+    "missing_fields": [
+      "marital_status"
+    ],
+    "low_confidence_fields": [
+      "full_name (cnic record spells name 'Wagqas' - likely OCR typo for 'Waqas')"
+    ],
+    "manual_review_required": false,
+    "resume_blurred": false,
+    "cnic_blurred": false
+  },
+  "metadata": {
+    "candidate_id": "manager_it_05",
+    "job_category": "Manager_IT",
+    "source_resume": "resume_extraction",
+    "source_cnic": "cnic_extraction",
+    "document_type": "resume_and_cnic",
+    "parser_version": "1.0",
+    "created_at": "2026-07-20",
+    "updated_at": "2026-07-20",
+    "parsing_status": "completed",
+    "confidence_score": 0.95
+  }
+}
