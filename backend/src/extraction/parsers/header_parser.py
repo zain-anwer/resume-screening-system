@@ -1,18 +1,21 @@
-import spacy # type: ignore
-import re
-
-from extraction.utils.url_classification import classify_urls
-from extraction.utils.all_cap_normalization import normalize_all_caps
-from extraction.regex_patterns import *
-
+# ======================================== #
+#      PRELIMINARY HEADER PARSER           #
+# ======================================== #
 
 # FLOW: extract structured data -> mask regex extracted data -> apply NER -> extract remaining fields
+# salient design principle:
+# masking fields after extraction
+
+import spacy # type: ignore
+import re
+from utils.url_classification import classify_urls
+from utils.all_cap_normalization import normalize_all_caps
+from regex_patterns import *
 
 # the smallest model available for english NLP
 nlp = spacy.load('en_core_web_sm')
 
-
-def personal_info_parser(header_lines):
+def parse_header_section(header_lines):
 
   urls = None
   personal_info = {
@@ -105,7 +108,13 @@ def personal_info_parser(header_lines):
       # person name
       if ent.label_ == 'PERSON' and not personal_info['name']:
         name = ' '.join(re.split(r'\s',ent.text))
-        personal_info['name'] = name
+        if len(name.split()) <= 3:
+          personal_info['name'] = name
+
+      # father name (NER unreliable)
+   #   if ent.label_ == 'PERSON' and personal_info['name']:
+   #     if len(ent.text.split()) > 1 and ent.text != personal_info['name']:
+   #       personal_info['father_name'] = ent.text
 
       # geopolitical entity
       if ent.label_ == 'GPE':
