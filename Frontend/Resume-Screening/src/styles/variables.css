@@ -1,0 +1,47 @@
+/* ============================================
+   THEME TOKENS
+   Edit colors here only — every component reads
+   from these variables, nothing is hardcoded.
+   ============================================ */
+:root {
+  /* Sidebar (dark navy, toned down from the reference screenshot) */
+  --sidebar-bg: #102A43;
+  --sidebar-bg-hover: #1B3B5A;
+  --sidebar-text: #B8C4D1;
+  --sidebar-text-active: #FFFFFF;
+
+  /* Accent (muted teal instead of the bright cyan in the reference) */
+  --accent: #14818E;
+  --accent-soft: rgba(20, 129, 142, 0.12);
+  --accent-hover: #106E79;
+
+  /* Surfaces */
+  --bg: #F6F8FA;
+  --card-bg: #FFFFFF;
+  --border: #E4E9EF;
+
+  /* Text */
+  --text-900: #101828;
+  --text-600: #475467;
+  --text-400: #98A2B3;
+
+  /* Status */
+  --success: #22C55E;
+  --success-soft: rgba(34, 197, 94, 0.12);
+  --warning: #F59E0B;
+  --warning-soft: rgba(245, 158, 11, 0.12);
+  --danger: #EF4444;
+  --danger-soft: rgba(239, 68, 68, 0.12);
+  --info: #2563EB;
+  --info-soft: rgba(37, 99, 235, 0.1);
+
+  /* Layout */
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --radius-sm: 8px;
+  --sidebar-width: 240px;
+  --topbar-height: 64px;
+  --shadow-soft: 0 1px 2px rgba(16, 24, 40, 0.04), 0 6px 20px rgba(16, 24, 40, 0.05);
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
