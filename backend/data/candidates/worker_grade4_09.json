@@ -1,0 +1,275 @@
+{
+  "id": "worker_grade4_09",
+  "personal_info": {
+    "full_name": "Muhammad Rizwan",
+    "father_name": "",
+    "gender": "",
+    "marital_status": "",
+    "date_of_birth": "1999-10-09",
+    "age": 26,
+    "nationality": "Pakistani",
+    "cnic": "81426-8038374-4",
+    "contact": {
+      "emails": [
+        "rizwanzahidofficial468122@gmail.com"
+      ],
+      "phones": [
+        "03152929764"
+      ],
+      "landlines": []
+    },
+    "address": {
+      "full_address": "Korangi Creek, Karachi",
+      "city": "Karachi",
+      "province": "Sindh",
+      "country": "Pakistan"
+    }
+  },
+  "education": [
+    {
+      "degree_name": "MBA in Supply Chain Management",
+      "degree_level": "Masters",
+      "field": "Supply Chain Management",
+      "specialization": "",
+      "institution": "ILMA University (formerly IBT)",
+      "campus": "Karachi",
+      "start_year": 2022,
+      "graduation_year": null,
+      "cgpa": null,
+      "max_cgpa": null,
+      "percentage": null,
+      "is_current": true
+    },
+    {
+      "degree_name": "Bachelors in Mechanical Engineering",
+      "degree_level": "Bachelors",
+      "field": "Mechanical Engineering",
+      "specialization": "",
+      "institution": "Preston Institute of Management Science & Technology",
+      "campus": "Karachi",
+      "start_year": null,
+      "graduation_year": 2020,
+      "cgpa": null,
+      "max_cgpa": null,
+      "percentage": null,
+      "is_current": false
+    },
+    {
+      "degree_name": "Intermediate",
+      "degree_level": "Intermediate",
+      "field": "",
+      "specialization": "",
+      "institution": "Fazaia Intermediate College",
+      "campus": "Karachi",
+      "start_year": null,
+      "graduation_year": 2016,
+      "cgpa": null,
+      "max_cgpa": null,
+      "percentage": null,
+      "is_current": false
+    }
+  ],
+  "experience": [
+    {
+      "title": "Process Engineer Flexo",
+      "organization": "Universal Films",
+      "industry": "Manufacturing/Printing",
+      "employment_type": "Full-time",
+      "location": "",
+      "start_date": "2024-09-01",
+      "end_date": "",
+      "is_current": true,
+      "description": "",
+      "responsibilities": [
+        "Created and maintained detailed production reports to track performance and efficiency",
+        "Optimized production processes for flexo printing, improving efficiency and reducing waste",
+        "Managed the setup and calibration of flexo presses"
+      ],
+      "technologies": [],
+      "achievements": [],
+      "duration_months": 22
+    },
+    {
+      "title": "Process Engineer Slitting Packing & Dispatch",
+      "organization": "Kompass Pakistan",
+      "industry": "Manufacturing",
+      "employment_type": "Full-time",
+      "location": "",
+      "start_date": "2019-08-01",
+      "end_date": "2024-09-01",
+      "is_current": false,
+      "description": "",
+      "responsibilities": [
+        "Led a team of 75 team leaders, officers, staff, supervisors, operators, and technicians in the Slitting, Packing & Dispatch department",
+        "Coordinated production schedules to ensure timely product delivery while maintaining quality standards",
+        "Conducted monthly stock audits and reviewed daily stock movement reports"
+      ],
+      "technologies": [],
+      "achievements": [],
+      "duration_months": 61
+    },
+    {
+      "title": "Enumerator",
+      "organization": "Sindh Education Foundation",
+      "industry": "Education",
+      "employment_type": "Full-time",
+      "location": "",
+      "start_date": "2019-02-01",
+      "end_date": "2019-08-01",
+      "is_current": false,
+      "description": "",
+      "responsibilities": [
+        "Validation and verification of schools enrolled in SEF"
+      ],
+      "technologies": [],
+      "achievements": [],
+      "duration_months": 6
+    },
+    {
+      "title": "Internship",
+      "organization": "General Tyres & Rubbers",
+      "industry": "Manufacturing",
+      "employment_type": "Internship",
+      "location": "",
+      "start_date": "2018-11-01",
+      "end_date": "2019-01-01",
+      "is_current": false,
+      "description": "",
+      "responsibilities": [
+        "Learned production cycles and working methods; calculated efficiency and daily outputs of machines"
+      ],
+      "technologies": [],
+      "achievements": [],
+      "duration_months": 2
+    }
+  ],
+  "projects": [],
+  "skills": {
+    "technical": [
+      "Process Optimization",
+      "Root Cause Analysis",
+      "Production Planning",
+      "SAP Business One HANA"
+    ],
+    "soft": [
+      "Leadership",
+      "Interpersonal Communication",
+      "Time Management",
+      "Team Management",
+      "Adaptability",
+      "Negotiation",
+      "Teamwork",
+      "Decision Making"
+    ],
+    "tools": [
+      "MS Office"
+    ],
+    "databases": [],
+    "frameworks": [],
+    "cloud": [],
+    "operating_systems": [],
+    "languages": []
+  },
+  "certifications": [
+    {
+      "name": "Project Management (PMP)",
+      "issuer": "Institute of Business Management, Karachi",
+      "issue_date": "2022-01-01",
+      "expiry_date": "",
+      "credential_id": "",
+      "credential_url": ""
+    },
+    {
+      "name": "Machinist Certified Course",
+      "issuer": "Karachi Tools Dies & Molds Center",
+      "issue_date": "2020-01-01",
+      "expiry_date": "",
+      "credential_id": "",
+      "credential_url": ""
+    },
+    {
+      "name": "Certificate Information Technology (C.I.T)",
+      "issuer": "SEED TECH Pakistan",
+      "issue_date": "2018-01-01",
+      "expiry_date": "",
+      "credential_id": "",
+      "credential_url": ""
+    },
+    {
+      "name": "MS Office Course",
+      "issuer": "A.N.B Welfare, Karachi",
+      "issue_date": "2014-01-01",
+      "expiry_date": "",
+      "credential_id": "",
+      "credential_url": ""
+    }
+  ],
+  "achievements": [],
+  "publications": [],
+  "languages": [],
+  "urls": {
+    "linkedin": "www.linkedln.com/in/muhammadrizwan",
+    "github": "",
+    "portfolio": [],
+    "website": "",
+    "other": []
+  },
+  "summary": "Analytical, process-driven professional with experience in production, planning, and supply-chain analysis, seeking to apply expertise in process improvement and cost-effective strategic sourcing.",
+  "experience_summary": {
+    "total_experience_years": 7.7,
+    "management_experience_years": 5.1,
+    "relevant_experience_years": 7.7
+  },
+  "eligibility_features": {
+    "highest_degree": "MBA in Supply Chain Management",
+    "highest_degree_level": "Masters",
+    "age": 26,
+    "currently_employed": true,
+    "current_designation": "Process Engineer Flexo",
+    "current_company": "Universal Films",
+    "has_management_experience": true,
+    "has_python": false,
+    "has_sql": false,
+    "has_sap": true,
+    "has_oracle": false,
+    "has_driving_license": false,
+    "has_security_clearance": false
+  },
+  "references": [],
+  "interests": [],
+  "verification": {
+    "resume_name": "Muhammad Rizwan",
+    "cnic_name": "Muhammad Rizwan",
+    "resume_dob": "",
+    "cnic_dob": "1999-10-09",
+    "resume_cnic": "",
+    "cnic_number": "81426-8038374-4",
+    "name_match": true,
+    "dob_match": false,
+    "cnic_match": false
+  },
+  "flags": {
+    "missing_fields": [
+      "date_of_birth",
+      "gender",
+      "marital_status",
+      "references"
+    ],
+    "low_confidence_fields": [],
+    "manual_review_required": false,
+    "resume_blurred": false,
+    "cnic_blurred": false
+  },
+  "metadata": {
+    "candidate_id": "worker_grade4_09",
+    "job_category": "Worker_Grade_04",
+    "source_resume": "resume_text",
+    "source_cnic": "cnic_extraction",
+    "document_type": "resume+cnic",
+    "parser_version": "1.0",
+    "created_at": "2026-07-20",
+    "updated_at": "2026-07-20",
+    "parsing_status": "success",
+    "confidence_score": 0.9
+  }
+}

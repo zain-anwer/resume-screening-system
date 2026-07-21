@@ -1,0 +1,61 @@
+job:
+  id: manager_it
+  title: Manager IT
+
+application:
+  reference_date: "2026-07-31"
+
+education:
+  minimum_level: bachelors
+  minimum_years_of_education: 16
+
+  accepted_degrees:
+    - BS Computer Science
+    - BS Information Technology
+    - BS Software Engineering
+    - BS Computer Engineering
+    - BS Computer Systems Engineering
+    - BS Management Information Systems
+    - Bachelor's in IT
+    - Master's in IT
+    - Master's in Computer Science
+    - Master's in Software Engineering
+    - Master's in Computer Engineering
+    - Master's in MIS
+
+  hec_recognized_required: true
+  pec_registration_required: true
+  foreign_degree_equivalence_required: true
+
+experience:
+  minimum_years: 7
+  supervisory_years: 2
+
+preferred:
+  - Tier 1 ERP
+  - SAP
+  - Oracle ERP
+  - ERP Implementation
+  - ERP Operations
+
+age:
+  maximum: 35
+
+relaxation:
+
+  regional:
+    years: 3
+
+    regions:
+      - FATA
+      - Gilgit Baltistan
+      - Balochistan
+      - Azad Jammu and Kashmir
+
+  pspc_employee:
+    years: 10
+
+notes:
+  - Candidate must satisfy minimum education.
+  - Higher qualification is acceptable.
+  - Experience must be post qualification.

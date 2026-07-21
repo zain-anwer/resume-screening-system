@@ -1,0 +1,175 @@
+{
+  "id": "manager_it_04",
+  "personal_info": {
+    "full_name": "Ayesha Noor Baig",
+    "father_name": "Rashid Baig",
+    "gender": "Female",
+    "marital_status": "",
+    "date_of_birth": "1996-12-26",
+    "age": 29,
+    "nationality": "Pakistani",
+    "cnic": "42101-4567890-4",
+    "contact": {
+      "emails": [],
+      "phones": [],
+      "landlines": []
+    },
+    "address": {
+      "full_address": "House 22, Block 13-D, Gulshan-e-Iqbal, Karachi",
+      "city": "Karachi",
+      "province": "Sindh",
+      "country": "Pakistan"
+    }
+  },
+  "education": [
+    {
+      "degree": "BS Computer Science",
+      "institution": "University of Karachi",
+      "graduation_year": "2020"
+    }
+  ],
+  "experience": [
+    {
+      "designation": "Assistant IT Manager",
+      "company": "Silverline Apparel",
+      "location": "Karachi",
+      "duration": "Jul 2023 - Present",
+      "responsibilities": [
+        "Assist in supervising a 3-member support team",
+        "Support SAP modules for finance and inventory"
+      ]
+    },
+    {
+      "designation": "IT Executive",
+      "company": "Falcon Trading Co",
+      "location": "Karachi",
+      "duration": "Jan 2021 - Jun 2023",
+      "responsibilities": [
+        "Managed SQL databases and network troubleshooting"
+      ]
+    },
+    {
+      "designation": "Junior IT Support",
+      "company": "Webline Solutions",
+      "location": "Karachi",
+      "duration": "Aug 2020 - Dec 2020",
+      "responsibilities": [
+        "Provided helpdesk and hardware support"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Inventory ERP Support Rollout"
+    }
+  ],
+  "skills": {
+    "technical": [
+      "SAP",
+      "SQL",
+      "Networking",
+      "Cloud",
+      "Python"
+    ],
+    "soft": [
+      "Team Supervision",
+      "Communication"
+    ],
+    "tools": [],
+    "databases": [
+      "SQL"
+    ],
+    "frameworks": [],
+    "cloud": [
+      "Cloud"
+    ],
+    "operating_systems": [],
+    "languages": [
+      "Python"
+    ]
+  },
+  "certifications": [
+    {
+      "name": "SAP Certified Associate"
+    },
+    {
+      "name": "CompTIA Network+"
+    }
+  ],
+  "achievements": [],
+  "publications": [],
+  "languages": [
+    "English",
+    "Urdu"
+  ],
+  "urls": {
+    "linkedin": "",
+    "github": "",
+    "portfolio": [],
+    "website": "",
+    "other": []
+  },
+  "summary": "IT professional with 5 years of experience in ERP support and systems administration, with growing exposure to team supervision.",
+  "experience_summary": {
+    "total_experience_years": 5,
+    "management_experience_years": 2,
+    "relevant_experience_years": 5
+  },
+  "eligibility_features": {
+    "highest_degree": "BS Computer Science",
+    "highest_degree_level": "Bachelors",
+    "age": 29,
+    "currently_employed": true,
+    "current_designation": "Assistant IT Manager",
+    "current_company": "Silverline Apparel",
+    "has_management_experience": true,
+    "has_python": true,
+    "has_sql": true,
+    "has_sap": true,
+    "has_oracle": false,
+    "has_driving_license": false,
+    "has_security_clearance": false
+  },
+  "references": [
+    {
+      "name": "Ms. Farah Yousuf",
+      "designation": "HR Manager",
+      "organization": "Silverline Apparel",
+      "contact": "0333-222334-4"
+    }
+  ],
+  "interests": [],
+  "verification": {
+    "resume_name": "Ayesha Noor Baig",
+    "cnic_name": "Ayesha Noor Baig",
+    "resume_dob": "1996-12-26",
+    "cnic_dob": "1996-12-26",
+    "resume_cnic": "42101-4567890-4",
+    "cnic_number": "42101-4567890-4",
+    "name_match": true,
+    "dob_match": true,
+    "cnic_match": true
+  },
+  "flags": {
+    "missing_fields": [
+      "contact",
+      "marital_status"
+    ],
+    "low_confidence_fields": [],
+    "manual_review_required": false,
+    "resume_blurred": false,
+    "cnic_blurred": false
+  },
+  "metadata": {
+    "candidate_id": "manager_it_04",
+    "job_category": "Manager_IT",
+    "source_resume": "resume_extraction",
+    "source_cnic": "cnic_extraction",
+    "document_type": "resume_and_cnic",
+    "parser_version": "1.0",
+    "created_at": "2026-07-20",
+    "updated_at": "2026-07-20",
+    "parsing_status": "completed",
+    "confidence_score": 0.96
+  }
+}

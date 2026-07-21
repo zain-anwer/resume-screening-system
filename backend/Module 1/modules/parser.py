@@ -1,12 +1,28 @@
 import os
 import re
 import shutil
+import struct
 import unicodedata
 from pathlib import Path
 
 import fitz
-import cv2
-import pytesseract
+
+try:
+    import cv2
+except ImportError:
+    cv2 = None
+
+try:
+    import pytesseract
+except ImportError:
+    pytesseract = None
+
+try:
+    from PIL import Image, ImageFilter, ImageOps
+except ImportError:
+    Image = None
+    ImageFilter = None
+    ImageOps = None
 
 try:
     import mammoth
@@ -54,7 +70,7 @@ def find_tesseract_executable():
 
 
 TESSERACT_EXE = find_tesseract_executable()
-if TESSERACT_EXE:
+if TESSERACT_EXE and pytesseract is not None:
     pytesseract.pytesseract.tesseract_cmd = TESSERACT_EXE
 
 
@@ -69,6 +85,37 @@ SUPPORTED_EXTENSIONS = {
     ".tiff",
     ".webp"
 }
+
+DOCUMENT_EXTENSIONS = {".pdf", ".docx", ".doc"}
+IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".bmp", ".tiff", ".webp"}
+
+
+def is_probable_cnic_file(file_path):
+    """
+    Prefer explicit CNIC filenames over treating every image as identity proof.
+    """
+
+    name = file_path.stem.lower()
+    return any(keyword in name for keyword in ["cnic", "id_card", "identity", "nic"])
+
+
+def is_probable_resume_file(file_path):
+    """
+    Resume files can be PDFs, Word docs, or scanned images named resume/cv.
+    """
+
+    extension = file_path.suffix.lower()
+    name = file_path.stem.lower()
+
+    if extension in DOCUMENT_EXTENSIONS:
+        return True
+
+    if extension in IMAGE_EXTENSIONS:
+        return any(keyword in name for keyword in ["resume", "cv", "curriculum"])
+
+    return False
+
+
 def get_all_candidates(jobs_folder):
     """
     Scan all job folders and candidate folders.
@@ -115,6 +162,7 @@ def get_all_candidates(jobs_folder):
 
             resume_file = None
             cnic_file = None
+            image_files = []
 
             for file in candidate_folder.iterdir():
 
@@ -123,17 +171,31 @@ def get_all_candidates(jobs_folder):
 
                 extension = file.suffix.lower()
 
-                # Resume Files
-                if extension in [".pdf", ".doc", ".docx"]:
+                if extension not in SUPPORTED_EXTENSIONS:
+                    continue
 
+                if extension in IMAGE_EXTENSIONS:
+                    image_files.append(file)
+
+                if is_probable_resume_file(file):
                     if resume_file is None:
                         resume_file = file
 
-                # CNIC Images
-                elif extension in [".png", ".jpg", ".jpeg", ".bmp", ".tiff", ".webp"]:
-
+                elif is_probable_cnic_file(file):
                     if cnic_file is None:
                         cnic_file = file
+
+            if cnic_file is None:
+                for image_file in image_files:
+                    if image_file != resume_file:
+                        cnic_file = image_file
+                        break
+
+            if resume_file is None:
+                for image_file in image_files:
+                    if image_file != cnic_file:
+                        resume_file = image_file
+                        break
 
             candidates.append({
 
@@ -328,6 +390,155 @@ def extract_docx_text(docx_path):
 
 # ---------------- DOC ---------------- #
 
+OLE_FREE_SECTOR = 0xFFFFFFFF
+OLE_END_OF_CHAIN = 0xFFFFFFFE
+
+
+class OleCompoundFile:
+    """
+    Minimal OLE reader for old Word .doc files.
+
+    This is a fallback for simple binary Word documents when Word/pywin32,
+    docx2txt, and textract are not available.
+    """
+
+    def __init__(self, file_path):
+        self.data = Path(file_path).read_bytes()
+
+        if self.data[:8] != b"\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1":
+            raise ValueError("Not an OLE compound file")
+
+        header = self.data[:512]
+        self.sector_size = 1 << struct.unpack_from("<H", header, 30)[0]
+        self.mini_sector_size = 1 << struct.unpack_from("<H", header, 32)[0]
+        self.first_directory_sector = struct.unpack_from("<I", header, 48)[0]
+        self.mini_stream_cutoff = struct.unpack_from("<I", header, 56)[0]
+        self.first_minifat_sector = struct.unpack_from("<I", header, 60)[0]
+
+        self.fat = []
+        for sector_id in struct.unpack_from("<109I", header, 76):
+            if sector_id in (OLE_FREE_SECTOR, OLE_END_OF_CHAIN):
+                continue
+            sector = self._read_sector(sector_id)
+            self.fat.extend(struct.unpack(f"<{self.sector_size // 4}I", sector))
+
+        self.directory_entries = {}
+        self.root_entry = None
+        self._read_directory()
+        self.minifat = self._read_minifat()
+        self.mini_stream = b""
+
+        if self.root_entry:
+            self.mini_stream = self._read_sector_chain(self.root_entry["start"])
+
+    def _read_sector(self, sector_id):
+        offset = 512 + sector_id * self.sector_size
+        return self.data[offset:offset + self.sector_size]
+
+    def _read_sector_chain(self, start_sector):
+        stream = bytearray()
+        sector_id = start_sector
+        seen = set()
+
+        while (
+            sector_id not in (OLE_FREE_SECTOR, OLE_END_OF_CHAIN)
+            and sector_id < len(self.fat)
+            and sector_id not in seen
+        ):
+            seen.add(sector_id)
+            stream.extend(self._read_sector(sector_id))
+            sector_id = self.fat[sector_id]
+
+        return bytes(stream)
+
+    def _read_minisector_chain(self, start_sector):
+        stream = bytearray()
+        sector_id = start_sector
+        seen = set()
+
+        while (
+            sector_id not in (OLE_FREE_SECTOR, OLE_END_OF_CHAIN)
+            and sector_id < len(self.minifat)
+            and sector_id not in seen
+        ):
+            seen.add(sector_id)
+            offset = sector_id * self.mini_sector_size
+            stream.extend(self.mini_stream[offset:offset + self.mini_sector_size])
+            sector_id = self.minifat[sector_id]
+
+        return bytes(stream)
+
+    def _read_directory(self):
+        directory_stream = self._read_sector_chain(self.first_directory_sector)
+
+        for offset in range(0, len(directory_stream), 128):
+            entry = directory_stream[offset:offset + 128]
+            if len(entry) < 128:
+                continue
+
+            name_length = struct.unpack_from("<H", entry, 64)[0]
+            if name_length < 2:
+                continue
+
+            name = entry[:name_length - 2].decode("utf-16le", errors="ignore")
+            stream_info = {
+                "start": struct.unpack_from("<I", entry, 116)[0],
+                "size": struct.unpack_from("<Q", entry, 120)[0],
+                "type": entry[66],
+            }
+            self.directory_entries[name] = stream_info
+
+            if name == "Root Entry":
+                self.root_entry = stream_info
+
+    def _read_minifat(self):
+        if self.first_minifat_sector in (OLE_FREE_SECTOR, OLE_END_OF_CHAIN):
+            return []
+
+        minifat_stream = self._read_sector_chain(self.first_minifat_sector)
+        usable_length = len(minifat_stream) - (len(minifat_stream) % 4)
+        return list(struct.unpack(f"<{usable_length // 4}I", minifat_stream[:usable_length]))
+
+    def read_stream(self, name):
+        stream_info = self.directory_entries.get(name)
+        if not stream_info:
+            return b""
+
+        if stream_info["size"] < self.mini_stream_cutoff:
+            stream = self._read_minisector_chain(stream_info["start"])
+        else:
+            stream = self._read_sector_chain(stream_info["start"])
+
+        return stream[:stream_info["size"]]
+
+
+def extract_doc_binary_text(doc_path):
+    """
+    Recover plain text from simple legacy Word .doc files.
+    """
+
+    try:
+        ole_file = OleCompoundFile(doc_path)
+        word_stream = ole_file.read_stream("WordDocument")
+    except Exception as e:
+        print(f"Error reading DOC binary stream: {e}")
+        return ""
+
+    decoded_text = word_stream.decode("utf-16le", errors="ignore")
+    runs = re.findall(r"[\w@.+#,/&()|:;'\-\s]{3,}", decoded_text, flags=re.UNICODE)
+
+    cleaned_runs = []
+    for run in runs:
+        run = re.sub(r"[ \t]+", " ", run)
+        run = re.sub(r"\n{3,}", "\n\n", run)
+        run = run.strip()
+
+        if len(run) >= 3 and re.search(r"[A-Za-z0-9]", run):
+            cleaned_runs.append(run)
+
+    return "\n".join(cleaned_runs)
+
+
 def extract_doc_text(doc_path):
 
     if win32com is not None and getattr(win32com, "client", None) is not None:
@@ -363,6 +574,10 @@ def extract_doc_text(doc_path):
     except Exception:
         pass
 
+    fallback_text = extract_doc_binary_text(doc_path)
+    if fallback_text:
+        return fallback_text
+
     print("DOC parsing is unavailable. Install pywin32, docx2txt, or textract.")
     return ""
 
@@ -374,6 +589,9 @@ def is_blurry(image, threshold=120):
     Returns:
         (is_blur, blur_score)
     """
+
+    if cv2 is None:
+        return False, 0
 
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
@@ -390,12 +608,38 @@ def extract_image_text(image_path):
 
     try:
 
-        if not TESSERACT_EXE:
+        if not TESSERACT_EXE or pytesseract is None:
             return {
                 "text": "",
                 "blurred": False,
                 "blur_score": 0,
                 "manual_review": True
+            }
+
+        if cv2 is None:
+            if Image is None:
+                return {
+                    "text": "",
+                    "blurred": False,
+                    "blur_score": 0,
+                    "manual_review": True
+                }
+
+            image = Image.open(image_path)
+            image = ImageOps.grayscale(image)
+            image = image.resize((image.width * 2, image.height * 2))
+            image = image.filter(ImageFilter.SHARPEN)
+            text = pytesseract.image_to_string(
+                image,
+                lang="eng",
+                config="--oem 3 --psm 3"
+            )
+
+            return {
+                "text": text,
+                "blurred": False,
+                "blur_score": 0,
+                "manual_review": len(text.strip()) < 250
             }
 
         image = cv2.imread(str(image_path))
