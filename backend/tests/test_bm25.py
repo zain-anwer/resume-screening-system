@@ -4,7 +4,7 @@ from pathlib import Path
 from backend.src.adapters.candidate_adapter import CandidateAdapter
 from backend.src.adapters.jd_adapter import JobDescriptionAdapter
 from backend.src.preprocessing.document_builder import DocumentBuilder
-from backend.src.services.bm25_engine import BM25Engine
+from backend.src.retrieval.bm25_engine import BM25Engine
 
 
 candidate_docs = []

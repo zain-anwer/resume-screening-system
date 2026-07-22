@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 import spacy # type: ignore
 from spacy.matcher import PhraseMatcher # type: ignore
-from regex_patterns import *
+from src.extraction.utils.regex_patterns import *
 
 CURR_DIR = Path(__file__).resolve().parent
 

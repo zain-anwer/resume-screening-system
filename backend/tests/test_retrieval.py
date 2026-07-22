@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 from backend.src.adapters.jd_adapter import JobDescriptionAdapter
-from backend.src.services.retrieval_service import RetrievalService
+from backend.src.retrieval.retrieval_engine import RetrievalService
 
 # -----------------------------
 # Build Retrieval Index

@@ -7,13 +7,47 @@
 # masking fields after extraction
 
 import spacy # type: ignore
+from urllib.parse import urlparse
 import re
-from utils.url_classification import classify_urls
-from utils.all_cap_normalization import normalize_all_caps
-from regex_patterns import *
+
+from src.extraction.utils.regex_patterns import *
 
 # the smallest model available for english NLP
 nlp = spacy.load('en_core_web_sm')
+
+# ======================================= #
+#           HELPER FUNCTIONS              #
+# ======================================= #
+
+def classify_urls(urls : list[str]) -> dict:
+
+  result = {
+      'github' : None,
+      'linkedin': None,
+      'portfolio': []
+  }
+
+  for url in urls:
+
+    normalized_url = url if url.startswith('http') else f'https://{url}'
+    domain = urlparse(normalized_url).netloc.lower().replace("www.","")
+
+    if "github.com" in domain:
+      result["github"] = normalized_url
+    elif "linkedin.com" in domain:
+      result["linkedin"] = normalized_url
+    elif domain and '@' not in normalized_url:
+      result["portfolio"].append(normalized_url)
+
+  return result
+
+def normalize_all_caps(text):
+  all_caps_phrase = re.compile(r'\b[A-Z][A-Z&/.\-]*(?:[ \t]+[A-Z][A-Z&/.\-]*)+\b')
+  def replace(match):
+    return " ".join(word.capitalize() for word in match.group().split())
+
+  return all_caps_phrase.sub(replace, text)
+
 
 def parse_header_section(header_lines):
 

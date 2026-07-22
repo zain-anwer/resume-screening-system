@@ -2,7 +2,7 @@
 #          PRELIMINARY CERTIFICATIONS PARSER
 # ============================================== #
 
-from regex_patterns import *
+from src.extraction.utils.regex_patterns import *
 
 
 # =========================================================
