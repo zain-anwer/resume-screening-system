@@ -23,10 +23,7 @@
         },
         "preferred_skills": {
             "status": true,
-            "matched": [
-                "SAP",
-                "Oracle ERP"
-            ]
+            "matched": []
         }
     },
     {
@@ -80,10 +77,7 @@
         },
         "preferred_skills": {
             "status": true,
-            "matched": [
-                "SAP",
-                "ERP Implementation"
-            ]
+            "matched": []
         }
     },
     {
@@ -110,11 +104,7 @@
         },
         "preferred_skills": {
             "status": true,
-            "matched": [
-                "SAP",
-                "Oracle ERP",
-                "ERP Implementation"
-            ]
+            "matched": []
         }
     },
     {
@@ -141,9 +131,7 @@
         },
         "preferred_skills": {
             "status": true,
-            "matched": [
-                "SAP"
-            ]
+            "matched": []
         }
     },
     {
@@ -197,11 +185,7 @@
         },
         "preferred_skills": {
             "status": true,
-            "matched": [
-                "SAP",
-                "Oracle ERP",
-                "ERP Implementation"
-            ]
+            "matched": []
         }
     },
     {

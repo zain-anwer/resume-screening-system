@@ -116,19 +116,7 @@
     "languages": [],
     "urls": null,
     "summary": null,
-    "experience_summary": {
-      "total_experience_years": 10.05,
-      "management_experience_years": 7.97,
-      "management_titles_flagged": [
-        "IT Manager",
-        "Assistant Manager IT"
-      ]
-    },
-    "eligibility_features": {
-      "highest_degree_level": "masters",
-      "is_pspc_employee": false,
-      "has_security_printing_experience": false
-    },
+    "total_experience_years": 10.05,
     "additional_sections": {
       "references": [
         {
@@ -148,8 +136,7 @@
       "ner_review_needed": false
     },
     "metadata": {
-      "job_category": "manager_it",
-      "candidate_id": "8041c5d7dd3985aabb9311eb983c04a40e4feca25479e0a26455d04d8ee8ced7"
+      "job_category": "manager_it"
     }
   },
   {
@@ -237,16 +224,7 @@
       "portfolio": []
     },
     "summary": null,
-    "experience_summary": {
-      "total_experience_years": 0.0,
-      "management_experience_years": 0.0,
-      "management_titles_flagged": []
-    },
-    "eligibility_features": {
-      "highest_degree_level": "",
-      "is_pspc_employee": false,
-      "has_security_printing_experience": false
-    },
+    "total_experience_years": 0.0,
     "additional_sections": {
       "references": [],
       "interests": []
@@ -258,8 +236,7 @@
       "ner_review_needed": false
     },
     "metadata": {
-      "job_category": "manager_it",
-      "candidate_id": "86384b874dc87dead98dcc401bb986c971387711f13561588ab3143ab5d495c3"
+      "job_category": "manager_it"
     }
   },
   {
@@ -377,18 +354,7 @@
     "languages": [],
     "urls": null,
     "summary": null,
-    "experience_summary": {
-      "total_experience_years": 9.55,
-      "management_experience_years": 4.39,
-      "management_titles_flagged": [
-        "IT Manager"
-      ]
-    },
-    "eligibility_features": {
-      "highest_degree_level": "masters",
-      "is_pspc_employee": false,
-      "has_security_printing_experience": false
-    },
+    "total_experience_years": 9.55,
     "additional_sections": {
       "references": [
         {
@@ -408,175 +374,37 @@
       "ner_review_needed": false
     },
     "metadata": {
-      "job_category": "manager_it",
-      "candidate_id": "b3f516fa9543c275b90ec5811a6e53f35f4dc2be230806bd75b247904af75cf8"
+      "job_category": "manager_it"
     }
   },
   {
-    "id": "14ecffeeab3fc7bbb340cf8fe9440a93845aae83bbd10ee746f393460ad1d639",
+    "id": "76ec7bd30fafd0bfed793dc28f337ca4ab9a14c0462c939992337c040b2a42c2",
     "personal_info": {
-      "name": "Faisal Mahmood",
-      "gender": null,
-      "marital_status": null,
-      "father_name": "r Date of Birtht 1987-12-26 Gendert Nationality: Male Pakistani",
-      "email": null,
-      "phone": [],
-      "landline": [],
-      "cnic": "42301-3456789-3",
-      "location": null,
-      "date_of_birth": null,
-      "nationality": null
-    },
-    "education": [
-      {
-        "degree": "Ms Information Technology sir Syed universitg of Engineering &Technology2011",
-        "institute": "BS Computer Science sir Syed university of Engineering &Technology",
-        "start_year": null,
-        "end_year": "2009",
-        "cgpa": null
-      }
-    ],
-    "experience": [],
-    "projects": [
-      {
-        "name": "Oracle ERP Upgrade Program Data-Center Consolidation -Pak Petro Refineries",
-        "role": null,
-        "start_date": null,
-        "end_date": null,
-        "technologies": [],
-        "github": null,
-        "demo": null,
-        "description": null
-      }
-    ],
-    "skills": [
-      "Oracle ERP",
-      "SAP",
-      "ERP Implementation",
-      "Project Management",
-      "Database Administration"
-    ],
-    "certifications": [
-      {
-        "name": "\u00b7PMP Oracle Database Administrator Certified Professional",
-        "issuer": null,
-        "issue_date": null,
-        "expiry_date": null,
-        "credential_id": null,
-        "credential_url": null
-      }
-    ],
-    "achievements": [],
-    "publications": [],
-    "languages": [],
-    "urls": null,
-    "summary": null,
-    "experience_summary": {
-      "total_experience_years": 0.0,
-      "management_experience_years": 0.0,
-      "management_titles_flagged": []
-    },
-    "eligibility_features": {
-      "highest_degree_level": "masters",
-      "is_pspc_employee": false,
-      "has_security_printing_experience": false
-    },
-    "additional_sections": {
-      "references": [
-        {
-          "name": "Dr. Nadeem Aslam co,Pak Petro Refineries Ltd .0300-9988776",
-          "designation": null,
-          "organization": null,
-          "phone": null,
-          "email": null
-        }
-      ],
-      "interests": []
-    },
-    "flags": {
-      "missing_fields": [],
-      "low_confidence_fields": [],
-      "mismatched_fields": [],
-      "ner_review_needed": false
-    },
-    "metadata": {
-      "job_category": "manager_it",
-      "candidate_id": "14ecffeeab3fc7bbb340cf8fe9440a93845aae83bbd10ee746f393460ad1d639"
-    }
-  },
-  {
-    "id": "41f9cf49398e287703817bf0d3f04b87509e0e2e2046936d13832890235e5875",
-    "personal_info": {
-      "name": "Ayesha Noor Baig",
+      "name": null,
       "gender": null,
       "marital_status": null,
       "father_name": null,
       "email": null,
       "phone": [],
       "landline": [],
-      "cnic": "42101-4567890-4",
-      "location": "Gulshan",
-      "date_of_birth": "Father Name: 1996-12-26 Rashid Baig Gender: Female",
+      "cnic": null,
+      "location": null,
+      "date_of_birth": null,
       "nationality": null
     },
-    "education": [
-      {
-        "degree": null,
-        "institute": "BS Computer Science University of Karachi",
-        "start_year": null,
-        "end_year": "2020",
-        "cgpa": null
-      }
-    ],
+    "education": [],
     "experience": [],
-    "projects": [
-      {
-        "name": "+ Inventory ERP Support Rollout",
-        "role": null,
-        "start_date": null,
-        "end_date": null,
-        "technologies": [],
-        "github": null,
-        "demo": null,
-        "description": null
-      }
-    ],
+    "projects": [],
     "skills": [],
-    "certifications": [
-      {
-        "name": "CompTIA Network+ \u2022 SAP Certified Associate",
-        "issuer": null,
-        "issue_date": null,
-        "expiry_date": null,
-        "credential_id": null,
-        "credential_url": null
-      }
-    ],
+    "certifications": [],
     "achievements": [],
     "publications": [],
     "languages": [],
     "urls": null,
     "summary": null,
-    "experience_summary": {
-      "total_experience_years": 0.0,
-      "management_experience_years": 0.0,
-      "management_titles_flagged": []
-    },
-    "eligibility_features": {
-      "highest_degree_level": "",
-      "is_pspc_employee": false,
-      "has_security_printing_experience": false
-    },
+    "total_experience_years": 0.0,
     "additional_sections": {
-      "references": [
-        {
-          "name": "Ms. Farah Yousuf HR Mandger, Silverline Apparel J 0333-2223344",
-          "designation": null,
-          "organization": null,
-          "phone": null,
-          "email": null
-        }
-      ],
+      "references": [],
       "interests": []
     },
     "flags": {
@@ -586,8 +414,47 @@
       "ner_review_needed": false
     },
     "metadata": {
-      "job_category": "manager_it",
-      "candidate_id": "41f9cf49398e287703817bf0d3f04b87509e0e2e2046936d13832890235e5875"
+      "job_category": "manager_it"
+    }
+  },
+  {
+    "id": "cc85e65bc10a30651fe032f5673abbf343033ae14ebde03d6409d17ff92298ea",
+    "personal_info": {
+      "name": null,
+      "gender": null,
+      "marital_status": null,
+      "father_name": null,
+      "email": null,
+      "phone": [],
+      "landline": [],
+      "cnic": null,
+      "location": null,
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [],
+    "experience": [],
+    "projects": [],
+    "skills": [],
+    "certifications": [],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "total_experience_years": 0.0,
+    "additional_sections": {
+      "references": [],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "manager_it"
     }
   },
   {
@@ -680,18 +547,7 @@
     "languages": [],
     "urls": null,
     "summary": null,
-    "experience_summary": {
-      "total_experience_years": 11.14,
-      "management_experience_years": 6.31,
-      "management_titles_flagged": [
-        "IT Manager (Operations)"
-      ]
-    },
-    "eligibility_features": {
-      "highest_degree_level": "",
-      "is_pspc_employee": false,
-      "has_security_printing_experience": false
-    },
+    "total_experience_years": 11.14,
     "additional_sections": {
       "references": [
         {
@@ -711,8 +567,7 @@
       "ner_review_needed": false
     },
     "metadata": {
-      "job_category": "manager_it",
-      "candidate_id": "1f02a185d032b986635666fc59ba905d9be345866b31eccceb102974a4f3d610"
+      "job_category": "manager_it"
     }
   },
   {
@@ -824,16 +679,7 @@
     "languages": [],
     "urls": null,
     "summary": null,
-    "experience_summary": {
-      "total_experience_years": 12.55,
-      "management_experience_years": 0.0,
-      "management_titles_flagged": []
-    },
-    "eligibility_features": {
-      "highest_degree_level": "masters",
-      "is_pspc_employee": false,
-      "has_security_printing_experience": false
-    },
+    "total_experience_years": 12.55,
     "additional_sections": {
       "references": [
         {
@@ -853,8 +699,7 @@
       "ner_review_needed": false
     },
     "metadata": {
-      "job_category": "manager_it",
-      "candidate_id": "412af70f42cd2e7661a1f1ca7c5a28507d57e40fefcd1ea6531a4e7ef9619814"
+      "job_category": "manager_it"
     }
   },
   {
@@ -940,18 +785,7 @@
       ]
     },
     "summary": null,
-    "experience_summary": {
-      "total_experience_years": 5.55,
-      "management_experience_years": 2.47,
-      "management_titles_flagged": [
-        "Unit Head"
-      ]
-    },
-    "eligibility_features": {
-      "highest_degree_level": "bachelors",
-      "is_pspc_employee": false,
-      "has_security_printing_experience": false
-    },
+    "total_experience_years": 5.55,
     "additional_sections": {
       "references": [],
       "interests": []
@@ -963,8 +797,7 @@
       "ner_review_needed": false
     },
     "metadata": {
-      "job_category": "manager_it",
-      "candidate_id": "40d8435574b9483e2a221888dae3ac4a733549dad04fb8f6d886d9e535418409"
+      "job_category": "manager_it"
     }
   },
   {
@@ -1094,16 +927,7 @@
       ]
     },
     "summary": null,
-    "experience_summary": {
-      "total_experience_years": 0.0,
-      "management_experience_years": 0.0,
-      "management_titles_flagged": []
-    },
-    "eligibility_features": {
-      "highest_degree_level": "",
-      "is_pspc_employee": false,
-      "has_security_printing_experience": false
-    },
+    "total_experience_years": 0.0,
     "additional_sections": {
       "references": [],
       "interests": []
@@ -1115,8 +939,7 @@
       "ner_review_needed": false
     },
     "metadata": {
-      "job_category": "manager_it",
-      "candidate_id": "7fbe7d36b283f3d0874bca5637757fa69b4a58072d9d3d652c904284c1962803"
+      "job_category": "manager_it"
     }
   },
   {
@@ -1172,16 +995,7 @@
     "languages": [],
     "urls": null,
     "summary": null,
-    "experience_summary": {
-      "total_experience_years": 7.06,
-      "management_experience_years": 0.0,
-      "management_titles_flagged": []
-    },
-    "eligibility_features": {
-      "highest_degree_level": "",
-      "is_pspc_employee": false,
-      "has_security_printing_experience": false
-    },
+    "total_experience_years": 7.06,
     "additional_sections": {
       "references": [
         {
@@ -1201,8 +1015,7 @@
       "ner_review_needed": false
     },
     "metadata": {
-      "job_category": "worker_grade_04",
-      "candidate_id": "6e886ec7e46b8dde2c3f514a448102e29551a365ac6f67f08ab9a04c92b6f143"
+      "job_category": "worker_grade_04"
     }
   },
   {
@@ -1250,16 +1063,7 @@
     "languages": [],
     "urls": null,
     "summary": null,
-    "experience_summary": {
-      "total_experience_years": 0.58,
-      "management_experience_years": 0.0,
-      "management_titles_flagged": []
-    },
-    "eligibility_features": {
-      "highest_degree_level": "",
-      "is_pspc_employee": false,
-      "has_security_printing_experience": false
-    },
+    "total_experience_years": 0.58,
     "additional_sections": {
       "references": [
         {
@@ -1279,65 +1083,37 @@
       "ner_review_needed": false
     },
     "metadata": {
-      "job_category": "worker_grade_04",
-      "candidate_id": "73ffd61aa5b47566e2ff6385b18ba85ef4c89388399e816c39bbbe02c49b8435"
+      "job_category": "worker_grade_04"
     }
   },
   {
-    "id": "ab0487ba83bda791de211cab614e195e431430c5ed06e5da1d12e1121ec5b263",
+    "id": "539a505e24aeefce16b816cc3fac3a4754b70056f00eeda8510fe18a321e93e8",
     "personal_info": {
-      "name": "Muhammad Bugti",
+      "name": null,
       "gender": null,
       "marital_status": null,
-      "father_name": "1994-12-26 Mir Hassan Bugti Gender: Male",
+      "father_name": null,
       "email": null,
       "phone": [],
       "landline": [],
-      "cnic": "53101-3334445-3",
+      "cnic": null,
       "location": null,
       "date_of_birth": null,
       "nationality": null
     },
-    "education": [
-      {
-        "degree": null,
-        "institute": "DAE Instrumentation Govermment College of Technology,Quetta",
-        "start_year": null,
-        "end_year": "2019",
-        "cgpa": null
-      }
-    ],
+    "education": [],
     "experience": [],
     "projects": [],
-    "skills": [
-      "Instrumentation Calibration Process Control Systems Field Instrumentation SCADA Basics"
-    ],
+    "skills": [],
     "certifications": [],
     "achievements": [],
     "publications": [],
     "languages": [],
     "urls": null,
     "summary": null,
-    "experience_summary": {
-      "total_experience_years": 0.0,
-      "management_experience_years": 0.0,
-      "management_titles_flagged": []
-    },
-    "eligibility_features": {
-      "highest_degree_level": "",
-      "is_pspc_employee": false,
-      "has_security_printing_experience": false
-    },
+    "total_experience_years": 0.0,
     "additional_sections": {
-      "references": [
-        {
-          "name": "Mr. Sarfaraz Marri FieldSupervisor,SuiGasFieldOperations0345-6667788",
-          "designation": null,
-          "organization": null,
-          "phone": null,
-          "email": null
-        }
-      ],
+      "references": [],
       "interests": []
     },
     "flags": {
@@ -1347,8 +1123,7 @@
       "ner_review_needed": false
     },
     "metadata": {
-      "job_category": "worker_grade_04",
-      "candidate_id": "ab0487ba83bda791de211cab614e195e431430c5ed06e5da1d12e1121ec5b263"
+      "job_category": "worker_grade_04"
     }
   },
   {
@@ -1403,16 +1178,7 @@
     "languages": [],
     "urls": null,
     "summary": null,
-    "experience_summary": {
-      "total_experience_years": 14.14,
-      "management_experience_years": 0.0,
-      "management_titles_flagged": []
-    },
-    "eligibility_features": {
-      "highest_degree_level": "",
-      "is_pspc_employee": false,
-      "has_security_printing_experience": true
-    },
+    "total_experience_years": 14.14,
     "additional_sections": {
       "references": [
         {
@@ -1432,14 +1198,13 @@
       "ner_review_needed": false
     },
     "metadata": {
-      "job_category": "worker_grade_04",
-      "candidate_id": "0334ec33c2482a05b33a1b6dcc9cf9196ac7c95f9f167da2c3a5e3335d357931"
+      "job_category": "worker_grade_04"
     }
   },
   {
-    "id": "5ac93474121b9e2a81dcf6429c9f9429c5b0d6adb9bae394aea40f5ae098e7ab",
+    "id": "722999a32b7f07fd297b2e36637ba293d9a481ca9f977d15796c675dbdbe751f",
     "personal_info": {
-      "name": "Shahbaz Ali",
+      "name": null,
       "gender": null,
       "marital_status": null,
       "father_name": null,
@@ -1447,52 +1212,23 @@
       "phone": [],
       "landline": [],
       "cnic": null,
-      "location": "Gujranwala",
+      "location": null,
       "date_of_birth": null,
       "nationality": null
     },
-    "education": [
-      {
-        "degree": null,
-        "institute": "DAE Mechanical Government College of Technology, Gujranwald",
-        "start_year": null,
-        "end_year": "2015",
-        "cgpa": null
-      }
-    ],
+    "education": [],
     "experience": [],
     "projects": [],
-    "skills": [
-      "Machine Operation",
-      "Welding",
-      "Fabrication Maintenance CERTIFICATIONS"
-    ],
+    "skills": [],
     "certifications": [],
     "achievements": [],
     "publications": [],
     "languages": [],
     "urls": null,
     "summary": null,
-    "experience_summary": {
-      "total_experience_years": 0.0,
-      "management_experience_years": 0.0,
-      "management_titles_flagged": []
-    },
-    "eligibility_features": {
-      "highest_degree_level": "",
-      "is_pspc_employee": false,
-      "has_security_printing_experience": false
-    },
+    "total_experience_years": 0.0,
     "additional_sections": {
-      "references": [
-        {
-          "name": "Mr. Nasir Gondal Workshop Manager, Gujranwala Engineering Works | 0333-9990011",
-          "designation": null,
-          "organization": null,
-          "phone": null,
-          "email": null
-        }
-      ],
+      "references": [],
       "interests": []
     },
     "flags": {
@@ -1502,8 +1238,7 @@
       "ner_review_needed": false
     },
     "metadata": {
-      "job_category": "worker_grade_04",
-      "candidate_id": "5ac93474121b9e2a81dcf6429c9f9429c5b0d6adb9bae394aea40f5ae098e7ab"
+      "job_category": "worker_grade_04"
     }
   },
   {
@@ -1543,16 +1278,7 @@
     "languages": [],
     "urls": null,
     "summary": null,
-    "experience_summary": {
-      "total_experience_years": 0.0,
-      "management_experience_years": 0.0,
-      "management_titles_flagged": []
-    },
-    "eligibility_features": {
-      "highest_degree_level": "",
-      "is_pspc_employee": false,
-      "has_security_printing_experience": false
-    },
+    "total_experience_years": 0.0,
     "additional_sections": {
       "references": [
         {
@@ -1572,133 +1298,37 @@
       "ner_review_needed": false
     },
     "metadata": {
-      "job_category": "worker_grade_04",
-      "candidate_id": "561ba09dc5366b885450c60144d54212f1af99f775f6c3079ac3454fac3716dd"
+      "job_category": "worker_grade_04"
     }
   },
   {
-    "id": "73f8ef38e7c19aa4bc8c14d85b0a62b01b6956b3d85b5018d4ceacb5268c2041",
+    "id": "f756d27e9cb63c790bd5d458424d25b836d4ac6463705a2a3435181ea4864298",
     "personal_info": {
-      "name": "Ghulam Mustafa Rind",
-      "gender": null,
-      "marital_status": null,
-      "father_name": "r Date of Birtht 1997-12-26 Ghulam Rasool Rind Gender: Nationality: Male Pakistani",
-      "email": null,
-      "phone": [],
-      "landline": [],
-      "cnic": "44301-7778889-7",
-      "location": null,
-      "date_of_birth": null,
-      "nationality": null
-    },
-    "education": [
-      {
-        "degree": "Matriculation (science) Govt.BoysHigh Schoo1,Jacobabad",
-        "institute": null,
-        "start_year": null,
-        "end_year": "2016",
-        "cgpa": null
-      }
-    ],
-    "experience": [],
-    "projects": [],
-    "skills": [
-      "General Labour Basic Machine Handling"
-    ],
-    "certifications": [],
-    "achievements": [],
-    "publications": [],
-    "languages": [],
-    "urls": null,
-    "summary": null,
-    "experience_summary": {
-      "total_experience_years": 0.0,
-      "management_experience_years": 0.0,
-      "management_titles_flagged": []
-    },
-    "eligibility_features": {
-      "highest_degree_level": "",
-      "is_pspc_employee": false,
-      "has_security_printing_experience": false
-    },
-    "additional_sections": {
-      "references": [
-        {
-          "name": "Mr. Aslam Rind Flooz Supervisor;Jacobabad Textile Mi11s 1 0300:5566778",
-          "designation": null,
-          "organization": null,
-          "phone": null,
-          "email": null
-        }
-      ],
-      "interests": []
-    },
-    "flags": {
-      "missing_fields": [],
-      "low_confidence_fields": [],
-      "mismatched_fields": [],
-      "ner_review_needed": false
-    },
-    "metadata": {
-      "job_category": "worker_grade_04",
-      "candidate_id": "73f8ef38e7c19aa4bc8c14d85b0a62b01b6956b3d85b5018d4ceacb5268c2041"
-    }
-  },
-  {
-    "id": "9aef0184f677c4ec1dfc6fe6291c3c9fb67b9c635809ff891231c6322c6d2ab2",
-    "personal_info": {
-      "name": "Anwar Bhatti",
+      "name": null,
       "gender": null,
       "marital_status": null,
       "father_name": null,
       "email": null,
       "phone": [],
       "landline": [],
-      "cnic": "45101-8889990-8",
+      "cnic": null,
       "location": null,
-      "date_of_birth": "Father Name: 1998-12-26 Anwar Ali Bhatti Gender: Male",
+      "date_of_birth": null,
       "nationality": null
     },
-    "education": [
-      {
-        "degree": null,
-        "institute": "DAE Civil Govermment College of Technology, Sukkur",
-        "start_year": null,
-        "end_year": "2019",
-        "cgpa": null
-      }
-    ],
+    "education": [],
     "experience": [],
     "projects": [],
-    "skills": [
-      "Site Supervision Surveying Construction Materials"
-    ],
+    "skills": [],
     "certifications": [],
     "achievements": [],
     "publications": [],
     "languages": [],
     "urls": null,
     "summary": null,
-    "experience_summary": {
-      "total_experience_years": 0.0,
-      "management_experience_years": 0.0,
-      "management_titles_flagged": []
-    },
-    "eligibility_features": {
-      "highest_degree_level": "",
-      "is_pspc_employee": false,
-      "has_security_printing_experience": false
-    },
+    "total_experience_years": 0.0,
     "additional_sections": {
-      "references": [
-        {
-          "name": "Eng.Kashif Abro Site Engineer, Sukkur Construction Co | 0333-6677889",
-          "designation": null,
-          "organization": null,
-          "phone": null,
-          "email": null
-        }
-      ],
+      "references": [],
       "interests": []
     },
     "flags": {
@@ -1708,8 +1338,47 @@
       "ner_review_needed": false
     },
     "metadata": {
-      "job_category": "worker_grade_04",
-      "candidate_id": "9aef0184f677c4ec1dfc6fe6291c3c9fb67b9c635809ff891231c6322c6d2ab2"
+      "job_category": "worker_grade_04"
+    }
+  },
+  {
+    "id": "f4dcde1207803516568abb03acb8623abcaa9960c008eedf593b3edc79abbbb1",
+    "personal_info": {
+      "name": null,
+      "gender": null,
+      "marital_status": null,
+      "father_name": null,
+      "email": null,
+      "phone": [],
+      "landline": [],
+      "cnic": null,
+      "location": null,
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [],
+    "experience": [],
+    "projects": [],
+    "skills": [],
+    "certifications": [],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "total_experience_years": 0.0,
+    "additional_sections": {
+      "references": [],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "worker_grade_04"
     }
   },
   {
@@ -1819,16 +1488,7 @@
       ]
     },
     "summary": null,
-    "experience_summary": {
-      "total_experience_years": 0.25,
-      "management_experience_years": 0.0,
-      "management_titles_flagged": []
-    },
-    "eligibility_features": {
-      "highest_degree_level": "masters",
-      "is_pspc_employee": false,
-      "has_security_printing_experience": false
-    },
+    "total_experience_years": 0.25,
     "additional_sections": {
       "references": [],
       "interests": []
@@ -1840,8 +1500,7 @@
       "ner_review_needed": false
     },
     "metadata": {
-      "job_category": "worker_grade_04",
-      "candidate_id": "7f4bd3520c68b5bb8a36d0b53a3bbe61fac5c3ebc3f145ec4113afa9c06bcf74"
+      "job_category": "worker_grade_04"
     }
   },
   {
@@ -1883,16 +1542,7 @@
       "portfolio": []
     },
     "summary": null,
-    "experience_summary": {
-      "total_experience_years": 0.0,
-      "management_experience_years": 0.0,
-      "management_titles_flagged": []
-    },
-    "eligibility_features": {
-      "highest_degree_level": "",
-      "is_pspc_employee": false,
-      "has_security_printing_experience": false
-    },
+    "total_experience_years": 0.0,
     "additional_sections": {
       "references": [],
       "interests": []
@@ -1904,8 +1554,7 @@
       "ner_review_needed": false
     },
     "metadata": {
-      "job_category": "worker_grade_04",
-      "candidate_id": "b128d2eae57591110f1dfe7851940ea1c075a5d08ea7cb358fb7ff6ea738b067"
+      "job_category": "worker_grade_04"
     }
   }
 ]

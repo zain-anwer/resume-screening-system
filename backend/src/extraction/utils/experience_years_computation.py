@@ -26,9 +26,28 @@ _MONTH_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Management role keywords — matched as whole words against job_title.
+# Order doesn't matter here since it's just membership testing.
+_MANAGEMENT_KEYWORDS = {
+    "manager", "management", "managing",
+    "director", "head", "chief",
+    "lead", "leader", "leading",
+    "supervisor", "supervising",
+    "vp", "vice president",
+    "president", "ceo", "cto", "cfo", "coo",
+    "principal", "president",
+    "executive",
+    "team lead", "tech lead",
+}
+
+_MANAGEMENT_KEYWORD_RE = re.compile(
+    r"\b(" + "|".join(sorted((re.escape(k) for k in _MANAGEMENT_KEYWORDS), key=len, reverse=True)) + r")\b",
+    re.IGNORECASE,
+)
+
 
 def _parse_date(raw, *, is_end=False, today=None):
-   
+
     if today is None:
         today = date.today()
 
@@ -76,31 +95,73 @@ def _merge_intervals(intervals):
     return merged
 
 
-def get_total_experience_years(experience, *, today=None, round_to=2):
+def _is_management_title(job_title):
+    """Return True if job_title contains a management-role keyword."""
+    if not job_title:
+        return False
+    return bool(_MANAGEMENT_KEYWORD_RE.search(str(job_title)))
 
+
+def _build_intervals(experience, *, today, management_only=False):
+    intervals = []
+    for entry in experience:
+        if not isinstance(entry, dict):
+            continue
+        if management_only and not _is_management_title(entry.get("job_title")):
+            continue
+        start = _parse_date(entry.get("start_date"), is_end=False, today=today)
+        if start is None:
+            continue
+        end = _parse_date(entry.get("end_date"), is_end=True, today=today)
+        if end is None:
+            end = today
+        if end < start:
+            start, end = end, start
+        intervals.append((start, end))
+    return intervals
+
+
+def _years_from_intervals(intervals, round_to):
+    merged = _merge_intervals(intervals)
+    total_days = sum((end - start).days for start, end in merged)
+    years = total_days / 365.25
+    return round(years, round_to) if round_to is not None else years
+
+
+def get_total_experience_years(experience, *, today=None, round_to=2):
     if not experience:
         return 0.0
     if today is None:
         today = date.today()
 
-    intervals = []
-    for entry in experience:
-        if not isinstance(entry, dict):
-            continue
-        start = _parse_date(entry.get("start_date"), is_end=False, today=today)
-        if start is None:
-            continue  # can't anchor this entry without a start date
-        end = _parse_date(entry.get("end_date"), is_end=True, today=today)
-        if end is None:
-            end = today  # treat unparseable/missing end as ongoing
-        if end < start:
-            start, end = end, start  # guard against swapped/bad data
-        intervals.append((start, end))
+    intervals = _build_intervals(experience, today=today, management_only=False)
+    return _years_from_intervals(intervals, round_to)
 
-    merged = _merge_intervals(intervals)
-    total_days = sum((end - start).days for start, end in merged)
-    years = total_days / 365.25
 
-    # 0.5 if experience exists but start and end date are same???
-    # maybe check things out in the parser
-    return round(years, round_to) if round_to is not None else years
+def get_management_experience_years(experience, *, today=None, round_to=2):
+  
+    if not experience:
+        return 0.0
+    if today is None:
+        today = date.today()
+
+    intervals = _build_intervals(experience, today=today, management_only=True)
+    return _years_from_intervals(intervals, round_to)
+
+
+def get_experience_summary(experience, *, today=None, round_to=2):
+    
+    if today is None:
+        today = date.today()
+
+    flagged = [
+        entry.get("job_title")
+        for entry in (experience or [])
+        if isinstance(entry, dict) and _is_management_title(entry.get("job_title"))
+    ]
+
+    return {
+        "total_experience_years": get_total_experience_years(experience, today=today, round_to=round_to),
+        "management_experience_years": get_management_experience_years(experience, today=today, round_to=round_to),
+        "management_titles_flagged": flagged,
+    }

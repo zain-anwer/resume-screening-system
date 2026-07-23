@@ -1,112 +1,39 @@
-import json
 from pathlib import Path
+import json
 
-from backend.src.adapters.jd_adapter import JobDescriptionAdapter
-from backend.src.retrieval.retrieval_engine import RetrievalService
+from backend.src.retrieval.resume_ranking import rank_candidates
 
-# -----------------------------
-# Build Retrieval Index
-# -----------------------------
+CURR_DIR = Path(__file__).resolve().parent
 
-service = RetrievalService()
-
-service.build_index(
-    "backend/data/candidates"
+JOB_DESCRIPTION = (
+    CURR_DIR.parent
+    / "data"
+    / "job_descriptions"
+    / "it_engineer.txt"
 )
 
-# -----------------------------
-# Load Job Description
-# -----------------------------
-
-job = JobDescriptionAdapter.adapt(
-    job_id="jd_001",
-    file_path="backend/data/job_descriptions/ai_engineer.txt",
+CANDIDATES = (
+    CURR_DIR.parent
+    / "data"
+    / "extraction_output.json"
 )
 
-# -----------------------------
-# Retrieve Ranked Candidates
-# -----------------------------
+OUTPUT_FILE = (
+    CURR_DIR
+    / "ranking_output.json"
+)
 
-results = service.retrieve(
-    job,
+with open(CANDIDATES, "r", encoding="utf-8") as f:
+    candidates_json = json.load(f)
+
+results = rank_candidates(
+    job_description_path=str(JOB_DESCRIPTION),
+    candidates_json=candidates_json,
     top_k=5,
 )
 
-# -----------------------------
-# Print Results
-# -----------------------------
+with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    json.dump(results, f, indent=4)
 
-print("=" * 70)
-print("TOP RANKED CANDIDATES")
-print("=" * 70)
-
-for candidate in results:
-
-    print(f"\nRank: {candidate.rank}")
-    print(f"Candidate ID: {candidate.candidate.id}")
-    print(f"Name: {candidate.candidate.personal_info.name}")
-
-    print(
-        f"Current Role: "
-        f"{candidate.candidate.experience[0].title}"
-    )
-
-    print(
-        f"Experience: "
-        f"{candidate.candidate.total_experience_years} years"
-    )
-
-    print(
-        f"Skills: "
-        f"{', '.join(candidate.candidate.skills)}"
-    )
-
-    print()
-
-    print(
-        f"Lexical Score : "
-        f"{candidate.lexical_score:.3f}"
-    )
-
-    print(
-        f"Semantic Score: "
-        f"{candidate.semantic_score:.3f}"
-    )
-
-    print(
-        f"Final Score   : "
-        f"{candidate.final_score:.3f}"
-    )
-
-    print()
-
-    print(
-        "Matched Skills:"
-    )
-
-    if candidate.matched_skills:
-        for skill in candidate.matched_skills:
-            print(f"  ✓ {skill}")
-    else:
-        print("  None")
-
-    print()
-
-    print(
-        "Missing Skills:"
-    )
-
-    if candidate.missing_skills:
-        for skill in candidate.missing_skills:
-            print(f"  ✗ {skill}")
-    else:
-        print("  None")
-
-    print("\nResume Preview:")
-
-    print(
-        candidate.candidate.resume_text[:150]
-        + "..."
-    )
-
-    print("-" * 70)
+print("Ranking completed successfully.")
+print(f"Results saved to: {OUTPUT_FILE}")

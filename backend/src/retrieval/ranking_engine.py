@@ -3,8 +3,8 @@ from backend.models.candidate import Candidate
 from backend.models.job_description import JobDescription
 from backend.models.ranked_candidate import RankedCandidate
 from backend.src.preprocessing.document_builder import DocumentBuilder
-from backend.src.services.embedding_engine import EmbeddingService
-from backend.src.services.similarity_engine import SimilarityService
+from backend.src.retrieval.embedding_engine import EmbeddingService
+from backend.src.retrieval.similarity_engine import SimilarityService
 class RankingService:
     from backend.configs.config import (
     LEXICAL_WEIGHT,

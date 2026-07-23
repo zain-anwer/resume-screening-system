@@ -3,13 +3,6 @@ candidate_adapter.py
 
 Converts raw candidate JSON into the standardized Candidate model
 used internally by Module 4.
-
-Responsibilities
-----------------
-- Validate incoming JSON
-- Normalize optional fields
-- Convert dictionaries into domain models
-- Raise meaningful validation exceptions
 """
 
 from __future__ import annotations
@@ -26,15 +19,13 @@ from backend.models.candidate import (
     PersonalInfo,
     URLs,
 )
+
 from backend.src.exceptions.validation import CandidateValidationError
 
 logger = logging.getLogger(__name__)
 
 
 class CandidateAdapter:
-    """
-    Converts raw candidate JSON into the internal Candidate model.
-    """
 
     REQUIRED_FIELDS = [
         "id",
@@ -42,14 +33,10 @@ class CandidateAdapter:
         "education",
         "experience",
         "skills",
-        "resume_text",
     ]
 
     @classmethod
     def adapt(cls, raw_candidate: dict[str, Any]) -> Candidate:
-        """
-        Convert raw candidate JSON into a Candidate object.
-        """
 
         cls._validate(raw_candidate)
 
@@ -60,12 +47,7 @@ class CandidateAdapter:
                 "Candidate id cannot be empty."
             )
 
-        logger.debug(
-            "Adapting candidate '%s'",
-            candidate_id,
-        )
-
-        candidate = Candidate(
+        return Candidate(
             id=candidate_id,
 
             personal_info=cls._build_personal_info(
@@ -74,12 +56,12 @@ class CandidateAdapter:
 
             education=[
                 cls._build_education(item)
-                for item in raw_candidate["education"]
+                for item in raw_candidate.get("education", [])
             ],
 
             experience=[
                 cls._build_experience(item)
-                for item in raw_candidate["experience"]
+                for item in raw_candidate.get("experience", [])
             ],
 
             total_experience_years=float(
@@ -102,38 +84,25 @@ class CandidateAdapter:
                 cls._build_certification(item)
                 for item in raw_candidate.get(
                     "certifications",
-                    [],
+                    []
                 )
             ],
 
             urls=cls._build_urls(
-                raw_candidate.get("urls", {})
+                raw_candidate.get("urls")
             ),
 
             flags=cls._build_flags(
-                raw_candidate.get("flags", {})
+                raw_candidate.get("flags")
             ),
 
-            resume_text=" ".join(
-                raw_candidate.get(
-                    "resume_text",
-                    "",
-                ).split()
+            resume_text=cls._build_resume_text(
+                raw_candidate
             ),
         )
-
-        logger.debug(
-            "Successfully adapted candidate '%s'",
-            candidate.id,
-        )
-
-        return candidate
 
     @classmethod
     def _validate(cls, data: dict[str, Any]) -> None:
-        """
-        Validate the incoming candidate JSON.
-        """
 
         if not isinstance(data, dict):
             raise CandidateValidationError(
@@ -167,23 +136,35 @@ class CandidateAdapter:
             )
 
     @staticmethod
-    def _build_personal_info(data: dict[str, Any]) -> PersonalInfo:
+    def _build_personal_info(
+        data: dict[str, Any],
+    ) -> PersonalInfo:
 
         if not isinstance(data, dict):
             raise CandidateValidationError(
                 "personal_info must be an object."
             )
 
+        phones = data.get("phone") or []
+
+        phone = (
+            phones[0]
+            if isinstance(phones, list) and phones
+            else ""
+        )
+
         return PersonalInfo(
-            name=data.get("name", ""),
-            email=data.get("email", ""),
-            phone=data.get("phone", ""),
-            cnic=data.get("cnic", ""),
-            location=data.get("location", ""),
+            name=data.get("name") or "",
+            email=data.get("email") or "",
+            phone=phone,
+            cnic=data.get("cnic") or "",
+            location=data.get("location") or "",
         )
 
     @staticmethod
-    def _build_education(data: dict[str, Any]) -> Education:
+    def _build_education(
+        data: dict[str, Any],
+    ) -> Education:
 
         if not isinstance(data, dict):
             raise CandidateValidationError(
@@ -192,91 +173,78 @@ class CandidateAdapter:
 
         try:
             graduation_year = int(
-                data.get("graduation_year", 0)
+                data.get("end_year") or 0
             )
         except (TypeError, ValueError):
-            raise CandidateValidationError(
-                "graduation_year must be an integer."
-            )
+            graduation_year = 0
 
         return Education(
-            degree_raw=data.get("degree_raw", ""),
-            degree_level=data.get("degree_level", ""),
-            field=data.get("field", ""),
-            institution=data.get("institution", ""),
+            degree_raw=data.get("degree") or "",
+            degree_level="",
+            field="",
+            institution=data.get("institute") or "",
             graduation_year=graduation_year,
-            is_current=bool(
-                data.get("is_current", False)
-            ),
+            is_current=False,
             cgpa=data.get("cgpa"),
         )
 
     @staticmethod
-    def _build_experience(data: dict[str, Any]) -> Experience:
+    def _build_experience(
+        data: dict[str, Any],
+    ) -> Experience:
 
         if not isinstance(data, dict):
             raise CandidateValidationError(
                 "Each experience entry must be an object."
             )
 
-        try:
-            duration = int(
-                data.get("duration_months", 0)
-            )
-        except (TypeError, ValueError):
-            raise CandidateValidationError(
-                "duration_months must be an integer."
-            )
-
         return Experience(
-            title=data.get("title", ""),
-            organization=data.get("organization", ""),
-            start_date=data.get("start_date", ""),
+            title=data.get("job_title") or "",
+            organization=data.get("organization") or "",
+            start_date=data.get("start_date") or "",
             end_date=data.get("end_date"),
-            is_current=bool(
-                data.get("is_current", False)
+            is_current=(
+                str(data.get("end_date", "")).lower()
+                == "present"
             ),
-            duration_months=duration,
+            duration_months=0,
         )
 
     @staticmethod
-    def _build_certification(data: dict[str, Any]) -> Certification:
+    def _build_certification(
+        data: dict[str, Any],
+    ) -> Certification:
 
         if not isinstance(data, dict):
             raise CandidateValidationError(
                 "Each certification entry must be an object."
             )
 
-        try:
-            year = int(
-                data.get("year", 0)
-            )
-        except (TypeError, ValueError):
-            raise CandidateValidationError(
-                "Certification year must be an integer."
-            )
-
         return Certification(
-            name=data.get("name", ""),
-            year=year,
+            name=data.get("name") or "",
+            year=0,
         )
 
     @staticmethod
-    def _build_urls(data: dict[str, Any]) -> URLs:
+    def _build_urls(
+        data: dict[str, Any] | None,
+    ) -> URLs:
 
         if not isinstance(data, dict):
             data = {}
 
         return URLs(
-            github=data.get("github", ""),
-            linkedin=data.get("linkedin", ""),
+            github=data.get("github") or "",
+            linkedin=data.get("linkedin") or "",
             portfolio=list(
                 data.get("portfolio", [])
             ),
         )
 
     @staticmethod
-    def _build_flags(data: dict[str, Any]) -> Flags:
+    def _build_flags(
+        data: dict[str, Any] | None,
+    ) -> Flags:
 
         if not isinstance(data, dict):
             data = {}
@@ -297,4 +265,46 @@ class CandidateAdapter:
                     False,
                 )
             ),
+        )
+
+    @staticmethod
+    def _build_resume_text(
+        data: dict[str, Any],
+    ) -> str:
+
+        parts: list[str] = []
+
+        if data.get("summary"):
+            parts.append(data["summary"])
+
+        parts.extend(data.get("skills", []))
+
+        for exp in data.get("experience", []):
+            parts.append(exp.get("job_title", ""))
+            parts.append(exp.get("organization", ""))
+            parts.append(exp.get("description", ""))
+
+        for edu in data.get("education", []):
+            parts.append(edu.get("degree", ""))
+            parts.append(edu.get("institute", ""))
+
+        for cert in data.get("certifications", []):
+            parts.append(cert.get("name", ""))
+
+        for project in data.get("projects", []):
+            parts.append(project.get("name", ""))
+            parts.append(project.get("description", ""))
+
+            technologies = project.get(
+                "technologies",
+                [],
+            )
+
+            if technologies:
+                parts.extend(technologies)
+
+        return " ".join(
+            str(item).strip()
+            for item in parts
+            if item
         )

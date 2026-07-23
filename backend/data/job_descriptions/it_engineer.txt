@@ -1,0 +1,63 @@
+# Senior IT Manager
+
+## Department
+
+Information Technology
+
+## Location
+
+Karachi, Pakistan
+
+## Employment Type
+
+Full Time
+
+## Experience Required
+
+8+ years of IT experience with at least 5 years in a managerial or supervisory role.
+
+## Education Required
+
+Bachelor's or Master's degree in Computer Science, Information Technology, Software Engineering, or related field.
+
+## Required Skills
+
+Oracle ERP
+SAP
+SQL
+Python
+Networking
+Linux
+Cloud Computing
+IT Infrastructure
+Database Administration
+Team Management
+
+## Preferred Skills
+
+AWS
+Azure
+Project Management
+ERP Implementation
+Disaster Recovery
+Cyber Security
+
+## Responsibilities
+
+* Manage enterprise IT infrastructure.
+* Lead ERP implementation and support projects.
+* Supervise the IT team and allocate technical tasks.
+* Maintain Oracle and SQL databases.
+* Manage Linux and Windows servers.
+* Ensure network availability and security.
+* Coordinate cloud migration initiatives.
+* Improve system performance and reduce downtime.
+* Prepare technical documentation and reports.
+
+## Qualifications
+
+* Strong experience with Oracle ERP or SAP.
+* Experience leading technical teams.
+* Excellent troubleshooting skills.
+* Strong communication and leadership abilities.
+* Experience working in enterprise environments.

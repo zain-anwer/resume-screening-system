@@ -35,6 +35,11 @@ except ImportError:
     docx = None
 
 try:
+    from rapidocr_onnxruntime import RapidOCR
+except ImportError:
+    RapidOCR = None
+
+try:
     import win32com.client
 except ImportError:
     win32com = None
@@ -599,6 +604,56 @@ def is_blurry(image, threshold=120):
 
     return blur_score < threshold, blur_score
 
+
+def _reconstruct_rapidocr_lines(ocr_result):
+    """
+    Convert RapidOCR token output into readable line-separated text.
+    The OCR engine returns words with bounding boxes; grouping by y-position
+    restores the resume layout with real line breaks.
+    """
+
+    if not ocr_result:
+        return ""
+
+    grouped_lines = []
+    current_line = None
+
+    for item in ocr_result:
+        if not item or len(item) < 2:
+            continue
+
+        box = item[0]
+        text = str(item[1]).strip()
+        if not text:
+            continue
+
+        xs = [point[0] for point in box]
+        ys = [point[1] for point in box]
+
+        center_x = sum(xs) / len(xs)
+        center_y = sum(ys) / len(ys)
+
+        if current_line is None or abs(center_y - current_line["y"]) > 18:
+            if current_line:
+                grouped_lines.append(current_line)
+
+            current_line = {
+                "y": center_y,
+                "items": [(center_x, text)],
+            }
+        else:
+            current_line["items"].append((center_x, text))
+
+    if current_line:
+        grouped_lines.append(current_line)
+
+    lines = []
+    for line in grouped_lines:
+        line["items"].sort(key=lambda entry: entry[0])
+        lines.append(" ".join(text for _, text in line["items"]))
+
+    return "\n".join(lines)
+
 # ---------------- IMAGE ---------------- #
 def extract_image_text(image_path):
     """
@@ -607,6 +662,21 @@ def extract_image_text(image_path):
     """
 
     try:
+
+        if RapidOCR is not None:
+            try:
+                rapidocr = RapidOCR()
+                result, _ = rapidocr(str(image_path))
+                text = _reconstruct_rapidocr_lines(result)
+                if text.strip():
+                    return {
+                        "text": text,
+                        "blurred": False,
+                        "blur_score": 0,
+                        "manual_review": len(text.strip()) < 250
+                    }
+            except Exception as e:
+                print(f"RapidOCR fallback failed for {image_path}: {e}")
 
         if not TESSERACT_EXE or pytesseract is None:
             return {

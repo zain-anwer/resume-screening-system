@@ -33,6 +33,7 @@ python-docx
 # -----------------------
 pytesseract
 Pillow
+rapidocr-onnxruntime
 
 # Uncomment if you later benchmark it
 # easyocr

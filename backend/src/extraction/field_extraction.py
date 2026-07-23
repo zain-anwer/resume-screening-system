@@ -14,7 +14,8 @@ from src.extraction.parsers.references_parser import parse_references
 from src.extraction.parsers.skills_parser import parse_skills_section
 
 # postprocessing import
-from src.extraction.utils.experience_years_computation import get_total_experience_years
+from src.extraction.utils.experience_years_computation import get_experience_summary
+from src.extraction.utils.eligibility_features_computation import compute_eligibility_features
 
 import json
 
@@ -55,13 +56,15 @@ def extract_fields(input_path : str, output_path : str):
         output['languages']      = []
         output['urls']           = urls
         output['summary']        = None
-        output['total_experience_years'] = get_total_experience_years(experience)
+        output['experience_summary'] = get_experience_summary(experience)
+        output['eligibility_features'] = compute_eligibility_features(output)
         output['additional_sections'] = {}
         output['additional_sections']['references'] = references
         output['additional_sections']['interests']  = []
         output['flags']                             = flags
         output['metadata'] = {}
         output['metadata']['job_category']          = input['job_category']
+        output['metadata']['candidate_id']          = input['hash_id']
     
         outputs.append(output)
 
