@@ -163,11 +163,8 @@ class JobDescriptionAdapter:
 
                     continue
 
-            normalized = (
-                line.lower()
-                .rstrip(":")
-                .strip()
-            )
+            normalized = re.sub(r"^#+\s*", "", line.lower())
+            normalized = normalized.rstrip(":").strip()
 
             if normalized in cls.SECTION_HEADERS:
 
@@ -198,7 +195,7 @@ class JobDescriptionAdapter:
 
             else:
                 data[current_section] = line.strip()
-
+        print(data)
         job = JobDescription(
             job_id=job_id,
             title=title,

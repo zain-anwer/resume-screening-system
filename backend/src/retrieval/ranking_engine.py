@@ -24,13 +24,27 @@ class RankingService:
             candidate_document=DocumentBuilder.build_candidate(candidate)
             candidate_embedding=self.embedding_service.encode(candidate_document)
             semantic_score=(SimilarityService.cosine_similarity(job_embedding,candidate_embedding))
-            final_score=(self.LEXICAL_WEIGHT*normalized_score+self.SEMANTIC_WEIGHT*semantic_score)
+            #final_score=(self.LEXICAL_WEIGHT*normalized_score+self.SEMANTIC_WEIGHT*semantic_score)
             candidate_skills=set(candidate.skills)
             required_skills=set(skill.lower() for skill in job.required_skills)
             prefferd_skills=set(skill.lower() for skill in job.preferred_skills)
             matched_skills=sorted(candidate_skills & required_skills)
             missing_skills=sorted(required_skills-candidate_skills)
             matched_preffered=sorted(candidate_skills & prefferd_skills)
+            required_skill_score = (
+                   len(matched_skills) / len(required_skills)
+                   if required_skills else 0.0
+       )
+            preferred_skill_score = (
+              len(matched_preffered) / len(prefferd_skills)
+               if prefferd_skills else 0.0
+)           
+            final_score = (
+    0.30 * normalized_score
+    + 0.30 * semantic_score
+    + 0.35 * required_skill_score
+    + 0.05 * preferred_skill_score
+)
             ranked_candidates.append(RankedCandidate(candidate=candidate,lexical_score=lexical_score,semantic_score=semantic_score,final_score=final_score,
                                                     matched_skills=matched_skills,missing_skills=missing_skills,matched_preferred_skills=matched_preffered,  score_breakdown={
                         "raw_bm25": lexical_score,
