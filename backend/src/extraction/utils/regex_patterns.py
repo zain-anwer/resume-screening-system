@@ -51,13 +51,19 @@ father_pattern = re.compile(
 dob_pattern = re.compile(
     r'(?im)^\s*'
     r'(?:'
-        r'D\.?\s*O\.?\s*B\.?'          # DOB, D.O.B.
+        r'D\.?\s*O\.?\s*B\.?'
         r'|Date\s+of\s+Birth'
         r'|Birth\s+Date'
         r'|Born'
     r')'
     r'\s*:?\s*'
-    r'(?P<dob>[^\n\r]+)'
+    r'(?P<dob>'
+        r'\d{4}[-/]\d{1,2}[-/]\d{1,2}'
+        r'|'
+        r'\d{1,2}[-/]\d{1,2}[-/]\d{2,4}'
+        r'|'
+        r'\d{1,2}\s+[A-Za-z]{3,9}\s+\d{4}'
+    r')'
 )
 
 gender_pattern = re.compile(

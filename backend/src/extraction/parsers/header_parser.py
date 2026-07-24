@@ -19,6 +19,95 @@ nlp = spacy.load('en_core_web_sm')
 #           HELPER FUNCTIONS              #
 # ======================================= #
 
+LABEL_PATTERNS = {
+    "date_of_birth": re.compile(r'Date\s+of\s+Birth\s*:', re.I),
+    "father_name":   re.compile(r"Father(?:'s)?\s*Name\s*:", re.I),
+    "gender":        re.compile(r'Gender\s*:', re.I),
+    "cnic":          re.compile(r'CNIC\s*(?:No\.?|Number)?\s*:', re.I),
+    "address":       re.compile(r'Address\s*:', re.I),
+    "nationality":   re.compile(r'Nationality\s*:', re.I),
+    "marital_status":re.compile(r'Marital\s*Status\s*:', re.I),
+}
+
+VALUE_PATTERNS = {
+    "cnic":          re.compile(r'\d{5}-\d{7}-\d'),
+    "date_of_birth": re.compile(r'\d{4}[-/]\d{1,2}[-/]\d{1,2}|\d{1,2}[-/]\d{1,2}[-/]\d{2,4}|\d{1,2}\s+[A-Za-z]{3,9}\s+\d{4}'),
+    "gender":        re.compile(r'\b(?:Male|Female|M|F)\b'),
+    "marital_status":re.compile(r'\b(?:Single|Married|Divorced|Widowed)\b', re.I),
+    "nationality":   re.compile(r'\b(?:Pakistani|Indian|Bangladeshi|Afghan|Chinese|British|American|Canadian|Saudi|Emirati)\b', re.I),
+    "father_name":   re.compile(r'(?:[A-Z][a-z]+\s+){1,3}[A-Z][a-z]+'),
+}
+FREEFORM_FIELDS = {"address"}  # no fixed shape - absorbs whatever's left
+
+
+def descramble_header_labels(header_text: str) -> str:
+    matches = []
+    for field, pat in LABEL_PATTERNS.items():
+        for m in pat.finditer(header_text):
+            matches.append((m.start(), m.end(), field, m.group()))
+    matches.sort(key=lambda t: t[0])
+    if not matches:
+        return header_text
+
+    # group labels that have nothing but whitespace between them
+    clusters, current = [], [matches[0]]
+    for prev, cur in zip(matches, matches[1:]):
+        if header_text[prev[1]:cur[0]].strip() == "":
+            current.append(cur)
+        else:
+            clusters.append(current)
+            current = [cur]
+    clusters.append(current)
+
+    scrambled = [c for c in clusters if len(c) > 1]
+    if not scrambled:
+        return header_text
+
+    rebuilt, offset = header_text, 0
+    priority = ["cnic", "date_of_birth", "gender", "marital_status",
+                "nationality", "father_name"]
+
+    for cluster in scrambled:
+        cluster_fields = [c[2] for c in cluster]
+        cluster_end = cluster[-1][1]
+        next_starts = [m[0] for m in matches if m[0] >= cluster_end and m not in cluster]
+        span_end = next_starts[0] if next_starts else len(header_text)
+        nl = header_text.find('\n', cluster_end, span_end)
+        if nl != -1:
+            span_end = nl
+
+        remaining = header_text[cluster_end:span_end]
+        assigned = {}
+        for field in priority:
+            if field not in cluster_fields or field in assigned:
+                continue
+            m = VALUE_PATTERNS[field].search(remaining)
+            if m:
+                assigned[field] = m.group().strip()
+                remaining = remaining[:m.start()] + remaining[m.end():]
+
+        leftover_fields = [f for f in cluster_fields if f in FREEFORM_FIELDS and f not in assigned]
+        leftover_text = remaining.strip(" ,")
+        if leftover_fields:
+            assigned[leftover_fields[0]] = leftover_text
+        elif leftover_text:
+            unassigned = [f for f in cluster_fields if f not in assigned]
+            if unassigned:
+                assigned[unassigned[-1]] = leftover_text
+
+        pieces = [f"{label_text} {assigned.get(field, '')}".strip()
+                  for _, _, field, label_text in cluster]
+        replacement = " ".join(pieces)
+
+        start, end = cluster[0][0] + offset, span_end + offset
+        tail = rebuilt[end:]
+        sep = "" if tail[:1] in ("", "\n", " ", "\t") else " "
+        rebuilt = rebuilt[:start] + replacement + sep + tail
+        offset += len(replacement) + len(sep) - (end - start)
+
+    return rebuilt
+
+
 def classify_urls(urls : list[str]) -> dict:
 
   result = {
@@ -67,6 +156,9 @@ def parse_header_section(header_lines):
   }
 
   header_text = '\n'.join(header_lines)
+  print("BEFORE DESCRAMBLE:", repr(header_text))
+  header_text = descramble_header_labels(header_text)
+  print("AFTER DESCRAMBLE:", repr(header_text))
 
   # ------------------- REGEX LAYER ------------------------ #
   # father_name, phone, email, cnic, date_of_birth, etc.

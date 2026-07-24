@@ -6,7 +6,7 @@
         "job_title": "IT Manager",
         "lexical_score": 84.772,
         "semantic_score": 0.691,
-        "final_score": 0.614,
+        "final_score": 0.643,
         "matched_skills": [
             "linux",
             "networking",
@@ -27,6 +27,30 @@
     },
     {
         "rank": 2,
+        "candidate_id": "412af70f42cd2e7661a1f1ca7c5a28507d57e40fefcd1ea6531a4e7ef9619814",
+        "candidate_name": "Hassan Raza Abbasi",
+        "job_title": "Senior ERP Consultant",
+        "lexical_score": 72.07,
+        "semantic_score": 0.637,
+        "final_score": 0.569,
+        "matched_skills": [
+            "database administration",
+            "oracle erp",
+            "python",
+            "sap",
+            "sql"
+        ],
+        "missing_skills": [
+            "cloud computing",
+            "it infrastructure",
+            "linux",
+            "networking",
+            "team management"
+        ],
+        "matched_preferred_skills": []
+    },
+    {
+        "rank": 3,
         "candidate_id": "8041c5d7dd3985aabb9311eb983c04a40e4feca25479e0a26455d04d8ee8ced7",
         "candidate_name": "Ahmed Siddiqui",
         "job_title": "IT Manager",
@@ -50,37 +74,13 @@
         "matched_preferred_skills": []
     },
     {
-        "rank": 3,
-        "candidate_id": "412af70f42cd2e7661a1f1ca7c5a28507d57e40fefcd1ea6531a4e7ef9619814",
-        "candidate_name": "Hassan Raza Abbasi",
-        "job_title": "Senior ERP Consultant",
-        "lexical_score": 72.07,
-        "semantic_score": 0.637,
-        "final_score": 0.507,
-        "matched_skills": [
-            "database administration",
-            "oracle erp",
-            "python",
-            "sap",
-            "sql"
-        ],
-        "missing_skills": [
-            "cloud computing",
-            "it infrastructure",
-            "linux",
-            "networking",
-            "team management"
-        ],
-        "matched_preferred_skills": []
-    },
-    {
         "rank": 4,
         "candidate_id": "1f02a185d032b986635666fc59ba905d9be345866b31eccceb102974a4f3d610",
         "candidate_name": "Waqas",
         "job_title": "IT Manager (Operations)",
         "lexical_score": 68.143,
         "semantic_score": 0.496,
-        "final_score": 0.404,
+        "final_score": 0.476,
         "matched_skills": [
             "database administration",
             "linux",
@@ -104,7 +104,7 @@
         "job_title": "PROCESS ENGINEER FLEXO",
         "lexical_score": 50.239,
         "semantic_score": 0.427,
-        "final_score": 0.163,
+        "final_score": 0.279,
         "matched_skills": [
             "team management"
         ],
@@ -118,6 +118,121 @@
             "python",
             "sap",
             "sql"
+        ],
+        "matched_preferred_skills": []
+    },
+    {
+        "rank": 6,
+        "candidate_id": "40d8435574b9483e2a221888dae3ac4a733549dad04fb8f6d886d9e535418409",
+        "candidate_name": "Atthar Hassan",
+        "job_title": "Unit Head",
+        "lexical_score": 43.504,
+        "semantic_score": 0.44,
+        "final_score": 0.221,
+        "matched_skills": [],
+        "missing_skills": [
+            "cloud computing",
+            "database administration",
+            "it infrastructure",
+            "linux",
+            "networking",
+            "oracle erp",
+            "python",
+            "sap",
+            "sql",
+            "team management"
+        ],
+        "matched_preferred_skills": []
+    },
+    {
+        "rank": 7,
+        "candidate_id": "86384b874dc87dead98dcc401bb986c971387711f13561588ab3143ab5d495c3",
+        "candidate_name": "Waleed Aftab",
+        "job_title": "",
+        "lexical_score": 38.961,
+        "semantic_score": 0.488,
+        "final_score": 0.218,
+        "matched_skills": [],
+        "missing_skills": [
+            "cloud computing",
+            "database administration",
+            "it infrastructure",
+            "linux",
+            "networking",
+            "oracle erp",
+            "python",
+            "sap",
+            "sql",
+            "team management"
+        ],
+        "matched_preferred_skills": []
+    },
+    {
+        "rank": 8,
+        "candidate_id": "7fbe7d36b283f3d0874bca5637757fa69b4a58072d9d3d652c904284c1962803",
+        "candidate_name": "Muzafar Ali Senior",
+        "job_title": "",
+        "lexical_score": 40.54,
+        "semantic_score": 0.447,
+        "final_score": 0.212,
+        "matched_skills": [],
+        "missing_skills": [
+            "cloud computing",
+            "database administration",
+            "it infrastructure",
+            "linux",
+            "networking",
+            "oracle erp",
+            "python",
+            "sap",
+            "sql",
+            "team management"
+        ],
+        "matched_preferred_skills": []
+    },
+    {
+        "rank": 9,
+        "candidate_id": "73ffd61aa5b47566e2ff6385b18ba85ef4c89388399e816c39bbbe02c49b8435",
+        "candidate_name": "Zeeshan Karim Solangi",
+        "job_title": "Electrical Technician",
+        "lexical_score": 24.954,
+        "semantic_score": 0.342,
+        "final_score": 0.118,
+        "matched_skills": [],
+        "missing_skills": [
+            "cloud computing",
+            "database administration",
+            "it infrastructure",
+            "linux",
+            "networking",
+            "oracle erp",
+            "python",
+            "sap",
+            "sql",
+            "team management"
+        ],
+        "matched_preferred_skills": []
+    },
+    {
+        "rank": 10,
+        "candidate_id": "6e886ec7e46b8dde2c3f514a448102e29551a365ac6f67f08ab9a04c92b6f143",
+        "candidate_name": "Muhammad Aslam Junejo",
+        "job_title": "Machine Operator",
+        "lexical_score": 20.993,
+        "semantic_score": 0.341,
+        "final_score": 0.102,
+        "matched_skills": [],
+        "missing_skills": [
+            "cloud computing",
+            "database administration",
+            "it infrastructure",
+            "linux",
+            "networking",
+            "oracle erp",
+            "python",
+            "sap",
+            "sql",
+            "team management"
         ],
         "matched_preferred_skills": []
     }

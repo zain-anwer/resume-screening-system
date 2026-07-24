@@ -2,7 +2,7 @@ from __future__ import annotations
 import logging
 import numpy as np
 from sentence_transformers import SentenceTransformer
-from backend.configs.config import EMBEDDING_MODEL
+from configs.config import EMBEDDING_MODEL
 
 logger = logging.getLogger(__name__)
 

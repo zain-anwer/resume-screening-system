@@ -4,8 +4,8 @@ Builds text documents used by BM25 and Semantic Retrieval.
 
 from __future__ import annotations
 
-from backend.models.candidate import Candidate
-from backend.models.job_description import JobDescription
+from models.candidate import Candidate
+from models.job_description import JobDescription
 
 
 class DocumentBuilder:

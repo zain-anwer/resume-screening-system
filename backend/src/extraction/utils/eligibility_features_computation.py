@@ -11,7 +11,10 @@ DEGREE_KEYWORDS = [
     ("mphil",     ["m.phil", "mphil", "m phil"]),
     ("masters",   ["ms ", "m.s.", "msc", "m.sc", "master", "mba", "me ", "m.e.", "meng"]),
     ("bachelors", ["bs ", "b.s.", "bsc", "b.sc", "bachelor", "be ", "b.e.", "beng", "bba"]),
-    ("diploma",   ["diploma", "associate"]),
+    ("diploma",   ["diploma", "associate","dae"]),
+    ("intermediate", ["intermediate","hssc","higher secondary school certificate","higher secondary","fsc","f.sc","fa","f.a","ics","i.com","icom"]),
+    ("matriculation", ["matric","matriculation","ssc","secondary school certificate","secondary education","o level","o-level",
+    ]),
 ]
 
 

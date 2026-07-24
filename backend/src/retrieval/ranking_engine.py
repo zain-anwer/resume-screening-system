@@ -1,12 +1,12 @@
 from __future__ import annotations
-from backend.models.candidate import Candidate
-from backend.models.job_description import JobDescription
-from backend.models.ranked_candidate import RankedCandidate
-from backend.src.preprocessing.document_builder import DocumentBuilder
-from backend.src.retrieval.embedding_engine import EmbeddingService
-from backend.src.retrieval.similarity_engine import SimilarityService
+from models.candidate import Candidate
+from models.job_description import JobDescription
+from models.ranked_candidate import RankedCandidate
+from src.preprocessing.document_builder import DocumentBuilder
+from src.retrieval.embedding_engine import EmbeddingService
+from src.retrieval.similarity_engine import SimilarityService
 class RankingService:
-    from backend.configs.config import (
+    from configs.config import (
     LEXICAL_WEIGHT,
     SEMANTIC_WEIGHT,
 )

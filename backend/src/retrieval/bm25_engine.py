@@ -16,7 +16,7 @@ import logging
 
 from rank_bm25 import BM25Okapi
 
-from backend.src.preprocessing.tokenizer import Tokenizer
+from src.preprocessing.tokenizer import Tokenizer
 
 logger = logging.getLogger(__name__)
 

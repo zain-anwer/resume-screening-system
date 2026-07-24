@@ -11,8 +11,8 @@ import logging
 import re
 from pathlib import Path
 
-from backend.models.job_description import JobDescription
-from backend.src.exceptions.validation import JobDescriptionValidationError
+from models.job_description import JobDescription
+from src.exceptions.validation import JobDescriptionValidationError
 
 logger = logging.getLogger(__name__)
 

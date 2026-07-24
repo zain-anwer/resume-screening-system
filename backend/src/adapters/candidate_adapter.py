@@ -10,7 +10,7 @@ from __future__ import annotations
 import logging
 from typing import Any
 
-from backend.models.candidate import (
+from models.candidate import (
     Candidate,
     Certification,
     Education,
@@ -20,7 +20,7 @@ from backend.models.candidate import (
     URLs,
 )
 
-from backend.src.exceptions.validation import CandidateValidationError
+from src.exceptions.validation import CandidateValidationError
 
 logger = logging.getLogger(__name__)
 

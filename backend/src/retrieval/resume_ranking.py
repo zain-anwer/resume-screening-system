@@ -1,26 +1,16 @@
 from __future__ import annotations
+import json
 
-from backend.models.ranked_candidate import RankedCandidate
-from backend.src.adapters.jd_adapter import JobDescriptionAdapter
-from backend.src.retrieval.retrieval_engine import RetrievalService
+from models.ranked_candidate import RankedCandidate
+from src.adapters.jd_adapter import JobDescriptionAdapter
+from src.retrieval.retrieval_engine import RetrievalService
 
 
-def rank_candidates(
-    job_description_path: str,
-    candidates_json: list[dict],
-    top_k: int = 10,
-) -> list[RankedCandidate]:
-    """
-    Public entry point for Module 4.
 
-    Args:
-        job_description_path: Path to the job description (.txt)
-        candidates_json: List of candidate JSON objects received from Module 3
-        top_k: Number of top candidates to return
+def rank_candidates(JOB_DESCRIPTION_PATH: str, INPUT_FILE_PATH: str, OUTPUT_FILE_PATH : str, top_k: int = 10) -> list[RankedCandidate]:
 
-    Returns:
-        List of ranked candidates.
-    """
+    with open(INPUT_FILE_PATH, "r", encoding="utf-8") as f:
+        candidates_json = json.load(f)
 
     service = RetrievalService()
 
@@ -30,7 +20,7 @@ def rank_candidates(
     # Parse the job description
     job = JobDescriptionAdapter.adapt(
         job_id="job_001",
-        file_path=job_description_path,
+        file_path=JOB_DESCRIPTION_PATH,
     )
 
     # Retrieve and rank candidates
@@ -58,4 +48,5 @@ def rank_candidates(
         }
     )
 
-    return response
+    with open(OUTPUT_FILE_PATH, "w", encoding="utf-8") as f:
+        json.dump(response, f, indent=4)

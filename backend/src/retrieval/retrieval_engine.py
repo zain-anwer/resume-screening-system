@@ -3,13 +3,13 @@ import json
 import logging
 from pathlib import Path
 
-from backend.models.candidate import Candidate
-from backend.models.job_description import JobDescription
-from backend.src.adapters.candidate_adapter import CandidateAdapter
-from backend.src.preprocessing.document_builder import DocumentBuilder
-from backend.src.retrieval.bm25_engine import BM25Engine
-from backend.src.retrieval.ranking_engine import RankingService
-from backend.models.ranked_candidate import RankedCandidate
+from models.candidate import Candidate
+from models.job_description import JobDescription
+from src.adapters.candidate_adapter import CandidateAdapter
+from src.preprocessing.document_builder import DocumentBuilder
+from src.retrieval.bm25_engine import BM25Engine
+from src.retrieval.ranking_engine import RankingService
+from models.ranked_candidate import RankedCandidate
 
 
 logger=logging.getLogger(__name__)

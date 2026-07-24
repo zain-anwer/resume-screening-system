@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
 
-from backend.models.candidate import Candidate
+from models.candidate import Candidate
 
 
 @dataclass(slots=True)

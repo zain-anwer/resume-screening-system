@@ -1,0 +1,529 @@
+[
+    {
+        "candidate_id": "8041c5d7dd3985aabb9311eb983c04a40e4feca25479e0a26455d04d8ee8ced7",
+        "job": "manager_it",
+        "overall_status": "Eligible",
+        "education": {
+            "status": true,
+            "reason": "Education requirement satisfied"
+        },
+        "experience": {
+            "status": true,
+            "reason": "10.06 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "7.98 supervisory years"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 33,
+            "allowed_age": 35,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": [
+                "SAP",
+                "Oracle ERP"
+            ]
+        }
+    },
+    {
+        "candidate_id": "86384b874dc87dead98dcc401bb986c971387711f13561588ab3143ab5d495c3",
+        "job": "manager_it",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 0.0 years experience"
+        },
+        "supervisory": {
+            "status": false,
+            "reason": "Supervisory experience insufficient"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": null,
+            "allowed_age": 35,
+            "reason": "Date of birth not found"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "b3f516fa9543c275b90ec5811a6e53f35f4dc2be230806bd75b247904af75cf8",
+        "job": "manager_it",
+        "overall_status": "Eligible",
+        "education": {
+            "status": true,
+            "reason": "Education requirement satisfied"
+        },
+        "experience": {
+            "status": true,
+            "reason": "9.55 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "4.4 supervisory years"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 31,
+            "allowed_age": 35,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": [
+                "SAP",
+                "ERP Implementation"
+            ]
+        }
+    },
+    {
+        "candidate_id": "14ecffeeab3fc7bbb340cf8fe9440a93845aae83bbd10ee746f393460ad1d639",
+        "job": "manager_it",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Required degree not found"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 0.0 years experience"
+        },
+        "supervisory": {
+            "status": false,
+            "reason": "Supervisory experience insufficient"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": null,
+            "allowed_age": 35,
+            "reason": "Date of birth not found"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": [
+                "SAP",
+                "Oracle ERP",
+                "ERP Implementation"
+            ]
+        }
+    },
+    {
+        "candidate_id": "41f9cf49398e287703817bf0d3f04b87509e0e2e2046936d13832890235e5875",
+        "job": "manager_it",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 0.0 years experience"
+        },
+        "supervisory": {
+            "status": false,
+            "reason": "Supervisory experience insufficient"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 29,
+            "allowed_age": 35,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "72c25ec20a3c5cd78491954070002fad0dabe62eb80a0713ecffab7e80efdbe4",
+        "job": "manager_it",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": true,
+            "reason": "11.14 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "6.31 supervisory years"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 32,
+            "allowed_age": 35,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "412af70f42cd2e7661a1f1ca7c5a28507d57e40fefcd1ea6531a4e7ef9619814",
+        "job": "manager_it",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": true,
+            "reason": "Education requirement satisfied"
+        },
+        "experience": {
+            "status": true,
+            "reason": "12.55 years experience"
+        },
+        "supervisory": {
+            "status": false,
+            "reason": "Supervisory experience insufficient"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 34,
+            "allowed_age": 35,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": [
+                "SAP",
+                "Oracle ERP",
+                "ERP Implementation"
+            ]
+        }
+    },
+    {
+        "candidate_id": "40d8435574b9483e2a221888dae3ac4a733549dad04fb8f6d886d9e535418409",
+        "job": "manager_it",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Required degree not found"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 5.56 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "2.48 supervisory years"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": null,
+            "allowed_age": 35,
+            "reason": "Date of birth not found"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "7fbe7d36b283f3d0874bca5637757fa69b4a58072d9d3d652c904284c1962803",
+        "job": "manager_it",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 0.0 years experience"
+        },
+        "supervisory": {
+            "status": false,
+            "reason": "Supervisory experience insufficient"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": null,
+            "allowed_age": 35,
+            "reason": "Date of birth not found"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "6e886ec7e46b8dde2c3f514a448102e29551a365ac6f67f08ab9a04c92b6f143",
+        "job": "worker_grade_04",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": true,
+            "reason": "7.06 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 27,
+            "allowed_age": 30,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "73ffd61aa5b47566e2ff6385b18ba85ef4c89388399e816c39bbbe02c49b8435",
+        "job": "worker_grade_04",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 0.58 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 28,
+            "allowed_age": 30,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "ab0487ba83bda791de211cab614e195e431430c5ed06e5da1d12e1121ec5b263",
+        "job": "worker_grade_04",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 0.0 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": null,
+            "allowed_age": 30,
+            "reason": "Date of birth not found"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "d1c609cfe207627d1772b747b880a1a90c13e70e4f8c26be9dce89bb247f6606",
+        "job": "worker_grade_04",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": true,
+            "reason": "14.14 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 39,
+            "allowed_age": 40,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "5ac93474121b9e2a81dcf6429c9f9429c5b0d6adb9bae394aea40f5ae098e7ab",
+        "job": "worker_grade_04",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 0.0 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": null,
+            "allowed_age": 30,
+            "reason": "Date of birth not found"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "561ba09dc5366b885450c60144d54212f1af99f775f6c3079ac3454fac3716dd",
+        "job": "worker_grade_04",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 0.0 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 26,
+            "allowed_age": 30,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "73f8ef38e7c19aa4bc8c14d85b0a62b01b6956b3d85b5018d4ceacb5268c2041",
+        "job": "worker_grade_04",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 0.0 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": null,
+            "allowed_age": 30,
+            "reason": "Date of birth not found"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "9aef0184f677c4ec1dfc6fe6291c3c9fb67b9c635809ff891231c6322c6d2ab2",
+        "job": "worker_grade_04",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 0.0 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": true,
+            "candidate_age": 27,
+            "allowed_age": 30,
+            "reason": "Age within limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "7f4bd3520c68b5bb8a36d0b53a3bbe61fac5c3ebc3f145ec4113afa9c06bcf74",
+        "job": "worker_grade_04",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": true,
+            "reason": "Higher qualification accepted"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 0.25 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": null,
+            "allowed_age": 30,
+            "reason": "Date of birth not found"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    },
+    {
+        "candidate_id": "b128d2eae57591110f1dfe7851940ea1c075a5d08ea7cb358fb7ff6ea738b067",
+        "job": "worker_grade_04",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 0.0 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": null,
+            "allowed_age": 30,
+            "reason": "Date of birth not found"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        }
+    }
+]

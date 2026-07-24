@@ -117,8 +117,8 @@
     "urls": null,
     "summary": null,
     "experience_summary": {
-      "total_experience_years": 10.05,
-      "management_experience_years": 7.97,
+      "total_experience_years": 10.06,
+      "management_experience_years": 7.98,
       "management_titles_flagged": [
         "IT Manager",
         "Assistant Manager IT"
@@ -379,7 +379,7 @@
     "summary": null,
     "experience_summary": {
       "total_experience_years": 9.55,
-      "management_experience_years": 4.39,
+      "management_experience_years": 4.4,
       "management_titles_flagged": [
         "IT Manager"
       ]
@@ -516,7 +516,7 @@
       "landline": [],
       "cnic": "42101-4567890-4",
       "location": "Gulshan",
-      "date_of_birth": "Father Name: 1996-12-26 Rashid Baig Gender: Female",
+      "date_of_birth": "1996-12-26",
       "nationality": null
     },
     "education": [
@@ -591,12 +591,12 @@
     }
   },
   {
-    "id": "1f02a185d032b986635666fc59ba905d9be345866b31eccceb102974a4f3d610",
+    "id": "72c25ec20a3c5cd78491954070002fad0dabe62eb80a0713ecffab7e80efdbe4",
     "personal_info": {
       "name": "Waqas",
-      "gender": null,
+      "gender": "Male",
       "marital_status": null,
-      "father_name": "Iqbal Ahmed Chaudhry DOB: 1993-12-26 CNIC: <CNIC> Gender: Male Nationality: Pakistani",
+      "father_name": "Iqbal Ahmed Chaudhry",
       "email": "waqas.iqbal.chy@gmail.com",
       "phone": [
         "0300-7788990"
@@ -604,8 +604,8 @@
       "landline": [],
       "cnic": "42401-5678901-5",
       "location": null,
-      "date_of_birth": null,
-      "nationality": null
+      "date_of_birth": "1993-12-26",
+      "nationality": "Pakistani"
     },
     "education": [
       {
@@ -712,7 +712,7 @@
     },
     "metadata": {
       "job_category": "manager_it",
-      "candidate_id": "1f02a185d032b986635666fc59ba905d9be345866b31eccceb102974a4f3d610"
+      "candidate_id": "72c25ec20a3c5cd78491954070002fad0dabe62eb80a0713ecffab7e80efdbe4"
     }
   },
   {
@@ -941,8 +941,8 @@
     },
     "summary": null,
     "experience_summary": {
-      "total_experience_years": 5.55,
-      "management_experience_years": 2.47,
+      "total_experience_years": 5.56,
+      "management_experience_years": 2.48,
       "management_titles_flagged": [
         "Unit Head"
       ]
@@ -1178,7 +1178,7 @@
       "management_titles_flagged": []
     },
     "eligibility_features": {
-      "highest_degree_level": "",
+      "highest_degree_level": "diploma",
       "is_pspc_employee": false,
       "has_security_printing_experience": false
     },
@@ -1256,7 +1256,7 @@
       "management_titles_flagged": []
     },
     "eligibility_features": {
-      "highest_degree_level": "",
+      "highest_degree_level": "diploma",
       "is_pspc_employee": false,
       "has_security_printing_experience": false
     },
@@ -1352,12 +1352,12 @@
     }
   },
   {
-    "id": "0334ec33c2482a05b33a1b6dcc9cf9196ac7c95f9f167da2c3a5e3335d357931",
+    "id": "d1c609cfe207627d1772b747b880a1a90c13e70e4f8c26be9dce89bb247f6606",
     "personal_info": {
       "name": "Rafiq Ahmed Chandio",
-      "gender": null,
+      "gender": "Male",
       "marital_status": null,
-      "father_name": "Muhammad Bux Chandio DOB: 1986-12-26 CNIC: <CNIC> Gender: Male Nationality: Pakistani",
+      "father_name": "Muhammad Bux Chandio",
       "email": "rafiq.chandio@gmail.com",
       "phone": [
         "0301-6667788"
@@ -1365,8 +1365,8 @@
       "landline": [],
       "cnic": "45302-4445556-4",
       "location": null,
-      "date_of_birth": null,
-      "nationality": null
+      "date_of_birth": "1986-12-26",
+      "nationality": "Pakistani"
     },
     "education": [
       {
@@ -1409,7 +1409,7 @@
       "management_titles_flagged": []
     },
     "eligibility_features": {
-      "highest_degree_level": "",
+      "highest_degree_level": "diploma",
       "is_pspc_employee": false,
       "has_security_printing_experience": true
     },
@@ -1433,7 +1433,7 @@
     },
     "metadata": {
       "job_category": "worker_grade_04",
-      "candidate_id": "0334ec33c2482a05b33a1b6dcc9cf9196ac7c95f9f167da2c3a5e3335d357931"
+      "candidate_id": "d1c609cfe207627d1772b747b880a1a90c13e70e4f8c26be9dce89bb247f6606"
     }
   },
   {
@@ -1549,7 +1549,7 @@
       "management_titles_flagged": []
     },
     "eligibility_features": {
-      "highest_degree_level": "",
+      "highest_degree_level": "diploma",
       "is_pspc_employee": false,
       "has_security_printing_experience": false
     },
@@ -1582,7 +1582,7 @@
       "name": "Ghulam Mustafa Rind",
       "gender": null,
       "marital_status": null,
-      "father_name": "r Date of Birtht 1997-12-26 Ghulam Rasool Rind Gender: Nationality: Male Pakistani",
+      "father_name": "r Date of Birtht 1997-12-26 Ghulam Rasool Rind Gender: Male Nationality: Pakistani",
       "email": null,
       "phone": [],
       "landline": [],
@@ -1617,7 +1617,7 @@
       "management_titles_flagged": []
     },
     "eligibility_features": {
-      "highest_degree_level": "",
+      "highest_degree_level": "matriculation",
       "is_pspc_employee": false,
       "has_security_printing_experience": false
     },
@@ -1656,7 +1656,7 @@
       "landline": [],
       "cnic": "45101-8889990-8",
       "location": null,
-      "date_of_birth": "Father Name: 1998-12-26 Anwar Ali Bhatti Gender: Male",
+      "date_of_birth": "1998-12-26",
       "nationality": null
     },
     "education": [
