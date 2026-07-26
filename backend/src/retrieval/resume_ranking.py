@@ -5,8 +5,6 @@ from models.ranked_candidate import RankedCandidate
 from src.adapters.jd_adapter import JobDescriptionAdapter
 from src.retrieval.retrieval_engine import RetrievalService
 
-
-
 def rank_candidates(JOB_DESCRIPTION_PATH: str, INPUT_FILE_PATH: str, OUTPUT_FILE_PATH : str, top_k: int = 10) -> list[RankedCandidate]:
 
     with open(INPUT_FILE_PATH, "r", encoding="utf-8") as f:
