@@ -121,100 +121,94 @@ def is_probable_resume_file(file_path):
     return False
 
 
-def get_all_candidates(jobs_folder):
+def get_all_candidates(job_folder):
+
     """
-    Scan all job folders and candidate folders.
+    Scan a single job category folder.
 
-    Expected Structure:
+    Expected structure:
 
-    jobs/
-        Manager_IT/
-            manager_it_01/
-                anything.pdf
-                anything.png
+    Manager_IT/
+        candidate_001/
+            resume.pdf
+            cnic.jpg
 
-        Worker_Grade_04/
-            worker_grade4_01/
-                my_cv.docx
-                cnic_front.jpg
+        candidate_002/
+            resume.docx
+            cnic.png
 
-    Resume can have ANY filename.
-    CNIC can have ANY filename.
-
-    Resume = PDF / DOC / DOCX
-    CNIC = Image
+    Worker_Grade_04/
+        candidate_001/
+            ...
     """
 
-    jobs_folder = Path(jobs_folder)
+    job_folder = Path(job_folder)
 
     candidates = []
 
-    if not jobs_folder.exists():
-        print(f"Folder not found: {jobs_folder}")
+    if not job_folder.exists():
+        print(f"Folder not found: {job_folder}")
         return candidates
 
-    for job_folder in jobs_folder.iterdir():
+    if not job_folder.is_dir():
+        print(f"Not a directory: {job_folder}")
+        return candidates
 
-        if not job_folder.is_dir():
+    job_category = job_folder.name
+
+    for candidate_folder in job_folder.iterdir():
+
+        if not candidate_folder.is_dir():
             continue
 
-        job_category = job_folder.name
+        resume_file = None
+        cnic_file = None
+        image_files = []
 
-        for candidate_folder in job_folder.iterdir():
+        for file in candidate_folder.iterdir():
 
-            if not candidate_folder.is_dir():
+            if not file.is_file():
                 continue
 
-            resume_file = None
-            cnic_file = None
-            image_files = []
+            extension = file.suffix.lower()
 
-            for file in candidate_folder.iterdir():
+            if extension not in SUPPORTED_EXTENSIONS:
+                continue
 
-                if not file.is_file():
-                    continue
+            if extension in IMAGE_EXTENSIONS:
+                image_files.append(file)
 
-                extension = file.suffix.lower()
+            if is_probable_resume_file(file):
+                if resume_file is None:
+                    resume_file = file
 
-                if extension not in SUPPORTED_EXTENSIONS:
-                    continue
+            elif is_probable_cnic_file(file):
+                if cnic_file is None:
+                    cnic_file = file
 
-                if extension in IMAGE_EXTENSIONS:
-                    image_files.append(file)
+        if cnic_file is None:
+            for image_file in image_files:
+                if image_file != resume_file:
+                    cnic_file = image_file
+                    break
 
-                if is_probable_resume_file(file):
-                    if resume_file is None:
-                        resume_file = file
+        if resume_file is None:
+            for image_file in image_files:
+                if image_file != cnic_file:
+                    resume_file = image_file
+                    break
 
-                elif is_probable_cnic_file(file):
-                    if cnic_file is None:
-                        cnic_file = file
-
-            if cnic_file is None:
-                for image_file in image_files:
-                    if image_file != resume_file:
-                        cnic_file = image_file
-                        break
-
-            if resume_file is None:
-                for image_file in image_files:
-                    if image_file != cnic_file:
-                        resume_file = image_file
-                        break
-
-            candidates.append({
-
-                "job_category": job_category,
-
-                "candidate_id": candidate_folder.name,
-
-                "resume": resume_file,
-
-                "cnic": cnic_file
-
-            })
+        candidates.append({
+            "job_category": job_category,
+            "candidate_id": candidate_folder.name,
+            "resume": resume_file,
+            "cnic": cnic_file,
+        })
 
     return candidates
+
+
+
 def get_resume_files(folder_path):
     """
     Scan the resume folder and return all supported files.
