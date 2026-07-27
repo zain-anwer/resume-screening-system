@@ -54,9 +54,9 @@ class JobDescriptionAdapter:
                 f"Job description not found: {file_path}"
             )
 
-        raw_text = file_path.read_text(
-            encoding="utf-8"
-        ).strip()
+        from src.preprocessing.jd_reader import JobDescriptionReader
+
+        raw_text = JobDescriptionReader.read(file_path).strip()
 
         if not raw_text:
             raise JobDescriptionValidationError(
