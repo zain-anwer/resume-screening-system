@@ -4,7 +4,7 @@ from pathlib import Path
 
 CURR_DIR = Path(__file__).resolve().parent
 
-JOB_DESCRIPTION = CURR_DIR.parent/"ads/advertisement_manager_it.docx"
+JOB_DESCRIPTION = CURR_DIR.parent/"ads/manager_it.docx"
 INPUT_FILE = CURR_DIR.parent / "data" / "extraction_output.json"
 OUTPUT_FILE = CURR_DIR / "ranking_output.json"
 
