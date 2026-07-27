@@ -96,6 +96,26 @@ def _policy_label(overall_status: str) -> str:
     return {"Eligible": "Pass", "Not Eligible": "Fail"}.get(overall_status, "Review")
 
 
+def _inject_eligibility_status(extracted: list, eligibility: list) -> list[dict]:
+    """
+    Stamps each extracted candidate record with an "overall_status" key
+    (e.g. "Eligible" / "Not Eligible") pulled from the eligibility stage,
+    keyed on candidate_id <-> id. This is the file the ranking module now
+    reads, so it can filter out "Not Eligible" candidates before scoring.
+
+    Returns a new list — the original `extracted` objects aren't mutated,
+    since that list is also used later to build the merged response.
+    """
+    status_by_id = {e["candidate_id"]: e["overall_status"] for e in eligibility}
+
+    stamped = []
+    for candidate in extracted:
+        record = dict(candidate)
+        record["overall_status"] = status_by_id.get(candidate["id"])
+        stamped.append(record)
+    return stamped
+
+
 def _run_full_pipeline(
     folder_path: str, job_description_path: str, top_k: int
 ) -> tuple[str, list, list, list, Optional[str]]:
@@ -129,6 +149,7 @@ def _run_full_pipeline(
     ingested_path = out / "01_ingested.json"
     extracted_path = out / "02_extracted.json"
     eligibility_path = out / "03_eligibility.json"
+    extracted_for_ranking_path = out / "03b_extracted_with_status.json"
     ranked_path = out / "04_ranked.json"
 
     # Stage 1: ingestion (OCR/text extraction from raw resume + CNIC files)
@@ -140,22 +161,30 @@ def _run_full_pipeline(
     # Stage 3: eligibility / policy evaluation against YAML rules
     evaluate_candidates(str(extracted_path), str(eligibility_path))
 
+    extracted = json.loads(extracted_path.read_text(encoding="utf-8"))
+    eligibility = json.loads(eligibility_path.read_text(encoding="utf-8"))
+
+    # Stamp each candidate with "overall_status" from the eligibility stage
+    # and write that as the ranking module's input — it now filters out
+    # "Not Eligible" candidates before scoring.
+    extracted_with_status = _inject_eligibility_status(extracted, eligibility)
+    extracted_for_ranking_path.write_text(
+        json.dumps(extracted_with_status, indent=2), encoding="utf-8"
+    )
+
     # Stage 4: ranking against the supplied job description
     ranking_error: Optional[str] = None
     ranked: list = []
     try:
         rank_candidates(
             str(jd_path),
-            str(extracted_path),
+            str(extracted_for_ranking_path),
             str(ranked_path),
             top_k=top_k,
         )
         ranked = json.loads(ranked_path.read_text(encoding="utf-8"))
     except Exception as exc:  # noqa: BLE001 - surface any ranking failure, don't crash the run
         ranking_error = f"Ranking failed: {exc}"
-
-    extracted = json.loads(extracted_path.read_text(encoding="utf-8"))
-    eligibility = json.loads(eligibility_path.read_text(encoding="utf-8"))
 
     return run_id, extracted, eligibility, ranked, ranking_error
 
@@ -279,6 +308,9 @@ def run_pipeline(req: ProcessRequest) -> ProcessResponse:
     extract_fields(str(ingested_path), str(extracted_path))
     evaluate_candidates(str(extracted_path), str(eligibility_path))
 
+    extracted = json.loads(extracted_path.read_text(encoding="utf-8"))
+    eligibility = json.loads(eligibility_path.read_text(encoding="utf-8"))
+
     ranked: list = []
     ranking_error = _ranking_import_error if not RANKING_AVAILABLE else None
 
@@ -288,16 +320,20 @@ def run_pipeline(req: ProcessRequest) -> ProcessResponse:
         elif not Path(req.job_description_path).exists():
             ranking_error = f"Job description not found: {req.job_description_path}"
         else:
+            # Stamp with "overall_status" before ranking — the ranking
+            # module filters out "Not Eligible" candidates on this field.
+            extracted_with_status = _inject_eligibility_status(extracted, eligibility)
+            extracted_for_ranking_path = out / "02b_extracted_with_status.json"
+            extracted_for_ranking_path.write_text(
+                json.dumps(extracted_with_status, indent=2), encoding="utf-8"
+            )
             rank_candidates(
                 req.job_description_path,
-                str(extracted_path),
+                str(extracted_for_ranking_path),
                 str(ranked_path),
                 top_k=req.top_k,
             )
             ranked = json.loads(ranked_path.read_text(encoding="utf-8"))
-
-    extracted = json.loads(extracted_path.read_text(encoding="utf-8"))
-    eligibility = json.loads(eligibility_path.read_text(encoding="utf-8"))
 
     global _latest_run
     _latest_run = {

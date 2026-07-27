@@ -58,8 +58,8 @@ class RetrievalService:
         candidate_ids: list[str] = []
         candidate_documents: list[str] = []
         for raw in candidates_json:
-                     #if raw.get("overall_status") != "Eligible":
-                      #  continue
+                     if raw.get("overall_status") != "Eligible":
+                         continue
                      candidate = CandidateAdapter.adapt(raw)
         
                      self.candidates[candidate.id] = candidate
