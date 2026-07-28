@@ -11,8 +11,8 @@ import logging
 import re
 from pathlib import Path
 
-from backend.models.job_description import JobDescription
-from backend.src.exceptions.validation import JobDescriptionValidationError
+from models.job_description import JobDescription
+from src.exceptions.validation import JobDescriptionValidationError
 
 logger = logging.getLogger(__name__)
 
@@ -54,9 +54,9 @@ class JobDescriptionAdapter:
                 f"Job description not found: {file_path}"
             )
 
-        raw_text = file_path.read_text(
-            encoding="utf-8"
-        ).strip()
+        from src.preprocessing.jd_reader import JobDescriptionReader
+
+        raw_text = JobDescriptionReader.read(file_path).strip()
 
         if not raw_text:
             raise JobDescriptionValidationError(
@@ -163,11 +163,8 @@ class JobDescriptionAdapter:
 
                     continue
 
-            normalized = (
-                line.lower()
-                .rstrip(":")
-                .strip()
-            )
+            normalized = re.sub(r"^#+\s*", "", line.lower())
+            normalized = normalized.rstrip(":").strip()
 
             if normalized in cls.SECTION_HEADERS:
 
@@ -198,7 +195,7 @@ class JobDescriptionAdapter:
 
             else:
                 data[current_section] = line.strip()
-
+        print(data)
         job = JobDescription(
             job_id=job_id,
             title=title,

@@ -4,7 +4,7 @@
 
 import re
 import spacy # type: ignore
-from regex_patterns import *
+from src.extraction.utils.regex_patterns import *
 from pathlib import Path
 from spacy.matcher import PhraseMatcher # type: ignore
 

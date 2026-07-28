@@ -1,13 +1,25 @@
-"""
-Custom validation exceptions for Module 4.
-"""
+from __future__ import annotations
 
 
-class CandidateValidationError(Exception):
-    """Raised when candidate validation fails."""
+class ValidationError(Exception):
+    """
+    Base class for all validation-related exceptions.
+    """
+
     pass
 
 
-class JobDescriptionValidationError(Exception):
-    """Raised when job description validation fails."""
+class CandidateValidationError(ValidationError):
+    """
+    Raised when candidate data is invalid.
+    """
+
+    pass
+
+
+class JobDescriptionValidationError(ValidationError):
+    """
+    Raised when a job description is invalid.
+    """
+
     pass

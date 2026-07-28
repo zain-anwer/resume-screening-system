@@ -36,29 +36,6 @@ dist/
 
 
 # ==================================================
-# Candidate Data (SENSITIVE - NEVER COMMIT)
-# ==================================================
-
-# Raw resumes
-data/resumes_raw/
-
-# Supporting documents
-data/supporting_docs/
-
-# Processed candidate information
-data/processed_json/
-
-# Annotation data
-data/annotations/
-
-# Any extracted personal information
-**/*cnic*
-**/*degree*
-**/*identity*
-**/*personal*
-
-
-# ==================================================
 # ML Models & Embeddings
 # ==================================================
 

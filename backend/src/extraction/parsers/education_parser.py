@@ -4,7 +4,7 @@
 
 import re
 import copy
-from regex_patterns import *
+from src.extraction.utils.regex_patterns import *
 
 # typical text cleaning
 def clean_line(line):
