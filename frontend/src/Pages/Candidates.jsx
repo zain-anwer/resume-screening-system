@@ -1,15 +1,19 @@
 import { useEffect, useState } from "react";
 import { Card } from "../components/ui/Card.jsx";
 import Badge from "../components/ui/Badge.jsx";
-import { fetchDashboardData } from "../api/client.js";
+import { fetchDashboardData, ApiError } from "../api/client.js";
 
 export default function Candidates() {
   const [candidates, setCandidates] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    // TODO (you): replace with a dedicated /api/candidates call once
-    // your backend exposes the full candidate list (not just recents).
-    fetchDashboardData().then((d) => setCandidates(d.recentScreenings));
+    // NOTE: main.py has no dedicated /api/candidates list endpoint yet,
+    // so this reuses dashboard/summary's recentScreenings (top 20 from
+    // the latest run). Swap for a real /api/candidates call if you add one.
+    fetchDashboardData()
+      .then((d) => setCandidates(d.recentScreenings))
+      .catch((err) => setError(err));
   }, []);
 
   return (
@@ -18,6 +22,13 @@ export default function Candidates() {
         <h1>Candidates</h1>
         <p>All screened candidates across every job.</p>
       </div>
+      {error && (
+        <p style={{ color: "var(--text-600)" }}>
+          {error instanceof ApiError && error.status === 404
+            ? "No pipeline run yet. Go to Resume Screening and run a job first."
+            : `Couldn't load candidates: ${error.detail || error.message}`}
+        </p>
+      )}
       <Card>
         <div className="grid grid-3">
           {candidates.map((c) => (

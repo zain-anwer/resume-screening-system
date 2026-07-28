@@ -31,6 +31,7 @@ from __future__ import annotations
 import json
 import uuid
 from pathlib import Path
+from pydantic import BaseModel
 from typing import Optional
 
 from fastapi import FastAPI, HTTPException
@@ -543,3 +544,22 @@ def screening_queue() -> list:
 @app.get("/api/health")
 def health() -> dict:
     return {"status": "ok", "ranking_available": RANKING_AVAILABLE}
+
+class PolicySaveRequest(BaseModel):
+    job_name: str
+    yaml: str
+
+CONFIGS_DIR = Path(__file__).parent / "configs"
+
+@app.post("/api/policy/save")
+def save_policy(body: PolicySaveRequest):
+    CONFIGS_DIR.mkdir(parents=True, exist_ok=True)
+
+    safe_name = body.job_name.strip().lower().replace(" ", "_")
+    if not safe_name:
+        safe_name = "policy"
+
+    file_path = CONFIGS_DIR / f"{safe_name}.yaml"
+    file_path.write_text(body.yaml, encoding="utf-8")
+
+    return {"path": str(file_path)}

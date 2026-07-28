@@ -1,15 +1,24 @@
+import { useEffect, useState } from "react";
 import { Card } from "../components/ui/Card.jsx";
 import ExportButton from "../components/ui/ExportButton.jsx";
-import { candidateRanking, recentScreenings } from "../data/mockData.js";
-
-// TODO (you): each ExportButton's `data` prop should come from the
-// relevant retrieval function's parsed output, not the mock imports below.
-const REPORTS = [
-  { label: "Candidate Ranking Report", data: candidateRanking, filename: "candidate_ranking_report.csv" },
-  { label: "Resume Screening Report", data: recentScreenings, filename: "resume_screening_report.csv" }
-];
+import { fetchRankedCandidates, fetchDashboardData } from "../api/client.js";
 
 export default function Reports() {
+  const [ranking, setRanking] = useState([]);
+  const [screenings, setScreenings] = useState([]);
+
+  useEffect(() => {
+    fetchRankedCandidates().then(setRanking).catch(() => setRanking([]));
+    fetchDashboardData()
+      .then((d) => setScreenings(d.recentScreenings))
+      .catch(() => setScreenings([]));
+  }, []);
+
+  const reports = [
+    { label: "Candidate Ranking Report", data: ranking, filename: "candidate_ranking_report.csv" },
+    { label: "Resume Screening Report", data: screenings, filename: "resume_screening_report.csv" },
+  ];
+
   return (
     <div>
       <div className="page-header">
@@ -17,7 +26,7 @@ export default function Reports() {
         <p>Export center for hiring data.</p>
       </div>
       <div className="grid grid-2">
-        {REPORTS.map((r) => (
+        {reports.map((r) => (
           <Card key={r.label} className="stat-card" style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
             <span className="card-title">{r.label}</span>
             <ExportButton data={r.data} filename={r.filename} label="Export CSV" />

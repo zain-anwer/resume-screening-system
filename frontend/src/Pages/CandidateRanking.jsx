@@ -2,21 +2,33 @@ import { useEffect, useState } from "react";
 import { Card } from "../components/ui/Card.jsx";
 import Badge from "../components/ui/Badge.jsx";
 import ExportButton from "../components/ui/ExportButton.jsx";
-import { fetchRankedCandidates } from "../api/client.js";
+import { fetchRankedCandidates, ApiError } from "../api/client.js";
 
 const policyTone = { Pass: "success", Review: "warning", Fail: "danger" };
 const statusTone = { Shortlisted: "success", Screened: "info", Rejected: "danger" };
 
 export default function CandidateRanking() {
   const [rows, setRows] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    // TODO (you): fetchRankedCandidates() should call your backend
-    // endpoint that runs BM25 and returns the PARSED ranking JSON
-    // (rank, candidate, overall/semantic/bm25 scores, etc.) — see
-    // the comment inside src/api/client.js for where that plugs in.
-    fetchRankedCandidates().then(setRows);
+    fetchRankedCandidates()
+      .then(setRows)
+      .catch((err) => setError(err));
   }, []);
+
+  if (error) {
+    return (
+      <div className="page-header">
+        <h1>Candidate Ranking</h1>
+        <p>
+          {error instanceof ApiError && (error.status === 404 || error.status === 409)
+            ? error.detail || "No ranking available yet. Run a pipeline job with a job description first."
+            : `Couldn't load ranking: ${error.detail || error.message}`}
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div>

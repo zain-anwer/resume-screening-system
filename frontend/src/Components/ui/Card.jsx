@@ -29,7 +29,9 @@ export function StatCard({ icon: Icon, label, value, delta, up }) {
         )}
       </div>
       <div className="stat-card-value">{value}</div>
-      <div className={`stat-card-delta ${up ? "up" : "down"}`}>{delta} vs last month</div>
+      {delta && (
+        <div className={`stat-card-delta ${up ? "up" : "down"}`}>{delta} vs last month</div>
+      )}
     </div>
   );
 }

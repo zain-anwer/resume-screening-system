@@ -6,7 +6,7 @@ import {
 import { Card, StatCard } from "../components/ui/Card.jsx";
 import Badge from "../components/ui/Badge.jsx";
 import ExportButton from "../components/ui/ExportButton.jsx";
-import { fetchDashboardData } from "../api/client.js";
+import { fetchDashboardData, ApiError } from "../api/client.js";
 import "../styles/cards.css";
 import "../styles/table.css";
 
@@ -15,14 +15,27 @@ const PIE_COLORS = ["#14818E", "#2563EB", "#F59E0B", "#8B5CF6"];
 const policyTone = { Pass: "success", Review: "warning", Fail: "danger" };
 
 export default function Dashboard() {
-  // TODO (you): this effect is where the real retrieval call happens.
-  // fetchDashboardData() currently returns mock data — point it at
-  // your backend endpoint once it's ready (see src/api/client.js).
   const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetchDashboardData().then(setData);
+    fetchDashboardData()
+      .then(setData)
+      .catch((err) => setError(err));
   }, []);
+
+  if (error) {
+    return (
+      <div className="page-header">
+        <h1>Dashboard</h1>
+        <p>
+          {error instanceof ApiError && error.status === 404
+            ? "No pipeline run yet. Go to Resume Screening and run a job first."
+            : `Couldn't load dashboard data: ${error.detail || error.message}`}
+        </p>
+      </div>
+    );
+  }
 
   if (!data) return <div className="page-header"><p>Loading dashboard...</p></div>;
 
@@ -116,7 +129,6 @@ export default function Dashboard() {
                 <th>Policy</th>
                 <th>Exp.</th>
                 <th>Skills</th>
-                <th>Date</th>
                 <th>Status</th>
               </tr>
             </thead>
@@ -142,7 +154,6 @@ export default function Dashboard() {
                   <td><Badge tone={policyTone[c.policy] || "neutral"}>{c.policy}</Badge></td>
                   <td>{c.exp}</td>
                   <td>{c.skills.map(s => <span key={s} className="chip">{s}</span>)}</td>
-                  <td>{c.date}</td>
                   <td><Badge tone="info">{c.status}</Badge></td>
                 </tr>
               ))}

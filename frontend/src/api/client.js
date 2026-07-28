@@ -1,45 +1,131 @@
 /**
  * API CLIENT
  * -----------------------------------------------------------------
- * This is the single place the frontend talks to your backend.
- * Replace the bodies of these functions with real fetch/axios calls
- * to your FastAPI endpoints once they're ready.
+ * Talks to the FastAPI backend in main.py.
  * -----------------------------------------------------------------
  */
 
-const BASE_URL = "/api"; // adjust if your backend runs elsewhere
+// Point this at your uvicorn server. Override with VITE_API_BASE_URL
+// in a .env file if the backend isn't on localhost:8000.
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000/api";
+
+class ApiError extends Error {
+  constructor(message, status, detail) {
+    super(message);
+    this.status = status;
+    this.detail = detail;
+  }
+}
+
+async function request(path, options = {}) {
+  const res = await fetch(`${BASE_URL}${path}`, {
+    headers: { "Content-Type": "application/json" },
+    ...options,
+  });
+
+  if (!res.ok) {
+    let detail = res.statusText;
+    try {
+      const body = await res.json();
+      detail = body.detail || detail;
+    } catch {
+      /* response wasn't JSON */
+    }
+    throw new ApiError(`Request to ${path} failed (${res.status})`, res.status, detail);
+  }
+
+  return res.json();
+}
 
 /**
- * Fetch dashboard summary data (KPIs, pipeline, charts, recent screenings).
- * TODO: replace with a real call, e.g.:
- *   const res = await fetch(`${BASE_URL}/dashboard/summary`);
- *   return res.json();
+ * Dashboard KPIs, pipeline, charts, recent screenings.
+ * Throws ApiError with status 404 if no pipeline run has completed yet
+ * — callers should catch this and show an empty/"run a job first" state.
  */
 export async function fetchDashboardData() {
-  // Placeholder — swap for your retrieval function's response.
-  const { dashboardMock } = await import("../data/mockData.js");
-  return dashboardMock;
+  return request("/dashboard/summary");
 }
 
-/**
- * Fetch the ranked candidate list (from your BM25 module output,
- * already parsed into JSON on the backend).
- * TODO: replace with:
- *   const res = await fetch(`${BASE_URL}/ranking/latest`);
- *   return res.json();
- */
+/** Ranked candidate list (BM25 + semantic scores). */
 export async function fetchRankedCandidates() {
-  const { candidateRanking } = await import("../data/mockData.js");
-  return candidateRanking;
+  return request("/ranking/latest");
+}
+
+/** Screening / extraction status per candidate file. */
+export async function fetchScreeningQueue() {
+  return request("/screening/queue");
+}
+
+/** Backend + ranking-stage health check. */
+export async function fetchHealth() {
+  return request("/health");
 }
 
 /**
- * Fetch resume screening queue / OCR processing status.
- * TODO: replace with a real polling call to your OCR status endpoint.
+ * Kicks off ingestion -> extraction -> eligibility -> (ranking, if a
+ * job description is supplied). Populates the in-memory run the other
+ * GET endpoints read from. Ranking is optional here.
+ *
+ * folderPath / jobDescriptionPath are paths on the machine running the
+ * backend (see KNOWN GAPS note in main.py) — not uploaded files or URLs.
  */
-export async function fetchScreeningQueue() {
-  const { screeningQueue } = await import("../data/mockData.js");
-  return screeningQueue;
+export async function runPipeline({ folderPath, jobDescriptionPath, topK = 20 }) {
+  return request("/pipeline/run", {
+    method: "POST",
+    body: JSON.stringify({
+      folder_path: folderPath,
+      job_description_path: jobDescriptionPath || null,
+      top_k: topK,
+    }),
+  });
 }
 
-export default { fetchDashboardData, fetchRankedCandidates, fetchScreeningQueue };
+/**
+ * Runs the full pipeline (ranking required) and returns one merged
+ * record per candidate: full profile + nested eligibility + ranking.
+ * Useful for a candidate detail view.
+ */
+export async function processAndMergeCandidates({ folderPath, jobDescriptionPath, topK = 20 }) {
+  return request("/candidates/process", {
+    method: "POST",
+    body: JSON.stringify({
+      folder_path: folderPath,
+      job_description_path: jobDescriptionPath,
+      top_k: topK,
+    }),
+  });
+}
+
+/**
+ * Saves a generated policy YAML to the backend, which should write it
+ * to ./config/{job_name}.yaml (see main.py — this endpoint doesn't
+ * exist yet and needs to be added there, e.g.:
+ *
+ *   @app.post("/api/policy/save")
+ *   def save_policy(body: PolicySaveRequest):
+ *       path = Path("config") / f"{body.job_name}.yaml"
+ *       path.write_text(body.yaml)
+ *       return { "path": str(path) }
+ *
+ * Until that route exists, callers should catch the ApiError/network
+ * failure and fall back to a client-side download (see
+ * PolicyBuilder.jsx, which already does this).
+ */
+export async function savePolicy({ jobName, yaml }) {
+  return request("/policy/save", {
+    method: "POST",
+    body: JSON.stringify({ job_name: jobName, yaml }),
+  });
+}
+
+export { ApiError };
+
+export default {
+  fetchDashboardData,
+  fetchRankedCandidates,
+  fetchScreeningQueue,
+  fetchHealth,
+  runPipeline,
+  processAndMergeCandidates,
+  savePolicy,
+};

@@ -1,27 +1,63 @@
+import { useEffect, useState } from "react";
 import { Card } from "../components/ui/Card.jsx";
-
-// TODO (you): replace with real job description data from your backend.
-const jobs = [
-  { id: "jd1", role: "Senior Frontend Engineer", dept: "Engineering", applicants: 214, avgMatch: 78 },
-  { id: "jd2", role: "Product Manager", dept: "Product", applicants: 158, avgMatch: 71 },
-  { id: "jd3", role: "Backend Engineer", dept: "Engineering", applicants: 96, avgMatch: 83 }
-];
+import { fetchDashboardData, ApiError } from "../api/client.js";
 
 export default function JobDescriptions() {
+  const [jobs, setJobs] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    // NOTE: there's no dedicated /api/jobs endpoint, so this groups the
+    // dashboard's recentScreenings by role. That list is capped at the
+    // 20 most recent candidates (see dashboard_summary() in main.py), so
+    // applicant counts/avg match below only reflect that recent slice,
+    // not every candidate in the run.
+    fetchDashboardData()
+      .then((d) => {
+        const groups = {};
+        for (const c of d.recentScreenings || []) {
+          const role = c.role || "Uncategorized";
+          const g = groups[role] || { applicants: 0, matches: [] };
+          g.applicants += 1;
+          if (c.match != null) g.matches.push(c.match);
+          groups[role] = g;
+        }
+        setJobs(
+          Object.entries(groups).map(([role, g], i) => ({
+            id: `jd${i}`,
+            role,
+            applicants: g.applicants,
+            avgMatch: g.matches.length
+              ? Math.round(g.matches.reduce((a, b) => a + b, 0) / g.matches.length)
+              : null,
+          }))
+        );
+      })
+      .catch((err) => setError(err));
+  }, []);
+
   return (
     <div>
       <div className="page-header">
         <h1>Job Descriptions</h1>
-        <p>Manage roles candidates are matched against.</p>
+        <p>Roles seen among the most recent screenings.</p>
       </div>
+
+      {error && (
+        <p style={{ color: "var(--text-600)" }}>
+          {error instanceof ApiError && error.status === 404
+            ? "No pipeline run yet. Go to Resume Screening and run a job first."
+            : `Couldn't load job descriptions: ${error.detail || error.message}`}
+        </p>
+      )}
+
       <div className="grid grid-3">
         {jobs.map((j) => (
-          <Card key={j.id} title={j.role} subtitle={j.dept}>
+          <Card key={j.id} title={j.role}>
             <div style={{ display: "flex", justifyContent: "space-between", fontSize: 13.5, color: "var(--text-600)", marginBottom: 14 }}>
-              <span>{j.applicants} applicants</span>
-              <span>{j.avgMatch}% avg match</span>
+              <span>{j.applicants} recent applicants</span>
+              <span>{j.avgMatch != null ? `${j.avgMatch}% avg match` : "no match data"}</span>
             </div>
-            <button className="btn btn-primary btn-sm" style={{ width: "100%" }}>View Matching Candidates</button>
           </Card>
         ))}
       </div>
