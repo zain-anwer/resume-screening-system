@@ -17,12 +17,34 @@ class ApiError extends Error {
   }
 }
 
+async function requestForm(path, formData) {
+  const res = await fetch(`${BASE_URL}${path}`, {
+    method: "POST",
+    // No Content-Type header here on purpose — the browser sets the
+    // correct multipart/form-data boundary automatically when the body
+    // is a FormData instance. Setting it manually breaks the upload.
+    body: formData,
+  });
+
+  if (!res.ok) {
+    let detail = res.statusText;
+    try {
+      const body = await res.json();
+      detail = body.detail || detail;
+    } catch {
+      /* response wasn't JSON */
+    }
+    throw new ApiError(`Request to ${path} failed (${res.status})`, res.status, detail);
+  }
+
+  return res.json();
+}
+
 async function request(path, options = {}) {
   const res = await fetch(`${BASE_URL}${path}`, {
     headers: { "Content-Type": "application/json" },
     ...options,
   });
-
   if (!res.ok) {
     let detail = res.statusText;
     try {
@@ -130,6 +152,35 @@ export async function saveJobDescription(payload) {
   });
 }
 
+/**
+ * Uploads a folder of resumes picked from the USER's own machine (via
+ * <input type="file" webkitdirectory> — see PathPicker.jsx) to the
+ * backend, which saves them under ./uploads/resumes/<id>/ preserving
+ * the folder structure and returns the resulting server-side
+ * `folder_path` to pass into runPipeline()/processAndMergeCandidates().
+ * Needs a matching POST /api/upload/resumes route in main.py.
+ */
+export async function uploadResumesFolder(fileList) {
+  const formData = new FormData();
+  for (const file of fileList) {
+    // The third argument keeps each file's relative path (e.g.
+    // "manager_it/candidate_01/resume.pdf") so the backend can
+    // reconstruct the original folder structure.
+    formData.append("files", file, file.webkitRelativePath || file.name);
+  }
+  return requestForm("/upload/resumes", formData);
+}
+
+/**
+ * Uploads a single job description file picked from the user's own
+ * machine. Needs a matching POST /api/upload/job-description route.
+ */
+export async function uploadJobDescriptionFile(file) {
+  const formData = new FormData();
+  formData.append("file", file);
+  return requestForm("/upload/job-description", formData);
+}
+
 export { ApiError };
 
 export default {
@@ -141,4 +192,6 @@ export default {
   processAndMergeCandidates,
   savePolicy,
   saveJobDescription,
+  uploadResumesFolder,
+  uploadJobDescriptionFile,
 };

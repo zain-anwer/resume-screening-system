@@ -42,6 +42,12 @@ from src.ingestion.resume_ingestion import ingest_resumes
 from src.extraction.field_extraction import extract_fields
 from src.policy_engine.candidate_evaluation import evaluate_candidates
 
+
+
+import shutil
+import uuid
+from fastapi import UploadFile, File
+
 # Ranking depends on the currently-missing `models` package. Import it
 # lazily so a broken stage 4 doesn't take down ingestion/extraction/
 # eligibility, which don't need it.
@@ -625,3 +631,52 @@ def save_job_description(body: JobDescriptionRequest):
     doc.save(str(file_path))
 
     return {"path": str(file_path)}
+
+
+UPLOADS_DIR = Path(__file__).parent / "uploads"
+
+
+@app.post("/api/upload/resumes")
+async def upload_resumes_folder(files: list[UploadFile] = File(...)):
+    """
+    Receives a folder of resumes picked from the USER's own machine
+    (see PathPicker.jsx, which uses <input type="file" webkitdirectory>
+    and uploads each file's browser-side relative path as its
+    filename). Reconstructs that folder structure under
+    ./uploads/resumes/<id>/ and returns the resulting folder_path to
+    feed into POST /api/pipeline/run or /api/candidates/process.
+    """
+    if not files:
+        raise HTTPException(status_code=400, detail="No files received")
+
+    upload_id = uuid.uuid4().hex[:12]
+    dest_root = UPLOADS_DIR / "resumes" / upload_id
+    dest_root.mkdir(parents=True, exist_ok=True)
+
+    for f in files:
+        rel_path = Path(f.filename)  # e.g. "manager_it/candidate_01/resume.pdf"
+        dest_path = dest_root / rel_path
+        dest_path.parent.mkdir(parents=True, exist_ok=True)
+        with dest_path.open("wb") as out:
+            shutil.copyfileobj(f.file, out)
+
+    # If the user picked one top-level folder, every relative path starts
+    # with it (e.g. "manager_it/..."), so point folder_path one level in —
+    # matching the <job_category>/<candidate>/{resume,cnic} layout the
+    # pipeline expects, instead of an extra wrapping folder.
+    children = list(dest_root.iterdir())
+    if len(children) == 1 and children[0].is_dir():
+        dest_root = children[0]
+
+    return {"folder_path": str(dest_root), "files_received": len(files)}
+
+
+@app.post("/api/upload/job-description")
+async def upload_job_description(file: UploadFile = File(...)):
+    upload_id = uuid.uuid4().hex[:12]
+    dest_dir = UPLOADS_DIR / "job_descriptions"
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    dest_path = dest_dir / f"{upload_id}_{file.filename}"
+    with dest_path.open("wb") as out:
+        shutil.copyfileobj(file.file, out)
+    return {"file_path": str(dest_path)}

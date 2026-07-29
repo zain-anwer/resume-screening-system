@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import { UploadCloud } from "lucide-react";
 import { Card } from "../components/ui/Card.jsx";
 import Badge from "../components/ui/Badge.jsx";
+import PathPicker from "../components/PathPicker.jsx";
 import { fetchScreeningQueue, runPipeline, ApiError } from "../api/client.js";
+import "../styles/forms.css";
 
 const STATUS_TONE = { Parsing: "info", "Review Needed": "warning", Completed: "success" };
 
@@ -62,40 +64,38 @@ export default function ResumeScreening() {
       </div>
 
       <Card title="Run a pipeline job" style={{ marginBottom: 20 }}>
-        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-          <label style={{ fontSize: 13.5 }}>
-            Resumes folder path (on the backend server)
+        <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+          <PathPicker
+            id="folder-path"
+            label="Resumes folder (on the backend server)"
+            mode="folder"
+            placeholder="C:\Users\intern\resume-screening-system\backend\jobs\manager_it"
+            value={folderPath}
+            onChange={setFolderPath}
+          />
+          <PathPicker
+            id="jd-path"
+            label="Job description file (optional — required for ranking)"
+            mode="file"
+            extensions=".docx,.txt"
+            placeholder="C:\Users\intern\resume-screening-system\backend\ads\manager_it.docx"
+            value={jdPath}
+            onChange={setJdPath}
+          />
+          <div className="form-field" style={{ width: 120 }}>
+            <label htmlFor="top-k">Top K</label>
             <input
-              type="text"
-              placeholder="C:\Users\intern\resume-screening-system\backend\jobs\manager_it"
-              value={folderPath}
-              onChange={(e) => setFolderPath(e.target.value)}
-              style={inputStyle}
-            />
-          </label>
-          <label style={{ fontSize: 13.5 }}>
-            Job description path (optional — required for ranking)
-            <input
-              type="text"
-              placeholder="C:\Users\intern\resume-screening-system\backend\ads\manager_it.docx"
-              value={jdPath}
-              onChange={(e) => setJdPath(e.target.value)}
-              style={inputStyle}
-            />
-          </label>
-          <label style={{ fontSize: 13.5, width: 120 }}>
-            Top K
-            <input
+              id="top-k"
               type="number"
               min={1}
+              className="form-input"
               value={topK}
               onChange={(e) => setTopK(e.target.value)}
-              style={inputStyle}
             />
-          </label>
+          </div>
           <button
             className="btn btn-primary"
-            style={{ width: "fit-content" }}
+            style={{ width: "fit-content", marginTop: 8 }}
             onClick={handleSubmit}
             disabled={running || !folderPath.trim()}
           >
@@ -146,14 +146,3 @@ export default function ResumeScreening() {
     </div>
   );
 }
-
-const inputStyle = {
-  display: "block",
-  width: "100%",
-  marginTop: 4,
-  border: "1px solid var(--border)",
-  borderRadius: "var(--radius-md)",
-  padding: 10,
-  fontSize: 13.5,
-  fontFamily: "inherit",
-};
