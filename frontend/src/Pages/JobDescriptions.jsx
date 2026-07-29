@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Card } from "../components/ui/Card.jsx";
+import JobDescriptionBuilder from "../components/JobDescriptionBuilder.jsx";
 import { fetchDashboardData, ApiError } from "../api/client.js";
 
 export default function JobDescriptions() {
@@ -40,7 +41,11 @@ export default function JobDescriptions() {
     <div>
       <div className="page-header">
         <h1>Job Descriptions</h1>
-        <p>Roles seen among the most recent screenings.</p>
+        <p>Create job ads, and see roles seen among the most recent screenings.</p>
+      </div>
+
+      <div style={{ marginBottom: 20 }}>
+        <JobDescriptionBuilder />
       </div>
 
       {error && (

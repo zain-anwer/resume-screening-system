@@ -37,7 +37,7 @@ from typing import Optional
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
-
+from docx import Document
 from src.ingestion.resume_ingestion import ingest_resumes
 from src.extraction.field_extraction import extract_fields
 from src.policy_engine.candidate_evaluation import evaluate_candidates
@@ -561,5 +561,67 @@ def save_policy(body: PolicySaveRequest):
 
     file_path = CONFIGS_DIR / f"{safe_name}.yaml"
     file_path.write_text(body.yaml, encoding="utf-8")
+
+    return {"path": str(file_path)}
+
+    
+
+ADS_DIR = Path(__file__).parent / "ads"
+
+
+def _slugify(text: str) -> str:
+    safe = "".join(c if c.isalnum() else "_" for c in text.strip().lower())
+    while "__" in safe:
+        safe = safe.replace("__", "_")
+    return safe.strip("_") or "job"
+
+
+class JobDescriptionRequest(BaseModel):
+    job_title: str
+    department: str = ""
+    location: str = ""
+    employment_type: str = ""
+    experience_required: str = ""
+    education_required: str = ""
+    required_skills: list[str] = []
+    preferred_skills: list[str] = []
+    responsibilities: list[str] = []
+
+
+@app.post("/api/jobs/save")
+def save_job_description(body: JobDescriptionRequest):
+    if not body.job_title.strip():
+        raise HTTPException(status_code=400, detail="job_title is required")
+
+    ADS_DIR.mkdir(parents=True, exist_ok=True)
+
+    doc = Document()
+
+    def add_field(label: str, value: str):
+        doc.add_paragraph(f"{label}: {value}")
+        doc.add_paragraph("")
+
+    def add_list_section(label: str, items: list[str]):
+        doc.add_paragraph(f"{label}:")
+        for item in items:
+            doc.add_paragraph(item)
+        doc.add_paragraph("")
+
+    add_field("Job Title", body.job_title)
+    add_field("Department", body.department)
+    add_field("Location", body.location)
+    add_field("Employment Type", body.employment_type)
+    add_field("Experience Required", body.experience_required)
+    add_field("Education Required", body.education_required)
+
+    if body.required_skills:
+        add_list_section("Required Skills", body.required_skills)
+    if body.preferred_skills:
+        add_list_section("Preferred Skills", body.preferred_skills)
+    if body.responsibilities:
+        add_list_section("Responsibilities", body.responsibilities)
+
+    file_path = ADS_DIR / f"{_slugify(body.job_title)}.docx"
+    doc.save(str(file_path))
 
     return {"path": str(file_path)}

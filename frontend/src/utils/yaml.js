@@ -10,6 +10,8 @@
  * -----------------------------------------------------------------
  */
 
+import { downloadText } from "./text.js";
+
 const INDENT = "  ";
 const pad = (level) => INDENT.repeat(level);
 
@@ -116,24 +118,11 @@ export function deepClean(value) {
   return value;
 }
 
-/** Converts "Senior Backend Engineer" -> "senior_backend_engineer" for filenames. */
-export function slugify(str) {
-  return String(str || "")
-    .trim()
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "_")
-    .replace(/^_+|_+$/g, "") || "policy";
-}
+// Re-exported for backwards compatibility — anything importing slugify
+// from here still works, but new code should import it from text.js.
+export { slugify } from "./text.js";
 
 /** Triggers a browser download of a YAML string. */
 export function downloadYaml(yamlString, filename) {
-  const blob = new Blob([yamlString], { type: "text/yaml;charset=utf-8;" });
-  const url = window.URL.createObjectURL(blob);
-  const link = document.createElement("a");
-  link.href = url;
-  link.setAttribute("download", filename);
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-  window.URL.revokeObjectURL(url);
+  downloadText(yamlString, filename, "text/yaml;charset=utf-8;");
 }
