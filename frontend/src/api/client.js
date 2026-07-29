@@ -118,6 +118,18 @@ export async function savePolicy({ jobName, yaml }) {
   });
 }
 
+/**
+ * Saves a job description as a .docx file on the backend, which should
+ * write it to ./ads/{job_title}.docx (see main.py — needs a matching
+ * POST /api/jobs/save route, added the same way as /api/policy/save).
+ */
+export async function saveJobDescription(payload) {
+  return request("/jobs/save", {
+    method: "POST",
+    body: JSON.stringify(payload),
+  });
+}
+
 export { ApiError };
 
 export default {
@@ -128,4 +140,5 @@ export default {
   runPipeline,
   processAndMergeCandidates,
   savePolicy,
+  saveJobDescription,
 };
