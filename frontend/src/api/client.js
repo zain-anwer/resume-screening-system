@@ -1,0 +1,131 @@
+/**
+ * API CLIENT
+ * -----------------------------------------------------------------
+ * Talks to the FastAPI backend in main.py.
+ * -----------------------------------------------------------------
+ */
+
+// Point this at your uvicorn server. Override with VITE_API_BASE_URL
+// in a .env file if the backend isn't on localhost:8000.
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000/api";
+
+class ApiError extends Error {
+  constructor(message, status, detail) {
+    super(message);
+    this.status = status;
+    this.detail = detail;
+  }
+}
+
+async function request(path, options = {}) {
+  const res = await fetch(`${BASE_URL}${path}`, {
+    headers: { "Content-Type": "application/json" },
+    ...options,
+  });
+
+  if (!res.ok) {
+    let detail = res.statusText;
+    try {
+      const body = await res.json();
+      detail = body.detail || detail;
+    } catch {
+      /* response wasn't JSON */
+    }
+    throw new ApiError(`Request to ${path} failed (${res.status})`, res.status, detail);
+  }
+
+  return res.json();
+}
+
+/**
+ * Dashboard KPIs, pipeline, charts, recent screenings.
+ * Throws ApiError with status 404 if no pipeline run has completed yet
+ * — callers should catch this and show an empty/"run a job first" state.
+ */
+export async function fetchDashboardData() {
+  return request("/dashboard/summary");
+}
+
+/** Ranked candidate list (BM25 + semantic scores). */
+export async function fetchRankedCandidates() {
+  return request("/ranking/latest");
+}
+
+/** Screening / extraction status per candidate file. */
+export async function fetchScreeningQueue() {
+  return request("/screening/queue");
+}
+
+/** Backend + ranking-stage health check. */
+export async function fetchHealth() {
+  return request("/health");
+}
+
+/**
+ * Kicks off ingestion -> extraction -> eligibility -> (ranking, if a
+ * job description is supplied). Populates the in-memory run the other
+ * GET endpoints read from. Ranking is optional here.
+ *
+ * folderPath / jobDescriptionPath are paths on the machine running the
+ * backend (see KNOWN GAPS note in main.py) — not uploaded files or URLs.
+ */
+export async function runPipeline({ folderPath, jobDescriptionPath, topK = 20 }) {
+  return request("/pipeline/run", {
+    method: "POST",
+    body: JSON.stringify({
+      folder_path: folderPath,
+      job_description_path: jobDescriptionPath || null,
+      top_k: topK,
+    }),
+  });
+}
+
+/**
+ * Runs the full pipeline (ranking required) and returns one merged
+ * record per candidate: full profile + nested eligibility + ranking.
+ * Useful for a candidate detail view.
+ */
+export async function processAndMergeCandidates({ folderPath, jobDescriptionPath, topK = 20 }) {
+  return request("/candidates/process", {
+    method: "POST",
+    body: JSON.stringify({
+      folder_path: folderPath,
+      job_description_path: jobDescriptionPath,
+      top_k: topK,
+    }),
+  });
+}
+
+/**
+ * Saves a generated policy YAML to the backend, which should write it
+ * to ./config/{job_name}.yaml (see main.py — this endpoint doesn't
+ * exist yet and needs to be added there, e.g.:
+ *
+ *   @app.post("/api/policy/save")
+ *   def save_policy(body: PolicySaveRequest):
+ *       path = Path("config") / f"{body.job_name}.yaml"
+ *       path.write_text(body.yaml)
+ *       return { "path": str(path) }
+ *
+ * Until that route exists, callers should catch the ApiError/network
+ * failure and fall back to a client-side download (see
+ * PolicyBuilder.jsx, which already does this).
+ */
+export async function savePolicy({ jobName, yaml }) {
+  return request("/policy/save", {
+    method: "POST",
+    body: JSON.stringify({ job_name: jobName, yaml }),
+  });
+}
+
+export { ApiError };
+
+export default {
+  fetchDashboardData,
+  fetchRankedCandidates,
+  fetchScreeningQueue,
+  fetchHealth,
+  runPipeline,
+  processAndMergeCandidates,
+  savePolicy,
+};

@@ -1,0 +1,291 @@
+{
+  "id": "manager_it_01",
+  "personal_info": {
+    "full_name": "Bilal Ahmed Siddiqui",
+    "father_name": "Sikandar Ahmed Siddiqui",
+    "gender": "Male",
+    "marital_status": "",
+    "date_of_birth": "1992-12-26",
+    "age": 33,
+    "nationality": "Pakistani",
+    "cnic": "42101-1234567-1",
+    "contact": {
+      "emails": [
+        "bilal.siddiqui.it@gmail.com"
+      ],
+      "phones": [
+        "0301-2345671"
+      ],
+      "landlines": []
+    },
+    "address": {
+      "full_address": "House 45, Street 12, Gulshan-e-Iqbal Block 6, Karachi",
+      "city": "Karachi",
+      "province": "Sindh",
+      "country": "Pakistan"
+    }
+  },
+  "education": [
+    {
+      "degree_name": "MS Computer Science",
+      "degree_level": "Masters",
+      "field": "Computer Science",
+      "specialization": "",
+      "institution": "NED University of Engineering & Technology",
+      "campus": "",
+      "start_year": null,
+      "graduation_year": 2016,
+      "cgpa": null,
+      "max_cgpa": null,
+      "percentage": null,
+      "is_current": false
+    },
+    {
+      "degree_name": "BS Computer Science",
+      "degree_level": "Bachelors",
+      "field": "Computer Science",
+      "specialization": "",
+      "institution": "NED University of Engineering & Technology",
+      "campus": "",
+      "start_year": null,
+      "graduation_year": 2014,
+      "cgpa": null,
+      "max_cgpa": null,
+      "percentage": null,
+      "is_current": false
+    }
+  ],
+  "experience": [
+    {
+      "title": "IT Manager",
+      "organization": "Al-Noor Textiles Ltd",
+      "industry": "Manufacturing",
+      "employment_type": "Full-time",
+      "location": "Karachi",
+      "start_date": "2021-01-01",
+      "end_date": "",
+      "is_current": true,
+      "description": "",
+      "responsibilities": [
+        "Led Oracle ERP implementation across 6 plants, supervising a team of 12 engineers",
+        "Managed data-center operations, Linux servers and enterprise networking",
+        "Reduced downtime by 30% through cloud migration and monitoring automation"
+      ],
+      "technologies": [
+        "Oracle ERP",
+        "Linux",
+        "Cloud"
+      ],
+      "achievements": [],
+      "duration_months": 66
+    },
+    {
+      "title": "Assistant Manager IT",
+      "organization": "Zafar Industries",
+      "industry": "",
+      "employment_type": "Full-time",
+      "location": "Karachi",
+      "start_date": "2018-08-01",
+      "end_date": "2020-12-01",
+      "is_current": false,
+      "description": "",
+      "responsibilities": [
+        "Supervised a team of 5 in SAP module rollout and support",
+        "Administered SQL Server and Oracle databases",
+        "Coordinated network upgrades across regional offices"
+      ],
+      "technologies": [
+        "SAP",
+        "SQL Server",
+        "Oracle"
+      ],
+      "achievements": [],
+      "duration_months": 28
+    },
+    {
+      "title": "IT Officer",
+      "organization": "Crescent Systems Pvt Ltd",
+      "industry": "",
+      "employment_type": "Full-time",
+      "location": "Karachi",
+      "start_date": "2016-07-01",
+      "end_date": "2018-07-01",
+      "is_current": false,
+      "description": "",
+      "responsibilities": [
+        "Provided Tier-1 ERP support and database maintenance",
+        "Assisted in Python-based reporting automation"
+      ],
+      "technologies": [
+        "Python"
+      ],
+      "achievements": [],
+      "duration_months": 24
+    }
+  ],
+  "projects": [
+    {
+      "name": "ERP Migration for Al-Noor Textiles",
+      "role": "",
+      "organization": "Al-Noor Textiles Ltd",
+      "description": "6-plant rollout",
+      "start_date": "",
+      "end_date": "",
+      "technologies": [
+        "Oracle ERP"
+      ],
+      "github": "",
+      "demo": ""
+    },
+    {
+      "name": "Enterprise Network Redesign Project",
+      "role": "",
+      "organization": "",
+      "description": "",
+      "start_date": "",
+      "end_date": "",
+      "technologies": [],
+      "github": "",
+      "demo": ""
+    }
+  ],
+  "skills": {
+    "technical": [
+      "Oracle ERP",
+      "SAP",
+      "Database Administration",
+      "Networking"
+    ],
+    "soft": [
+      "Project Management"
+    ],
+    "tools": [],
+    "databases": [
+      "Oracle",
+      "SQL Server"
+    ],
+    "frameworks": [],
+    "cloud": [
+      "AWS"
+    ],
+    "operating_systems": [
+      "Linux"
+    ],
+    "languages": [
+      "Python",
+      "SQL"
+    ]
+  },
+  "certifications": [
+    {
+      "name": "Oracle ERP Cloud Certified Implementation Specialist",
+      "issuer": "Oracle",
+      "issue_date": "",
+      "expiry_date": "",
+      "credential_id": "",
+      "credential_url": ""
+    },
+    {
+      "name": "PMP - Project Management Professional",
+      "issuer": "PMI",
+      "issue_date": "",
+      "expiry_date": "",
+      "credential_id": "",
+      "credential_url": ""
+    },
+    {
+      "name": "AWS Certified Solutions Architect",
+      "issuer": "AWS",
+      "issue_date": "",
+      "expiry_date": "",
+      "credential_id": "",
+      "credential_url": ""
+    }
+  ],
+  "achievements": [],
+  "publications": [],
+  "languages": [
+    {
+      "language": "English",
+      "proficiency": ""
+    },
+    {
+      "language": "Urdu",
+      "proficiency": ""
+    },
+    {
+      "language": "Sindhi",
+      "proficiency": ""
+    }
+  ],
+  "urls": {
+    "linkedin": "",
+    "github": "",
+    "portfolio": [],
+    "website": "",
+    "other": []
+  },
+  "summary": "Results-driven IT Manager with 9 years of experience leading ERP implementation projects, infrastructure teams, and enterprise database administration across manufacturing and public-sector organizations.",
+  "experience_summary": {
+    "total_experience_years": 10.0,
+    "management_experience_years": 7.8,
+    "relevant_experience_years": 10.0
+  },
+  "eligibility_features": {
+    "highest_degree": "MS Computer Science",
+    "highest_degree_level": "Masters",
+    "age": 33,
+    "currently_employed": true,
+    "current_designation": "IT Manager",
+    "current_company": "Al-Noor Textiles Ltd",
+    "has_management_experience": true,
+    "has_python": true,
+    "has_sql": true,
+    "has_sap": true,
+    "has_oracle": true,
+    "has_driving_license": false,
+    "has_security_clearance": false
+  },
+  "references": [
+    {
+      "name": "Eng. Asif Raza",
+      "designation": "Director IT",
+      "organization": "Al-Noor Textiles Ltd",
+      "phone": "0300-1112223",
+      "email": ""
+    }
+  ],
+  "interests": [],
+  "verification": {
+    "resume_name": "Bilal Ahmed Siddiqui",
+    "cnic_name": "Bilal Ahmed Siddiqui",
+    "resume_dob": "1992-12-26",
+    "cnic_dob": "1992-12-26",
+    "resume_cnic": "42101-1234567-1",
+    "cnic_number": "42101-1234567-1",
+    "name_match": true,
+    "dob_match": true,
+    "cnic_match": true
+  },
+  "flags": {
+    "missing_fields": [
+      "marital_status"
+    ],
+    "low_confidence_fields": [],
+    "manual_review_required": false,
+    "resume_blurred": false,
+    "cnic_blurred": false
+  },
+  "metadata": {
+    "candidate_id": "manager_it_01",
+    "job_category": "Manager_IT",
+    "source_resume": "resume_text",
+    "source_cnic": "cnic_extraction",
+    "document_type": "resume+cnic",
+    "parser_version": "1.0",
+    "created_at": "2026-07-20",
+    "updated_at": "2026-07-20",
+    "parsing_status": "success",
+    "confidence_score": 0.9
+  }
+}

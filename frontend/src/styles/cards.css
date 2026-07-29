@@ -1,0 +1,157 @@
+@import './variables.css';
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-900);
+}
+
+.card-subtitle {
+  font-size: 12.5px;
+  color: var(--text-400);
+  margin-top: 2px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.card-header-link {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* Stat card (KPI) */
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-card-label {
+  font-size: 13px;
+  color: var(--text-600);
+}
+
+.stat-card-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-card-value {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-900);
+}
+
+.stat-card-delta {
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.stat-card-delta.up { color: var(--success); }
+.stat-card-delta.down { color: var(--danger); }
+
+/* Pipeline / funnel rows (image-2 style) */
+.pipeline-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.pipeline-row:last-child {
+  margin-bottom: 0;
+}
+
+.pipeline-label {
+  width: 90px;
+  font-size: 13px;
+  color: var(--text-600);
+  flex-shrink: 0;
+}
+
+.pipeline-track {
+  flex: 1;
+  height: 34px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.pipeline-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #2BA9B8);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+}
+
+.pipeline-fill span {
+  color: #fff;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.pipeline-value {
+  width: 60px;
+  text-align: right;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-900);
+  flex-shrink: 0;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+.badge-success { background: var(--success-soft); color: var(--success); }
+.badge-warning { background: var(--warning-soft); color: var(--warning); }
+.badge-danger  { background: var(--danger-soft); color: var(--danger); }
+.badge-info    { background: var(--info-soft); color: var(--info); }
+.badge-neutral { background: var(--bg); color: var(--text-600); }
+
+/* Skill tag chips */
+.chip {
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--text-600);
+  margin: 2px;
+}

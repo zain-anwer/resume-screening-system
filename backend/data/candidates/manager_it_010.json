@@ -1,0 +1,283 @@
+{
+  "id": "manager_it_010",
+  "personal_info": {
+    "full_name": "Waleed Aftab",
+    "father_name": "",
+    "gender": "Male",
+    "marital_status": "Married",
+    "date_of_birth": "1991-12-21",
+    "age": 34,
+    "nationality": "Pakistani",
+    "cnic": "88907-1445199-9",
+    "contact": {
+      "emails": [
+        "s.waleed.aftab@gmail.com"
+      ],
+      "phones": [
+        "+92-332-2159620"
+      ],
+      "landlines": []
+    },
+    "address": {
+      "full_address": "S-1/558, Saudabad, Malir, Karachi, Pakistan 75300",
+      "city": "Karachi",
+      "province": "Sindh",
+      "country": "Pakistan"
+    }
+  },
+  "education": [
+    {
+      "degree_name": "Bachelor of Science (BS), Computer Science (BSCS)",
+      "degree_level": "Bachelors",
+      "field": "Computer Science",
+      "specialization": "",
+      "institution": "National College",
+      "campus": "Karachi",
+      "start_year": null,
+      "graduation_year": 2008,
+      "cgpa": null,
+      "max_cgpa": null,
+      "percentage": null,
+      "is_current": false
+    }
+  ],
+  "experience": [
+    {
+      "title": "Deputy Manager ERP",
+      "organization": "Changan Motors Limited",
+      "industry": "Automotive",
+      "employment_type": "Full-time",
+      "location": "Karachi",
+      "start_date": "2019-09-01",
+      "end_date": "",
+      "is_current": true,
+      "description": "",
+      "responsibilities": [
+        "Led the team of Oracle EBS developers in designing, developing, and implementing custom solutions",
+        "Created custom PL/SQL packages, forms, reports, and workflows",
+        "Conducted performance analysis of Oracle EBS modules, achieving 25% improvement in system response time",
+        "Worked on integration projects including 'Parts Integration System' and '3rd Party Logistics'"
+      ],
+      "technologies": [
+        "Oracle EBS",
+        "PL/SQL",
+        "BI Publisher"
+      ],
+      "achievements": [],
+      "duration_months": 82
+    },
+    {
+      "title": "Oracle Applications Developer",
+      "organization": "Island Textile Limited",
+      "industry": "Textile",
+      "employment_type": "Full-time",
+      "location": "Karachi",
+      "start_date": "2018-02-01",
+      "end_date": "2019-09-01",
+      "is_current": false,
+      "description": "",
+      "responsibilities": [
+        "Developed and maintained customized Oracle applications per business requirements"
+      ],
+      "technologies": [
+        "Oracle EBS"
+      ],
+      "achievements": [],
+      "duration_months": 19
+    },
+    {
+      "title": "Oracle Application Developer",
+      "organization": "Naveena Denim Limited",
+      "industry": "Textile",
+      "employment_type": "Full-time",
+      "location": "Karachi",
+      "start_date": "2017-05-01",
+      "end_date": "2018-02-01",
+      "is_current": false,
+      "description": "",
+      "responsibilities": [
+        "Developed reports and forms using Reports 10g and Forms 10g"
+      ],
+      "technologies": [
+        "Oracle Forms",
+        "Oracle Reports"
+      ],
+      "achievements": [],
+      "duration_months": 9
+    },
+    {
+      "title": "Oracle Technical Consultant - Intern",
+      "organization": "Sapphire Consulting Services",
+      "industry": "",
+      "employment_type": "Internship",
+      "location": "Karachi",
+      "start_date": "2016-11-01",
+      "end_date": "2017-04-01",
+      "is_current": false,
+      "description": "",
+      "responsibilities": [
+        "Worked on projects including CKD Part-by-Part, Dealer Commission System, Auto Delivery System, Gate Pass System and Auto-Invoice System"
+      ],
+      "technologies": [],
+      "achievements": [],
+      "duration_months": 5
+    }
+  ],
+  "projects": [
+    {
+      "name": "Parts Integration System",
+      "role": "Technical Lead",
+      "organization": "Changan Motors Limited",
+      "description": "",
+      "start_date": "",
+      "end_date": "",
+      "technologies": [
+        "Oracle EBS"
+      ],
+      "github": "",
+      "demo": ""
+    },
+    {
+      "name": "3rd Party Logistics Integration",
+      "role": "Technical Lead",
+      "organization": "Changan Motors Limited",
+      "description": "",
+      "start_date": "",
+      "end_date": "",
+      "technologies": [
+        "Oracle EBS"
+      ],
+      "github": "",
+      "demo": ""
+    }
+  ],
+  "skills": {
+    "technical": [
+      "Oracle E-Business Suite (EBS) R12",
+      "Oracle Workflow",
+      "Oracle WebADI",
+      "Integration Skills",
+      "Customization",
+      "Performance Tuning",
+      "BI Publisher"
+    ],
+    "soft": [
+      "Project Management",
+      "Continuous Learning",
+      "Adaptability"
+    ],
+    "tools": [
+      "Oracle Apex",
+      "ORDS"
+    ],
+    "databases": [
+      "Oracle Database"
+    ],
+    "frameworks": [
+      "Oracle Forms",
+      "Oracle Reports"
+    ],
+    "cloud": [],
+    "operating_systems": [],
+    "languages": [
+      "PL/SQL",
+      "SQL"
+    ]
+  },
+  "certifications": [
+    {
+      "name": "Oracle 11g Developer Track",
+      "issuer": "Orasoft Training Institute",
+      "issue_date": "2016-01-01",
+      "expiry_date": "",
+      "credential_id": "",
+      "credential_url": ""
+    },
+    {
+      "name": "OCP - Oracle Cloud Apex",
+      "issuer": "Oracle University",
+      "issue_date": "2023-01-01",
+      "expiry_date": "",
+      "credential_id": "",
+      "credential_url": ""
+    }
+  ],
+  "achievements": [],
+  "publications": [],
+  "languages": [
+    {
+      "language": "English",
+      "proficiency": "Upper Intermediate"
+    },
+    {
+      "language": "Urdu",
+      "proficiency": "Native"
+    }
+  ],
+  "urls": {
+    "linkedin": "https://www.linkedin.com/in/waleed-aftab-756a45a4/",
+    "github": "",
+    "portfolio": [],
+    "website": "",
+    "other": []
+  },
+  "summary": "Results-driven Senior Oracle Technical Consultant with over 7 years of experience delivering strategic Oracle E-Business Suite (EBS) solutions across industry, with deep expertise in PL/SQL development, Oracle Forms and Reports, and Oracle Workflow.",
+  "experience_summary": {
+    "total_experience_years": 9.7,
+    "management_experience_years": 6.8,
+    "relevant_experience_years": 9.7
+  },
+  "eligibility_features": {
+    "highest_degree": "Bachelor of Science (BS), Computer Science (BSCS)",
+    "highest_degree_level": "Bachelors",
+    "age": 34,
+    "currently_employed": true,
+    "current_designation": "Deputy Manager ERP",
+    "current_company": "Changan Motors Limited",
+    "has_management_experience": true,
+    "has_python": false,
+    "has_sql": true,
+    "has_sap": false,
+    "has_oracle": true,
+    "has_driving_license": false,
+    "has_security_clearance": false
+  },
+  "references": [],
+  "interests": [],
+  "verification": {
+    "resume_name": "Waleed Aftab",
+    "cnic_name": "Waleed Aftab",
+    "resume_dob": "1990-09-05",
+    "cnic_dob": "1991-12-21",
+    "resume_cnic": "88907-1445199-9",
+    "cnic_number": "88907-1445199-9",
+    "name_match": true,
+    "dob_match": false,
+    "cnic_match": true
+  },
+  "flags": {
+    "missing_fields": [
+      "father_name",
+      "references"
+    ],
+    "low_confidence_fields": [
+      "education section is OCR-jumbled (pre-engineering, SSC, and diploma entries could not be reliably separated) - additional diplomas mentioned (Computer Graphics, Computer Information Technology, Computer Hardware from 'Computing Next, Karachi') were omitted pending manual verification",
+      "resume_dob (05/09/1990) does not match cnic_dob (1991-12-21)"
+    ],
+    "manual_review_required": true,
+    "resume_blurred": false,
+    "cnic_blurred": false
+  },
+  "metadata": {
+    "candidate_id": "manager_it_010",
+    "job_category": "Manager_IT",
+    "source_resume": "resume_text",
+    "source_cnic": "cnic_extraction",
+    "document_type": "resume+cnic",
+    "parser_version": "1.0",
+    "created_at": "2026-07-20",
+    "updated_at": "2026-07-20",
+    "parsing_status": "success",
+    "confidence_score": 0.5
+  }
+}

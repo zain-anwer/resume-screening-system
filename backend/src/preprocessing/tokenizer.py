@@ -1,6 +1,6 @@
 from __future__ import annotations
 from typing import List
-from backend.src.preprocessing.text_cleaner import TextCleaner
+from src.preprocessing.text_cleaner import TextCleaner
 class Tokenizer:
     STOP_WORDS={
         "a",

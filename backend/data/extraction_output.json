@@ -1,0 +1,1560 @@
+[
+  {
+    "id": "8041c5d7dd3985aabb9311eb983c04a40e4feca25479e0a26455d04d8ee8ced7",
+    "personal_info": {
+      "name": "Ahmed Siddiqui",
+      "gender": "Male",
+      "marital_status": null,
+      "father_name": "Sikandar Ahmed Siddiqui",
+      "email": "bilal.siddiqui.it@gmail.com",
+      "phone": [
+        "0301-2345671"
+      ],
+      "landline": [],
+      "cnic": "42101-1234567-1",
+      "location": "Gulshan",
+      "date_of_birth": "1992-12-26",
+      "nationality": "Pakistani"
+    },
+    "education": [
+      {
+        "degree": "MS Computer Science",
+        "institute": "NED University of Engineering & Technology",
+        "start_year": null,
+        "end_year": "2016",
+        "cgpa": null
+      },
+      {
+        "degree": "BS Computer Science",
+        "institute": "NED University of Engineering & Technology",
+        "start_year": null,
+        "end_year": "2014",
+        "cgpa": null
+      }
+    ],
+    "experience": [
+      {
+        "job_title": "IT Manager",
+        "organization": "Al-Noor Textiles Ltd, Karachi",
+        "start_date": "Jan 2021",
+        "end_date": "Present",
+        "description": "Led Oracle ERP implementation across 6 plants, supervising a team of 12 engineers Managed data-center operations, Linux servers and enterprise networking Reduced downtime by 30% through cloud migration and monitoring automation"
+      },
+      {
+        "job_title": "Assistant Manager IT",
+        "organization": "Zafar Industries, Karachi",
+        "start_date": "Aug 2018",
+        "end_date": "Dec 2020",
+        "description": "Supervised a team of 5 in SAP module rollout and support Administered SQL Server and Oracle databases Coordinated network upgrades across regional offices"
+      },
+      {
+        "job_title": "IT Officer",
+        "organization": "Crescent Systems Pvt Ltd, Karachi",
+        "start_date": "Jul 2016",
+        "end_date": "Jul 2018",
+        "description": "Provided Tier-1 ERP support and database maintenance Assisted in Python-based reporting automation"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Cloud (AWS)",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [
+          "Networking",
+          "Python",
+          "SQL"
+        ],
+        "github": null,
+        "demo": null,
+        "description": "Python SQL Networking"
+      },
+      {
+        "name": "ERP Migration for Al-Noor Textiles (6-plant rollout)",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": null
+      }
+    ],
+    "skills": [
+      "Oracle ERP",
+      "SAP"
+    ],
+    "certifications": [
+      {
+        "name": "Oracle ERP Cloud Certified Implementation Specialist",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      },
+      {
+        "name": "PMP - Project Management Professional",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      },
+      {
+        "name": "AWS Certified Solutions Architect",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      }
+    ],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "total_experience_years": 10.05,
+    "additional_sections": {
+      "references": [
+        {
+          "name": "Eng. Asif Raza",
+          "designation": "Director IT",
+          "organization": "Al-Noor Textiles Ltd",
+          "phone": "0300-1112223",
+          "email": null
+        }
+      ],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "manager_it"
+    }
+  },
+  {
+    "id": "86384b874dc87dead98dcc401bb986c971387711f13561588ab3143ab5d495c3",
+    "personal_info": {
+      "name": "Waleed Aftab",
+      "gender": null,
+      "marital_status": null,
+      "father_name": null,
+      "email": "s.waleed.aftab@gmail.com",
+      "phone": [
+        "+92-332-2159620",
+        "+92-332-2159620"
+      ],
+      "landline": [],
+      "cnic": null,
+      "location": "Karachi",
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [],
+    "experience": [],
+    "projects": [
+      {
+        "name": "Oracle 11g Developer Track",
+        "role": null,
+        "start_date": "2016",
+        "end_date": "2016",
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": null
+      },
+      {
+        "name": "OCP",
+        "role": "Oracle Cloud Apex",
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": null
+      },
+      {
+        "name": "Pre",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": "engineering"
+      },
+      {
+        "name": "Computing Next, Karachi",
+        "role": null,
+        "start_date": "2005",
+        "end_date": "2005",
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": null
+      }
+    ],
+    "skills": [
+      "Oracle E-Business Suite (EBS)",
+      "PL/SQL Development",
+      "Oracle Forms and Reports",
+      "Oracle Workflow",
+      "Oracle WEBADI",
+      "Oracle Database",
+      "Customization",
+      "Performance Tuning",
+      "Computing Next",
+      "Karachi",
+      "2004"
+    ],
+    "certifications": [],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": {
+      "github": null,
+      "linkedin": "https://www.linkedin.com/in/waleed-aftab-756a45a4",
+      "portfolio": []
+    },
+    "summary": null,
+    "total_experience_years": 0.0,
+    "additional_sections": {
+      "references": [],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "manager_it"
+    }
+  },
+  {
+    "id": "b3f516fa9543c275b90ec5811a6e53f35f4dc2be230806bd75b247904af75cf8",
+    "personal_info": {
+      "name": "Sana Fatima Qureshi",
+      "gender": "Female",
+      "marital_status": null,
+      "father_name": "Manzoor Ahmed Qureshi",
+      "email": null,
+      "phone": [],
+      "landline": [],
+      "cnic": "42201-2345678-2",
+      "location": null,
+      "date_of_birth": "1994-12-26",
+      "nationality": "Pakistani"
+    },
+    "education": [
+      {
+        "degree": "MS Software Engineering",
+        "institute": "IBA Karachi",
+        "start_year": null,
+        "end_year": "2017",
+        "cgpa": null
+      },
+      {
+        "degree": "BS Software Engineering",
+        "institute": "IBA Karachi",
+        "start_year": null,
+        "end_year": "2015",
+        "cgpa": null
+      }
+    ],
+    "experience": [
+      {
+        "job_title": "IT Manager",
+        "organization": "Bloom FMCG Pakistan, Karachi",
+        "start_date": "Mar 2022",
+        "end_date": "Present",
+        "description": "Supervise a 6-member infrastructure and applications team Led SAP S/4HANA implementation across supply-chain division Manage cloud infrastructure (Azure) and disaster-recovery planning"
+      },
+      {
+        "job_title": "Senior IT Analyst",
+        "organization": "Metro Retail Solutions, Karachi",
+        "start_date": "Jun 2019",
+        "end_date": "Feb 2022",
+        "description": "Supervised 2 junior analysts on ERP support desk Administered SQL databases and network infrastructure Automated reporting workflows using Python"
+      },
+      {
+        "job_title": "IT Support Engineer",
+        "organization": "Horizon Tech Karachi",
+        "start_date": "Jan 2017",
+        "end_date": "May 2019",
+        "description": "Provided ERP and network support for corporate clients"
+      }
+    ],
+    "projects": [
+      {
+        "name": "SAP S/4HANA Rollout",
+        "role": "Bloom FMCG",
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": null
+      },
+      {
+        "name": "Retail ERP Support Desk Revamp",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": null
+      }
+    ],
+    "skills": [
+      "SAP",
+      "ERP Implementation",
+      "SQL",
+      "Networking",
+      "Python",
+      "Linux"
+    ],
+    "certifications": [
+      {
+        "name": "SAP Certified Application Associate",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      },
+      {
+        "name": "ITIL Foundation",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      },
+      {
+        "name": "Microsoft Certified: Azure Administrator Languages",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      }
+    ],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "total_experience_years": 9.55,
+    "additional_sections": {
+      "references": [
+        {
+          "name": "Mr. Kamran Sheikh",
+          "designation": "Head of IT",
+          "organization": "Bloom FMCG Pakistan",
+          "phone": "0321-5556677",
+          "email": null
+        }
+      ],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "manager_it"
+    }
+  },
+  {
+    "id": "76ec7bd30fafd0bfed793dc28f337ca4ab9a14c0462c939992337c040b2a42c2",
+    "personal_info": {
+      "name": null,
+      "gender": null,
+      "marital_status": null,
+      "father_name": null,
+      "email": null,
+      "phone": [],
+      "landline": [],
+      "cnic": null,
+      "location": null,
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [],
+    "experience": [],
+    "projects": [],
+    "skills": [],
+    "certifications": [],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "total_experience_years": 0.0,
+    "additional_sections": {
+      "references": [],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "manager_it"
+    }
+  },
+  {
+    "id": "cc85e65bc10a30651fe032f5673abbf343033ae14ebde03d6409d17ff92298ea",
+    "personal_info": {
+      "name": null,
+      "gender": null,
+      "marital_status": null,
+      "father_name": null,
+      "email": null,
+      "phone": [],
+      "landline": [],
+      "cnic": null,
+      "location": null,
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [],
+    "experience": [],
+    "projects": [],
+    "skills": [],
+    "certifications": [],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "total_experience_years": 0.0,
+    "additional_sections": {
+      "references": [],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "manager_it"
+    }
+  },
+  {
+    "id": "1f02a185d032b986635666fc59ba905d9be345866b31eccceb102974a4f3d610",
+    "personal_info": {
+      "name": "Waqas",
+      "gender": null,
+      "marital_status": null,
+      "father_name": "Iqbal Ahmed Chaudhry DOB: 1993-12-26 CNIC: <CNIC> Gender: Male Nationality: Pakistani",
+      "email": "waqas.iqbal.chy@gmail.com",
+      "phone": [
+        "0300-7788990"
+      ],
+      "landline": [],
+      "cnic": "42401-5678901-5",
+      "location": null,
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [
+      {
+        "degree": null,
+        "institute": "University of Karachi",
+        "start_year": null,
+        "end_year": "2015",
+        "cgpa": null
+      }
+    ],
+    "experience": [
+      {
+        "job_title": "IT Manager (Operations)",
+        "organization": "Skyline Logistics, Karachi",
+        "start_date": "Apr 2020",
+        "end_date": "Present",
+        "description": "Supervise 4-member network operations team Manage Linux server infrastructure and database backups"
+      },
+      {
+        "job_title": "Network Administrator",
+        "organization": "Trident Freight Services, Karachi",
+        "start_date": "Feb 2017",
+        "end_date": "Mar 2020",
+        "description": "Administered enterprise LAN/WAN infrastructure"
+      },
+      {
+        "job_title": "IT Support Officer",
+        "organization": "Chaudhry Enterprises, Karachi",
+        "start_date": "Jun 2015",
+        "end_date": "Jan 2017",
+        "description": "Provided desktop and network support"
+      }
+    ],
+    "projects": [
+      {
+        "name": "WAN Redesign",
+        "role": "Skyline Logistics",
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": null
+      }
+    ],
+    "skills": [
+      "Networking",
+      "Linux",
+      "Database Administration",
+      "SQL"
+    ],
+    "certifications": [
+      {
+        "name": "CCNA",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      },
+      {
+        "name": "Linux Foundation Certified Engineer",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      }
+    ],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "total_experience_years": 11.14,
+    "additional_sections": {
+      "references": [
+        {
+          "name": "Mr. Salman Raza",
+          "designation": "Operations Director",
+          "organization": "Skyline Logistics",
+          "phone": "0321-4445566",
+          "email": null
+        }
+      ],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "manager_it"
+    }
+  },
+  {
+    "id": "412af70f42cd2e7661a1f1ca7c5a28507d57e40fefcd1ea6531a4e7ef9619814",
+    "personal_info": {
+      "name": "Hassan Raza Abbasi",
+      "gender": "Male",
+      "marital_status": null,
+      "father_name": "Ghulam Raza Abbasi",
+      "email": null,
+      "phone": [],
+      "landline": [],
+      "cnic": "42101-6789012-6",
+      "location": "North Nazimabad",
+      "date_of_birth": "1991-12-26",
+      "nationality": "Pakistani"
+    },
+    "education": [
+      {
+        "degree": "MS Computer Science",
+        "institute": "FAST National University",
+        "start_year": null,
+        "end_year": "2013",
+        "cgpa": null
+      },
+      {
+        "degree": "BS Computer Science",
+        "institute": "FAST National University",
+        "start_year": null,
+        "end_year": "2011",
+        "cgpa": null
+      }
+    ],
+    "experience": [
+      {
+        "job_title": "Senior ERP Consultant",
+        "organization": "Techsol Global, Karachi",
+        "start_date": "May 2019",
+        "end_date": "Present",
+        "description": "Lead technical implementation of Oracle ERP modules for enterprise clients Work independently on database administration and cloud deployments Serve as subject-matter expert without direct reports"
+      },
+      {
+        "job_title": "ERP Consultant",
+        "organization": "Bright Consulting, Karachi",
+        "start_date": "Feb 2016",
+        "end_date": "Apr 2019",
+        "description": "Provided SAP implementation support for multiple clients"
+      },
+      {
+        "job_title": "Database Administrator",
+        "organization": "Quantum Systems, Karachi",
+        "start_date": "Jan 2014",
+        "end_date": "Jan 2016",
+        "description": "Administered Oracle and SQL Server databases"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Multi-client Oracle ERP Implementation Program",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": null
+      },
+      {
+        "name": "SAP Rollout",
+        "role": "Bright Consulting Clients",
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": null
+      }
+    ],
+    "skills": [
+      "Oracle ERP",
+      "SAP",
+      "Tier-1 ERP",
+      "Implementation",
+      "Database Administration",
+      "Python",
+      "SQL",
+      "Cloud"
+    ],
+    "certifications": [
+      {
+        "name": "Oracle ERP Cloud Certified Implementation Specialist",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      },
+      {
+        "name": "SAP Certified Technology Associate",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      }
+    ],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "total_experience_years": 12.55,
+    "additional_sections": {
+      "references": [
+        {
+          "name": "Mr. Imran Sheikh",
+          "designation": "Practice Lead",
+          "organization": "Techsol Global",
+          "phone": "0300-3334455",
+          "email": null
+        }
+      ],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "manager_it"
+    }
+  },
+  {
+    "id": "40d8435574b9483e2a221888dae3ac4a733549dad04fb8f6d886d9e535418409",
+    "personal_info": {
+      "name": "Atthar Hassan",
+      "gender": null,
+      "marital_status": null,
+      "father_name": null,
+      "email": "athar.rehmani1@gmail.com",
+      "phone": [
+        "+92 333 4707817"
+      ],
+      "landline": [],
+      "cnic": null,
+      "location": null,
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [
+      {
+        "degree": "BS (Hons.) Computer Science",
+        "institute": "The University of Lahore",
+        "start_year": "2011",
+        "end_year": "2015",
+        "cgpa": null
+      }
+    ],
+    "experience": [
+      {
+        "job_title": "Unit Head",
+        "organization": "IS Governance, Compliance and Awareness",
+        "start_date": "Feb, 2024",
+        "end_date": "Present",
+        "description": "MCB Islamic Bank Limited Establishes policies, procedures, and standards for information security management, resulting in improved security posture. Conduct assessments to ensure compliance with relevant laws, regulations, and industry standards. Develops and implements an information security governance framework, ensuring alignment with industry best practices and regulatory requirements. Develops and delivers information security awareness training programs for employees. Conduct regular reviews of Service Level Agreements (SLAs) to ensure alignment with business goals and objectives. Stays informed about industry best practices and regulatory requirements in SLA management. Provides guidance and support to cross-functional teams on information security matters, fostering a culture of security awareness. Stays inform about emerging threats, technologies, and best practices in information security governance."
+      },
+      {
+        "job_title": "Inspecting Officer",
+        "organization": "Information System",
+        "start_date": "Jan, 2021",
+        "end_date": "Jan 2024",
+        "description": "State Bank of Pakistan Supported the supervisory division by evaluating cyber security risks of Regulated Entities (REs) to enhance regulatory compliance and mitigate potential threats. Assisted in compiling and distributing updates on cyber security risks to senior management and relevant stakeholders to facilitate informed decision-making. Engaged with internal and external stakeholders to address inquiries and provide guidance on cyber security risk-related matters, fostering collaboration and alignment."
+      }
+    ],
+    "projects": [],
+    "skills": [
+      "TEAMWORK"
+    ],
+    "certifications": [
+      {
+        "name": "CISA - ISACA",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      },
+      {
+        "name": "CERTIFIED IN CYBERSECURITY - (ISC)2",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      },
+      {
+        "name": "CYBER RISK SUPERVISION - IMF",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      }
+    ],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": {
+      "github": null,
+      "linkedin": null,
+      "portfolio": [
+        "https://4.0"
+      ]
+    },
+    "summary": null,
+    "total_experience_years": 5.55,
+    "additional_sections": {
+      "references": [],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "manager_it"
+    }
+  },
+  {
+    "id": "7fbe7d36b283f3d0874bca5637757fa69b4a58072d9d3d652c904284c1962803",
+    "personal_info": {
+      "name": "Muzafar Ali Senior",
+      "gender": null,
+      "marital_status": null,
+      "father_name": null,
+      "email": "muzafar4996@gmail.com",
+      "phone": [
+        "0300-3096932",
+        "0335-3812224"
+      ],
+      "landline": [],
+      "cnic": null,
+      "location": "Sindh",
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [],
+    "experience": [],
+    "projects": [
+      {
+        "name": "WordPress Development",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [
+          "Agile",
+          "CSS",
+          "Google Project Management",
+          "HTML",
+          "JavaScript",
+          "PHP",
+          "WordPress",
+          "project management",
+          "troubleshooting"
+        ],
+        "github": null,
+        "demo": null,
+        "description": "Expertise in developing WordPress websites from PSD to HTML and WordPress CMS. Proficient in PHP, HTML, CSS, and JavaScript for customizing WordPress themes and plugins. Familiar with WordPress best practices, including security, performance optimization, and SEO. Experience in managing and updating WordPress sites, including content management and troubleshooting. Certified in Google Project Management, demonstrating proficiency in leading and managing projects using Google's project management tools and methodologies. Skilled in overseeing cross-functional teams, ensuring project success through effective planning, execution, and monitoring. Experienced in utilizing Google Workspace (formerly G Suite) tools such as Google Drive, Google Docs, Google Sheets, and Google Calendar for collaboration and project tracking. Proficient in implementing Agile and other project management frameworks to deliver projects on time and within budget."
+      },
+      {
+        "name": "KEY SKILLS",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [
+          "PHP"
+        ],
+        "github": null,
+        "demo": null,
+        "description": "Languages: Core PHP Server-Side Technologies: PHP (Core, OOP, Session handling, Validations and Security, Database programming)"
+      },
+      {
+        "name": "Client-Side Technologies",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [
+          "CSS",
+          "HTML",
+          "HTML5",
+          "JAVASCRIPT",
+          "WordPress"
+        ],
+        "github": null,
+        "demo": null,
+        "description": "HTML5, CSS 3, AJAX, JAVASCRIPT Tools and IDE\u2019s: PhpMyAdmin, Webpage Maker, Adobe Dreamweaver, WOW slider, Adobe Photoshop, CMS: WordPress, Custom HTML template site."
+      },
+      {
+        "name": "Servers",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": "XAMPP, WAMPP"
+      },
+      {
+        "name": "Data Base",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [
+          "MySQL"
+        ],
+        "github": null,
+        "demo": null,
+        "description": "Ms-Access, MySQL"
+      },
+      {
+        "name": "Social Media Listening and Community Tools",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": "Sprinklr, YouScan, Meltwater"
+      }
+    ],
+    "skills": [],
+    "certifications": [],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": {
+      "github": null,
+      "linkedin": null,
+      "portfolio": [
+        "https://3.30",
+        "https://4.00",
+        "http://www.spectrum-pk.com",
+        "http://www.axact.com",
+        "http://www.spectrumyr.com",
+        "http://www.inspurate.com",
+        "http://www.networks360.net",
+        "https://phcip.com.pk",
+        "https://shmaglobal.com",
+        "https://yamaha-motor.com.pk",
+        "http://piac.com.pk",
+        "http://www.jsbl.com",
+        "http://www.theeaglesacademy.com"
+      ]
+    },
+    "summary": null,
+    "total_experience_years": 0.0,
+    "additional_sections": {
+      "references": [],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "manager_it"
+    }
+  },
+  {
+    "id": "6e886ec7e46b8dde2c3f514a448102e29551a365ac6f67f08ab9a04c92b6f143",
+    "personal_info": {
+      "name": "Muhammad Aslam Junejo",
+      "gender": "Male",
+      "marital_status": null,
+      "father_name": "Ghulam Nabi Junejo",
+      "email": null,
+      "phone": [],
+      "landline": [],
+      "cnic": "41304-1112223-1",
+      "location": null,
+      "date_of_birth": "1998-12-26",
+      "nationality": "Pakistani"
+    },
+    "education": [
+      {
+        "degree": "DAE Mechanical",
+        "institute": "Government College of Technology, Hyderabad",
+        "start_year": null,
+        "end_year": "2019",
+        "cgpa": null
+      }
+    ],
+    "experience": [
+      {
+        "job_title": "Machine Operator",
+        "organization": "Indus Steel Works, Hyderabad",
+        "start_date": "Jun 2020",
+        "end_date": "Present",
+        "description": "Operate and maintain CNC and conventional machines Conduct routine preventive maintenance"
+      },
+      {
+        "job_title": "Trainee Technician",
+        "organization": "Sindh Engineering Works, Hyderabad",
+        "start_date": "Jul 2019",
+        "end_date": "May 2020",
+        "description": "Assisted senior technicians in mechanical fabrication tasks"
+      }
+    ],
+    "projects": [],
+    "skills": [
+      "Machine Operation",
+      "Preventive Maintenance",
+      "Workshop Safety",
+      "Fabrication"
+    ],
+    "certifications": [],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "total_experience_years": 7.06,
+    "additional_sections": {
+      "references": [
+        {
+          "name": "Mr. Sikandar Memon",
+          "designation": "Shift Supervisor",
+          "organization": "Indus Steel Works",
+          "phone": "0333-1234567",
+          "email": null
+        }
+      ],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "worker_grade_04"
+    }
+  },
+  {
+    "id": "73ffd61aa5b47566e2ff6385b18ba85ef4c89388399e816c39bbbe02c49b8435",
+    "personal_info": {
+      "name": "Zeeshan Karim Solangi",
+      "gender": "Male",
+      "marital_status": null,
+      "father_name": "Abdul Karim Solangi",
+      "email": null,
+      "phone": [],
+      "landline": [],
+      "cnic": "41304-2223334-2",
+      "location": "Latifabad",
+      "date_of_birth": "1997-12-26",
+      "nationality": "Pakistani"
+    },
+    "education": [
+      {
+        "degree": "DAE Electrical",
+        "institute": "Government College of Technology, Hyderabad",
+        "start_year": null,
+        "end_year": "2018",
+        "cgpa": null
+      }
+    ],
+    "experience": [
+      {
+        "job_title": "Electrical Technician",
+        "organization": "Sindh Power Generation Co, Hyderabad",
+        "start_date": "Jun 2018",
+        "end_date": "Dec 2018",
+        "description": "Maintain electrical panels and motor-control systems Ensure compliance with safety protocols Apprentice Electrician City Electric Works, Hyderabad Assisted in electrical installation and wiring tasks"
+      }
+    ],
+    "projects": [],
+    "skills": [
+      "Electrical Wiring",
+      "Panel Maintenance",
+      "Motor Control Systems"
+    ],
+    "certifications": [],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "total_experience_years": 0.58,
+    "additional_sections": {
+      "references": [
+        {
+          "name": "Eng. Tariq Mahar",
+          "designation": "Maintenance Head",
+          "organization": "Sindh Power Generation Co",
+          "phone": "0300-4445566",
+          "email": null
+        }
+      ],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "worker_grade_04"
+    }
+  },
+  {
+    "id": "539a505e24aeefce16b816cc3fac3a4754b70056f00eeda8510fe18a321e93e8",
+    "personal_info": {
+      "name": null,
+      "gender": null,
+      "marital_status": null,
+      "father_name": null,
+      "email": null,
+      "phone": [],
+      "landline": [],
+      "cnic": null,
+      "location": null,
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [],
+    "experience": [],
+    "projects": [],
+    "skills": [],
+    "certifications": [],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "total_experience_years": 0.0,
+    "additional_sections": {
+      "references": [],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "worker_grade_04"
+    }
+  },
+  {
+    "id": "0334ec33c2482a05b33a1b6dcc9cf9196ac7c95f9f167da2c3a5e3335d357931",
+    "personal_info": {
+      "name": "Rafiq Ahmed Chandio",
+      "gender": null,
+      "marital_status": null,
+      "father_name": "Muhammad Bux Chandio DOB: 1986-12-26 CNIC: <CNIC> Gender: Male Nationality: Pakistani",
+      "email": "rafiq.chandio@gmail.com",
+      "phone": [
+        "0301-6667788"
+      ],
+      "landline": [],
+      "cnic": "45302-4445556-4",
+      "location": null,
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [
+      {
+        "degree": "DAE Printing & Graphic Arts",
+        "institute": "Government College of Technology, Karachi",
+        "start_year": null,
+        "end_year": "2012",
+        "cgpa": null
+      }
+    ],
+    "experience": [
+      {
+        "job_title": "Senior Press Technician",
+        "organization": "Pakistan Security Printing Corporation, Karachi",
+        "start_date": "Jan 2017",
+        "end_date": "Present",
+        "description": "Operate secure offset printing lines for banknote-grade documents Conduct quality-control checks under security printing protocols"
+      },
+      {
+        "job_title": "Press Technician",
+        "organization": "National Press Ltd, Nawabshah",
+        "start_date": "Jun 2012",
+        "end_date": "Dec 2016",
+        "description": "Operated printing presses and performed routine maintenance"
+      }
+    ],
+    "projects": [],
+    "skills": [
+      "Quality Control"
+    ],
+    "certifications": [],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "total_experience_years": 14.14,
+    "additional_sections": {
+      "references": [
+        {
+          "name": "Mr. Javed Qureshi",
+          "designation": "Production Manager",
+          "organization": "Pakistan Security Printing Corporation",
+          "phone": "0321-7778899",
+          "email": null
+        }
+      ],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "worker_grade_04"
+    }
+  },
+  {
+    "id": "722999a32b7f07fd297b2e36637ba293d9a481ca9f977d15796c675dbdbe751f",
+    "personal_info": {
+      "name": null,
+      "gender": null,
+      "marital_status": null,
+      "father_name": null,
+      "email": null,
+      "phone": [],
+      "landline": [],
+      "cnic": null,
+      "location": null,
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [],
+    "experience": [],
+    "projects": [],
+    "skills": [],
+    "certifications": [],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "total_experience_years": 0.0,
+    "additional_sections": {
+      "references": [],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "worker_grade_04"
+    }
+  },
+  {
+    "id": "561ba09dc5366b885450c60144d54212f1af99f775f6c3079ac3454fac3716dd",
+    "personal_info": {
+      "name": "Yousuf Larik",
+      "gender": "Male",
+      "marital_status": null,
+      "father_name": "Yousuf Ali Larik",
+      "email": null,
+      "phone": [],
+      "landline": [],
+      "cnic": "45301-6667778-6",
+      "location": "Benazirabad",
+      "date_of_birth": "1999-12-26",
+      "nationality": "Pakistani"
+    },
+    "education": [
+      {
+        "degree": "DAE Electronics",
+        "institute": "Government College of Technology, Nawabshah",
+        "start_year": null,
+        "end_year": "2023",
+        "cgpa": null
+      }
+    ],
+    "experience": [],
+    "projects": [],
+    "skills": [
+      "Electronics Repair",
+      "Circuit Testing",
+      "Basic Maintenance"
+    ],
+    "certifications": [],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "total_experience_years": 0.0,
+    "additional_sections": {
+      "references": [
+        {
+          "name": "Mr. Farhan Larik",
+          "designation": "Owner",
+          "organization": "Larik Electronics Workshop",
+          "phone": "0345-2334455",
+          "email": null
+        }
+      ],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "worker_grade_04"
+    }
+  },
+  {
+    "id": "f756d27e9cb63c790bd5d458424d25b836d4ac6463705a2a3435181ea4864298",
+    "personal_info": {
+      "name": null,
+      "gender": null,
+      "marital_status": null,
+      "father_name": null,
+      "email": null,
+      "phone": [],
+      "landline": [],
+      "cnic": null,
+      "location": null,
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [],
+    "experience": [],
+    "projects": [],
+    "skills": [],
+    "certifications": [],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "total_experience_years": 0.0,
+    "additional_sections": {
+      "references": [],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "worker_grade_04"
+    }
+  },
+  {
+    "id": "f4dcde1207803516568abb03acb8623abcaa9960c008eedf593b3edc79abbbb1",
+    "personal_info": {
+      "name": null,
+      "gender": null,
+      "marital_status": null,
+      "father_name": null,
+      "email": null,
+      "phone": [],
+      "landline": [],
+      "cnic": null,
+      "location": null,
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [],
+    "experience": [],
+    "projects": [],
+    "skills": [],
+    "certifications": [],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "total_experience_years": 0.0,
+    "additional_sections": {
+      "references": [],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "worker_grade_04"
+    }
+  },
+  {
+    "id": "7f4bd3520c68b5bb8a36d0b53a3bbe61fac5c3ebc3f145ec4113afa9c06bcf74",
+    "personal_info": {
+      "name": "Muhammad Rizwan",
+      "gender": null,
+      "marital_status": null,
+      "father_name": null,
+      "email": "rizwanzahidofficial468122@gmail.com",
+      "phone": [
+        "03152929764"
+      ],
+      "landline": [],
+      "cnic": null,
+      "location": "Korangi Creek",
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [
+      {
+        "degree": "MBA IN SUPPLY CHAIN MANAGEMENT",
+        "institute": "ILMA UNIVERSITY",
+        "start_year": "2022",
+        "end_year": "CONTINUE",
+        "cgpa": null
+      },
+      {
+        "degree": "BACHELORS IN MECHANICAL ENGINEERING",
+        "institute": "PRESTON INSTITUTE OF MANAGEMENT SCIENCE & TECHNOLOGY",
+        "start_year": null,
+        "end_year": "2020",
+        "cgpa": null
+      },
+      {
+        "degree": "INTERMEDIATE",
+        "institute": "FAZAIA INTERMEDIATE COLLEGE",
+        "start_year": null,
+        "end_year": "2016",
+        "cgpa": null
+      }
+    ],
+    "experience": [
+      {
+        "job_title": "PROCESS ENGINEER FLEXO",
+        "organization": "UNIVERSAL FILMS",
+        "start_date": "NOV 2018",
+        "end_date": "JAN 2019",
+        "description": "Created and maintained detailed production reports to track performance and efficiency. Optimized production processes for flexo printing, improving efficiency and reducing waste. Conducted process analysis and troubleshooting to identify and resolve production bottlenecks. Developed and maintained production schedules, ensuring timely and cost-effective delivery of print jobs. Managed the setup and calibration of flexo presses, ensuring optimal performance and minimal downtime. Collaborated with cross-functional teams (R&D, quality control, and maintenance) to streamline workflows and improve overall production quality. Utilized data analysis to monitor key performance indicators (KPIs) and drive continuous improvement initiatives. Trained production teams on process optimization techniques, safety standards, and best practices. Ensured compliance with company quality policies. Led root cause analysis for quality issues, implementing corrective actions that improved product consistency and customer satisfaction. Managed process documentation and reporting, tracking performance metrics, and supporting audits PROCESS ENGINEER SLITTING PACKING & DISPATCH KOMPASS PAKISTAN Lead a team of 75 team leaders\u2019 officers, staff, supervisors, operators, and technicians in the slitting Packing & Dispatch department. Coordinate production schedules to ensure timely product delivery while maintaining quality standards. Execute production activities efficiently to achieve consistent high-quality products and minimize customer complaints. Collaborate with engineering, procurement, and quality control teams to optimize production processes and address challenges. Provide leadership to enhance production efficiency, improve machine utilization, and boost team morale. Conduct monthly stock audits and review daily stock movement reports to ensure accurate inventory management. Analyze processes and compile de-bottlenecking studies to optimize production efficiency. Design and validate process parameters for new products, calculate break-even points and recipes. Monitor process parameters continuously to maintain optimal production and quality. Implement the production plan, update bills of materials (BOM), and align activities to achieve management targets. Investigate technical problems, identify root causes, and propose solutions to ensure safe operations in the slitting department. ENUMERATOR SINDH EDUCATION FOUNDATION Interacted sensitively, effectively & professionally with individuals of educational background. Proper validation & verifications of schools enrolled in SEF. Strictly adhered to confidentially dictionaries to safeguard information. Validation of schools, teachers & students. INTERNSHIP GENERAL TYRES & RUBBERS Understand basic workflow ethics & environment of company. Learn their production cycles & working methods and Calculate efficiency & daily outputs of machines. Observe their strategies & regulations regarding productions."
+      }
+    ],
+    "projects": [],
+    "skills": [
+      "Leadership skills",
+      "Interpersonal communication skills",
+      "Time management",
+      "Team management",
+      "Adaptability",
+      "SAP Business one Hana Literacy",
+      "Ms. Office",
+      "Negotiation",
+      "Team work",
+      "Decision making"
+    ],
+    "certifications": [
+      {
+        "name": "PROJECT MANAGEMENT (PMP)",
+        "issuer": "INSTITUTE OF BUISNESS MANAGEMENT",
+        "issue_date": "2022",
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      },
+      {
+        "name": "MACHINIST CERTIFIED COURSE",
+        "issuer": "KARACHI TOOLS DIES & MOLDS CENTER",
+        "issue_date": "2020",
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      },
+      {
+        "name": "CERTIFICATE INFORMATION TECHNOLOGY (C.I.T)",
+        "issuer": "SEED TECH PAKISTAN",
+        "issue_date": "2018",
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      },
+      {
+        "name": "MS OFFICE COURSE",
+        "issuer": "A.N.B WELFARE",
+        "issue_date": "2014",
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      }
+    ],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": {
+      "github": null,
+      "linkedin": null,
+      "portfolio": [
+        "https://www.linkedln.com/in/muhammadrizwan"
+      ]
+    },
+    "summary": null,
+    "total_experience_years": 0.25,
+    "additional_sections": {
+      "references": [],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "worker_grade_04"
+    }
+  },
+  {
+    "id": "b128d2eae57591110f1dfe7851940ea1c075a5d08ea7cb358fb7ff6ea738b067",
+    "personal_info": {
+      "name": "Skill Highlights",
+      "gender": null,
+      "marital_status": "Single",
+      "father_name": null,
+      "email": "abdullahfaheem998@gmail.com",
+      "phone": [
+        "+923482977412"
+      ],
+      "landline": [],
+      "cnic": "42501-7246536-7",
+      "location": "Gulistan",
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [
+      {
+        "degree": null,
+        "institute": "MATRICULATION  o Karachi Board o Science",
+        "start_year": null,
+        "end_year": "2015",
+        "cgpa": null
+      }
+    ],
+    "experience": [],
+    "projects": [],
+    "skills": [],
+    "certifications": [],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": {
+      "github": null,
+      "linkedin": "https://www.linkedin.com/in/abdullah-faheem-73525b1b2",
+      "portfolio": []
+    },
+    "summary": null,
+    "total_experience_years": 0.0,
+    "additional_sections": {
+      "references": [],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "worker_grade_04"
+    }
+  }
+]

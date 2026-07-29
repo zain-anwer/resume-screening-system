@@ -1,0 +1,279 @@
+{
+  "id": "manager_it_02",
+  "personal_info": {
+    "full_name": "Sana Fatima Qureshi",
+    "father_name": "",
+    "gender": "",
+    "marital_status": "",
+    "date_of_birth": "1994-12-26",
+    "age": 31,
+    "nationality": "Pakistani",
+    "cnic": "42201-2345678-2",
+    "contact": {
+      "emails": [],
+      "phones": [],
+      "landlines": []
+    },
+    "address": {
+      "full_address": "",
+      "city": "",
+      "province": "",
+      "country": "Pakistan"
+    }
+  },
+  "education": [
+    {
+      "degree_name": "MS Software Engineering",
+      "degree_level": "Masters",
+      "field": "Software Engineering",
+      "specialization": "",
+      "institution": "IBA Karachi",
+      "campus": "",
+      "start_year": null,
+      "graduation_year": 2017,
+      "cgpa": null,
+      "max_cgpa": null,
+      "percentage": null,
+      "is_current": false
+    },
+    {
+      "degree_name": "BS Software Engineering",
+      "degree_level": "Bachelors",
+      "field": "Software Engineering",
+      "specialization": "",
+      "institution": "IBA Karachi",
+      "campus": "",
+      "start_year": null,
+      "graduation_year": 2015,
+      "cgpa": null,
+      "max_cgpa": null,
+      "percentage": null,
+      "is_current": false
+    }
+  ],
+  "experience": [
+    {
+      "title": "IT Manager",
+      "organization": "Bloom FMCG Pakistan",
+      "industry": "FMCG",
+      "employment_type": "Full-time",
+      "location": "Karachi",
+      "start_date": "2022-03-01",
+      "end_date": "",
+      "is_current": true,
+      "description": "",
+      "responsibilities": [
+        "Supervise a 6-member infrastructure and applications team",
+        "Led SAP S/4HANA implementation across supply-chain division",
+        "Manage cloud infrastructure (Azure) and disaster-recovery planning"
+      ],
+      "technologies": [
+        "SAP S/4HANA",
+        "Azure"
+      ],
+      "achievements": [],
+      "duration_months": 52
+    },
+    {
+      "title": "Senior IT Analyst",
+      "organization": "Metro Retail Solutions",
+      "industry": "Retail",
+      "employment_type": "Full-time",
+      "location": "Karachi",
+      "start_date": "2019-06-01",
+      "end_date": "2022-02-01",
+      "is_current": false,
+      "description": "",
+      "responsibilities": [
+        "Supervised 2 junior analysts on ERP support desk",
+        "Administered SQL databases and network infrastructure",
+        "Automated reporting workflows using Python"
+      ],
+      "technologies": [
+        "SQL",
+        "Python"
+      ],
+      "achievements": [],
+      "duration_months": 32
+    },
+    {
+      "title": "IT Support Engineer",
+      "organization": "Horizon Tech",
+      "industry": "",
+      "employment_type": "Full-time",
+      "location": "Karachi",
+      "start_date": "2017-01-01",
+      "end_date": "2019-05-01",
+      "is_current": false,
+      "description": "",
+      "responsibilities": [
+        "Provided ERP and network support for corporate clients"
+      ],
+      "technologies": [],
+      "achievements": [],
+      "duration_months": 28
+    }
+  ],
+  "projects": [
+    {
+      "name": "SAP S/4HANA Rollout - Bloom FMCG",
+      "role": "",
+      "organization": "Bloom FMCG Pakistan",
+      "description": "",
+      "start_date": "",
+      "end_date": "",
+      "technologies": [
+        "SAP S/4HANA"
+      ],
+      "github": "",
+      "demo": ""
+    },
+    {
+      "name": "Retail ERP Support Desk Revamp",
+      "role": "",
+      "organization": "Metro Retail Solutions",
+      "description": "",
+      "start_date": "",
+      "end_date": "",
+      "technologies": [],
+      "github": "",
+      "demo": ""
+    }
+  ],
+  "skills": {
+    "technical": [
+      "SAP",
+      "Tier-1 ERP",
+      "Implementation",
+      "Networking"
+    ],
+    "soft": [],
+    "tools": [],
+    "databases": [
+      "SQL"
+    ],
+    "frameworks": [],
+    "cloud": [
+      "Azure"
+    ],
+    "operating_systems": [
+      "Linux"
+    ],
+    "languages": [
+      "Python"
+    ]
+  },
+  "certifications": [
+    {
+      "name": "SAP Certified Application Associate",
+      "issuer": "SAP",
+      "issue_date": "",
+      "expiry_date": "",
+      "credential_id": "",
+      "credential_url": ""
+    },
+    {
+      "name": "ITIL Foundation",
+      "issuer": "",
+      "issue_date": "",
+      "expiry_date": "",
+      "credential_id": "",
+      "credential_url": ""
+    },
+    {
+      "name": "Microsoft Certified: Azure Administrator",
+      "issuer": "Microsoft",
+      "issue_date": "",
+      "expiry_date": "",
+      "credential_id": "",
+      "credential_url": ""
+    }
+  ],
+  "achievements": [],
+  "publications": [],
+  "languages": [
+    {
+      "language": "English",
+      "proficiency": ""
+    },
+    {
+      "language": "Urdu",
+      "proficiency": ""
+    }
+  ],
+  "urls": {
+    "linkedin": "",
+    "github": "",
+    "portfolio": [],
+    "website": "",
+    "other": []
+  },
+  "summary": "IT Manager with 8 years of progressive experience in SAP and Tier-1 ERP implementations, database administration and cross-functional team leadership in the FMCG sector.",
+  "experience_summary": {
+    "total_experience_years": 9.5,
+    "management_experience_years": 7.0,
+    "relevant_experience_years": 9.5
+  },
+  "eligibility_features": {
+    "highest_degree": "MS Software Engineering",
+    "highest_degree_level": "Masters",
+    "age": 31,
+    "currently_employed": true,
+    "current_designation": "IT Manager",
+    "current_company": "Bloom FMCG Pakistan",
+    "has_management_experience": true,
+    "has_python": true,
+    "has_sql": true,
+    "has_sap": true,
+    "has_oracle": false,
+    "has_driving_license": false,
+    "has_security_clearance": false
+  },
+  "references": [
+    {
+      "name": "Mr. Kamran Sheikh",
+      "designation": "Head of IT",
+      "organization": "Bloom FMCG Pakistan",
+      "phone": "0321-5556677",
+      "email": ""
+    }
+  ],
+  "interests": [],
+  "verification": {
+    "resume_name": "Sana Fatima Qureshi",
+    "cnic_name": "Sana Fatima Qureshi",
+    "resume_dob": "",
+    "cnic_dob": "1994-12-26",
+    "resume_cnic": "",
+    "cnic_number": "42201-2345678-2",
+    "name_match": true,
+    "dob_match": false,
+    "cnic_match": false
+  },
+  "flags": {
+    "missing_fields": [
+      "date_of_birth",
+      "gender",
+      "marital_status",
+      "contact.emails",
+      "contact.phones",
+      "address"
+    ],
+    "low_confidence_fields": [],
+    "manual_review_required": false,
+    "resume_blurred": false,
+    "cnic_blurred": false
+  },
+  "metadata": {
+    "candidate_id": "manager_it_02",
+    "job_category": "Manager_IT",
+    "source_resume": "resume_text",
+    "source_cnic": "cnic_extraction",
+    "document_type": "resume+cnic",
+    "parser_version": "1.0",
+    "created_at": "2026-07-20",
+    "updated_at": "2026-07-20",
+    "parsing_status": "success",
+    "confidence_score": 0.9
+  }
+}

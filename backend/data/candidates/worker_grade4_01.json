@@ -1,0 +1,178 @@
+{
+  "id": "worker_grade4_01",
+  "personal_info": {
+    "full_name": "Muhammad Aslam Junejo",
+    "father_name": "Ghulam Nabi Junejo",
+    "gender": "Male",
+    "marital_status": "",
+    "date_of_birth": "1998-12-26",
+    "age": 27,
+    "nationality": "Pakistani",
+    "cnic": "41304-1112223-1",
+    "contact": {
+      "emails": [],
+      "phones": [],
+      "landlines": []
+    },
+    "address": {
+      "full_address": "Village Bhittai Colony, Tando Allahyar Road, Hyderabad",
+      "city": "Hyderabad",
+      "province": "Sindh",
+      "country": "Pakistan"
+    }
+  },
+  "education": [
+    {
+      "degree_name": "DAE Mechanical",
+      "degree_level": "Diploma",
+      "field": "Mechanical",
+      "specialization": "",
+      "institution": "Government College of Technology",
+      "campus": "Hyderabad",
+      "start_year": null,
+      "graduation_year": 2019,
+      "cgpa": null,
+      "max_cgpa": null,
+      "percentage": null,
+      "is_current": false
+    }
+  ],
+  "experience": [
+    {
+      "title": "Machine Operator",
+      "organization": "Indus Steel Works",
+      "industry": "Manufacturing",
+      "employment_type": "Full-time",
+      "location": "Hyderabad",
+      "start_date": "2020-06-01",
+      "end_date": "",
+      "is_current": true,
+      "description": "",
+      "responsibilities": [
+        "Operate and maintain CNC and conventional machines",
+        "Conduct routine preventive maintenance"
+      ],
+      "technologies": [],
+      "achievements": [],
+      "duration_months": 73
+    },
+    {
+      "title": "Trainee Technician",
+      "organization": "Sindh Engineering Works",
+      "industry": "",
+      "employment_type": "Full-time",
+      "location": "Hyderabad",
+      "start_date": "2019-07-01",
+      "end_date": "2020-05-01",
+      "is_current": false,
+      "description": "",
+      "responsibilities": [
+        "Assisted senior technicians in mechanical fabrication tasks"
+      ],
+      "technologies": [],
+      "achievements": [],
+      "duration_months": 10
+    }
+  ],
+  "projects": [],
+  "skills": {
+    "technical": [
+      "Machine Operation",
+      "Preventive Maintenance",
+      "Workshop Safety",
+      "Fabrication"
+    ],
+    "soft": [],
+    "tools": [],
+    "databases": [],
+    "frameworks": [],
+    "cloud": [],
+    "operating_systems": [],
+    "languages": []
+  },
+  "certifications": [],
+  "achievements": [],
+  "publications": [],
+  "languages": [
+    {
+      "language": "Urdu",
+      "proficiency": ""
+    },
+    {
+      "language": "English",
+      "proficiency": ""
+    }
+  ],
+  "urls": {
+    "linkedin": "",
+    "github": "",
+    "portfolio": [],
+    "website": "",
+    "other": []
+  },
+  "summary": "Diligent and safety-conscious technical worker seeking a Grade IV position.",
+  "experience_summary": {
+    "total_experience_years": 7.0,
+    "management_experience_years": 0,
+    "relevant_experience_years": 7.0
+  },
+  "eligibility_features": {
+    "highest_degree": "DAE Mechanical",
+    "highest_degree_level": "Diploma",
+    "age": 27,
+    "currently_employed": true,
+    "current_designation": "Machine Operator",
+    "current_company": "Indus Steel Works",
+    "has_management_experience": false,
+    "has_python": false,
+    "has_sql": false,
+    "has_sap": false,
+    "has_oracle": false,
+    "has_driving_license": false,
+    "has_security_clearance": false
+  },
+  "references": [
+    {
+      "name": "Mr. Sikandar Memon",
+      "designation": "Shift Supervisor",
+      "organization": "Indus Steel Works",
+      "phone": "0333-1234567",
+      "email": ""
+    }
+  ],
+  "interests": [],
+  "verification": {
+    "resume_name": "Muhammad Aslam Junejo",
+    "cnic_name": "Muhammad Aslam Junejo",
+    "resume_dob": "1998-12-26",
+    "cnic_dob": "1998-12-26",
+    "resume_cnic": "41304-1112223-1",
+    "cnic_number": "41304-1112223-1",
+    "name_match": true,
+    "dob_match": true,
+    "cnic_match": true
+  },
+  "flags": {
+    "missing_fields": [
+      "marital_status",
+      "contact.emails",
+      "contact.phones"
+    ],
+    "low_confidence_fields": [],
+    "manual_review_required": false,
+    "resume_blurred": false,
+    "cnic_blurred": false
+  },
+  "metadata": {
+    "candidate_id": "worker_grade4_01",
+    "job_category": "Worker_Grade_04",
+    "source_resume": "resume_text",
+    "source_cnic": "cnic_extraction",
+    "document_type": "resume+cnic",
+    "parser_version": "1.0",
+    "created_at": "2026-07-20",
+    "updated_at": "2026-07-20",
+    "parsing_status": "success",
+    "confidence_score": 0.9
+  }
+}

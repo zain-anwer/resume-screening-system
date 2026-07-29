@@ -1,0 +1,360 @@
+@import './variables.css';
+
+/* ============================================
+   POLICY BUILDER FORM
+   ============================================ */
+
+.policy-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+}
+.form-section:first-of-type {
+  padding-top: 0;
+}
+.form-section:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.form-section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.form-section-header h3 {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text-900);
+}
+
+.form-badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+.form-badge-required {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.form-badge-optional {
+  background: var(--bg);
+  color: var(--text-400);
+  border: 1px solid var(--border);
+}
+
+.form-hint {
+  font-size: 12.5px;
+  color: var(--text-400);
+  margin: 4px 0 14px;
+  line-height: 1.5;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.form-field:last-child {
+  margin-bottom: 0;
+}
+
+.form-field label,
+.form-field-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-600);
+}
+
+.form-field-optional-tag {
+  font-weight: 400;
+  color: var(--text-400);
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  font-size: 13.5px;
+  font-family: inherit;
+  color: var(--text-900);
+  background: var(--card-bg);
+  transition: border-color 0.15s ease;
+}
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.form-textarea {
+  resize: vertical;
+  min-height: 64px;
+}
+
+.form-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+.form-row .form-field {
+  flex: 1;
+}
+.form-row-suffix {
+  font-size: 13px;
+  color: var(--text-400);
+  padding-bottom: 11px;
+  white-space: nowrap;
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 640px) {
+  .form-grid-2 { grid-template-columns: 1fr; }
+}
+
+/* Subsections inside a form-section (e.g. Regional / Employees under Age Relaxation) */
+.form-subsection {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+.form-subsection:last-child {
+  margin-bottom: 0;
+}
+.form-subsection-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-400);
+  margin-bottom: 10px;
+}
+
+.form-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-900);
+  cursor: pointer;
+}
+.form-checkbox-label input {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+/* Repeatable rows (regional relaxation, sub-fields) */
+.repeatable-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.repeatable-row:last-of-type {
+  margin-bottom: 10px;
+}
+.repeatable-row .form-input {
+  flex: 1;
+}
+.repeatable-row .form-input.narrow {
+  flex: 0 0 110px;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text-400);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.icon-btn:hover {
+  background: var(--danger-soft);
+  color: var(--danger);
+  border-color: var(--danger-soft);
+}
+
+/* Chip / tag input (degree names) */
+.chip-input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.chip-input-row .form-input {
+  flex: 1;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.chip-list:empty {
+  display: none;
+}
+
+.chip-removable {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px 5px 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12.5px;
+  font-weight: 600;
+}
+.chip-removable button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.chip-removable button:hover {
+  opacity: 1;
+  background: rgba(20, 129, 142, 0.18);
+}
+
+/* Additional / custom policy blocks */
+.policy-block {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-bottom: 14px;
+  background: var(--bg);
+}
+.policy-block:last-of-type {
+  margin-bottom: 14px;
+}
+
+.policy-block-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.policy-block-header .form-input {
+  flex: 1;
+  font-weight: 600;
+}
+
+.policy-block-subfields {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+}
+.policy-block-subfields-title {
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-400);
+  margin-bottom: 8px;
+}
+
+.dashed-add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--border);
+  background: transparent;
+  color: var(--text-600);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+.dashed-add-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* Footer actions + status */
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 22px;
+}
+
+.form-footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-status {
+  font-size: 13px;
+  line-height: 1.5;
+}
+.form-status-success {
+  color: var(--success);
+}
+.form-status-error {
+  color: var(--danger);
+}
+.form-status-note {
+  display: block;
+  color: var(--text-400);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.yaml-preview-wrap {
+  margin-top: 18px;
+}
+.yaml-preview {
+  background: #0B1220;
+  color: #D6E2EF;
+  border-radius: var(--radius-md);
+  padding: 16px;
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 12.5px;
+  line-height: 1.6;
+  overflow-x: auto;
+  white-space: pre;
+  max-height: 420px;
+  overflow-y: auto;
+}

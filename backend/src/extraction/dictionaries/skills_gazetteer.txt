@@ -1,0 +1,348 @@
+Machine Operation
+CNC Operation
+CNC Machining
+Conventional Machining
+Preventive Maintenance
+Predictive Maintenance
+Corrective Maintenance
+Workshop Safety
+Fabrication
+Mechanical Fabrication
+Welding
+Arc Welding
+MIG Welding
+TIG Welding
+Soldering
+Electrical Wiring
+Panel Maintenance
+Motor Control Systems
+Electrical Installation
+Electronics Repair
+Circuit Testing
+Circuit Board Repair
+Basic Maintenance
+Quality Control
+Quality Inspection
+Forklift Operation
+Overhead Crane Operation
+Material Handling
+Inventory Handling
+PPE Compliance
+Lockout Tagout
+Hand Tools
+Power Tools
+Hydraulic Systems
+Pneumatic Systems
+Boiler Operation
+Furnace Operation
+Zinc Pot Operation
+Galvanizing
+Continuous Galvanizing Line
+Tension Leveler Operation
+Flexo Printing
+Flexographic Printing
+Slitting
+Packing
+Dispatch
+Assembly Line Operation
+Production Line Operation
+Wiring Diagrams
+Load Testing
+Plumbing
+HVAC Maintenance
+Generator Maintenance
+Diesel Engine Maintenance
+Rigging
+Scaffolding
+Painting and Coating
+Machinist
+Dies and Mold Making
+Tool and Die Making
+Calibration
+Troubleshooting
+Equipment Operation
+Shift Operations
+Python
+Java
+JavaScript
+TypeScript
+C++
+C#
+PHP
+SQL
+PL/SQL
+R
+Go
+Rust
+HTML
+HTML5
+CSS
+CSS3
+React
+Angular
+Vue.js
+Node.js
+Django
+Flask
+Spring Boot
+REST APIs
+RESTful Services
+GraphQL
+Microservices
+Docker
+Kubernetes
+CI/CD
+Git
+GitHub
+GitLab
+Linux
+Windows Server
+Unix
+Networking
+LAN
+WAN
+Firewall Management
+VPN
+Network Security
+Cybersecurity
+Penetration Testing
+Vulnerability Assessment
+Cloud Computing
+AWS
+Microsoft Azure
+Google Cloud Platform
+Cloud Migration
+Cloud Infrastructure
+Database Administration
+MySQL
+PostgreSQL
+MongoDB
+Oracle Database
+SQL Server
+Data Warehousing
+ETL
+Data Analysis
+Machine Learning
+Deep Learning
+Natural Language Processing
+Data Visualization
+Power BI
+Tableau
+Excel
+VBA
+SAP
+SAP S/4HANA
+SAP FICO
+SAP Business One
+Oracle ERP
+Oracle E-Business Suite
+Oracle Forms
+Oracle Reports
+Oracle Workflow
+Oracle Apex
+Oracle WebADI
+BI Publisher
+ERP Implementation
+Tier-1 ERP Support
+System Administration
+IT Support
+Technical Support
+Help Desk Support
+Active Directory
+Server Administration
+Virtualization
+VMware
+Disaster Recovery Planning
+IT Infrastructure Management
+Web Development
+WordPress
+Content Management Systems
+Agile
+Scrum
+DevOps
+API Integration
+Software Testing
+QA Automation
+Mobile App Development
+UI/UX Design
+Financial Analysis
+Financial Reporting
+Financial Modeling
+Budgeting
+Forecasting
+Variance Analysis
+Cost Accounting
+Management Accounting
+Accounts Payable
+Accounts Receivable
+General Ledger
+Bank Reconciliation
+Payroll Processing
+Taxation
+Tax Compliance
+Auditing
+Internal Audit
+External Audit
+Risk Management
+Treasury Management
+Cash Flow Management
+Financial Planning and Analysis
+IFRS
+GAAP
+QuickBooks
+Financial Statement Preparation
+Investment Analysis
+Credit Analysis
+Accounts Reconciliation
+ERP Financial Modules
+Fixed Asset Management
+Regulatory Compliance
+Cost-Benefit Analysis
+Procurement
+Vendor Payments
+Health and Safety Compliance
+Risk Assessment
+Hazard Identification
+Incident Investigation
+Root Cause Analysis
+OSHA Compliance
+ISO 45001
+ISO 14001
+ISO 27001
+ISMS
+PCI-DSS
+Emergency Response
+Fire Safety
+Environmental Compliance
+Safety Audits
+Permit to Work
+Job Safety Analysis
+Toolbox Talks
+HAZOP
+MSDS
+Waste Management
+Industrial Hygiene
+Safety Training
+Accident Prevention
+Occupational Health
+Environmental Impact Assessment
+Regulatory Inspections
+Compliance Reporting
+IS Governance
+Information Security Governance
+Cybersecurity Risk Management
+Information Systems Auditing
+CISA
+Recruitment
+Talent Acquisition
+Onboarding
+Employee Relations
+Performance Management
+Compensation and Benefits
+HRIS
+Payroll Management
+Training and Development
+Labor Law Compliance
+HR Policy Development
+Succession Planning
+Employee Engagement
+Exit Interviews
+Conflict Resolution
+Workforce Planning
+Employee Retention
+HR Administration
+Organizational Development
+Talent Management
+Project Management
+Team Leadership
+Team Management
+Strategic Planning
+Stakeholder Management
+Budget Management
+Change Management
+Process Improvement
+Decision Making
+Negotiation
+Time Management
+Resource Allocation
+KPI Tracking
+Vendor Management
+Operations Management
+Supply Chain Management
+Production Planning
+Six Sigma
+Lean Manufacturing
+Cross-functional Team Management
+Client Communication
+Client Relationship Management
+Problem Solving
+Adaptability
+Communication Skills
+Interpersonal Skills
+Leadership
+Analytical Skills
+Organizational Skills
+PMP
+Project Management Professional
+Agile Project Management
+Google Project Management
+ITIL Foundation
+Mechanical Design
+Mechanical Engineering
+Electrical Engineering
+Civil Engineering
+Industrial Engineering
+Process Engineering
+Manufacturing Engineering
+Quality Engineering
+Production Engineering
+Reliability Engineering
+Value Engineering
+Structural Analysis
+Structural Design
+Thermodynamics
+Fluid Mechanics
+Materials Science
+GD&T
+Failure Mode and Effects Analysis
+FMEA
+Root Cause Analysis
+Process Optimization
+De-bottlenecking Studies
+Break-even Analysis
+Process Parameter Validation
+Bill of Materials
+BOM Management
+AutoCAD
+AutoCAD Civil 3D
+SolidWorks
+Creo Parametric
+CATIA
+ANSYS
+3D Modeling
+Technical Drawing
+Engineering Drawing Interpretation
+Prototyping
+Product Design
+PLC Programming
+SCADA
+Instrumentation
+Control Systems
+Power Systems
+Electrical Circuit Design
+Robotics
+Mechatronics
+Industrial Automation
+Piping Design
+HVAC Design
+Plant Engineering
+Project Engineering
+Surveying
+Construction Management
+Machine Design
+Tolerance Analysis
+Engineering Documentation
+Technical Specifications
+Break-even Calculations
+Recipe Formulation
+Process Validation

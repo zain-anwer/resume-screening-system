@@ -1,0 +1,22 @@
+job_name: manager IT
+age:
+  maximum: 28
+age_relaxation:
+  regional:
+    - region: Balochistan
+      relaxation_years: 3
+  employees:
+    applicable: true
+    relaxation_years: 8
+education:
+  minimum_years: 16
+  level: BS
+  degrees:
+    - BSCS
+    - BSIT
+    - BSSE
+experience:
+  minimum_years: 5
+other_policies:
+  - name: nationality
+    description: pakistani

@@ -1,0 +1,15 @@
+@import './variables.css';
+
+.app-shell {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.app-main {
+  margin-left: var(--sidebar-width);
+}
+
+.app-content {
+  padding: 24px;
+  max-width: 1400px;
+}

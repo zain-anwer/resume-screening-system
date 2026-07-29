@@ -1,0 +1,147 @@
+{
+  "id": "worker_grade4_03",
+  "personal_info": {
+    "full_name": "Din Muhammad Bugti",
+    "father_name": "Mir Hassan Bugti",
+    "gender": "Male",
+    "marital_status": "",
+    "date_of_birth": "1994-12-26",
+    "age": 31,
+    "nationality": "Pakistan",
+    "cnic": "53101-3334445-3",
+    "contact": {
+      "emails": [],
+      "phones": [],
+      "landlines": []
+    },
+    "address": {
+      "full_address": "Mohalla Shahwani, Sui Road, Dera Bugti",
+      "city": "Dera Bugti",
+      "province": "Balochistan",
+      "country": "Pakistan"
+    }
+  },
+  "education": [
+    {
+      "degree": "DAE Instrumentation",
+      "institution": "Government College of Technology, Quetta",
+      "graduation_year": "2019"
+    }
+  ],
+  "experience": [
+    {
+      "designation": "Instrumentation Technician",
+      "company": "Sui Gas Field Operations",
+      "location": "Dera Bugti",
+      "duration": "Mar 2020 - Present",
+      "responsibilities": [
+        "Calibrate field instruments and control valves",
+        "Maintain SCADA-linked process control equipment"
+      ]
+    },
+    {
+      "designation": "Junior Technician",
+      "company": "Balochistan Gas Development Co",
+      "duration": "Feb 2019 - Feb 2020",
+      "responsibilities": [
+        "Supported instrumentation maintenance activities"
+      ]
+    }
+  ],
+  "projects": [],
+  "skills": {
+    "technical": [
+      "Instrumentation Calibration",
+      "Process Control Systems",
+      "Field Instrumentation",
+      "SCADA Basics"
+    ],
+    "soft": [
+      "Safety Conscious",
+      "Diligent"
+    ],
+    "tools": [],
+    "databases": [],
+    "frameworks": [],
+    "cloud": [],
+    "operating_systems": [],
+    "languages": []
+  },
+  "certifications": [],
+  "achievements": [],
+  "publications": [],
+  "languages": [
+    "Urdu",
+    "English"
+  ],
+  "urls": {
+    "linkedin": "",
+    "github": "",
+    "portfolio": [],
+    "website": "",
+    "other": []
+  },
+  "summary": "Diligent and safety-conscious technical worker seeking a Grade IV position.",
+  "experience_summary": {
+    "total_experience_years": 6,
+    "management_experience_years": 0,
+    "relevant_experience_years": 6
+  },
+  "eligibility_features": {
+    "highest_degree": "DAE Instrumentation",
+    "highest_degree_level": "Diploma",
+    "age": 31,
+    "currently_employed": true,
+    "current_designation": "Instrumentation Technician",
+    "current_company": "Sui Gas Field Operations",
+    "has_management_experience": false,
+    "has_python": false,
+    "has_sql": false,
+    "has_sap": false,
+    "has_oracle": false,
+    "has_driving_license": false,
+    "has_security_clearance": false
+  },
+  "references": [
+    {
+      "name": "Mr. Sarfaraz Marri",
+      "designation": "Field Supervisor",
+      "organization": "Sui Gas Field Operations",
+      "contact": "0345-6667788"
+    }
+  ],
+  "interests": [],
+  "verification": {
+    "resume_name": "Din Muhammad Bugti",
+    "cnic_name": "Din Muhammad Bugti",
+    "resume_dob": "1994-12-26",
+    "cnic_dob": "1994-12-26",
+    "resume_cnic": "53101-3334445-3",
+    "cnic_number": "53101-3334445-3",
+    "name_match": true,
+    "dob_match": true,
+    "cnic_match": true
+  },
+  "flags": {
+    "missing_fields": [
+      "contact",
+      "marital_status"
+    ],
+    "low_confidence_fields": [],
+    "manual_review_required": false,
+    "resume_blurred": false,
+    "cnic_blurred": false
+  },
+  "metadata": {
+    "candidate_id": "worker_grade4_03",
+    "job_category": "Worker_Grade_04",
+    "source_resume": "resume_extraction",
+    "source_cnic": "cnic_extraction",
+    "document_type": "resume_and_cnic",
+    "parser_version": "1.0",
+    "created_at": "2026-07-20",
+    "updated_at": "2026-07-20",
+    "parsing_status": "completed",
+    "confidence_score": 0.95
+  }
+}

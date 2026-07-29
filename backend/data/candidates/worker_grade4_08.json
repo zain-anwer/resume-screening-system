@@ -1,0 +1,111 @@
+{
+  "id": "worker_grade4_08",
+  "personal_info": {
+    "full_name": "Naveed Anwar Bhatti",
+    "father_name": "",
+    "gender": "",
+    "marital_status": "",
+    "date_of_birth": "1998-12-26",
+    "age": 27,
+    "nationality": "Pakistani",
+    "cnic": "45101-8889990-8",
+    "contact": {
+      "emails": [],
+      "phones": [],
+      "landlines": []
+    },
+    "address": {
+      "full_address": "",
+      "city": "",
+      "province": "",
+      "country": "Pakistan"
+    }
+  },
+  "education": [],
+  "experience": [],
+  "projects": [],
+  "skills": {
+    "technical": [],
+    "soft": [],
+    "tools": [],
+    "databases": [],
+    "frameworks": [],
+    "cloud": [],
+    "operating_systems": [],
+    "languages": []
+  },
+  "certifications": [],
+  "achievements": [],
+  "publications": [],
+  "languages": [],
+  "urls": {
+    "linkedin": "",
+    "github": "",
+    "portfolio": [],
+    "website": "",
+    "other": []
+  },
+  "summary": "",
+  "experience_summary": {
+    "total_experience_years": 0,
+    "management_experience_years": 0,
+    "relevant_experience_years": 0
+  },
+  "eligibility_features": {
+    "highest_degree": "",
+    "highest_degree_level": "",
+    "age": 27,
+    "currently_employed": false,
+    "current_designation": "",
+    "current_company": "",
+    "has_management_experience": false,
+    "has_python": false,
+    "has_sql": false,
+    "has_sap": false,
+    "has_oracle": false,
+    "has_driving_license": false,
+    "has_security_clearance": false
+  },
+  "references": [],
+  "interests": [],
+  "verification": {
+    "resume_name": "",
+    "cnic_name": "Naveed Anwar Bhatti",
+    "resume_dob": "",
+    "cnic_dob": "1998-12-26",
+    "resume_cnic": "",
+    "cnic_number": "45101-8889990-8",
+    "name_match": false,
+    "dob_match": false,
+    "cnic_match": false
+  },
+  "flags": {
+    "missing_fields": [
+      "resume_text",
+      "education",
+      "experience",
+      "skills",
+      "contact",
+      "address",
+      "gender",
+      "father_name",
+      "marital_status"
+    ],
+    "low_confidence_fields": [],
+    "manual_review_required": true,
+    "resume_blurred": false,
+    "cnic_blurred": false
+  },
+  "metadata": {
+    "candidate_id": "worker_grade4_08",
+    "job_category": "Worker_Grade_04",
+    "source_resume": "",
+    "source_cnic": "cnic_extraction",
+    "document_type": "cnic_only",
+    "parser_version": "1.0",
+    "created_at": "2026-07-20",
+    "updated_at": "2026-07-20",
+    "parsing_status": "resume_text_unavailable",
+    "confidence_score": 0.3
+  }
+}
