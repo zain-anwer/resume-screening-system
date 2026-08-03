@@ -1,0 +1,1109 @@
+[
+  {
+    "id": "8041c5d7dd3985aabb9311eb983c04a40e4feca25479e0a26455d04d8ee8ced7",
+    "personal_info": {
+      "name": "Ahmed Siddiqui",
+      "gender": "Male",
+      "marital_status": null,
+      "father_name": "Sikandar Ahmed Siddiqui",
+      "email": "bilal.siddiqui.it@gmail.com",
+      "phone": [
+        "0301-2345671"
+      ],
+      "landline": [],
+      "cnic": "42101-1234567-1",
+      "location": "Gulshan",
+      "date_of_birth": "1992-12-26",
+      "nationality": "Pakistani"
+    },
+    "education": [
+      {
+        "degree": "MS Computer Science",
+        "institute": "NED University of Engineering & Technology",
+        "start_year": null,
+        "end_year": "2016",
+        "cgpa": null
+      },
+      {
+        "degree": "BS Computer Science",
+        "institute": "NED University of Engineering & Technology",
+        "start_year": null,
+        "end_year": "2014",
+        "cgpa": null
+      }
+    ],
+    "experience": [
+      {
+        "job_title": "IT Manager",
+        "organization": "Al-Noor Textiles Ltd, Karachi",
+        "start_date": "Jan 2021",
+        "end_date": "Present",
+        "description": "Led Oracle ERP implementation across 6 plants, supervising a team of 12 engineers Managed data-center operations, Linux servers and enterprise networking Reduced downtime by 30% through cloud migration and monitoring automation"
+      },
+      {
+        "job_title": "Assistant Manager IT",
+        "organization": "Zafar Industries, Karachi",
+        "start_date": "Aug 2018",
+        "end_date": "Dec 2020",
+        "description": "Supervised a team of 5 in SAP module rollout and support Administered SQL Server and Oracle databases Coordinated network upgrades across regional offices"
+      },
+      {
+        "job_title": "IT Officer",
+        "organization": "Crescent Systems Pvt Ltd, Karachi",
+        "start_date": "Jul 2016",
+        "end_date": "Jul 2018",
+        "description": "Provided Tier-1 ERP support and database maintenance Assisted in Python-based reporting automation"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Cloud (AWS)",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [
+          "Networking",
+          "Python",
+          "SQL"
+        ],
+        "github": null,
+        "demo": null,
+        "description": "Python SQL Networking"
+      },
+      {
+        "name": "ERP Migration for Al-Noor Textiles (6-plant rollout)",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": null
+      }
+    ],
+    "skills": [
+      "Oracle ERP",
+      "SAP"
+    ],
+    "certifications": [
+      {
+        "name": "Oracle ERP Cloud Certified Implementation Specialist",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      },
+      {
+        "name": "PMP - Project Management Professional",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      },
+      {
+        "name": "AWS Certified Solutions Architect",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      }
+    ],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "experience_summary": {
+      "total_experience_years": 10.08,
+      "management_experience_years": 8.0,
+      "management_titles_flagged": [
+        "IT Manager",
+        "Assistant Manager IT"
+      ]
+    },
+    "eligibility_features": {
+      "highest_degree_level": "masters",
+      "is_pspc_employee": false,
+      "has_security_printing_experience": false
+    },
+    "additional_sections": {
+      "references": [
+        {
+          "name": "Eng. Asif Raza",
+          "designation": "Director IT",
+          "organization": "Al-Noor Textiles Ltd",
+          "phone": "0300-1112223",
+          "email": null
+        }
+      ],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "manager_it",
+      "candidate_id": "8041c5d7dd3985aabb9311eb983c04a40e4feca25479e0a26455d04d8ee8ced7"
+    },
+    "overall_status": "Not Eligible"
+  },
+  {
+    "id": "86384b874dc87dead98dcc401bb986c971387711f13561588ab3143ab5d495c3",
+    "personal_info": {
+      "name": "Waleed Aftab",
+      "gender": null,
+      "marital_status": null,
+      "father_name": null,
+      "email": "s.waleed.aftab@gmail.com",
+      "phone": [
+        "+92-332-2159620",
+        "+92-332-2159620"
+      ],
+      "landline": [],
+      "cnic": null,
+      "location": "Karachi",
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [],
+    "experience": [],
+    "projects": [
+      {
+        "name": "Oracle 11g Developer Track",
+        "role": null,
+        "start_date": "2016",
+        "end_date": "2016",
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": null
+      },
+      {
+        "name": "OCP",
+        "role": "Oracle Cloud Apex",
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": null
+      },
+      {
+        "name": "Pre",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": "engineering"
+      },
+      {
+        "name": "Computing Next, Karachi",
+        "role": null,
+        "start_date": "2005",
+        "end_date": "2005",
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": null
+      }
+    ],
+    "skills": [
+      "Oracle E-Business Suite (EBS)",
+      "PL/SQL Development",
+      "Oracle Forms and Reports",
+      "Oracle Workflow",
+      "Oracle WEBADI",
+      "Oracle Database",
+      "Customization",
+      "Performance Tuning",
+      "Computing Next",
+      "Karachi",
+      "2004"
+    ],
+    "certifications": [],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": {
+      "github": null,
+      "linkedin": "https://www.linkedin.com/in/waleed-aftab-756a45a4",
+      "portfolio": []
+    },
+    "summary": null,
+    "experience_summary": {
+      "total_experience_years": 0.0,
+      "management_experience_years": 0.0,
+      "management_titles_flagged": []
+    },
+    "eligibility_features": {
+      "highest_degree_level": "",
+      "is_pspc_employee": false,
+      "has_security_printing_experience": false
+    },
+    "additional_sections": {
+      "references": [],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "manager_it",
+      "candidate_id": "86384b874dc87dead98dcc401bb986c971387711f13561588ab3143ab5d495c3"
+    },
+    "overall_status": "Not Eligible"
+  },
+  {
+    "id": "028c5053c1f4436773fad5cfb49ce87ad365daddd92f385f7060840266802274",
+    "personal_info": {
+      "name": "Sana Fatima Qureshi",
+      "gender": null,
+      "marital_status": null,
+      "father_name": null,
+      "email": null,
+      "phone": [],
+      "landline": [],
+      "cnic": null,
+      "location": null,
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [
+      {
+        "degree": "MS Software Engineering",
+        "institute": "IBA Karachi",
+        "start_year": null,
+        "end_year": "2017",
+        "cgpa": null
+      },
+      {
+        "degree": "BS Software Engineering",
+        "institute": "IBA Karachi",
+        "start_year": null,
+        "end_year": "2015",
+        "cgpa": null
+      }
+    ],
+    "experience": [
+      {
+        "job_title": "IT Manager",
+        "organization": "Bloom FMCG Pakistan, Karachi",
+        "start_date": "Mar 2022",
+        "end_date": "Present",
+        "description": "Supervise a 6-member infrastructure and applications team Led SAP S/4HANA implementation across supply-chain division Manage cloud infrastructure (Azure) and disaster-recovery planning"
+      },
+      {
+        "job_title": "Senior IT Analyst",
+        "organization": "Metro Retail Solutions, Karachi",
+        "start_date": "Jun 2019",
+        "end_date": "Feb 2022",
+        "description": "Supervised 2 junior analysts on ERP support desk Administered SQL databases and network infrastructure Automated reporting workflows using Python"
+      },
+      {
+        "job_title": "IT Support Engineer",
+        "organization": "Horizon Tech Karachi",
+        "start_date": "Jan 2017",
+        "end_date": "May 2019",
+        "description": "Provided ERP and network support for corporate clients"
+      }
+    ],
+    "projects": [
+      {
+        "name": "SAP S/4HANA Rollout",
+        "role": "Bloom FMCG",
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": null
+      },
+      {
+        "name": "Retail ERP Support Desk Revamp",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": null
+      }
+    ],
+    "skills": [
+      "SAP",
+      "ERP Implementation",
+      "SQL",
+      "Networking",
+      "Python",
+      "Linux"
+    ],
+    "certifications": [
+      {
+        "name": "SAP Certified Application Associate",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      },
+      {
+        "name": "ITIL Foundation",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      },
+      {
+        "name": "Microsoft Certified: Azure Administrator Languages",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      }
+    ],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "experience_summary": {
+      "total_experience_years": 9.58,
+      "management_experience_years": 4.42,
+      "management_titles_flagged": [
+        "IT Manager"
+      ]
+    },
+    "eligibility_features": {
+      "highest_degree_level": "masters",
+      "is_pspc_employee": false,
+      "has_security_printing_experience": false
+    },
+    "additional_sections": {
+      "references": [
+        {
+          "name": "Mr. Kamran Sheikh",
+          "designation": "Head of IT",
+          "organization": "Bloom FMCG Pakistan",
+          "phone": "0321-5556677",
+          "email": null
+        }
+      ],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "manager_it",
+      "candidate_id": "028c5053c1f4436773fad5cfb49ce87ad365daddd92f385f7060840266802274"
+    },
+    "overall_status": "Not Eligible"
+  },
+  {
+    "id": "76ec7bd30fafd0bfed793dc28f337ca4ab9a14c0462c939992337c040b2a42c2",
+    "personal_info": {
+      "name": null,
+      "gender": null,
+      "marital_status": null,
+      "father_name": null,
+      "email": null,
+      "phone": [],
+      "landline": [],
+      "cnic": null,
+      "location": null,
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [],
+    "experience": [],
+    "projects": [],
+    "skills": [],
+    "certifications": [],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "experience_summary": {
+      "total_experience_years": 0.0,
+      "management_experience_years": 0.0,
+      "management_titles_flagged": []
+    },
+    "eligibility_features": {
+      "highest_degree_level": "",
+      "is_pspc_employee": false,
+      "has_security_printing_experience": false
+    },
+    "additional_sections": {
+      "references": [],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "manager_it",
+      "candidate_id": "76ec7bd30fafd0bfed793dc28f337ca4ab9a14c0462c939992337c040b2a42c2"
+    },
+    "overall_status": "Not Eligible"
+  },
+  {
+    "id": "cc85e65bc10a30651fe032f5673abbf343033ae14ebde03d6409d17ff92298ea",
+    "personal_info": {
+      "name": null,
+      "gender": null,
+      "marital_status": null,
+      "father_name": null,
+      "email": null,
+      "phone": [],
+      "landline": [],
+      "cnic": null,
+      "location": null,
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [],
+    "experience": [],
+    "projects": [],
+    "skills": [],
+    "certifications": [],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "experience_summary": {
+      "total_experience_years": 0.0,
+      "management_experience_years": 0.0,
+      "management_titles_flagged": []
+    },
+    "eligibility_features": {
+      "highest_degree_level": "",
+      "is_pspc_employee": false,
+      "has_security_printing_experience": false
+    },
+    "additional_sections": {
+      "references": [],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "manager_it",
+      "candidate_id": "cc85e65bc10a30651fe032f5673abbf343033ae14ebde03d6409d17ff92298ea"
+    },
+    "overall_status": "Not Eligible"
+  },
+  {
+    "id": "271387f618b8200ee30f52fa1cf9b914910ffbaf27108b9d28782d22ab9f5ded",
+    "personal_info": {
+      "name": "Waqas",
+      "gender": null,
+      "marital_status": null,
+      "father_name": "Iqbal Ahmed Chaudhry DOB: 1993-12-26 CNIC: <CNIC> Gender: Male Nationality: Pakistani",
+      "email": "waqas.iqbal.chy@gmail.com",
+      "phone": [
+        "0300-7788990"
+      ],
+      "landline": [],
+      "cnic": "42401-5678901-5",
+      "location": null,
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [
+      {
+        "degree": null,
+        "institute": "University of Karachi",
+        "start_year": null,
+        "end_year": "2015",
+        "cgpa": null
+      }
+    ],
+    "experience": [
+      {
+        "job_title": "IT Manager (Operations)",
+        "organization": "Skyline Logistics, Karachi",
+        "start_date": "Feb 2017",
+        "end_date": "Mar 2020",
+        "description": "Supervise 4-member network operations team Manage Linux server infrastructure and database backups Network Administrator Trident Freight Services, Karachi Administered enterprise LAN/WAN infrastructure"
+      },
+      {
+        "job_title": "IT Support Officer",
+        "organization": "Chaudhry Enterprises, Karachi",
+        "start_date": "Jun 2015",
+        "end_date": "Jan 2017",
+        "description": "Provided desktop and network support"
+      }
+    ],
+    "projects": [
+      {
+        "name": "WAN Redesign",
+        "role": "Skyline Logistics",
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": null
+      }
+    ],
+    "skills": [
+      "Networking",
+      "Linux",
+      "Database Administration",
+      "SQL"
+    ],
+    "certifications": [
+      {
+        "name": "CCNA",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      },
+      {
+        "name": "Linux Foundation Certified Engineer",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      }
+    ],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "experience_summary": {
+      "total_experience_years": 4.83,
+      "management_experience_years": 3.16,
+      "management_titles_flagged": [
+        "IT Manager (Operations)"
+      ]
+    },
+    "eligibility_features": {
+      "highest_degree_level": "",
+      "is_pspc_employee": false,
+      "has_security_printing_experience": false
+    },
+    "additional_sections": {
+      "references": [
+        {
+          "name": "Mr. Salman Raza",
+          "designation": "Operations Director",
+          "organization": "Skyline Logistics",
+          "phone": "0321-4445566",
+          "email": null
+        },
+        {
+          "name": "\u0100l\u0100p\u7105",
+          "designation": null,
+          "organization": null,
+          "phone": null,
+          "email": null
+        },
+        {
+          "name": "\u0100l\u0100p\u7105",
+          "designation": null,
+          "organization": null,
+          "phone": null,
+          "email": null
+        },
+        {
+          "name": "\u0100l\u0100l\u0100l\u0100l\u0100l\u0100l\u0100l\u0100l\u0100l\u0100l\u0100l\u0100l\u0100l\u0100p\u0800",
+          "designation": null,
+          "organization": null,
+          "phone": null,
+          "email": null
+        },
+        {
+          "name": "\u0500l\ua413",
+          "designation": null,
+          "organization": null,
+          "phone": null,
+          "email": null
+        },
+        {
+          "name": "\u0100l\u0100p\u7105",
+          "designation": null,
+          "organization": null,
+          "phone": null,
+          "email": null
+        },
+        {
+          "name": "\u0100p\u7105",
+          "designation": null,
+          "organization": null,
+          "phone": null,
+          "email": null
+        },
+        {
+          "name": "\u0100l\u0100l\u0100l\u0100p\u7105",
+          "designation": null,
+          "organization": null,
+          "phone": null,
+          "email": null
+        },
+        {
+          "name": ";\u303c\u4000P\u4200\u0250\u1f00\ud0b0",
+          "designation": null,
+          "organization": null,
+          "phone": null,
+          "email": null
+        },
+        {
+          "name": "\u6490 p",
+          "designation": null,
+          "organization": null,
+          "phone": null,
+          "email": null
+        }
+      ],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "manager_it",
+      "candidate_id": "271387f618b8200ee30f52fa1cf9b914910ffbaf27108b9d28782d22ab9f5ded"
+    },
+    "overall_status": "Not Eligible"
+  },
+  {
+    "id": "412af70f42cd2e7661a1f1ca7c5a28507d57e40fefcd1ea6531a4e7ef9619814",
+    "personal_info": {
+      "name": "Hassan Raza Abbasi",
+      "gender": "Male",
+      "marital_status": null,
+      "father_name": "Ghulam Raza Abbasi",
+      "email": null,
+      "phone": [],
+      "landline": [],
+      "cnic": "42101-6789012-6",
+      "location": "North Nazimabad",
+      "date_of_birth": "1991-12-26",
+      "nationality": "Pakistani"
+    },
+    "education": [
+      {
+        "degree": "MS Computer Science",
+        "institute": "FAST National University",
+        "start_year": null,
+        "end_year": "2013",
+        "cgpa": null
+      },
+      {
+        "degree": "BS Computer Science",
+        "institute": "FAST National University",
+        "start_year": null,
+        "end_year": "2011",
+        "cgpa": null
+      }
+    ],
+    "experience": [
+      {
+        "job_title": "Senior ERP Consultant",
+        "organization": "Techsol Global, Karachi",
+        "start_date": "May 2019",
+        "end_date": "Present",
+        "description": "Lead technical implementation of Oracle ERP modules for enterprise clients Work independently on database administration and cloud deployments Serve as subject-matter expert without direct reports"
+      },
+      {
+        "job_title": "ERP Consultant",
+        "organization": "Bright Consulting, Karachi",
+        "start_date": "Feb 2016",
+        "end_date": "Apr 2019",
+        "description": "Provided SAP implementation support for multiple clients"
+      },
+      {
+        "job_title": "Database Administrator",
+        "organization": "Quantum Systems, Karachi",
+        "start_date": "Jan 2014",
+        "end_date": "Jan 2016",
+        "description": "Administered Oracle and SQL Server databases"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Multi-client Oracle ERP Implementation Program",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": null
+      },
+      {
+        "name": "SAP Rollout",
+        "role": "Bright Consulting Clients",
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": null
+      }
+    ],
+    "skills": [
+      "Oracle ERP",
+      "SAP",
+      "Tier-1 ERP",
+      "Implementation",
+      "Database Administration",
+      "Python",
+      "SQL",
+      "Cloud"
+    ],
+    "certifications": [
+      {
+        "name": "Oracle ERP Cloud Certified Implementation Specialist",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      },
+      {
+        "name": "SAP Certified Technology Associate",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      }
+    ],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": null,
+    "summary": null,
+    "experience_summary": {
+      "total_experience_years": 12.58,
+      "management_experience_years": 0.0,
+      "management_titles_flagged": []
+    },
+    "eligibility_features": {
+      "highest_degree_level": "masters",
+      "is_pspc_employee": false,
+      "has_security_printing_experience": false
+    },
+    "additional_sections": {
+      "references": [
+        {
+          "name": "Mr. Imran Sheikh",
+          "designation": "Practice Lead",
+          "organization": "Techsol Global",
+          "phone": "0300-3334455",
+          "email": null
+        }
+      ],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "manager_it",
+      "candidate_id": "412af70f42cd2e7661a1f1ca7c5a28507d57e40fefcd1ea6531a4e7ef9619814"
+    },
+    "overall_status": "Not Eligible"
+  },
+  {
+    "id": "40d8435574b9483e2a221888dae3ac4a733549dad04fb8f6d886d9e535418409",
+    "personal_info": {
+      "name": "Atthar Hassan",
+      "gender": null,
+      "marital_status": null,
+      "father_name": null,
+      "email": "athar.rehmani1@gmail.com",
+      "phone": [
+        "+92 333 4707817"
+      ],
+      "landline": [],
+      "cnic": null,
+      "location": null,
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [
+      {
+        "degree": "BS (Hons.) Computer Science",
+        "institute": "The University of Lahore",
+        "start_year": "2011",
+        "end_year": "2015",
+        "cgpa": null
+      }
+    ],
+    "experience": [
+      {
+        "job_title": "Unit Head",
+        "organization": "IS Governance, Compliance and Awareness",
+        "start_date": "Feb, 2024",
+        "end_date": "Present",
+        "description": "MCB Islamic Bank Limited Establishes policies, procedures, and standards for information security management, resulting in improved security posture. Conduct assessments to ensure compliance with relevant laws, regulations, and industry standards. Develops and implements an information security governance framework, ensuring alignment with industry best practices and regulatory requirements. Develops and delivers information security awareness training programs for employees. Conduct regular reviews of Service Level Agreements (SLAs) to ensure alignment with business goals and objectives. Stays informed about industry best practices and regulatory requirements in SLA management. Provides guidance and support to cross-functional teams on information security matters, fostering a culture of security awareness. Stays inform about emerging threats, technologies, and best practices in information security governance."
+      },
+      {
+        "job_title": "Inspecting Officer",
+        "organization": "Information System",
+        "start_date": "Jan, 2021",
+        "end_date": "Jan 2024",
+        "description": "State Bank of Pakistan Supported the supervisory division by evaluating cyber security risks of Regulated Entities (REs) to enhance regulatory compliance and mitigate potential threats. Assisted in compiling and distributing updates on cyber security risks to senior management and relevant stakeholders to facilitate informed decision-making. Engaged with internal and external stakeholders to address inquiries and provide guidance on cyber security risk-related matters, fostering collaboration and alignment."
+      }
+    ],
+    "projects": [],
+    "skills": [
+      "TEAMWORK"
+    ],
+    "certifications": [
+      {
+        "name": "CISA - ISACA",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      },
+      {
+        "name": "CERTIFIED IN CYBERSECURITY - (ISC)2",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      },
+      {
+        "name": "CYBER RISK SUPERVISION - IMF",
+        "issuer": null,
+        "issue_date": null,
+        "expiry_date": null,
+        "credential_id": null,
+        "credential_url": null
+      }
+    ],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": {
+      "github": null,
+      "linkedin": null,
+      "portfolio": [
+        "https://4.0"
+      ]
+    },
+    "summary": null,
+    "experience_summary": {
+      "total_experience_years": 5.58,
+      "management_experience_years": 2.5,
+      "management_titles_flagged": [
+        "Unit Head"
+      ]
+    },
+    "eligibility_features": {
+      "highest_degree_level": "bachelors",
+      "is_pspc_employee": false,
+      "has_security_printing_experience": false
+    },
+    "additional_sections": {
+      "references": [],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "manager_it",
+      "candidate_id": "40d8435574b9483e2a221888dae3ac4a733549dad04fb8f6d886d9e535418409"
+    },
+    "overall_status": "Not Eligible"
+  },
+  {
+    "id": "7fbe7d36b283f3d0874bca5637757fa69b4a58072d9d3d652c904284c1962803",
+    "personal_info": {
+      "name": "Muzafar Ali Senior",
+      "gender": null,
+      "marital_status": null,
+      "father_name": null,
+      "email": "muzafar4996@gmail.com",
+      "phone": [
+        "0300-3096932",
+        "0335-3812224"
+      ],
+      "landline": [],
+      "cnic": null,
+      "location": "Sindh",
+      "date_of_birth": null,
+      "nationality": null
+    },
+    "education": [],
+    "experience": [],
+    "projects": [
+      {
+        "name": "WordPress Development",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [
+          "Agile",
+          "CSS",
+          "Google Project Management",
+          "HTML",
+          "JavaScript",
+          "PHP",
+          "WordPress",
+          "project management",
+          "troubleshooting"
+        ],
+        "github": null,
+        "demo": null,
+        "description": "Expertise in developing WordPress websites from PSD to HTML and WordPress CMS. Proficient in PHP, HTML, CSS, and JavaScript for customizing WordPress themes and plugins. Familiar with WordPress best practices, including security, performance optimization, and SEO. Experience in managing and updating WordPress sites, including content management and troubleshooting. Certified in Google Project Management, demonstrating proficiency in leading and managing projects using Google's project management tools and methodologies. Skilled in overseeing cross-functional teams, ensuring project success through effective planning, execution, and monitoring. Experienced in utilizing Google Workspace (formerly G Suite) tools such as Google Drive, Google Docs, Google Sheets, and Google Calendar for collaboration and project tracking. Proficient in implementing Agile and other project management frameworks to deliver projects on time and within budget."
+      },
+      {
+        "name": "KEY SKILLS",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [
+          "PHP"
+        ],
+        "github": null,
+        "demo": null,
+        "description": "Languages: Core PHP Server-Side Technologies: PHP (Core, OOP, Session handling, Validations and Security, Database programming)"
+      },
+      {
+        "name": "Client-Side Technologies",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [
+          "CSS",
+          "HTML",
+          "HTML5",
+          "JAVASCRIPT",
+          "WordPress"
+        ],
+        "github": null,
+        "demo": null,
+        "description": "HTML5, CSS 3, AJAX, JAVASCRIPT Tools and IDE\u2019s: PhpMyAdmin, Webpage Maker, Adobe Dreamweaver, WOW slider, Adobe Photoshop, CMS: WordPress, Custom HTML template site."
+      },
+      {
+        "name": "Servers",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": "XAMPP, WAMPP"
+      },
+      {
+        "name": "Data Base",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [
+          "MySQL"
+        ],
+        "github": null,
+        "demo": null,
+        "description": "Ms-Access, MySQL"
+      },
+      {
+        "name": "Social Media Listening and Community Tools",
+        "role": null,
+        "start_date": null,
+        "end_date": null,
+        "technologies": [],
+        "github": null,
+        "demo": null,
+        "description": "Sprinklr, YouScan, Meltwater"
+      }
+    ],
+    "skills": [],
+    "certifications": [],
+    "achievements": [],
+    "publications": [],
+    "languages": [],
+    "urls": {
+      "github": null,
+      "linkedin": null,
+      "portfolio": [
+        "https://3.30",
+        "https://4.00",
+        "http://www.spectrum-pk.com",
+        "http://www.axact.com",
+        "http://www.spectrumyr.com",
+        "http://www.inspurate.com",
+        "http://www.networks360.net",
+        "https://phcip.com.pk",
+        "https://shmaglobal.com",
+        "https://yamaha-motor.com.pk",
+        "http://piac.com.pk",
+        "http://www.jsbl.com",
+        "http://www.theeaglesacademy.com"
+      ]
+    },
+    "summary": null,
+    "experience_summary": {
+      "total_experience_years": 0.0,
+      "management_experience_years": 0.0,
+      "management_titles_flagged": []
+    },
+    "eligibility_features": {
+      "highest_degree_level": "",
+      "is_pspc_employee": false,
+      "has_security_printing_experience": false
+    },
+    "additional_sections": {
+      "references": [],
+      "interests": []
+    },
+    "flags": {
+      "missing_fields": [],
+      "low_confidence_fields": [],
+      "mismatched_fields": [],
+      "ner_review_needed": false
+    },
+    "metadata": {
+      "job_category": "manager_it",
+      "candidate_id": "7fbe7d36b283f3d0874bca5637757fa69b4a58072d9d3d652c904284c1962803"
+    },
+    "overall_status": "Not Eligible"
+  }
+]

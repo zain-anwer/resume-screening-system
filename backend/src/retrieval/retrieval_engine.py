@@ -51,6 +51,11 @@ class RetrievalService:
     self,
     candidates_json: list[dict],
 ) -> None:
+
+        print("\n========== RETRIEVAL DEBUG ==========")
+        print("Type received:", type(candidates_json))
+        print("Number of candidates received:", len(candidates_json))
+
         if not isinstance(candidates_json, list):
          raise ValueError(
             "Candidates must be provided as a list of JSON objects."
@@ -58,6 +63,9 @@ class RetrievalService:
         candidate_ids: list[str] = []
         candidate_documents: list[str] = []
         for raw in candidates_json:
+
+                     print(raw)
+            
                      if raw.get("overall_status") != "Eligible":
                          continue
                      candidate = CandidateAdapter.adapt(raw)

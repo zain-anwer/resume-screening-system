@@ -1,0 +1,8 @@
+job_name: IT Manager
+age:
+  maximum: 40
+education:
+  minimum_years: 10
+  level: BS
+experience:
+  minimum_years: 2

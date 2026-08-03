@@ -1,0 +1,38 @@
+[
+    {
+        "rank": 1,
+        "candidate_id": "8041c5d7dd3985aabb9311eb983c04a40e4feca25479e0a26455d04d8ee8ced7",
+        "candidate_name": "Ahmed Siddiqui",
+        "job_title": "IT Manager",
+        "lexical_score": -1.671,
+        "semantic_score": 0.592,
+        "final_score": 0.565,
+        "matched_skills": [
+            "sap"
+        ],
+        "missing_skills": [
+            "erp",
+            "networking",
+            "sql"
+        ],
+        "matched_preferred_skills": []
+    },
+    {
+        "rank": 2,
+        "candidate_id": "412af70f42cd2e7661a1f1ca7c5a28507d57e40fefcd1ea6531a4e7ef9619814",
+        "candidate_name": "Hassan Raza Abbasi",
+        "job_title": "Senior ERP Consultant",
+        "lexical_score": -1.721,
+        "semantic_score": 0.652,
+        "final_score": 0.371,
+        "matched_skills": [
+            "sap",
+            "sql"
+        ],
+        "missing_skills": [
+            "erp",
+            "networking"
+        ],
+        "matched_preferred_skills": []
+    }
+]

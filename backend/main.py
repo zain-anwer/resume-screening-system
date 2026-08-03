@@ -15,7 +15,6 @@ below) that combines all four stages into one object per candidate.
 
 Run with:
     uvicorn main:app --reload --port 8000
-
 KNOWN GAPS IN THE CURRENT REPO (see chat for details):
   - `models/` package (Candidate, JobDescription, RankedCandidate dataclasses)
     is imported by several stage-4 modules but wasn't present in the
@@ -492,37 +491,102 @@ def dashboard_summary() -> dict:
         "recentScreenings": recent_screenings,
     }
 
-
 @app.get("/api/ranking/latest")
 def ranking_latest() -> list:
-    """Matches fetchRankedCandidates() -> candidateRanking shape."""
     run = _require_run()
-    if run["ranking_error"]:
-        raise HTTPException(status_code=409, detail=run["ranking_error"])
 
-    eligibility_by_id = {e["candidate_id"]: e for e in run["eligibility"]}
-    extracted_by_id = {c["id"]: c for c in run["extracted"]}
+    if run["ranking_error"]:
+        raise HTTPException(
+            status_code=409,
+            detail=run["ranking_error"]
+        )
+
+    eligibility_by_id = {
+        e["candidate_id"]: e
+        for e in run["eligibility"]
+    }
+
+    extracted_by_id = {
+        c["id"]: c
+        for c in run["extracted"]
+    }
 
     results = []
+
     for r in run["ranked"]:
         cid = r["candidate_id"]
         elig = eligibility_by_id.get(cid)
         candidate = extracted_by_id.get(cid, {})
-        education = (candidate.get("education") or [{}])[0]
-        years = (candidate.get("experience_summary") or {}).get("total_experience_years", 0) or 0
 
+        # -----------------------------
+        # Personal information
+        # -----------------------------
+        personal_info = candidate.get("personal_info") or {}
+
+        name = personal_info.get("name") or "Unknown"
+        email = personal_info.get("email") or ""
+        phone = personal_info.get("phone") or ""
+        cnic = personal_info.get("cnic") or ""
+
+        # -----------------------------
+        # Experience
+        # -----------------------------
+        experience_summary = candidate.get("experience_summary") or {}
+
+        years = (
+            experience_summary.get("total_experience_years", 0)
+            or 0
+        )
+
+        # -----------------------------
+        # Education
+        # -----------------------------
+        education_entries = candidate.get("education") or []
+
+        degrees = " | ".join(
+            edu.get("degree", "").strip()
+            for edu in education_entries
+            if edu.get("degree")
+        )
+
+        # -----------------------------
+        # Final ranking record
+        # -----------------------------
         results.append({
             "rank": r["rank"],
-            "candidate": r["candidate_name"],
+
+            # Candidate information
+            "candidate": r.get("candidate_name") or name,
+            "name": name,
+            "email": email,
+            "phone": phone,
+            "cnic": cnic,
+
+            # Scores
             "overall": round(r["final_score"] * 100),
             "semantic": round(r["semantic_score"] * 100),
             "bm25": round(r["lexical_score"] * 100),
+
+            # Profile
             "experience": f"{years} yrs",
-            "education": education.get("degree_level") or education.get("degree_raw") or "",
-            "policy": _policy_label(elig["overall_status"]) if elig else "Review",
-            "status": "Shortlisted" if elig and elig["overall_status"] == "Eligible" else "Screened",
+            "education": degrees,
+
+            # Eligibility
+            "policy": (
+                _policy_label(elig["overall_status"])
+                if elig
+                else "Review"
+            ),
+
+            "status": (
+                "Shortlisted"
+                if elig and elig["overall_status"] == "Eligible"
+                else "Screened"
+            ),
         })
+
     return results
+
 
 
 @app.get("/api/screening/queue")

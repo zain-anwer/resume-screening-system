@@ -1,0 +1,317 @@
+[
+    {
+        "candidate_id": "8041c5d7dd3985aabb9311eb983c04a40e4feca25479e0a26455d04d8ee8ced7",
+        "job": "manager_it",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Required degree not found"
+        },
+        "experience": {
+            "status": true,
+            "reason": "10.08 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": 33,
+            "allowed_age": 28,
+            "reason": "Age exceeds limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        },
+        "other_policies": [
+            {
+                "name": "nationality",
+                "status": true,
+                "reason": "No automated check registered for this policy \u2014 recorded for manual review only.",
+                "automated": false
+            }
+        ]
+    },
+    {
+        "candidate_id": "86384b874dc87dead98dcc401bb986c971387711f13561588ab3143ab5d495c3",
+        "job": "manager_it",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 0.0 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": null,
+            "allowed_age": 28,
+            "reason": "Date of birth not found"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        },
+        "other_policies": [
+            {
+                "name": "nationality",
+                "status": true,
+                "reason": "No automated check registered for this policy \u2014 recorded for manual review only.",
+                "automated": false
+            }
+        ]
+    },
+    {
+        "candidate_id": "028c5053c1f4436773fad5cfb49ce87ad365daddd92f385f7060840266802274",
+        "job": "manager_it",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Required degree not found"
+        },
+        "experience": {
+            "status": true,
+            "reason": "9.58 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": null,
+            "allowed_age": 28,
+            "reason": "Date of birth not found"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        },
+        "other_policies": [
+            {
+                "name": "nationality",
+                "status": true,
+                "reason": "No automated check registered for this policy \u2014 recorded for manual review only.",
+                "automated": false
+            }
+        ]
+    },
+    {
+        "candidate_id": "76ec7bd30fafd0bfed793dc28f337ca4ab9a14c0462c939992337c040b2a42c2",
+        "job": "manager_it",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 0.0 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": null,
+            "allowed_age": 28,
+            "reason": "Date of birth not found"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        },
+        "other_policies": [
+            {
+                "name": "nationality",
+                "status": true,
+                "reason": "No automated check registered for this policy \u2014 recorded for manual review only.",
+                "automated": false
+            }
+        ]
+    },
+    {
+        "candidate_id": "cc85e65bc10a30651fe032f5673abbf343033ae14ebde03d6409d17ff92298ea",
+        "job": "manager_it",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 0.0 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": null,
+            "allowed_age": 28,
+            "reason": "Date of birth not found"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        },
+        "other_policies": [
+            {
+                "name": "nationality",
+                "status": true,
+                "reason": "No automated check registered for this policy \u2014 recorded for manual review only.",
+                "automated": false
+            }
+        ]
+    },
+    {
+        "candidate_id": "271387f618b8200ee30f52fa1cf9b914910ffbaf27108b9d28782d22ab9f5ded",
+        "job": "manager_it",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 4.83 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": null,
+            "allowed_age": 28,
+            "reason": "Date of birth not found"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        },
+        "other_policies": [
+            {
+                "name": "nationality",
+                "status": true,
+                "reason": "No automated check registered for this policy \u2014 recorded for manual review only.",
+                "automated": false
+            }
+        ]
+    },
+    {
+        "candidate_id": "412af70f42cd2e7661a1f1ca7c5a28507d57e40fefcd1ea6531a4e7ef9619814",
+        "job": "manager_it",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Required degree not found"
+        },
+        "experience": {
+            "status": true,
+            "reason": "12.58 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": 34,
+            "allowed_age": 28,
+            "reason": "Age exceeds limit"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        },
+        "other_policies": [
+            {
+                "name": "nationality",
+                "status": true,
+                "reason": "No automated check registered for this policy \u2014 recorded for manual review only.",
+                "automated": false
+            }
+        ]
+    },
+    {
+        "candidate_id": "40d8435574b9483e2a221888dae3ac4a733549dad04fb8f6d886d9e535418409",
+        "job": "manager_it",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Required degree not found"
+        },
+        "experience": {
+            "status": true,
+            "reason": "5.58 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": null,
+            "allowed_age": 28,
+            "reason": "Date of birth not found"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        },
+        "other_policies": [
+            {
+                "name": "nationality",
+                "status": true,
+                "reason": "No automated check registered for this policy \u2014 recorded for manual review only.",
+                "automated": false
+            }
+        ]
+    },
+    {
+        "candidate_id": "7fbe7d36b283f3d0874bca5637757fa69b4a58072d9d3d652c904284c1962803",
+        "job": "manager_it",
+        "overall_status": "Not Eligible",
+        "education": {
+            "status": false,
+            "reason": "Education not found"
+        },
+        "experience": {
+            "status": false,
+            "reason": "Only 0.0 years experience"
+        },
+        "supervisory": {
+            "status": true,
+            "reason": "Not required"
+        },
+        "age": {
+            "status": false,
+            "candidate_age": null,
+            "allowed_age": 28,
+            "reason": "Date of birth not found"
+        },
+        "preferred_skills": {
+            "status": true,
+            "matched": []
+        },
+        "other_policies": [
+            {
+                "name": "nationality",
+                "status": true,
+                "reason": "No automated check registered for this policy \u2014 recorded for manual review only.",
+                "automated": false
+            }
+        ]
+    }
+]
