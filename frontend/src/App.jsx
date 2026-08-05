@@ -8,6 +8,7 @@ import JobDescriptions from "./pages/JobDescriptions.jsx";
 import Analytics from "./pages/Analytics.jsx";
 import Reports from "./pages/Reports.jsx";
 import Policy from "./pages/Policy.jsx";
+import NerReview from "./pages/NerReview.jsx";
 import About from "./pages/About.jsx";
 import "./styles/global.css";
 
@@ -17,6 +18,7 @@ export default function App() {
       <Route element={<Layout />}>
         <Route index element={<Dashboard />} />
         <Route path="screening" element={<ResumeScreening />} />
+        <Route path="ner-review" element={<NerReview />} />
         <Route path="ranking" element={<CandidateRanking />} />
         <Route path="candidates" element={<Candidates />} />
         <Route path="jobs" element={<JobDescriptions />} />

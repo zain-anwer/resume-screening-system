@@ -1,0 +1,5 @@
+Fix tesseract issues leading to incomplete CNIC scans
+Decide on a better flag object structure and construct NER review endpoint
+Modify frontend to show and export NER review candidates with reasons
+Add search functionality in candidates
+Remove excess stuff and add about page 

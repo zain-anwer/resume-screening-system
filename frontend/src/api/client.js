@@ -78,6 +78,10 @@ export async function fetchScreeningQueue() {
   return request("/screening/queue");
 }
 
+export async function fetchNerReviewCandidates() {
+  return request("/candidates/ner-review");
+}
+
 /** Backend + ranking-stage health check. */
 export async function fetchHealth() {
   return request("/health");

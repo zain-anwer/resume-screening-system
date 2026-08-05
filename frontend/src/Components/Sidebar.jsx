@@ -8,6 +8,7 @@ import "../styles/sidebar.css";
 const NAV = [
   { to: "/", label: "Dashboard", icon: LayoutGrid, end: true },
   { to: "/screening", label: "Resume Screening", icon: ScanLine },
+  { to: "/ner-review", label: "NER Review", icon: FileText },
   { to: "/ranking", label: "Candidate Ranking", icon: ListOrdered },
   { to: "/candidates", label: "Candidates", icon: Users },
   { to: "/jobs", label: "Job Descriptions", icon: FileText },

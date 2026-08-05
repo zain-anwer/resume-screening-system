@@ -168,11 +168,3 @@ def ingest_resumes(input_path: str, output_path: str):
     print("=" * 60)
 
     return all_candidates
-
-
-if __name__ == "__main__":
-
-    ingest_resumes(
-        input_path="jobs",
-        output_path="output/all_candidates.json",
-    )

@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import { matchName } from "../utils/search.js";
 import { Card } from "../components/ui/Card.jsx";
 import Badge from "../components/ui/Badge.jsx";
 import ExportButton from "../components/ui/ExportButton.jsx";
@@ -10,6 +12,8 @@ const statusTone = { Shortlisted: "success", Screened: "info", Rejected: "danger
 export default function CandidateRanking() {
   const [rows, setRows] = useState([]);
   const [error, setError] = useState(null);
+  const [searchParams] = useSearchParams();
+  const q = searchParams.get("q") || "";
 
   useEffect(() => {
     fetchRankedCandidates()
@@ -50,7 +54,7 @@ export default function CandidateRanking() {
               </tr>
             </thead>
             <tbody>
-              {rows.map((r) => (
+              {rows.filter((r) => matchName(r.candidate || "", q)).map((r) => (
                 <tr key={r.rank}>
                   <td style={{ fontWeight: 600, color: "var(--text-900)" }}>#{r.rank}</td>
                   <td className="candidate-name">{r.candidate}</td>

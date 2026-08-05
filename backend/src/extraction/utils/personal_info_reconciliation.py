@@ -4,64 +4,94 @@ from dateutil import parser
 
 def dates_are_equal(date_1, date_2):
     try:
-        return (parser.parse(date_1, fuzzy=True).date() == parser.parse(date_2, fuzzy=True).date())
+        return parser.parse(date_1, fuzzy=True).date() == parser.parse(date_2, fuzzy=True).date()
 
     except (ValueError, TypeError, OverflowError):
         return False
 
 
-def reconcile_personal_info(personal_info,input_dict):
-    
+def reconcile_personal_info(personal_info, input_dict):
+
     flags = {
-        "missing_fields": [],
-        "low_confidence_fields": [],
-        "mismatched_fields": [],
-        "ner_review_needed": False
+        "needs_ner_review": False,
+        "ner_review_reasons": [],
+        "missing_fields": []
     }
 
-    if ((input_dict['cnic_number'] == None or input_dict['cnic_number'].strip() == '')
-        and (input_dict['cnic_name'] == None or input_dict['cnic_name'].strip() == '')
-        and (input_dict['cnic_dob'] == None or input_dict['cnic_dob'].strip() == '')):
+    def add_ner_review(field, reason):
+        flags["needs_ner_review"] = True
+        flags["ner_review_reasons"].append({
+            "field": field,
+            "reason": reason
+        })
+
+    # If CNIC verification data is unavailable, skip reconciliation
+    if (
+        not input_dict.get("cnic_number") or
+        not input_dict.get("cnic_name") or
+        not input_dict.get("cnic_dob")
+    ):
         return personal_info, flags
 
-    
-    if personal_info['name']:
-        if fuzz.ratio(personal_info['name'].lower(),input_dict['cnic_name'].lower()) < 80:
-            personal_info['name'] = input_dict['cnic_name']
-            print('ERROR: Name mismatch detected!')
-            flags['low_confidence_fields'].append('name')
-            flags['mismatched_fields'].append('name')
-            flags['ner_review_needed'] = True
-        else:
-            personal_info['name'] = input_dict['cnic_name']
+
+    # Name reconciliation
+    if personal_info.get("name"):
+        if fuzz.ratio(
+            personal_info["name"].lower(),
+            input_dict["cnic_name"].lower()
+        ) < 80:
+
+            add_ner_review(
+                "name",
+                "Extracted name does not match CNIC name"
+            )
+
+        personal_info["name"] = input_dict["cnic_name"]
+
     else:
-        personal_info['name'] = input_dict['cnic_name']
+        personal_info["name"] = input_dict["cnic_name"]
 
-    if personal_info['cnic']:
-        if personal_info['cnic'] != input_dict['cnic_number']:
-            print('ERROR: CNIC number mismatch detected')
-            flags['low_confidence_fields'].append('cnic')
-            flags['mismatched_fields'].append('cnic')
-            flags['ner_review_needed'] = True
+
+    # CNIC reconciliation
+    if personal_info.get("cnic"):
+        if personal_info["cnic"] != input_dict["cnic_number"]:
+
+            add_ner_review(
+                "cnic",
+                "Extracted CNIC number does not match CNIC document"
+            )
+
     else:
-        personal_info['cnic'] = input_dict['cnic_number']
+        personal_info["cnic"] = input_dict["cnic_number"]
 
-    if personal_info['date_of_birth']:
-        if not dates_are_equal(personal_info['date_of_birth'],input_dict['cnic_dob']):
-            print('ERROR: date of birth mismatch detected')
-            flags['low_confidence_fields'].append('date_of_birth')
-            flags['mismatched_fields'].append('date_of_birth')
-            flags['ner_review_needed'] = True
+
+    # DOB reconciliation
+    if personal_info.get("date_of_birth"):
+        if not dates_are_equal(
+            personal_info["date_of_birth"],
+            input_dict["cnic_dob"]
+        ):
+
+            add_ner_review(
+                "date_of_birth",
+                "Extracted date of birth does not match CNIC date of birth"
+            )
+
     else:
-        personal_info['date_of_birth'] = input_dict['cnic_dob']
+        personal_info["date_of_birth"] = input_dict["cnic_dob"]
 
-    if not personal_info['gender'] and personal_info['cnic']:
-        last_digit = int(personal_info['cnic'][-1])
-        personal_info['gender'] = 'Male' if last_digit % 2 else 'Female'
 
-    # appending missing fields from personal information
-    for key in personal_info.keys():
-        if not personal_info[key]:
-            flags['missing_fields'].append(key)
+    # Infer gender from CNIC
+    if not personal_info.get("gender") and personal_info.get("cnic"):
+
+        last_digit = int(personal_info["cnic"][-1])
+        personal_info["gender"] = "Male" if last_digit % 2 else "Female"
+
+
+    # Missing fields check
+    for key, value in personal_info.items():
+        if value is None or value == "" or value == []:
+            flags["missing_fields"].append(key)
+
 
     return personal_info, flags

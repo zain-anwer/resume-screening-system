@@ -734,7 +734,6 @@ async def upload_resumes_folder(files: list[UploadFile] = File(...)):
 
     return {"folder_path": str(dest_root), "files_received": len(files)}
 
-
 @app.post("/api/upload/job-description")
 async def upload_job_description(file: UploadFile = File(...)):
     upload_id = uuid.uuid4().hex[:12]
@@ -744,3 +743,34 @@ async def upload_job_description(file: UploadFile = File(...)):
     with dest_path.open("wb") as out:
         shutil.copyfileobj(file.file, out)
     return {"file_path": str(dest_path)}
+
+@app.get("/api/candidates/ner-review")
+def get_ner_review_candidates() -> list[dict]:
+    """
+    Returns candidates that require manual NER/OCR review.
+
+    Filters extracted candidates where:
+        flags.needs_ner_review == True
+
+    Returns:
+        Full candidate profile data including:
+        - personal_info
+        - education
+        - experience
+        - projects
+        - certifications
+        - flags
+        - metadata
+    """
+
+    run = _require_run()
+
+    ner_candidates = []
+
+    for candidate in run["extracted"]:
+        flags = candidate.get("flags") or {}
+
+        if flags.get("needs_ner_review", False):
+            ner_candidates.append(candidate)
+
+    return ner_candidates

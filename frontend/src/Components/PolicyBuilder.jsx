@@ -20,6 +20,33 @@ const emptyRegional = () => ({ id: genId(), region: "", years: "" });
 const emptySubField = () => ({ id: genId(), label: "", description: "" });
 const emptyOtherPolicy = () => ({ id: genId(), name: "", description: "", subFields: [] });
 
+// ---------------------------------------------------------------------
+// Education level options
+// ---------------------------------------------------------------------
+// These map 1:1 onto the canonical LEVELS keys in eligibility.py, via
+// the alias table in rules_adapter.py (_LEVEL_ALIASES). Each `value`
+// below is one of the recognized aliases, so it normalizes cleanly
+// server-side instead of risking "Unrecognized minimum education
+// level" from a free-typed value. Keep this list in sync with
+// _LEVEL_ALIASES if the backend adds a new level.
+const EDUCATION_LEVEL_OPTIONS = [
+  { value: "Matric", label: "Matric / SSC" },
+  { value: "Intermediate", label: "Intermediate / FSc / A-Level" },
+  { value: "Diploma", label: "Diploma / Associate Degree" },
+  { value: "Bachelors", label: "Bachelor's" },
+  { value: "Masters", label: "Master's" },
+  { value: "MPhil", label: "M.Phil" },
+  { value: "PhD", label: "PhD / Doctorate" },
+];
+
+// "Preferred Skills" is the only Additional Policy name with a
+// registered, automated handler in policy_registry.py (it checks each
+// sub-field label against the candidate's parsed skills). Any other
+// name is accepted too — it's just recorded for manual review instead
+// of automated pass/fail — so this stays a free-text field with a
+// suggestion rather than a locked dropdown.
+const SUGGESTED_POLICY_NAMES = ["Preferred Skills"];
+
 export default function PolicyBuilder() {
   const [jobName, setJobName] = useState("");
   const [maxAge, setMaxAge] = useState("");
@@ -104,7 +131,7 @@ export default function PolicyBuilder() {
     },
     education: {
       minimum_years: toNum(eduYears),
-      level: eduLevel.trim(),
+      level: eduLevel,
       degrees,
     },
     experience: { minimum_years: toNum(minExperience) },
@@ -229,6 +256,10 @@ export default function PolicyBuilder() {
 
           <div className="form-subsection">
             <div className="form-subsection-title">Regional relaxation</div>
+            <p className="form-hint">
+              Region names are free text — they're matched directly against whatever province
+              string a candidate's record contains, so there's no fixed list to choose from.
+            </p>
             {regional.map((row) => (
               <div className="repeatable-row" key={row.id}>
                 <input
@@ -311,15 +342,24 @@ export default function PolicyBuilder() {
             </div>
             <div className="form-field">
               <label>Level of education</label>
-              <input
-                type="text"
+              <select
                 className="form-input"
-                placeholder="e.g. BS"
                 value={eduLevel}
                 onChange={(e) => setEduLevel(e.target.value)}
-              />
+              >
+                <option value="">Select a level...</option>
+                {EDUCATION_LEVEL_OPTIONS.map((opt) => (
+                  <option key={opt.value} value={opt.value}>
+                    {opt.label}
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
+          <p className="form-hint">
+            Limited to the levels the eligibility engine recognizes — anything else would fail
+            every candidate with "Unrecognized minimum education level".
+          </p>
 
           <div className="form-field" style={{ marginTop: 14 }}>
             <label>
@@ -329,6 +369,9 @@ export default function PolicyBuilder() {
           <p className="form-hint">
             Add specific degrees (e.g. BSCS, BS IT), type "Relevant" to accept any related
             degree, or leave this empty to only require the level above (e.g. any Bachelor's).
+            There's no fixed degree list on the backend — it does a loose substring match
+            against whatever a candidate's parsed education record contains, so this stays
+            free text.
           </p>
           <div className="chip-input-row">
             <input
@@ -390,8 +433,17 @@ export default function PolicyBuilder() {
           </div>
           <p className="form-hint">
             Add any other rule HR wants to define — give it a name, a description, and
-            optionally break it down into labeled sub-fields.
+            optionally break it down into labeled sub-fields. Name it "Preferred Skills" (one
+            sub-field label per skill) to get automated matching against a candidate's parsed
+            skills — any other name is recorded for manual review instead, since the backend
+            has no way to auto-evaluate a policy it doesn't have logic for yet.
           </p>
+
+          <datalist id="other-policy-name-suggestions">
+            {SUGGESTED_POLICY_NAMES.map((name) => (
+              <option key={name} value={name} />
+            ))}
+          </datalist>
 
           {otherPolicies.map((policy) => (
             <div className="policy-block" key={policy.id}>
@@ -399,7 +451,8 @@ export default function PolicyBuilder() {
                 <input
                   type="text"
                   className="form-input"
-                  placeholder="Policy name (e.g. Gender Diversity)"
+                  placeholder="Policy name (e.g. Preferred Skills)"
+                  list="other-policy-name-suggestions"
                   value={policy.name}
                   onChange={(e) => updateOtherPolicy(policy.id, "name", e.target.value)}
                 />
@@ -412,6 +465,13 @@ export default function PolicyBuilder() {
                   <Trash2 size={15} />
                 </button>
               </div>
+              {policy.name.trim().toLowerCase() === "preferred skills" && (
+                <p className="form-hint">
+                  This name is automated: each sub-field label below is checked against the
+                  candidate's parsed skills list. It's informational only and never blocks
+                  eligibility on its own.
+                </p>
+              )}
               <textarea
                 className="form-textarea"
                 placeholder="Description"
