@@ -34,12 +34,12 @@ Screenit takes a folder of scanned/OCR'd resumes and turns them into structured,
 
 ```bash
 git clone <repo-url>
-cd screenit
+cd resume_screening_system
 ```
 
 ### 2. Run the setup script
 
-The setup script installs dependencies and prepares the environment for both backend and frontend.
+The setup script (in the project root) installs dependencies and prepares the environment for both backend and frontend.
 
 ```bash
 chmod +x setup.sh
@@ -50,6 +50,7 @@ chmod +x setup.sh
 
 ```bash
 cd backend
+source .venv/Scripts/activate   # on Mac/Linux use: source .venv/bin/activate
 uvicorn main:app --reload --port 8000
 ```
 
