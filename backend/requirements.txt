@@ -15,4 +15,5 @@ rapidocr-onnxruntime==1.2.3
 sentence-transformers
 spacy
 uvicorn[standard]
+python-multipart
 win32_setctime==1.2.0
