@@ -1,5 +1,4 @@
-Fix tesseract issues leading to incomplete CNIC scans
-Decide on a better flag object structure and construct NER review endpoint
-Modify frontend to show and export NER review candidates with reasons
-Add search functionality in candidates
-Remove excess stuff and add about page 
+Add multi-processing and better input reading mechanism with better persistence
+Add database layer for data backup
+Improve extraction module by using state of the art layout reconstruction and better flagging mechanisms on failure
+Fix ingestion module time lag and test with actual CNIC to make sure

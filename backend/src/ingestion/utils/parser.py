@@ -284,27 +284,44 @@ def extract_identity_fields(text):
             for label in labels:
                 match = re.search(rf"{re.escape(label)}\s*[:.-]?\s*(.+)$", line, flags=re.IGNORECASE)
                 if match:
-                    return match.group(1).strip()
+                    value = match.group(1).strip()
+                    if value:
+                        return value
 
-            if index + 1 < len(lines):
-                next_line = re.sub(r"\s+", " ", lines[index + 1]).strip()
-                if next_line:
+            for offset in range(1, 4):
+                if index + offset >= len(lines):
+                    break
+
+                next_line = lines[index + offset].strip()
+                if next_line and not any(lbl in next_line.lower() for lbl in labels):
                     return next_line
 
         return ""
 
     name = find_value(["name", "naam"])
-    dob = find_value(["date of birth", "dob", "birth date", "dateofbirth"])
+    dob = find_value(["date of birth", "dob", "birth date", "dateofbirth", "date of birth / age"])
+
+    # fallback: find a date anywhere in the text if a DOB label is missing or broken
+    if not dob:
+        date_match = re.search(
+            r"\b(?:\d{4}[-/]\d{2}[-/]\d{2}|\d{2}[-/]\d{2}[-/]\d{4})\b",
+            cleaned_text
+        )
+        if date_match:
+            dob = date_match.group(0)
 
     cnic = ""
     for line in lines:
-        match = re.search(r"\b(\d{5}-\d{7}-\d)\b", line)
+        candidate = re.sub(r"[^0-9\- ]", "", line)
+        candidate = candidate.replace(" ", "")
+        match = re.search(r"(\d{5}-?\d{7}-?\d)", candidate)
         if match:
             cnic = match.group(1)
             break
 
     if not cnic:
-        match = re.search(r"\b(\d{13})\b", cleaned_text)
+        all_digits = re.sub(r"[^0-9]", "", cleaned_text)
+        match = re.search(r"(\d{13})", all_digits)
         if match:
             cnic = match.group(1)
 
@@ -648,6 +665,116 @@ def _reconstruct_rapidocr_lines(ocr_result):
 
     return "\n".join(lines)
 
+
+def _is_cnic_image_path(image_path):
+    """Return True for image names that look like CNIC/identity cards."""
+
+    if not image_path:
+        return False
+
+    name = Path(image_path).stem.lower()
+    return any(keyword in name for keyword in ["cnic", "id_card", "identity", "nic", "id"])
+
+
+def _identity_text_quality(text):
+    """Score OCR text for CNIC/identity card quality."""
+
+    if not text:
+        return 0
+
+    score = text.count("\n")
+    score += sum(char.isdigit() for char in text)
+    score += 50 if re.search(r"\b\d{5}[- ]?\d{7}[- ]?\d\b", text) else 0
+    score += 20 if re.search(r"\b\d{4}[-/]\d{2}[-/]\d{2}\b", text) else 0
+    return score
+
+
+def _tesseract_image_ocr(image_path):
+    """Run Tesseract OCR on an image with the existing preprocessing pipeline."""
+
+    def ocr_from_image(image):
+        return pytesseract.image_to_string(
+            image,
+            lang="eng",
+            config="--oem 3 --psm 3"
+        )
+
+    if not TESSERACT_EXE or pytesseract is None:
+        return {
+            "text": "",
+            "blurred": False,
+            "blur_score": 0,
+            "manual_review": True
+        }
+
+    if cv2 is None:
+        if Image is None:
+            return {
+                "text": "",
+                "blurred": False,
+                "blur_score": 0,
+                "manual_review": True
+            }
+
+        image = Image.open(image_path)
+        image = ImageOps.grayscale(image)
+        image = image.resize((image.width * 2, image.height * 2))
+        image = image.filter(ImageFilter.SHARPEN)
+        text = ocr_from_image(image)
+
+        return {
+            "text": text,
+            "blurred": False,
+            "blur_score": 0,
+            "manual_review": len(text.strip()) < 250
+        }
+
+    image = cv2.imread(str(image_path))
+    if image is None:
+        return {
+            "text": "",
+            "blurred": False,
+            "blur_score": 0,
+            "manual_review": True
+        }
+
+    blurred, blur_score = is_blurry(image)
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    resized = cv2.resize(
+        gray,
+        None,
+        fx=3,
+        fy=3,
+        interpolation=cv2.INTER_CUBIC
+    )
+
+    text_raw = ocr_from_image(resized)
+
+    thresh = cv2.adaptiveThreshold(
+        resized,
+        255,
+        cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+        cv2.THRESH_BINARY,
+        31,
+        11
+    )
+    cv2.imwrite("debug_processed.png", thresh)
+    text_thresh = ocr_from_image(thresh)
+
+    best_text = text_raw
+    if _identity_text_quality(text_thresh) > _identity_text_quality(text_raw):
+        best_text = text_thresh
+
+    manual_review = blurred or len(best_text.strip()) < 250
+
+    return {
+        "text": best_text,
+        "blurred": blurred,
+        "blur_score": round(blur_score, 2),
+        "manual_review": manual_review
+    }
+
+
 # ---------------- IMAGE ---------------- #
 def extract_image_text(image_path):
     """
@@ -663,6 +790,11 @@ def extract_image_text(image_path):
                 result, _ = rapidocr(str(image_path))
                 text = _reconstruct_rapidocr_lines(result)
                 if text.strip():
+                    if _is_cnic_image_path(image_path):
+                        tesseract_result = _tesseract_image_ocr(image_path)
+                        if _identity_text_quality(tesseract_result["text"]) > _identity_text_quality(text):
+                            return tesseract_result
+
                     return {
                         "text": text,
                         "blurred": False,
@@ -672,101 +804,7 @@ def extract_image_text(image_path):
             except Exception as e:
                 print(f"RapidOCR fallback failed for {image_path}: {e}")
 
-        if not TESSERACT_EXE or pytesseract is None:
-            return {
-                "text": "",
-                "blurred": False,
-                "blur_score": 0,
-                "manual_review": True
-            }
-
-        if cv2 is None:
-            if Image is None:
-                return {
-                    "text": "",
-                    "blurred": False,
-                    "blur_score": 0,
-                    "manual_review": True
-                }
-
-            image = Image.open(image_path)
-            image = ImageOps.grayscale(image)
-            image = image.resize((image.width * 2, image.height * 2))
-            image = image.filter(ImageFilter.SHARPEN)
-            text = pytesseract.image_to_string(
-                image,
-                lang="eng",
-                config="--oem 3 --psm 3"
-            )
-
-            return {
-                "text": text,
-                "blurred": False,
-                "blur_score": 0,
-                "manual_review": len(text.strip()) < 250
-            }
-
-        image = cv2.imread(str(image_path))
-
-        if image is None:
-
-            return {
-                "text": "",
-                "blurred": False,
-                "blur_score": 0,
-                "manual_review": True
-            }
-
-        # ---------- Blur Detection ----------
-        blurred, blur_score = is_blurry(image)
-
-        # ---------- Image Preprocessing ----------
-
-        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-
-        # Increase resolution
-        gray = cv2.resize(
-            gray,
-            None,
-            fx=2,
-            fy=2,
-            interpolation=cv2.INTER_CUBIC
-        )
-
-        # Remove noise
-        gray = cv2.GaussianBlur(gray, (3, 3), 0)
-
-        # Binarization
-        gray = cv2.threshold(
-            gray,
-            0,
-            255,
-            cv2.THRESH_BINARY + cv2.THRESH_OTSU
-        )[1]
-
-        # OCR
-        text = pytesseract.image_to_string(
-            gray,
-            lang="eng",
-            config="--oem 3 --psm 3"
-        )
-
-        # ---------- Quality Check ----------
-
-        manual_review = False
-
-        if blurred:
-            manual_review = True
-
-        if len(text.strip()) < 250:
-            manual_review = True
-
-        return {
-            "text": text,
-            "blurred": blurred,
-            "blur_score": round(blur_score, 2),
-            "manual_review": manual_review
-        }
+        return _tesseract_image_ocr(image_path)
 
     except Exception as e:
 
@@ -778,6 +816,7 @@ def extract_image_text(image_path):
             "blur_score": 0,
             "manual_review": True
         }
+
 
 # ---------------- Dispatcher ---------------- #
 

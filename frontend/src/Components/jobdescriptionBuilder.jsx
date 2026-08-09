@@ -84,7 +84,7 @@ export default function JobDescriptionBuilder() {
     };
 
     try {
-      // The backend writes this to ./ads/{job_title}.docx — see
+      // The backend writes this to ./job_descriptions/{job_title}.docx — see
       // api/client.js saveJobDescription() for the expected contract.
       // Unlike the policy YAML form, there's no client-side fallback
       // here: generating a real .docx in the browser needs its own
@@ -281,7 +281,7 @@ export default function JobDescriptionBuilder() {
           <div>
             {saveResult && (
               <p className="form-status form-status-success">
-                Saved to ./ads/{saveResult.filename}
+                Saved to ./job_descriptions/{saveResult.filename}
               </p>
             )}
             {saveError && (

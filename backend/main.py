@@ -636,7 +636,7 @@ def save_policy(body: PolicySaveRequest):
 
     
 
-ADS_DIR = Path(__file__).parent / "ads"
+ADS_DIR = Path(__file__).parent / "job_descriptions"
 
 
 def _slugify(text: str) -> str:
