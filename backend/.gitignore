@@ -1,25 +1,16 @@
 # ==================================================
-# Python
+# Python (backend)
 # ==================================================
 
 __pycache__/
 *.py[cod]
 *$py.class
 
-*.so
-.Python
-
 # Virtual environments
 venv/
 env/
 ENV/
 .venv/
-
-# Package builds
-build/
-dist/
-*.egg-info/
-.eggs/
 
 
 # ==================================================
@@ -30,59 +21,14 @@ dist/
 .env.*
 !.env.example
 
-*.key
-*.pem
-*.crt
-
 
 # ==================================================
-# ML Models & Embeddings
+# Frontend (React)
 # ==================================================
 
-# Downloaded/generated models
-models/embeddings/
-models/rerankers/
-
-# Model weights
-*.bin
-*.pt
-*.pth
-*.onnx
-*.safetensors
-
-# Vector databases / indexes
-*.faiss
-*.index
-*.pkl
-*.pickle
-
-
-# ==================================================
-# Logs
-# ==================================================
-
-logs/*
-!logs/.gitkeep
-
-*.log
-
-
-# ==================================================
-# Reports & Evaluation Results
-# ==================================================
-
-reports/evaluation_results/
-reports/screenshots/
-
-
-# ==================================================
-# Jupyter Notebook
-# ==================================================
-
-.ipynb_checkpoints/
-
-# Notebook generated files
-*.nbconvert.ipynb
+node_modules/
+dist/
+build/
 
 
 # ==================================================
@@ -92,45 +38,18 @@ reports/screenshots/
 .vscode/
 .idea/
 
-*.swp
-*.swo
+
+# ==================================================
+# OS Files
+# ==================================================
+
+.DS_Store
+Thumbs.db
 
 
 # ==================================================
-# Temporary Files
+# Pipeline Runtime Output
 # ==================================================
 
-*.tmp
-*.temp
-*.cache
-
-tmp/
-temp/
-
-
-# ==================================================
-# Testing
-# ==================================================
-
-.pytest_cache/
-.coverage
-htmlcov/
-
-
-# ==================================================
-# Large Dataset Files
-# ==================================================
-
-*.csv
-*.xlsx
-
-# Allow project configuration/sample files
-!data/sample_jobs/*.yaml
-!configs/**/*.yaml
-
-
-# ==================================================
-# Keep Empty Directories
-# ==================================================
-
-!.gitkeep
+runs/
+uploads/
